@@ -1,0 +1,64 @@
+prompt > *{
+  box-sizing: border-box;
+  font-family:'Akshar', sans-serif;
+}
+
+prompt{
+  box-sizing: border-box;
+  font-family:'Akshar', sans-serif;
+  user-select: none;
+  /* background-color: red; */
+  color: white;
+  position: absolute;
+  right:0;
+  top:50%;
+  width:fit-content;
+  height:25vh;
+
+  display:flex;
+  flex-direction: column;
+  gap:5px;
+}
+
+promptOpt{
+  opacity:0;
+  padding:5px;
+  background-color: rgba(0, 0, 0, 0.545);
+  color: white;
+  display:flex;
+  flex-direction: column;
+}
+
+
+
+promptOpt > div:nth-child(1){
+  padding:5px;
+  /* background-color: green; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap:10px;
+  
+}
+
+
+promptOpt > div:nth-child(1) > i{
+  font-size: 125%;
+  color: rgb(151, 151, 151);
+}
+
+promptOpt > div:nth-child(2){
+  padding:5px;
+  font-size: 90%;
+  color: rgb(212, 212, 212);
+}
+
+.hover{
+  transition: all 0.1s ease-in-out;
+}
+
+.hover:hover{
+  box-shadow: 0px 0px 6px 0px rgba(40, 40, 40, 0.75);
+  cursor:pointer;
+  transform: scale(1.05);
+}

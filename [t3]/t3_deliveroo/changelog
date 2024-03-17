@@ -1,0 +1,18 @@
+v1.0.1
+- Added check to stop accepting the delivery more than once.
+- Added min,max to payout to randomise the pay per delivery.
+- Added a bonus for driven miles. Can be turned on or off.
+- Added tips. You can be tipped a random percentage per delivery.
+- Added command to report a lost delivery to prevent being stuck in a loop.
+- Added cooldowns to config.
+
+v1.0.2
+- Added lots more pickup/delivery locations and customers (thanks to @Vareska#1118 for this).
+
+v1.0.3
+- Added option to use duty [QBCore].
+
+v1.0.4
+- Added option to auto equip bag when using QB duty.
+- Security check to stop exploit use.
+- Move customers out of Config.lua.

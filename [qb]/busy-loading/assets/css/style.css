@@ -1,0 +1,252 @@
+body {
+	background: rgb(0, 0, 0);
+	overflow: hidden;
+	font-size: min(0.9vw,1.8vh);
+	user-select: none;
+}
+
+.bg {
+	position: fixed;
+	z-index: -1;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	filter: blur(.5vw);
+	transition: filter .5s;
+	width: 100%;
+}
+
+.overlay {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+
+	background: radial-gradient(circle at top right, #7100c836, rgba(0, 248, 103, 0.3));
+	transition: opacity .5s;
+}
+
+/* -------------- */
+/* MAIN CONTAINER */
+/* -------------- */
+.overlay .container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 100%;
+}
+
+/* Loader */
+
+.overlay .container > .loader {
+	display: flex;
+	flex-direction: column;
+
+	justify-content: center;
+	align-items: center;
+
+	flex-basis: 20%;
+
+	margin: 0 min(6vw,12vh);
+}
+
+.overlay .container > .loader > .progress {
+	margin: 0;
+	margin-top: min(.8vw,1.6vh);
+
+	color: white;
+	font-size: 1.2em;
+	font-family: "PoppinsSemibold";
+}
+
+.overlay .container > .loader > .description {
+	margin: 0;
+	margin-top: .0vw;
+
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 1.0em;
+	font-family: "Poppins";
+
+	text-align: center;
+}
+
+.overlay .container > .loader > .logo {
+	position: relative;
+}
+
+.overlay .container > .loader > .logo > * {
+	display: block;
+
+	width: min(11vw,22vh);
+
+	-webkit-user-drag: none;
+	object-fit: cover;
+	object-position: bottom;
+
+	image-rendering: -webkit-optimize-contrast;
+}
+
+.overlay .container > .loader .transparent-logo {
+	position: relative;
+	opacity: 0.5;
+}
+
+.overlay .container > .loader .filled-logo {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+
+	height: 0%;
+
+	filter: drop-shadow(0 0 .7vw black);
+	transition: height .3s;
+}
+
+.overlay .container > .loader > .logo > img {
+	width: 6.0em;
+}
+
+.overlay .container > .keybinds {
+	display: flex;
+	flex-direction: column;
+	row-gap: .4em;
+	position: absolute;
+	/* top: 50%;
+	transform: translateY(-50%); */
+	left: 1.5%;
+	bottom: 5%;
+}
+
+.overlay .container > .keybinds > .binddiv {
+	display: flex;
+}
+
+.overlay .container > .keybinds > .binddiv .bind {
+	min-width: 1.5em;
+	height: 2em;
+	border-radius: min(.2vw,.4vh);
+	background: #070909fa;
+	margin-right: min(.4vw,.8vh);
+	line-height: min(1vw,2vh);
+	text-align: center;
+	color: #F2F2F2;
+	font-family: PoppinsSemibold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 0.4em;
+	border-bottom: 0.2em solid #9dff00;
+}
+
+.overlay .container  > .keybinds > .binddiv {
+	line-height: min(1vw,2vh);
+	color: rgba(255, 255, 255, .7);
+	font-size: .75em;
+	font-family: Poppins;
+	align-items: center;
+}
+
+.overlay .container > .categories {
+	flex-basis: 33%;
+}
+
+/* Server Stats */
+#stats {
+	display: none;
+	position: absolute;
+	bottom: 0;
+	background-color: #070909fa;
+	border-radius: min(0.1vw,0.2vh) min(0.1vw,0.2vh) 0 0;
+	color: #FFFFFF;
+	z-index: 10000;
+	/* margin-bottom: min(0.85vw,1.7vh); */
+	height: 0px;
+	transition: height 0.75s;
+	overflow: hidden;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#stats h2 {
+	margin-top: 0;
+	margin-bottom: 0.5em;
+}
+
+#stats table {
+	border-top: solid #09ff00 min(0.2vw,0.4vh);
+	font-size: .9em;
+	padding: .5em 1.5em;
+	font-family: "Poppins";
+}
+
+#stats table td:nth-child(1) {
+	color:#91ff00;
+}
+
+#stats table td:nth-child(2) {
+	padding-left: 0.5em;
+	user-select: text;
+}
+
+#stats table td:nth-child(3) {
+	padding-left: 0.15em;
+	text-align: right;
+	user-select: text;
+}
+
+#snow {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	pointer-events: none;
+	z-index: 1000;
+}
+
+/* Seasonal */
+.halloween .overlay {
+	background: radial-gradient(circle at top right, #7100c836, rgba(219, 107, 3, 0.3)) !important;
+}
+.halloween .overlay .container > .keybinds > .binddiv .bind {
+	border-bottom: 0.2em solid #f88603;
+}
+.halloween #stats table {
+	border-top: solid #f88603 min(0.2vw,0.4vh);
+}
+.halloween #stats table td:nth-child(1) {
+	color: #f88603;
+}
+
+.christmas .overlay {
+	background: radial-gradient(circle at top right, #7100c836, rgba(8, 149, 89, 0.3)) !important;
+}
+.christmas .overlay .container > .keybinds > .binddiv .bind {
+	border-bottom: 0.2em solid #089559;
+}
+.christmas #stats table {
+	border-top: solid #089559 min(0.2vw,0.4vh);
+}
+.christmas #stats table td:nth-child(1) {
+	color: #089559;
+}
+
+.remembrance .overlay {
+	background: radial-gradient(circle at top right, #7100c836, rgba(102, 16, 16, 0.3)) !important;
+}
+.remembrance .overlay .container > .keybinds > .binddiv .bind {
+	border-bottom: 0.2em solid #DB0000;
+}
+.remembrance #stats table {
+	border-top: solid #DB0000 min(0.2vw,0.4vh);
+}
+.remembrance #stats table td:nth-child(1) {
+	color: #DB0000;
+}

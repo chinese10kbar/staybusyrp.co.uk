@@ -1,0 +1,839 @@
+html,
+body {
+  /* background-image: url("https://s3-screenshots.int-cdn.lcpdfrusercontent.com/monthly_2021_04/bmwm5-3.png.3c003101b146899a000e5560ff9bf633.png");  */
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  overflow: hidden;
+  background-color: transparent !important;
+  font-family: 'Nokia', sans-serif;
+  user-select: none;
+  width:100%;
+  height:100%;
+
+} 
+
+
+@font-face {
+  font-family: Nokia;
+  src: url("nokiafc22.ttf") format("opentype");
+}
+
+
+@font-face {
+  font-family: Invisible;
+  src: url("invisible.otf") format("opentype");
+}
+
+.greenGrad{
+    border-radius: 3px;
+    border: 1px solid rgba(15, 35, 35, 0.5);
+  background: linear-gradient(171deg, rgb(9, 32, 28, 0.8) 0%, rgb(1, 4, 4, 0.5) 100%);
+}
+
+.gradientBG{
+  background: rgba(31, 32, 34, 0.8);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 25px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap");
+
+.selectorContainer{
+  position: absolute;
+  top:50%;
+  left:50%;
+  background-color: rgba(0,0,0,0.8);
+  transform: translate(-50%, -50%);
+  transition: all ease-in 200ms;
+  border-radius: 7px;
+  overflow: hidden;
+  padding:10px;
+  display: flex;
+  flex-direction: row;
+  gap:5px;
+}
+
+.phoneBox{
+  font-family: 'Poppins', sans-serif;
+  font-weight:bold;
+
+  color:rgba(255,255,255,0.7);
+  padding:8px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 7px;
+  justify-content: center;
+  align-items: center;
+  gap:5px;
+}
+
+.phoneBox:hover{
+  color:white;
+  outline:1px solid white;
+}
+
+.phoneBox > i{
+  font-size: 35px;
+}
+
+.phoneBox > div{
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+/* Main Container */
+
+.outerPhone{
+  background-image: url("phones/phone.png");
+  background-size: 100% 100%;
+  background-position: 150px 0px;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity ease-in 250ms;
+  /* transform: translate(-50%, -50%); */
+  height:600px;
+  width:600px;
+  position: absolute;
+  right: 20%;
+}
+
+
+
+.phoneScreen{
+  overflow: hidden;
+  color:white;
+  font-size: 10px;
+  position: absolute;
+  left:60.1%;
+  background-image:url("https://cdn.wallpapersafari.com/27/73/juRJM8.jpg");
+  background-size:100% 100%;
+  top:12.3%;
+  background-color: rgb(0, 0, 0);
+  height:38.6%;
+  width:29.9%;
+}
+
+
+
+
+/* Bottom Bar */
+.bottomBar{
+  position: absolute;
+  bottom:2px;
+  width:100%;
+  height:auto;
+
+  display:flex;
+  align-items: center;
+  align-content: center;
+
+  justify-content: center;
+  align-content: center;
+  box-sizing: border-box;
+}
+
+.centerButton{
+  padding:2px;
+}
+
+.centerButton:hover{
+  outline:1px solid grey
+}
+
+
+/* MAIN CONTENT */
+
+.content{
+  overflow-y:auto;
+  overflow-x:none;
+  height: 80%;
+}
+
+/* Notifications */
+.notifications{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  gap:2px;
+  overflow: auto;
+}
+
+.closeBtn{
+  z-index: 99;
+  font-size: 10px;
+  position:relative;
+  width:0px;
+  left:90%;
+}
+
+.closeBtn:hover{
+  color:rgba(255,0,0,0.7);
+}
+
+.notif{
+  transition: opacity 250ms cubic-bezier(0.11, 0, 0.5, 0) 0s;
+  border-radius: 2px;
+  padding:5px;
+  margin-top:px;
+  margin: 2px;
+  width:auto;
+  height:35px;
+  background-color: rgba(24, 24, 24, 0.7);
+
+  display: flex;
+  flex-direction: row;
+  gap:5px;
+}
+
+.notif:hover{
+  outline:1px solid rgba(255, 255, 255, 0.775);
+}
+.notifTitle{
+  font-weight: lighter;
+  color:black;
+}
+
+.notifDesc{
+  font-size:8px;
+  height:70%;
+  overflow-y:auto;
+
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.notifIcon{
+  padding:2px;
+  font-size:18px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+/* Top Bar */
+
+.topBar{
+  width:98.5%;
+  height:7.5%;
+  padding:2px;
+  display: flex;
+  flex-direction: row;
+  background-color: #555555a0;
+  border-bottom: solid rgb(0, 0, 0) 2px;
+}
+
+.topBar > div{
+  padding-top: 2px;
+}
+
+.Time{
+  font-size: 8px;
+  padding-left:2px;
+}
+
+.Signal{
+  width:25%;
+  height:100%;
+  margin-left:auto;
+  text-align:right;
+  padding-right:2px;
+  padding-top:2px;
+}
+
+.Battery{
+
+  font-size:11px;
+  text-align: right;
+  align-items: center;
+  align-content: center;
+  width:120%;
+  height:100%;
+
+}
+
+
+/* MENU GRID */
+
+
+.menuWrapper{
+  width:100%;
+  height:100%;
+  /* display: flex; */
+  background-color: red;
+
+/* 
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center; */
+}
+
+.menuGrid{
+  padding:5px;
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.11, 0, 0.5, 0) 0s;
+  height: 95%;
+  width:92%;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  gap:3px;
+}
+
+.menuIcon{
+  width:95%;
+  height:92.5%;
+    background-color: rgba(24, 24, 24, 0.5);
+
+  display:flex;
+  justify-content: center;
+  justify-items: center;
+
+  align-content: center;
+  align-items: center;
+  font-size: 250%;
+  border-radius:50%;
+  color:rgba(255,255,255,0.5);
+}
+
+
+.hoverIcon:hover{
+  background-color: rgba(24, 24, 24, 0.7);
+  color: rgba(255, 255, 255, 1);
+}
+
+
+.glow{
+  background-color: rgba(24, 24, 24, 0.9);
+  color: rgba(255, 255, 255, 1);
+}
+
+/* Messages */
+
+
+.messageContainer{
+  width:100%;
+  height:80%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.messageTitle{
+  width:100%;
+  height:auto;
+  text-align: center;
+  background-color: rgba(24, 24, 24, 0.7);
+
+}
+
+.messageRight{
+  width: 50%;
+  height:auto;
+  padding:5px;
+  background-color: rgba(0,255,0,0.8);
+  border-radius: 2px;
+  margin-top:2px;
+  margin-left:auto;
+}
+
+.redMesg{
+  background-color: rgba(255,0,0,0.8);
+}
+
+.messageLeft{
+  width: 50%;
+
+  height: auto;
+  padding: 5px;
+  background-color: rgba(154, 169, 154, 0.8);
+  border-radius: 2px;
+  margin-top: 2px;
+}
+
+
+.messageInput{
+  position: absolute;
+  bottom:10%;
+  width:100%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  height:auto;
+
+}
+.messageInput > input{
+  outline: none;
+  border: none;
+  max-width:100%;
+  background-color: rgba(255,255,255,0.7);
+}
+
+
+.messageInput:active{
+  outline: none;
+  border:none;
+}
+
+.messageInput:focus {
+  outline: none;
+  border: none;
+}
+
+
+.tabletContainer{
+  box-sizing: border-box;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  width:1600px;
+  /* width:52.5%; */
+  /* height:65%; */
+  height:900px;
+  font-family: 'Invisible', sans-serif;
+  background-image: url("phones/tablet.png");
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+.tabletScreen{
+  background-color: #374f6b;
+  position: absolute;
+  top: 28.5%;
+  left: 24.4%;
+  padding: 2px;
+  width: 56.5%;
+  height: 47%;
+  box-shadow: inset 2px 2px 2px grey;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.tabletLoading{
+  padding:5px;
+  width:100%;
+  height: 100%;
+  background-color: #374f6b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  transition: opacity 250ms cubic-bezier(0.11, 0, 0.5, 0) 0s;
+  gap:10px;
+}
+
+.loadingBar{
+
+  box-shadow: inset 2px 2px 2px grey;
+  overflow: hidden;
+  border-radius: 5px;
+  height:10%;
+  width:50%;
+  background-color:rgba(255, 255, 255, 0.603);
+  display: flex;
+  flex-direction: row;
+}
+
+.loadingBarFill{
+  font-size: 130%;
+  box-shadow: inset 2px 2px 2px grey;
+  transition: width 3s ease-in-out;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #f1f1f1;
+  width:0%;
+  height:100%;
+  text-align: center;
+  padding:3px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  color:#888
+
+}
+
+.loadIcon{
+  width:  35%;
+  height: 45%;
+  background-size: 100% 100%;
+  background-position: center;
+  background-image: url('phones/tableticon.png');
+
+}
+
+.decryptContainer{
+  box-sizing: border-box;
+  padding:5px;
+  width:100%;
+  height: 100%;
+  background-color: #374f6b;
+  display: flex;
+  flex-direction: column;
+  transition: opacity 250ms cubic-bezier(0.11, 0, 0.5, 0) 0s;
+  gap:10px;
+}
+
+.decryptBar{
+  box-sizing: border-box;
+  width: 100%;
+  height:20%;
+  background-color: #1b2734;
+  border-bottom: #d1d1d1 2px solid;
+  display: flex;
+  padding:5px;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+}
+
+.decryptIcon{
+  height:90%;
+  width: 10%;
+  background-size: 100% 100%;
+  background-position: center;
+  background-image: url('phones/tableticon.png');
+}
+
+.decryptButtons{
+  padding:5px;
+  margin-right: 10px;
+  margin-left:auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  gap:5px;
+}
+
+
+.decryptButtons > i{
+  box-sizing: border-box;
+  border-radius: 5px;
+  height:35px;
+  width:35px;
+  display:flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.scanButton{
+  background-color: rgb(221, 219, 219);
+  color:#555
+}
+
+.scanButton:hover{
+  background-color: rgb(255, 255, 255);
+  color:#000000;
+  border:1px solid black;
+}
+
+.saveButton{
+  background-color: #374f6b;
+  color:rgb(180, 180, 180);
+}
+
+.saveButton:hover{
+  background-color: #456486;
+  color:rgb(255, 255, 255);
+  border:1px solid black
+}
+
+.incomingMessages{
+  padding:5px;
+  box-sizing: border-box;
+  width:100%;
+  height:100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  border: solid 2px #e2e2e2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+.creditBox{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  width:100%;
+  background:#555555a0;
+}
+.row{
+  background-color: rgb(221, 219, 219);
+  padding:5px;
+  display:flex;
+  flex-direction: row;
+}
+
+.row > div{
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  width:25%;
+  max-width:25%;
+  text-align: center;
+}
+
+.row > i{
+  width:10%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.column{
+  width:100%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  gap:4px;
+}
+
+.header{
+  background-color: #1b2734;
+  color:#e2e2e2;
+}
+
+.spaceEven{
+  justify-content: space-evenly;
+}
+
+.full{
+  width:90%;
+}
+
+
+
+
+
+.hidden> div:not(.rowButton){
+  filter: blur(5px);
+}
+
+
+.saveRowBut{
+  transition: all 0.1s ease-in-out;
+  color:#374f6b;
+}
+.saveRowBut:hover{
+  color:rgb(255, 255, 255);
+}
+
+.crackButton{
+  transition: all 0.1s ease-in-out;
+  color:#374f6b;
+}
+.crackButton:hover{
+  color:rgb(255, 255, 255);
+}
+
+
+.miniGameContainer{
+  overflow: hidden;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: all 0.25s ease-in-out;
+  background-color: #374f6b;
+  border: 2px white solid;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  width:100%;
+  height:100%;
+  padding:5px;
+}
+
+.hackGrid{
+  box-sizing: border-box;
+  display: grid;
+  gap:4px;
+  text-align: center;
+  grid-template-columns: repeat(auto-fill, minmax(16px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(16px, 1fr));
+  height:100%;
+  width:100%;
+}
+
+.hackLetter{
+  color:white;
+  font-size: 90%;
+  box-sizing: border-box;
+  height:16px;
+  padding: 9px;
+  width:16px;
+  background-color: #1b2734;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.badHover:hover{
+  background-color: red;
+}
+
+.goodHover:hover{
+  background-color: green;
+}
+
+.miniGameHeader{
+  box-sizing: border-box;
+  text-shadow:#000000 1px 1px 1px;
+  width:100%;
+  height:10%;
+  background-color: #1b2734;
+  border-bottom: #d1d1d1 2px solid;
+  text-align: center;
+  display: flex;
+  padding:5px;
+  font-size: 130%;
+  flex-direction: row;
+  justify-content: center;
+  color:white;
+  align-items: center;
+  align-content: center;
+}
+
+.gameBox{
+  padding:3px;
+  box-sizing: border-box;
+  width:50%;
+  height:20%;
+  border-radius: 2px;
+  background-color: #1b2734;
+  text-align: center;
+  color:white;
+  font-size: 200%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+
+}
+
+.gameText{
+  text-shadow:#000000 1px 1px 1px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  height:75%;
+}
+
+.timerWrapper{
+  width: 90%;
+  height: 10%;
+  margin-top: auto;
+  background-color: rgb(255, 255, 255); 
+  border-radius: 2px;
+  border:1px solid rgb(0, 0, 0);
+}
+
+.timerBar{
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  width: 100%;
+  height: 100%;
+  background-color: #374f6b;
+}
+
+.playerInputWrap{
+  box-sizing: border-box;
+  margin-top: auto;
+  margin-bottom: 10px;
+  width:100%;
+  height:10%;
+  border-radius:4px;
+  padding:1px;
+  transition: all 0.1s ease-in-out;
+}
+
+.playerInputWrap:hover{
+  background-color: #0000008a;
+}
+
+.playerInput{
+  box-sizing: border-box;
+  font-size: 180%;
+  text-align: center;
+  height:100%;
+  width:100%;
+  background-color: #ffffff;
+  border-radius:4px;
+}
+
+
+.guessedWords{
+  width:100%;
+  height:35%;
+  box-sizing: border-box;
+  padding:5px;
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(20px, 1fr));
+  gap:5px;
+}
+
+.guessedWords > div{
+  border-radius: 3px;
+  color:whitesmoke;
+  text-shadow:#000000 1px 1px 1px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.correct{
+  background: rgb(0, 255, 42);
+}
+
+.incorrect{
+  background: rgb(255, 0, 0);
+}

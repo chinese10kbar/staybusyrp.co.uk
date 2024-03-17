@@ -1,0 +1,20 @@
+RegisterNetEvent(triggerName('healPlayer'))
+AddEventHandler(triggerName('healPlayer'), function()
+    local playerPed = PlayerPedId()
+    local maxHealth = GetEntityMaxHealth(playerPed)
+    SetEntityHealth(playerPed, maxHealth)
+end)
+
+RegisterNetEvent(triggerName('revivePlayer'))
+AddEventHandler(triggerName('revivePlayer'), function()
+    local playerPed = PlayerPedId()
+    local coords = GetEntityCoords(playerPed)
+    local maxHealth = GetEntityMaxHealth(playerPed)
+
+    SetEntityCoordsNoOffset(playerPed, coords.x, coords.y, coords.z, false, false, false)
+    NetworkResurrectLocalPlayer(coords.x, coords.y, coords.z, 0.0, true, false)
+    SetPlayerInvincible(playerPed, false)
+    ClearPedBloodDamage(playerPed)
+
+    SetEntityHealth(playerPed, maxHealth)
+end)

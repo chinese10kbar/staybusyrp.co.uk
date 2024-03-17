@@ -1,0 +1,11 @@
+@media (min-width: 1920px) {
+    .report-system {
+        transform: scale(1.0);
+    }
+}
+
+@media (min-width: 2560px) {
+    .report-system {
+        transform: scale(1.0);
+    }
+}

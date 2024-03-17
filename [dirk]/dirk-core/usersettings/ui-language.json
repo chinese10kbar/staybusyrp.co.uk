@@ -1,0 +1,13 @@
+{
+  "ENG":{
+   "Remove":"Remove",
+   "Add":"Add",
+   "Basket":"Basket",
+   "Total":"Total",
+   "Purchase":"PURCHASE",
+   "Sell":"SELL",
+   "StoreLimit": "This is the most you can buy from this store at one time",
+   "NotEnoughItems": "You don't have enough items to sell that many", 
+   "NotEnoughMoney": "You don't have enough money to buy that many"
+  } 
+}

@@ -1,0 +1,51 @@
+.full-screen {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /*background-image: url("https://androidprog.com/wp-content/uploads/2020/07/gta5-1.jpg");
+    background-size: cover;*/
+    caret-color: transparent;
+    user-select: none;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+#main-container {
+    font-family: 'Jura', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    height: 100%;
+    overflow: hidden !important;
+    justify-content: center;
+    align-items: center;
+}
+.inner-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-100vh);
+}
+.card {
+    position: relative;
+}
+.anim-enter {
+    animation-name: enter;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in;
+    transform-origin: center;
+    animation-fill-mode: forwards;
+}
+@keyframes enter {
+    0% {transform: translate(-50%,-100vh);}
+    100% {transform: translate(-50%,-50%);}
+}
+.anim-exit {
+    animation-name: exit;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in;
+    transform-origin: center;
+    animation-fill-mode: forwards;
+}
+@keyframes exit {
+    0% {transform: translate(-50%,-50%);}
+    100% {transform: translate(-50%,-100vh);}
+}

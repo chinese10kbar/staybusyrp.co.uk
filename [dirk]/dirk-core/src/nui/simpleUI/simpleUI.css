@@ -1,0 +1,363 @@
+.promptList {
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  font-family: 'Koulen', cursive;
+  font-weight: 500;
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+  transition: opacity 1s;
+  user-select: none;
+  position: absolute;
+  /* left: 35%;
+  top: 35%; */
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  transition: width 1.5s ease;
+  transition: height 1.5s ease;
+
+}
+
+.Prompt {
+  /* Chrome 10-25, Safari 5.1-6 */
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  gap: 2px;
+  padding: 2.5px;
+  margin-top:5px;
+}
+
+
+
+
+
+.icon {
+  width: 25px;
+  height: 25px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.26));
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  border-radius: 2px;
+  border: 1px solid black;
+  font-size: smaller;
+}
+
+.icon:hover {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.56));
+}
+
+.promptButton {
+  font-weight: bolder;
+  width: 25px;
+  height: 25px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.26));
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  border-radius: 2px;
+  border: 1px solid black;
+}
+
+.promptText {
+  color: white;
+}
+
+.HelpOuter{
+  user-select: none;
+  font-family: 'Bebas Neue';
+  position: absolute;
+  top: 60%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#HelpContainer {
+  display: flex;
+  flex-direction: column;
+  /*      box-shadow: 10px 10px 10px black;*/
+  border-radius: 5px;
+}
+
+#row {
+  gap:5px;
+  margin-top: 1.5%;
+  width: auto;
+  display: flex;
+  align-content: center;
+  Justify-content: center;
+  align-items: center;
+  Justify-items: center;
+  flex-direction: row;
+}
+
+#button {
+  border: 1px solid rgba(255, 255, 255, 0.753);
+  color: rgba(255, 255, 255, 0.836);
+  font-size: 150%;
+  text-align: center;
+  font-weight:bolder;
+  display:flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  border-radius: 2.5px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.81);
+}
+
+#useinfo {
+  padding: 2px;
+  padding-left:25px;
+  padding-right:25px;
+  clip-path: polygon(15px 0%, 100% 0%, 95% 100%, 0% 100%);
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+
+
+  background-color: rgba(0,0,0,0.2);
+  /*background-color: rgba(0, 0, 0, 0.0);*/
+  vertical-align: center;
+  /*backdrop-filter: blur(5px);*/
+  color: white;
+  font-size: 20px;
+  width: auto;
+  height:30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+notifications{
+  font-family:'Akshar', sans-serif;
+  padding:5px;
+  position: absolute;
+  top:2%;
+  right:2%;
+  height: auto;
+  width:  25%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:5px;
+}
+
+notification{
+  user-select: none;
+  font-size: 120%;
+  height: auto;
+  width:  90%;
+  background-color: rgba(0,0,0,0.5);
+  padding:5px;
+}
+
+notification > div:nth-child(2){
+  color:rgb(209, 209, 209);
+  font-size: 90%;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  gap:5px;
+}
+
+notification > div:first-child{
+  color:white;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  gap:5px;
+  border-bottom: solid rgb(209, 209, 209) 1px;
+}
+
+notification > div:first-child > i{
+  color:rgb(209, 209, 209);
+}
+
+
+notification > div:nth-child(3){
+  display: flex;
+  width:100%;
+
+  background-color: rgb(145, 145, 145);
+}
+
+
+notification > div:nth-child(3) > div{
+  font-size: 80%;
+  background-color: rgb(255, 255, 255);
+  width:50%;
+  height:100%;
+  text-align: right;
+  padding-right:6px;
+}
+
+/* SELECT MENU  */
+
+.selectMenu{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  background-color: var(--darkBackground);
+  width:25%;
+  min-width:fit-content;
+}
+.selectMenuHeader{
+  font-size:125%;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  gap:5px;
+  align-items: center;
+  background-color: var(--solidBlack);
+}
+
+.selectMenuHeader > i{
+  color:var(--dirkGreen);
+}
+
+.selectMenuHeader > div{
+  color:var(--lightWhite);
+  font-weight: bolder;
+  font-size: 125%;
+}
+
+.selectMenuItems{
+  display:flex;
+  flex-direction: column;
+  padding:5px;
+  gap:5px;
+}
+
+.selectMenuItem{
+  transition: all ease-in-out 0.2s;
+  background-color: var(--darkBackground);
+  padding:5px;
+  color: var(--lightWhite);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  gap:5px;
+}
+
+.selectMenuItem > div {
+  color:var(--lightWhite);
+}
+
+.selectMenuItem:hover{
+  cursor:pointer;
+  background-color: var(--solidBlack);
+  transform:scale(1.01);
+}
+
+.checkBox{
+  font-size: 75%;
+  background-color: white;
+  padding:2px;
+  margin-left:auto;
+  box-shadow: inset 0px 0px 1px black;
+}
+
+.selectedItem{
+  background-color: var(--solidBlack);
+  color: var(--dirkGreen);
+  outline: solid var(--dirkGreen) 1px;
+}
+
+.selectMenuFooter{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap:5px;
+  padding:5px;
+}
+
+.confirmSelectMenu{
+  transition: all ease-in-out 0.2s;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap:5px;
+  background-color: var(--darkBackground);
+  color: var(--lightWhite);
+  padding:5px;
+  transition: all ease-in-out 0.2s;
+}
+
+.confirmSelectMenu:hover{
+  background-color: var(--solidBlack);
+  cursor:pointer;
+  transform:scale(1.04);
+  color:var(--dirkGreen);
+  font-weight: bold;
+}
+
+.confirmSelectMenu > div{
+  color:var(--lightWhite);
+}
+
+.confirmSelectMenu > i{
+  color:var(--dirkGreen);
+}
+
+
+
+
+
+itemSelection{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  background-color: var(--darkBackground);
+  width:25%;
+  height:25%;
+  min-width:fit-content;
+}

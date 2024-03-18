@@ -50,7 +50,7 @@ const DiscordWhitelistRoleIds = "1219005031416598599, 000000000000000000";
 const EnableDiscordSlashCommands = true;
 const DiscordModRoleId = "1219005024521425048";
 const DiscordAdminRoleId = "1219005021765763163";
-const DiscordGodRoleId = "1213806773765406770";
+const DiscordGodRoleId = "1219005013469171824";
 
 
 // DISCORD BOT STATUS

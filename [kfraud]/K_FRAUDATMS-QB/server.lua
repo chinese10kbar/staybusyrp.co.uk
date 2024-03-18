@@ -12,28 +12,25 @@ AddEventHandler('k_fraudatms:enterATM', function()
                 Player.Functions.RemoveItem(KonfigSH.ClonedItem, 1)
                 TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items[KonfigSH.ClonedItem], "remove")
                 TriggerClientEvent('QBCore:Notify', source, 'ATM: Card swallowed and authorities alerted for bank fraud', "success")
-                qsDispatch:GetPlayerInfo(Player.PlayerData.citizenid, function(playerData)
-                    if (not playerData) then
-                        ErrorPrint("Error getting player data")
-                        return
-                    end
-                    TriggerEvent('qs-dispatch:server:CreateDispatchCall', {
-                        job = { 'police', 'sheriff', 'traffic', 'patrol' },
-                        callLocation = playerData.coords,
-                        callCode = { code = 'Bank Fraud', snippet = 'ATM' },
-                        message = "Street 1: ".. playerData.street_1.. " Street 2: ".. playerData.street_2.. " Sex: ".. playerData.sex.. " Vehicle Label: ".. playerData.vehicle_label.. " Vehicle Colour: ".. playerData.vehicle_colour.. " Vehicle Plate: ".. playerData.vehicle_plate.. " Speed: ".. playerData.speed,
-                        flashes = false,
-                        image = nil,
-                        blip = {
-                            sprite = 488,
-                            scale = 1.5,
-                            colour = 1,
-                            flashes = true,
-                            text = 'Bank Fraud',
-                            time = 20 * 1000,     -- 20 secs
-                        }
-                    })
-                end)       
+                        exports['qs-dispatch']:GetSSURL(PlayerID, function(screanshot)
+                            TriggerEvent('qs-dispatch:server:CreateDispatchCall', {
+                                job = { 'police'},
+                                callLocation = playerData.coords,
+                                callCode = { code = 'Hight Speed', snippet = 'Vehicle' },
+                                message = " street_1: ".. playerData.street_1.. " street_2: ".. playerData.street_2.. " sex: ".. playerData.sex.. " vehicle_label: ".. playerData.vehicle_label.. " vehicle_colour: ".. playerData.vehicle_colour.. " vehicle_plate: ".. playerData.vehicle_plate.. " speed: ".. playerData.speed.. "",
+                                flashes = false,
+                                image = screanshot or nil,
+                                blip = {
+                                    sprite = 488,
+                                    scale = 1.5,
+                                    colour = 1,
+                                    flashes = true,
+                                    text = 'Hight Speed',
+                                    time = (20 * 1000), -- 20 secs
+                                }
+                            })
+                        end)
+                        
             else
                 Player.Functions.RemoveItem(KonfigSH.ClonedItem, 1)
                 TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items[KonfigSH.ClonedItem], "remove")

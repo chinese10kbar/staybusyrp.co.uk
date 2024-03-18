@@ -187,6 +187,7 @@ Config.Stores = {
         --targetScenario = "" -- overrides the target scenario configure for the group
         points = {
             vector3(1686.9018554688, 4829.8330078125, 42.07),
+            vector3(123.0804, -1032.3140, 29.5189),
             vector3(1698.8566894531, 4831.4604492188, 42.07),
             vector3(1700.2448730469, 4817.7734375, 42.07),
             vector3(1688.3682861328, 4816.2954101562, 42.07)

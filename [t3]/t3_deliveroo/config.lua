@@ -8,16 +8,16 @@ Config.Options = {
     autoBagOnDuty = true,
     lostDeliveryCommand = "lostdelivery",
     secondsToAcceptDelivery = 15,
-    maxItemsPerPickup = 10,
-    maxDistanceFromPickup = 1200,
+    maxItemsPerPickup = 5,
+    maxDistanceFromPickup = 1600,
     enableTips = true,
     tipPercentage = {min = 0, max = 50},
     prop = "prop_paper_bag_01",
     cooldowns = {
-        offPeak = 1.5, --in minutes
-        breakfast = 1.0,
-        lunch = 0.75,
-        evening = 0.50,
+        offPeak = 1.0, --in minutes
+        breakfast = 0.75,
+        lunch = 0.5,
+        evening = 0.25,
     }
 }
 

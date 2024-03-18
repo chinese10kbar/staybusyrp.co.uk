@@ -288,8 +288,7 @@ Config.EnableAutoMessage = true
 Config.AutoMessageTime = 60 -- (in minutes) will send messages every x minutes 
 
 Config.AutoMessages = {
-	"Don't break the rules!",
-	"Have fun!",
+
 }
 
 --------------------------------

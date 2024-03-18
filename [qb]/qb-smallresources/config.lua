@@ -25,7 +25,7 @@ Config.Binoculars = {
     zoomSpeed = 10.0,        -- camera zoom speed
     storeBinocularsKey = 177 -- backspace by default
 }
-
+ 
 Config.AIResponse = {
     wantedLevels = false, -- if true, you will recieve wanted levels
     dispatchServices = {  -- AI dispatch services

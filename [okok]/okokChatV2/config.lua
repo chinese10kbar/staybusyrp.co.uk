@@ -5,7 +5,7 @@ Config.QBPermissionsUpdate = true -- set it to true if you have the latest Permi
 --------------------------------
 -- [Discord Logs]
 
-Config.EnableDiscordLogs = true
+Config.EnableDiscordLogs = false
 
 Config.IconURL = ""
 
@@ -283,7 +283,7 @@ Config.AmbulanceIcon = 'fas fa-ambulance'
 --------------------------------
 -- [Auto Message]
 
-Config.EnableAutoMessage = true
+Config.EnableAutoMessage = false
 
 Config.AutoMessageTime = 60 -- (in minutes) will send messages every x minutes 
 

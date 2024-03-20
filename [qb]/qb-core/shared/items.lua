@@ -1210,6 +1210,9 @@ QBShared.Items = {
     battering_ram                    = { name = 'battering_ram', label = 'Battering Ram', weight = 100, type = 'item', image = 'battering_ram.png', unique = false, useable = false, shouldClose = true, combinable = false, description = 'MET Police Battering Ram'},
 	['painting'] 			 = {['name'] = 'painting', 				['label'] = 'Painting',	['weight'] = 500, 		['type'] = 'item', 		['image'] = 'painting.png', 		['unique'] = false,		['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Expensive painting'},
     ['ls_wirecutters'] 			= {['name'] = 'ls_wirecutters', 				['label'] = 'Wire cutters', 			['weight'] = 0, 		['type'] = 'item', 		['image'] = 'ls_wirecutters.png', 		['unique'] = true, 		['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Wire cutters!'},
+    
+  -- T3
+['fooddelivery'] 				 = {['name'] = 'fooddelivery',					['label'] = 'Food Delivery', 			['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'fooddelivery.png', 		['unique'] = true, 		['useable'] = false, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'UberEats Delivery Bag'},
 
     -- SMOKINGV2
 empty_sealed_baggy          = { name = 'empty_sealed_baggy', label = 'empty sealed baggy', weight = 0, type = 'item', image = 'empty_sealed_baggy.png', unique = false, useable = true, shouldClose = false, combinable = nil, description = 'empty sealed baggy' },

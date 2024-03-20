@@ -107,7 +107,7 @@ Config.AttemptsCards = 3           -- If you fail the password three times, it w
 Config.CreateCardEverywhere = true -- Can you create cards in all banks or only in the configured spots?
 Config.CreateCard = {              -- Spots to create cards (optional)
     {
-    --    coords = vec3(143.26641845703, -1042.5906982422, 29.367889404297)
+        coords = vec3(143.26641845703, -1042.5906982422, 29.367889404297)
     },
     -- Here you can add specific points to create cards (need Config.Metadata)
 }
@@ -120,7 +120,7 @@ Config.CreateCard = {              -- Spots to create cards (optional)
 ]]
 
 Config.Bank = { -- All physical banks
-    vec3(149.91, -1040.74, 29.374),
+ --   vec3(149.91, -1040.74, 29.374),
     vec3(-1212.63, -330.78, 37.59),
     vec3(-2962.47, 482.93, 15.5),
     vec3(-113.01, 6470.24, 31.43),

@@ -1,5 +1,71 @@
 Config.Locations = Config.Locations or {}
 
+Config.Locations[#Config.Locations+1] = { --[[ Fast Customs ]]--
+	Enabled = true,
+	job = "mechanic",
+	zones = {
+		vector2(-871.984375, -789.86895751953),
+ 		vector2(-935.56884765625, -789.814453125),
+ 	 	vector2(-935.611328125, -752.33160400391),
+ 	 	vector2(-871.32257080078, -753.07086181641),
+ 		vector2(-871.32366943359, -789.89947509766),
+  		vector2(-870.16693115234, -791.18194580078)
+	},
+	autoClock = { enter = true, exit = true, },
+	stash = {
+		{ coords = vector4(-906.46, -760.55, 15.27, 99.49), w = 3.6, d = 0.8, },
+		{ coords = vector4(-898.24, -760.04, 15.27, 86.15), w = 3.6, d = 0.8, },
+		{ coords = vector4(-889.65, -760.06, 15.27, 92.18), w = 3.6, d = 0.8, },
+		
+		
+	},
+	--store = {
+		--{ coords = vector4(-931.51, -773.84, 15.27, 254.07), w = 3.60, d = 0.8 },
+--	},
+	crafting = {
+		{ coords = vector4(-911.59, -759.04, 15.27, 342.0), w = 2.8, d = 1.5 },
+		{ coords = vector4(-902.69, -758.94, 15.27, 177.41), w = 2.8, d = 1.5 },
+		{ coords = vector4(-893.87, -758.94, 15.27, 175.4), w = 2.8, d = 1.5 },
+	},
+	clockin = {
+		{ coords = vector4(-933.52, -781.66, 15.27, 262.99), prop = false },
+	},
+	manualRepair = {
+		{ coords = vector4(-967.96, -752.62, 15.2, 179.45), prop = true, },
+	},
+	carLift = {
+        { coords = vec4(-201.85, -1319.65, 31.3, 19.36), useMLOLift = true },
+        { coords = vec4(-221.27, -1318.71, 31.3, 352.67), useMLOLift = true },
+    },
+	garage = {
+		spawn = vec4(-182.74, -1317.61, 30.63, 357.23),
+		out = vec4(-190.62, -1311.57, 31.3, 0.0),
+		list = { "towtruck", "panto", "slamtruck", "cheburek", "utillitruck3" },
+		prop = true
+	},
+	payments = {
+		img = "https://static.wikia.nocookie.net/gtawiki/images/b/be/BennysOriginalMotorWorks-GTAO-Logo.png",
+		{ coords = vector4(-933.45, -779.72, 15.27, 260.43), prop = false },
+	},
+	Restrictions = {
+		Vehicle = { "Compacts", "Sedans", "SUVs", "Coupes", "Muscle", "Sports Classics", "Sports", "Super", "Motorcycles", "Off-road", "Industrial", "Utility", "Vans", "Cycles", "Service", "Emergency", "Commercial", },
+		Allow = { "tools", "cosmetics", "repairs", "nos", "perform" },
+	},
+	blip = {
+		coords = vector3(-927.32, -790.92, 15.2),
+		label = "Fast Customs",
+		color = 1,
+		sprite = 446,
+		disp = 6,
+		scale = 0.7,
+		cat = nil,
+		previewImg = "https://i.imgur.com/kKC2Mw2.png",
+	},
+	discord = {
+		link = "",
+		color = 16711680,
+	}
+}
 Config.Locations[#Config.Locations+1] = { --[[ GABZ ALTA STREET BENNYS ]]--
 	Enabled = true,
 	job = "mechanic",

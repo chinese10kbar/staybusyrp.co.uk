@@ -3,7 +3,7 @@ Config = {}
 Config.JobName = "deliveroo"
 
 Config.Options = {
-    useDuty = true,
+    useDuty = false,
     bagCommand = "dbag",
     autoBagOnDuty = true,
     lostDeliveryCommand = "lostdelivery",

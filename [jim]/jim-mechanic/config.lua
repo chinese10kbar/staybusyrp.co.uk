@@ -60,15 +60,15 @@ Config = {
 	},
 
 	Harness = {
-		JobOnly = false,			-- Only allow job roles to add a Harness to vehicle
+		JobOnly = true,			-- Only allow job roles to add a Harness to vehicle
 		HarnessControl = false,		-- Enable harness AND seatbelt features of the script, requires edits to smallresources and hud scripts
-		seatbeltEasyLeave = true,	-- if true players can exit vehicled before removing seatbelt
-		harnessEasyLeave = true,	-- if true players can exit vehicled before removing harness
+		seatbeltEasyLeave = false,	-- if true players can exit vehicled before removing seatbelt
+		harnessEasyLeave = fasle,	-- if true players can exit vehicled before removing harness
 
 		progOn = true,				-- if true add a progressBar to buckle harness
 		progOff = true,				-- if true add a progressBar to unbuckle harness
 
-		seatbeltNotify = false,		-- if true, show a notification when seatbelt is put on or off
+		seatbeltNotify = true,		-- if true, show a notification when seatbelt is put on or off
 
 		timeOn = 3000,				-- Time for the progress bar to put on harness
 		timeOff = 2000,				-- Time for the progress bar to take off harness
@@ -77,7 +77,7 @@ Config = {
 		minimumSeatBeltSpeed = 110, -- Minimuim speed for ejecting with a seatbelt attached
 		minimumDamage = 15.0, 		-- Minimum body damage for ejecting a player (default 15 = .15%)
 
-		crashKill = false,			-- Set to true if you want ejecting when crashing to kill/injure
+		crashKill = true,			-- Set to true if you want ejecting when crashing to kill/injure
 
 		AltEjection = false,		-- Enabling this may make some varibles above not be used
 									-- Requires adding a couple lines to your server.cfg to activate
@@ -186,9 +186,9 @@ Config = {
 	},
 
 	StoreCraft = {
-		Crafting = true, 				-- Set true to turn on crafting features
-		StashCraft = false,  			-- Set true to grab materials from mechaincs stash for crafting
-		Stores = true, 					-- Set true to turn on shop store features
+		Crafting = true, 				-- Set true to turn on crafting featuresaw
+		StashCraft = true,  			-- Set true to grab materials from mechaincs stash for crafting
+		Stores = false, 					-- Set true to turn on shop store features
 	},
 
 	Odometer = {
@@ -353,65 +353,65 @@ Config = {
 		},
 		CosmeticTable = { 			-- This controls what will appear in the emergency mech bench, "false" to hide it
 			["Repair" ] = true,
-			["Paints"] = true,
-			["Horn"] = true,
-			["Hood"] = true,
-			["Exhaust"] = true,
-			["RollCage"] = true,
-			["Roof"] = true,
-			["Spoiler"] = true,
-			["Seats"] = true,
-			["PlateHolder"] = true,
-			["VanityPlate"] = true,
-			["CustomPlate"] = true,
-			["Skirts"] = true,
-			["RightFender"] = true,
-			["LeftFender"] = true,
-			["Liverys"] = true,
-			["OldLiverys"] = true,
-			["RoofLiverys"] = true,
-			["Grille"] = true,
-			["FrontBumper"] = true,
-			["BackBumper"] = true,
-			["TrimA"] = true,
-			["TrimB"] = true,
-			["Trunk"] = true,
-			["EngineBlock"] = true,
-			["Filter"] = true,
-			["Struts"] = true,
-			["Hydraulics"] = true,
-			["ArchCovers"] = true,
-			["FuelTank"] = true,
-			["Aerials"] = true,
-			["Extras"] = true,
-			["Ornaments"] = true,
-			["DashBoard"] = true,
-			["Dials"] = true,
-			["DoorSpeakers"] = true,
-			["SteeringWheels"] = true,
-			["ShifterLeavers"] = true,
-			["Plaques"] = true,
-			["Speakers"] = true,
-			["WindowTints"] = true,
-			["Rims"] = true,
+			["Paints"] = false,
+			["Horn"] = false,
+			["Hood"] = false,
+			["Exhaust"] = false,
+			["RollCage"] = false,
+			["Roof"] = false,
+			["Spoiler"] = false,
+			["Seats"] = false,
+			["PlateHolder"] = false,
+			["VanityPlate"] = false,
+			["CustomPlate"] = false,
+			["Skirts"] = false,
+			["RightFender"] = false,
+			["LeftFender"] = false,
+			["Liverys"] = false,
+			["OldLiverys"] = false,
+			["RoofLiverys"] = false,
+			["Grille"] = false,
+			["FrontBumper"] = false,
+			["BackBumper"] = false,
+			["TrimA"] = false,
+			["TrimB"] = false,
+			["Trunk"] = false,
+			["EngineBlock"] = false,
+			["Filter"] = false,
+			["Struts"] = false,
+			["Hydraulics"] = false,
+			["ArchCovers"] = false,
+			["FuelTank"] = false,
+			["Aerials"] = false,
+			["Extras"] = false,
+			["Ornaments"] = false,
+			["DashBoard"] = false,
+			["Dials"] = false,
+			["DoorSpeakers"] = false,
+			["SteeringWheels"] = false,
+			["ShifterLeavers"] = false,
+			["Plaques"] = false,
+			["Speakers"] = false,
+			["WindowTints"] = false,
+			["Rims"] = false,
 		},
 		PreformaceTable = {
-			["Engine"] = true,
-			["Brakes"] = true,
-			["Suspension"] = true,
-			["Transmission"] = true,
-			["Armour"] = true,
-			["Turbo"] = true,
-			["Harness"] = true,
+			["Engine"] = false,
+			["Brakes"] = false,
+			["Suspension"] = false,
+			["Transmission"] = false,
+			["Armour"] = false,
+			["Turbo"] = false,
+			["Harness"] = false,
 		}
 	},
 
 	ManualRepairs = { -- Player vehicle repair config
-		ManualRepairCost = 5000, 	-- Set this to a high amount to get people to talk to mechanics rather than use automated systems
-		ManualRepairCostBased = false, 	-- Set this to true if you want the cost to ALWAYS be the amount set at "ManualRepairCost"
+		ManualRepairCost = 8000, 	-- Set this to a high amount to get people to talk to mechanics rather than use automated systems
+		ManualRepairCostBased = true, 	-- Set this to true if you want the cost to ALWAYS be the amount set at "ManualRepairCost"
 									-- Set this to false if you want it to "ManualRepairCost" to be the max and cost is calculated by damage
 
-		ManualRepairBased = true, 	-- Set this to true if you want to set the repair cost to be based on Core.Shared.Vehicle costs(overrides the cost setting above)
+		ManualRepairBased = false, 	-- Set this to true if you want to set the repair cost to be based on Core.Shared.Vehicle costs(overrides the cost setting above)
 		ManualRepairPercent = 5,	-- Set this to the percent of the vehicle price (Only works if ManualRepairBased is true)
 									-- Default is 5% because $200,000 would be $10,000 max to repair by this system
 									-- 5% of a $10,000 car would be $500
@@ -419,11 +419,11 @@ Config = {
 		repairEngine = true, 		-- Set this to true if automated repairs also repair engine (not just body)
 		repairExtras = true, 		-- Set this to true for automated repairs to also repair extra damages (if mechanicjob is available and repairEngine is true)
 
-		requireDutyCheck = false, 	-- if set to true, the repair bench will only be usable if there are no mechanics in the server ON DUTY
+		requireDutyCheck = true, 	-- if set to true, the repair bench will only be usable if there are no mechanics in the server ON DUTY
 		dutyMessage = "There is a Mechanic on duty!", -- This is the notification that pops up when a person tries to repair when a mechanic is on duty, choose what you want for it.
 
-		repairAnimate = false,		-- Better than staring at a progress bar, "damaged" parts will be removed and replaced. Making it look more authentic
-		repairSpeed = 1500, 		-- The time between each task while using repairAnimate. 1500 Seems to be a reasonable time for it
+		repairAnimate = true,		-- Better than staring at a progress bar, "damaged" parts will be removed and replaced. Making it look more authentic
+		repairSpeed = 2000, 		-- The time between each task while using repairAnimate. 1500 Seems to be a reasonable time for it
 	},
 
 	antiLag = {
@@ -432,7 +432,7 @@ Config = {
 	},
 
 	NOS = { -- NOS STUF
-		JobOnly = false,			-- Only allow job roles to change NOS
+		JobOnly = true,			-- Only allow job roles to change NOS
 		NosRefillCharge = 1000, 	-- amount in dollars required to refill a nos can
 
 		NosBoostPower = { 			-- NOS boost acceleration power

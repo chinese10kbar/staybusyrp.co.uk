@@ -25,7 +25,7 @@
         "silent": false
     },
     "weather": {
-        "celcius": false
+        "celcius": true
     },
     "notifications": {},
     "storage": {

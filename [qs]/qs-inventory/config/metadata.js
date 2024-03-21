@@ -8,6 +8,13 @@ function FormatItemInfo(itemData) {
             $(".item-info-description").html("<p>" + tableToString(itemData.info) + "</p>");
             return
         }
+        if (itemData.name == "phone" && itemData.info.lbPhoneNumber) {
+            $(".item-info-title").html("<p>" + (itemData.info.lbPhoneName ?? itemData.label) + "</p>")
+            $(".item-info-description").html(
+                "<p><strong>Phone Number: </strong><span>" + (itemData.info.lbFormattedNumber ?? itemData.info.lbPhoneNumber) + "</span></p>"
+            )
+            return
+        }
         if (itemData.name == "id_card") {
             $(".item-info-title").html("<p>" + `${itemData.info.label || label}` + "</p>");
             $(".item-info-description").html(

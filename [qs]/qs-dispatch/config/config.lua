@@ -58,7 +58,7 @@ Config.showBillsInMDT = true -- configure your billing system in server/custom/m
         'qs-advancedgarages'
 ]]
 
-Config.VehicleGarages = 'jg-advancedgarages'
+Config.VehicleGarages = 'qb_garages'
 
 Config.Keys = {
     --Basic keys

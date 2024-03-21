@@ -22,19 +22,21 @@ Config.Language = 'en'
         'none' It means that it is deactivated
 ]]
 
-Config.UseTarget = 'qb-target'          -- Choose between 'qb-target', 'ox_target' or 'none' disabled!
+Config.UseTarget = 'qb-target'               -- Choose between 'qb-target', 'ox_target' or 'none' disabled!
 
-Config.BlockedSwap = false         -- If set to true, you will not be able to swap between items
-Config.BlockedSlot = false         -- This is the sixth slot, the one that does not allow them to steal from that space
-Config.GiveItemHideName = false    -- If you enable this, then the player will not be able to see names in giveitem, only id
+Config.BlockedSwap = false              -- If set to true, you will not be able to swap between items
+Config.BlockedSlot = false              -- This is the sixth slot, the one that does not allow them to steal from that space
+Config.GiveItemHideName = false         -- If you enable this, then the player will not be able to see names in giveitem, only id
 
-Config.Handsup = true              -- Enable or disable Handsup and Robbery button
-Config.StealDeadPlayer = true      -- Steal from dead players?
-Config.StealWithoutWeapons = false -- Possibility to draw only if the target player raises his arms (without weapons)
+Config.Handsup = true                   -- Enable or disable Handsup and Robbery button
+Config.StealDeadPlayer = true           -- Steal from dead players?
+Config.StealWithoutWeapons = false      -- Possibility to draw only if the target player raises his arms (without weapons)
+Config.DropItemWhenInventoryFull = true -- Drop the item when the inventory is fully
 
-Config.InventoryWeight = {         -- Configuration of maximum weight and maximum slots of the player
+Config.InventoryWeight = {              -- Configuration of maximum weight and maximum slots of the player
     ['weight'] = 120000,
-    ['slots'] = 41,                -- If you want to remove the 6 slot, use 40 here!
+    --- CAUTION: If you change this value after the anyone has items. It will cause dupe problems. So don't forget to wipe all the inventories.
+    ['slots'] = 41, -- If you want to remove the 6 slot, use 40 here!
 }
 
 Config.DropWeight = { -- Configuration of maximum weight and maximum slots of the player
@@ -42,7 +44,7 @@ Config.DropWeight = { -- Configuration of maximum weight and maximum slots of th
     ['slots'] = 130,  -- If you want to remove the 6 slot, use 40 here! (Max 100)
 }
 
-Config.LabelChange = false       -- Enable or disable this function here
+Config.LabelChange = true       -- Enable or disable this function here
 Config.LabelChangePrice = false -- Set prince or false
 Config.BlockedLabelChangeItems = {
     ['money'] = true,
@@ -51,6 +53,7 @@ Config.BlockedLabelChangeItems = {
 
 Config.UsableItemsFromHotbar = true -- Can the items be used with the hotbar? (1, 2, 3, 4, 5)
 Config.BlockedItemsHotbar = {       -- Items that you can not use from hotbar, only from the inventory
+    'lockpick',
     -- Add more elements here if necessary
 }
 
@@ -71,7 +74,8 @@ Config.OnePerItem = { -- Items that cannot be sent to your inventory (item = max
 
 Config.notStolenItems = {
     ['id_card'] = true,
-    ['car_license'] = true
+    ['water_bottle'] = true,
+    ['tosti'] = true
 }
 
 Config.notStoredItems = {
@@ -81,7 +85,7 @@ Config.notStoredItems = {
 -- If you enable this in true check the docs
 -- ESX: https://docs.quasar-store.com/ Inventory > Functions > Clothing
 -- QB: https://docs.quasar-store.com/qbcore/inventory/installations/step-7
-Config.Clothing = false                         -- Disable clothing system, this will disable the button too
+Config.Clothing = true                         -- Disable clothing system, this will disable the button too
 Config.EnableScreenPed = false                 -- Disable the zoom pad and put it on your screen
 Config.TakePreviousClothes = true              -- Set whether you want previous clothes to go to your inventory or be removed
 
@@ -118,15 +122,15 @@ Config.InventoryOptions = {
     ['clothes'] = Config.Clothing, -- Enable or disable in Config.Clothing.
     ['configuration'] = true,
     -- Left menu
-    ['health'] = false,
-    ['armor'] = false,
-    ['hunger'] = false,
-    ['thirst'] = false,
+    ['health'] = true,
+    ['armor'] = true,
+    ['hunger'] = true,
+    ['thirst'] = true,
     -- Right menu
     ['id'] = true,
     ['money'] = true,
     ['bank'] = true,
-    ['blackmoney'] = false,
+    ['blackmoney'] = true,
 }
 
 -- https://fontawesome.com/
@@ -169,8 +173,8 @@ Config.Defaults = {
 }
 
 Config.KeyBinds = { -- They are keymaps, check the docs to know how they work!
-    ['inventory'] = 'F2',
-    ['hotbar'] = 'TAB',
+    ['inventory'] = 'TAB',
+    ['hotbar'] = 'Z',
     ['reload'] = 'R',
     ['handsup'] = 'X',
 }

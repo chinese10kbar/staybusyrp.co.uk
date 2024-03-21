@@ -5563,4 +5563,56 @@ ItemList = {
         ['combinable'] = nil,
         ['description'] = 'An album to put your TCG cards'
     },
+
+    ['qs_ring']                      = {
+        ['name'] = 'qs_ring',
+        ['label'] = 'Quasar Ring',
+        ['weight'] = 150,
+        ['type'] = 'item',
+        ['image'] = 'qs_ring.png',
+        ['unique'] = true,
+        ['useable'] = true,
+        ['shouldClose'] = true,
+        ['combinable'] = nil,
+        ['description'] = '¿Finally quasar finds love?'
+    },
+
+    ['drive']                        = {
+        ['name'] = 'drive',
+        ['label'] = 'Drive License',
+        ['weight'] = 0,
+        ['type'] = 'item',
+        ['image'] = 'drive.png',
+        ['unique'] = true,
+        ['useable'] = true,
+        ['shouldClose'] = false,
+        ['combinable'] = nil,
+        ['description'] = '...'
+    },
+
+    ['drive_bike']                   = {
+        ['name'] = 'drive_bike',
+        ['label'] = 'Drive Bike License',
+        ['weight'] = 0,
+        ['type'] = 'item',
+        ['image'] = 'drive_bike.png',
+        ['unique'] = true,
+        ['useable'] = true,
+        ['shouldClose'] = false,
+        ['combinable'] = nil,
+        ['description'] = '...'
+    },
+
+    ['drive_truck']                  = {
+        ['name'] = 'drive_truck',
+        ['label'] = 'Drive Truck License',
+        ['weight'] = 0,
+        ['type'] = 'item',
+        ['image'] = 'drive_truck.png',
+        ['unique'] = true,
+        ['useable'] = true,
+        ['shouldClose'] = false,
+        ['combinable'] = nil,
+        ['description'] = '...'
+    },
 }

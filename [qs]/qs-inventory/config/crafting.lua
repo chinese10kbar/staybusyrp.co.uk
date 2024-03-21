@@ -7,7 +7,7 @@
     Don't forget to set a level of 1-100 chance to craft on each item!
 ]]
 
-Config.Crafting = false -- Enable or disable crafting system!
+Config.Crafting = true -- Enable or disable crafting system!
 
 --[[
     Reputation system (QBCore only)

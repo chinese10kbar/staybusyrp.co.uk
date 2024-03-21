@@ -6,8 +6,9 @@
 ]]
 
 Config.LimitAmmo = false                    -- If you enable this feature, it will only allow one full magazine per weapon
-Config.ReloadProgressbar = true
-Config.ReloadTime = math.random(4000, 5000) -- Reload progressbar
+Config.ReloadTime = math.random(4000, 6000) -- Reload progressbar
+
+Config.RemoveTintAfterRemoving = false      -- Remove tint once you remove them from the gun?
 
 -- This will make the durability of weapons down
 Config.DurabilityBlockedWeapons = {
@@ -52,32 +53,8 @@ Config.DurabilityMultiplier = {
     ['weapon_briefcase_02']          = 0.10,
     ['weapon_garbagebag']            = 0.10,
     ['weapon_handcuffs']             = 0.10,
-    ['weapon_bread']                 = 0.7,
-    ['weapon_katana']                = 0.7,
-    ['weapon_shiv']                  = 0.7,
-    ['weapon_sledgehammer']          = 0.7,
-    ['weapon_karambit']              = 0.7,
-    ['weapon_keyboard']              = 0.7,
-    ['weapon_bfknife']               = 0.7,
-    ['weapon_urbanrbfknife']          = 0.7,
-    ['weapon_stainedrbfknife']        = 0.7,
-    ['weapon_slaughterbfknife']      = 0.7,
-    ['weapon_scorchedbfknife']       = 0.7,
-    ['weapon_safaribfknife']         = 0.7,
-    ['weapon_perforator']            = 0.7,
-    ['weapon_huntsmanknife']         = 0.7,
-    ['weapon_gutknife']              = 0.7,
-    ['weapon_goldenknife']           = 0.7,
-    ['weapon_forestbfknife']         = 0.7,
-    ['weapon_flipknife']             = 0.7,
-    ['weapon_fadebfknife']           = 0.7,
-    ['weapon_crimsonbfknife']        = 0.7,
-    ['weapon_chbfknife']             = 0.7,
-    ['weapon_bluebfknife']           = 0.7,
-    ['weapon_bayonetknife']          = 0.7,
-    ['weapon_awerp']                 = 0.7,
+    ['weapon_bread']                 = 0.10,
     ['weapon_stone_hatchet']         = 0.10,
-    ['weapon_pigeon']         = 0.3,
 
     -- Handguns
     ['weapon_pistol']                = 0.10,
@@ -99,17 +76,6 @@ Config.DurabilityMultiplier = {
     ['weapon_ceramicpistol']         = 0.10,
     ['weapon_navyrevolver']          = 0.10,
     ['weapon_gadgetpistol']          = 0.10,
-    ['weapon_glock18c']              = 0.7,
-    ['weapon_glock22']               = 0.7,
-    ['weapon_deagle']                = 0.7,
-    ['weapon_fnx45']                 = 0.7,
-    ['weapon_m1911']                 = 0.7,
-    ['weapon_glock20']               = 0.7,
-    ['weapon_glock19gen4']           = 0.7,
-    ['weapon_g17']                   = 0.7,
-    ['weapon_nambu']                 = 0.6,
-    ['weapon_nailgun']               = 0.4,
-    ['weapon_paintball']             = 0.0,
 
     -- Submachine Guns
     ['weapon_microsmg']              = 0.10,
@@ -120,11 +86,6 @@ Config.DurabilityMultiplier = {
     ['weapon_machinepistol']         = 0.10,
     ['weapon_minismg']               = 0.10,
     ['weapon_raycarbine']            = 0.10,
-    ['weapon_pmxfm']                 = 0.7,
-    ['weapon_mac10']                 = 0.7,
-    ['weapon_miniuzi']               = 0.7,
-    ['weapon_mp5temp']               = 0.7,
-    ['weapon_diamondmp5']               = 0.4,
 
     -- Shotguns
     ['weapon_pumpshotgun']           = 0.10,
@@ -137,32 +98,20 @@ Config.DurabilityMultiplier = {
     ['weapon_autoshotgun']           = 0.10,
     ['weapon_pumpshotgun_mk2']       = 0.10,
     ['weapon_combatshotgun']         = 0.10,
-    ['weapon_m870']         = 0.7,
 
     -- Assault Rifles
-    ['weapon_assaultrifle']          = 0.7,
-    ['weapon_assaultrifle_mk2']      = 0.7,
-    ['weapon_carbinerifle']          = 0.7,
-    ['weapon_carbinerifle_mk2']      = 0.7,
-    ['weapon_tacticalrifle']         = 0.7,
-    ['weapon_advancedrifle']         = 0.7,
-    ['weapon_specialcarbine']        = 0.7,
-    ['weapon_bullpuprifle']          = 0.7,
-    ['weapon_compactrifle']          = 0.7,
-    ['weapon_specialcarbine_mk2']    = 0.7,
-    ['weapon_bullpuprifle_mk2']      = 0.7,
-    ['weapon_militaryrifle']         = 0.7,
-    ['weapon_mk47fm']                = 0.7,
-    ['weapon_m6ic']                  = 0.7,
-    ['weapon_scarsc']                = 0.7,
-    ['weapon_m4']                    = 0.7,
-    ['weapon_ak47']                  = 0.7,
-    ['weapon_ak74']                  = 0.7,
-    ['weapon_aks74']                 = 0.7,
-    ['weapon_groza']                 = 0.7,
-    ['weapon_scarh']                 = 0.7,
-    ['weapon_akm']                   = 0.7,
-    ['weapon_ak47handmade']          = 0.7,
+    ['weapon_assaultrifle']          = 0.10,
+    ['weapon_assaultrifle_mk2']      = 0.10,
+    ['weapon_carbinerifle']          = 0.10,
+    ['weapon_carbinerifle_mk2']      = 0.10,
+    ['weapon_tacticalrifle']         = 0.10,
+    ['weapon_advancedrifle']         = 0.10,
+    ['weapon_specialcarbine']        = 0.10,
+    ['weapon_bullpuprifle']          = 0.10,
+    ['weapon_compactrifle']          = 0.10,
+    ['weapon_specialcarbine_mk2']    = 0.10,
+    ['weapon_bullpuprifle_mk2']      = 0.10,
+    ['weapon_militaryrifle']         = 0.10,
     ['weapon_heavyrifle']            = 0.10,
 
     -- Light Machine Guns
@@ -178,7 +127,6 @@ Config.DurabilityMultiplier = {
     ['weapon_remotesniper']          = 0.10,
     ['weapon_heavysniper_mk2']       = 0.10,
     ['weapon_marksmanrifle_mk2']     = 0.10,
-    ['weapon_gcsniper']     = 0.10,
 
     -- Heavy Weapons
     ['weapon_rpg']                   = 0.10,
@@ -191,15 +139,6 @@ Config.DurabilityMultiplier = {
     ['weapon_hominglauncher']        = 0.10,
     ['weapon_compactlauncher']       = 0.10,
     ['weapon_rayminigun']            = 0.10,
-
-    -- Met Weapons
-    ['weapon_glock17']               = 0.02,
-    ['weapon_beanbagshotgun']        = 0.01,
-    ['weapon_sig516']                = 0.02,
-    ['weapon_g36']                   = 0.02,
-    ['weapon_mpx']                   = 0.02,
-    ['weapon_sr25']                  = 0.02,
-    ['weapon_sig716']                  = 0.02,
 
     -- Throwables
     ['weapon_grenade']               = 0.10,
@@ -219,10 +158,35 @@ Config.DurabilityMultiplier = {
     ['weapon_hazardcan']             = 0.10,
     ['weapon_fertilizercan']         = 0.10,
 
-    ['weapon_glock19gen4']           = 0.10,
-
     -- Custom Weapons NoobySloth (it is possible that some weapon is broken)
     -- ref: https://github.com/NoobySloth/Custom-Weapons
+    ['weapon_ak47']                  = 0.15,
+    ['weapon_de']                    = 0.15,
+    ['weapon_fnx45']                 = 0.15,
+    ['weapon_glock17']               = 0.15,
+    ['weapon_m4']                    = 0.15,
+    ['weapon_hk416']                 = 0.15,
+    ['weapon_mk14']                  = 0.15,
+    ['weapon_m110']                  = 0.15,
+    ['weapon_huntingrifle']          = 0.20,
+    ['weapon_ar15']                  = 0.15,
+    ['weapon_m9']                    = 0.15,
+    ['weapon_m70']                   = 0.15,
+    ['weapon_m1911']                 = 0.15,
+    ['weapon_mac10']                 = 0.15,
+    ['weapon_uzi']                   = 0.15,
+    ['weapon_mp9']                   = 0.15,
+    ['weapon_mossberg']              = 0.15,
+    ['weapon_remington']             = 0.15,
+    ['weapon_scarh']                 = 0.15,
+    ['weapon_shiv']                  = 0.15,
+    ['weapon_katana']                = 0.15,
+    ['weapon_sledgehammer']          = 0.15,
+    ['weapon_mp5']                   = 0.15,
+    ['weapon_glock18c']              = 0.15,
+    ['weapon_glock22']               = 0.15,
+    ['weapon_aks74']                 = 0.15,
+    ['weapon_ak74']                  = 0.15,
 }
 
 -- Repair coordinates, add the ones you want

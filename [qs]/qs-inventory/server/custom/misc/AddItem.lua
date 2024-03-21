@@ -15,7 +15,7 @@ function AddItem(source, item, amount, slot, info, data, created, lastinventory)
     TriggerClientEvent(Config.InventoryPrefix .. ':client:UpdatePlayerMoney', source, money, blackMoney, bank) -- Update money hud
 
     local inventory = lastinventory or inventories[source]
-    local totalWeight = GetTotalWeight(inventory)
+    local totalUsedSlots, totalWeight = GetTotalUsedSlots(source)
     local itemInfo = ItemList[item:lower()]
     local time = os.time()
 
@@ -52,20 +52,20 @@ function AddItem(source, item, amount, slot, info, data, created, lastinventory)
             info.quality = info.quality or 100
         end
 
-        local temporalinventorycount <const> = table.clean(inventory)
-        -- Debug(#temporalinventorycount)
-
         if notStoredItems(item, source) then
             TriggerClientEvent(Config.InventoryPrefix .. ':client:forceCloseInventory', source)
             return TriggerClientEvent(Config.InventoryPrefix .. ':client:sendTextMessage', source, Lang('INVENTORY_NOTIFICATION_CANT_TAKE_MORE') .. ' ' .. itemInfo['label'], 'inform')
         end
 
-        if GetTotalUsedSlots(source) >= Config.InventoryWeight.slots then
-            TriggerEvent(Config.InventoryPrefix .. ':server:spawnOnGround', source, { name = itemInfo['name'], amount = amount, info = info or '', label = itemInfo['label'], description = itemInfo['description'] or '', weight = itemInfo['weight'], type = itemInfo['type'], unique = itemInfo['unique'], useable = itemInfo['useable'], image = itemInfo['image'], shouldClose = itemInfo['shouldClose'], slot = slot, combinable = itemInfo['combinable'], created = itemInfo['created'] }, amount)
-            return false
+        local newWeight = (totalWeight + (itemInfo['weight'] * amount))
+        if Config.DropItemWhenInventoryFull then
+            if totalUsedSlots > Config.InventoryWeight.slots or newWeight > Config.InventoryWeight.weight then
+                DropItem(source, { name = itemInfo['name'], amount = amount, info = info or '', label = itemInfo['label'], description = itemInfo['description'] or '', weight = itemInfo['weight'], type = itemInfo['type'], unique = itemInfo['unique'], useable = itemInfo['useable'], image = itemInfo['image'], shouldClose = itemInfo['shouldClose'], slot = slot, combinable = itemInfo['combinable'], created = itemInfo['created'] }, amount)
+                return true
+            end
         end
 
-        if (totalWeight + (itemInfo['weight'] * amount)) <= Config.InventoryWeight.weight then
+        if newWeight <= Config.InventoryWeight.weight then
             if (slot and inventory[slot]) and (inventory[slot].name:lower() == item:lower()) and (itemInfo['type'] == 'item' and not itemInfo['unique']) then
                 inventory[slot].amount = inventory[slot].amount + amount
                 TriggerEvent('esx:onAddInventoryItem', source, item, amount)
@@ -149,7 +149,10 @@ function AddItem(source, item, amount, slot, info, data, created, lastinventory)
                 end
             end
         else
-            TriggerEvent(Config.InventoryPrefix .. ':server:spawnOnGround', source, { name = itemInfo['name'], amount = amount, info = info or '', label = itemInfo['label'], description = itemInfo['description'] or '', weight = itemInfo['weight'], type = itemInfo['type'], unique = itemInfo['unique'], useable = itemInfo['useable'], image = itemInfo['image'], shouldClose = itemInfo['shouldClose'], slot = slot, combinable = itemInfo['combinable'], created = itemInfo['created'] }, amount)
+            if Config.DropItemWhenInventoryFull then
+                DropItem(source, { name = itemInfo['name'], amount = amount, info = info or '', label = itemInfo['label'], description = itemInfo['description'] or '', weight = itemInfo['weight'], type = itemInfo['type'], unique = itemInfo['unique'], useable = itemInfo['useable'], image = itemInfo['image'], shouldClose = itemInfo['shouldClose'], slot = slot, combinable = itemInfo['combinable'], created = itemInfo['created'] }, amount)
+                return true
+            end
         end
     end
     return false

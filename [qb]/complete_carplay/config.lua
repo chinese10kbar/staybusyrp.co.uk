@@ -11,9 +11,9 @@ Config.Debug                    = false
 -- === GENERAL ===
 Config.QBCoreName               = 'qb-core' -- if you have renamed the qb-core folder change this
 Config.OpenUICommand            = 'carplay' -- Console command to open the NUI
-Config.OpenUIKey                = 'N'
+Config.OpenUIKey                = 'n'
 Config.OpenTrunkCameraCommand   = 'trunk-camera' -- Console command to open the trunk camera
-Config.OpenTrunkCameraKey       = 'f7' -- Open or close
+Config.OpenTrunkCameraKey       = 'f5' -- Open or close
 Config.Km                       = false -- if false mph
 Config.Apps                     = {
     ['messages'] = true,
@@ -26,8 +26,7 @@ Config.Draggable                = true -- if TRUE you will be able to drag and r
 Config.RemoveFocusKey           = 16 -- [16 = SHIFT] with the UI open, pressing this button the UI will remain on screen but you will be able to use mouse and keyboard (drive)
 -- that's a javascript key, use this to change https://www.toptal.com/developers/keycode         
 Config.ReturnFocusCommand       = "carplay-focus"       
-Config.ReturnFocusKey           = "H"       
-Config.High3DSound              = false
+Config.ReturnFocusKey           = "H"
 
 -- === PHONE ===
 Config.NeedPhoneItem            = true -- true if you need a phone in inventory to use carplay
@@ -46,11 +45,11 @@ Config.DisplayCurrentStreet     = true
 
 -- === CARPLAY INSTALLATION ===
 Config.NoInstall                = true -- all vehicles will be able to use carplay also without installing it 
-Config.RequireMechanic          = true
+Config.RequireMechanic          = false
 Config.MechanicJobName          = {
     'mechanic'
 }
-Config.ItemUsable               = true
+Config.ItemUsable               = false
 Config.MechanicInstallCommand   = 'carplay-install'
 Config.InstallTime              = 10000 -- milliseconds
 

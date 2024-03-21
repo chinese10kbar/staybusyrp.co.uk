@@ -13,7 +13,7 @@
 5) Add export on qb-phone (see below OPTIONAL)
 6) Add `start complete_carplay` to your server config.
 
-### qb-phone export
+### Qb-phone export
 1) Open qb-phone folder
 2) Open `qb-phone/client/main.lua`
 3) `Add this to the bottom of the page`:

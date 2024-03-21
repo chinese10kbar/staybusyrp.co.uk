@@ -401,6 +401,7 @@ QBShared.Items = {
     goldchain                    = { name = 'goldchain', label = 'Golden Chain', weight = 1500, type = 'item', image = 'goldchain.png', unique = false, useable = false, shouldClose = true, combinable = nil, description = 'A golden chain seems like the jackpot to me!' },
     tenkgoldchain                = { name = '10kgoldchain', label = '10k Gold Chain', weight = 2000, type = 'item', image = '10kgoldchain.png', unique = false, useable = false, shouldClose = true, combinable = nil, description = '10 carat golden chain' },
     goldbar                      = { name = 'goldbar', label = 'Gold Bar', weight = 300, type = 'item', image = 'goldbar.png', unique = false, useable = false, shouldClose = true, combinable = nil, description = 'Looks pretty expensive to me' },
+    fakeplate                        = { name = 'fakeplate', label = 'fakeplate', weight = 200, type = 'item', image = 'fake_plate.png', unique = true, useable = true, shouldClose = true, combinable = nil, description = 'Neat plate you got there.' },
 
     -- Cops Tools --
     armor                        = { name = 'armor', label = 'Armor', weight = 5000, type = 'item', image = 'armor.png', unique = false, useable = true, shouldClose = true, combinable = nil, description = 'Some protection won\'t hurt... right?' },

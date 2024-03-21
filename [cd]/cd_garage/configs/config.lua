@@ -46,7 +46,7 @@ Config.FrameworkTriggers = {
 --╚═╝╚═╝     ╚═╝╚═╝      ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝
 
 
-Config.PlateFormats = 'mixed' --[ 'trimmed' /  'with_spaces' / 'mixed' ] CHOOSE CAREFULLY! Read our documentation website for more info on this if you are unsure! [https://docs.codesign.pro/paid-scripts/garage#step-6-vehicle-plate-format].
+Config.PlateFormats = 'trimmed' --[ 'trimmed' /  'with_spaces' / 'mixed' ] CHOOSE CAREFULLY! Read our documentation website for more info on this if you are unsure! [https://docs.codesign.pro/paid-scripts/garage#step-6-vehicle-plate-format].
 Config.UsingOnesync = true --Do you use OneSync legacy/infinity?
 Config.IdentifierType = 'license' --[ 'steamid' / 'license' ] Choose the identifier type that your server uses.
 Config.UseFrameworkDutySystem = true --Do you want to use your frameworks (esx/qbcore) built-in duty system?

@@ -81,19 +81,6 @@ Config.GarageLocations = { -- IMPORTANT - Every garage name must be unique
     hideMarkers = true,
     markers = { id = 21, size = { x = 0.3, y = 0.3, z = 0.3 }, color = { r = 255, g = 255, b = 255, a = 120 }, bobUpAndDown = 0, faceCamera = 0, rotate = 1, drawOnEnts = 0 },
   },
-  ['Grove Street'] = {
-    coords = vector3(14.66, -1728.52, 29.3),
-    spawn = vector4(23.93, -1722.9, 29.3, 310.58),
-    distance = 15,
-    type = "car",
-    blip = {
-      id = 357,
-      color = 0,
-      scale = 0.6
-    },
-    hideMarkers = true,
-    markers = { id = 21, size = { x = 0.3, y = 0.3, z = 0.3 }, color = { r = 255, g = 255, b = 255, a = 120 }, bobUpAndDown = 0, faceCamera = 0, rotate = 1, drawOnEnts = 0 },
-  },
   ['Mirror Park'] = {
     coords = vector3(1032.84, -765.1, 58.18),
     spawn = vector4(1023.2, -764.27, 57.96, 319.66),

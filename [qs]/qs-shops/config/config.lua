@@ -1323,26 +1323,7 @@ Config.Locations = {
         ['requiredLicense'] = nil     -- or example 'itemname'
     },
     -- Hardware Store Locations
-    ['hardware'] = {
-        ['label'] = 'Hardware Store',
-        ['coords'] = vector4(45.68, -1749.04, 29.61, 53.13),
-        ['ped'] = 'mp_m_waremech_01', -- or false
-        ['scenario'] = 'WORLD_HUMAN_CLIPBOARD',
-        ['radius'] = 1.5,
-        ['targetIcon'] = 'fas fa-wrench',
-        ['targetLabel'] = 'Open Hardware Store',
-        ['products'] = Config.Products['hardware'],
-        ['showblip'] = true,
-        ['blipsprite'] = 402,
-        ['blipscale'] = 0.8,
-        ['blipcolor'] = 0,
-        ['delivery'] = vector4(89.15, -1745.29, 30.09, 315.25),
-        ['distance'] = 2.0,
-        ['account'] = 'money',
-        ['requiredJobs'] = nil,       -- nil or example { 'police', 'ambulance' }
-        ['requiredJobsGrades'] = nil, -- nil or grade tables example { 2, 3, 4},
-        ['requiredLicense'] = nil     -- or example 'itemname'
-    },
+
     ['hardware2'] = {
         ['label'] = 'Hardware Store',
         ['coords'] = vector4(2747.71, 3472.85, 55.67, 255.08),

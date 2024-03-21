@@ -13,7 +13,7 @@ Config.menuPosition = 'bottom-right'
 -- These resources can trigger "wasabi_crutch:giveCrutch" and "wasabi_crutch:giveChair"
 Config.AllowedResources = {
     'wasabi_ambulance',
-    --'qb-core',
+    'qb-core',
 }
 
 

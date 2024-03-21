@@ -2016,5 +2016,5 @@ blueberryelfbar                 = { name = 'blueberryelfbar', label = 'Elf Bar',
 ["heroin"] 							= {["name"] = "heroin",  	     		["label"] = "Heroin",	 			["weight"] = 25, 		["type"] = "item", 		["image"] = "heroin.png", 				["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = ""},
 ["garden_pitcher"] 						= {["name"] = "garden_pitcher",  	     	["label"] = "Garden Pitcher",	 		["weight"] = 25, 		["type"] = "item", 		["image"] = "garden_pitcher.png", 			["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = ""},
 ["garden_shovel"] 						= {["name"] = "garden_shovel",  	     	["label"] = "Garden Shovel",	 		["weight"] = 25, 		["type"] = "item", 		["image"] = "garden_shovel.png", 			["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = ""},
-
+["payticket"] 					 = {["name"] = "payticket", 				["label"] = "Receipt", 	     			["weight"] = 150, 		["type"] = "item", 		["image"] = "ticket.png", 				["unique"] = false,   	["useable"] = false,    ["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = "Cash these in at the bank!"},
 }

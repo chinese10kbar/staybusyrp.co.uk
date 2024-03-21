@@ -4,12 +4,12 @@ Config.Locations[#Config.Locations+1] = { --[[ Fast Customs ]]--
 	Enabled = true,
 	job = "mechanic",
 	zones = {
-		vector2(-871.984375, -789.86895751953),
- 		vector2(-935.56884765625, -789.814453125),
- 	 	vector2(-935.611328125, -752.33160400391),
- 	 	vector2(-871.32257080078, -753.07086181641),
- 		vector2(-871.32366943359, -789.89947509766),
-  		vector2(-870.16693115234, -791.18194580078)
+		vec2(-871.984375, -789.86895751953),
+ 		vec2(-935.56884765625, -789.814453125),
+ 	 	vec2(-935.611328125, -752.33160400391),
+ 	 	vec2(-871.32257080078, -753.07086181641),
+ 		vec2(-871.32366943359, -789.89947509766),
+  		vec2(-870.16693115234, -791.18194580078)
 	},
 	autoClock = { enter = true, exit = true, },
 	stash = {
@@ -33,10 +33,6 @@ Config.Locations[#Config.Locations+1] = { --[[ Fast Customs ]]--
 	manualRepair = {
 		{ coords = vector4(-967.96, -752.62, 15.2, 179.45), prop = true, },
 	},
-	carLift = {
-        { coords = vec4(-201.85, -1319.65, 31.3, 19.36), useMLOLift = true },
-        { coords = vec4(-221.27, -1318.71, 31.3, 352.67), useMLOLift = true },
-    },
 	garage = {
 		spawn = vec4(-182.74, -1317.61, 30.63, 357.23),
 		out = vec4(-190.62, -1311.57, 31.3, 0.0),
@@ -134,28 +130,34 @@ Config.Locations[#Config.Locations+1] = { --[[ GABZ ALTA STREET BENNYS ]]--
 
 Config.Locations[#Config.Locations+1] = { --[[ LS CUSTOMS IN CITY ]]--
 	Enabled = true,
-	job = "mechanic",
+	job = "busymechanic",
 	zones = {
-		vec2(-356.63, -137.9),
-		vec2(-347.32, -111.48),
-		vec2(-309.05, -128.79),
-		vec2(-324.44, -148.96)
+		vec2(154.86961364746, -1070.4423828125),
+		vec2(156.48901367188, -1087.8028564453),
+		vec2(133.76623535156, -1079.1403808594),
+		vec2(147.56820678711, -1042.1771240234),
+		vec2(170.26551818848, -1050.9093017578)
 	},
 	autoClock = { enter = true, exit = true, },
 	stash = {
-		{ coords = vec4(-346.14, -130.52, 39.01, 340.0), w = 4.0, d = 1.0, },
+		{ coords = {x = 160.18, y = -1047.91, z = 15.87, w = 152.46}, w = 4.0, d = 1.0 },
+		{ coords = {x = 138.61, y = -1071.62, z = 15.91, w = 152.46}, w = 4.0, d = 1.0 }
 	},
+	carLift = {
+        { coords = vec4(143.3, -1063.16, 16.1, 75.16), useMLOLift = true },
+        { coords = vec4(-221.27, -1318.71, 31.3, 352.67), useMLOLift = true },
+    },
 	store = {
-		{ coords = vec4(-347.9, -133.19, 39.01, 340.0), w = 1.2, d = 0.25, },
+		{ coords = vec4(162.84, -1068.93, 15.87, 62.51), w = 1.2, d = 0.25, },
 	},
 	crafting = {
-		{ coords = vec4(-340.44, -141.9, 39.01, 255.0), w = 3.2, d = 1.0, },
+		{ coords = vec4(138.89, -1068.65, 15.91, 66.47), w = 3.2, d = 1.0, },
 	},
 	clockin = {
-		{ coords = vec4(-344.85, -140.35, 39.05, 157.0), prop = true },
+		{ coords = vec4(152.88891601562, -1084.2066650391, 15.811477661133, 35.999931335449), prop = true },
 	},
 	manualRepair = {
-		{ coords = vec4(-322.28, -140.38, 39.01, 68.35), prop = true, },
+		{ coords = vec4(-322.28, -140.38, 39.01, 68.35), prop = false, },
 	},
 	garage = {
 		spawn = vec4(-361.48, -123.14, 38.03, 158.96),
@@ -165,15 +167,15 @@ Config.Locations[#Config.Locations+1] = { --[[ LS CUSTOMS IN CITY ]]--
 	},
 	payments = {
 		img = "https://static.wikia.nocookie.net/gtawiki/images/f/f2/GTAV-LSCustoms-Logo.png",
-		{ coords = vec4(-343.75, -140.86, 39.02, 180.0), prop = true, },
+		{ coords = vec4(158.71, -1047.51, 15.87, 335.43), prop = true, },
 	},
 	Restrictions = {
 		Vehicle = { "Compacts", "Sedans", "SUVs", "Coupes", "Muscle", "Sports Classics", "Sports", "Super", "Motorcycles", "Off-road", "Industrial", "Utility", "Vans", "Cycles", "Service", "Emergency", "Commercial", },
 		Allow = { "tools", "cosmetics", "repairs", "nos", "perform" },
 	},
 	blip = {
-		coords = vec3(-336.84, -136.39, 39.01),
-		label = "Los Santos Customs",
+		coords = vec3(144.71, -1083.73, 15.88),
+		label = "Busy Customs",
 		color = 81,
 		sprite = 446,
 		disp = 6,

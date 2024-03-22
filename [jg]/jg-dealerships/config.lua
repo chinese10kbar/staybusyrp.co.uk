@@ -14,7 +14,7 @@ Config.DisableServerVehicleSpawning = false -- Set to true to use CreateVehicle 
 
 Config.Framework = "QBCore"  -- or "ESX"
 Config.FuelSystem = "LegacyFuel" -- or "LegacyFuel", "ps-fuel", "lj-fuel", "ox_fuel", "cdn-fuel", "hyon_gas_station", "okokGasStation", "nd_fuel", "myFuel", "ti_fuel", "none"
-Config.VehicleKeys = "qb-vehiclekeys" -- or "qb-vehiclekeys", "jaksam-vehicles-keys", "qs-vehiclekeys", "mk_vehiclekeys", "wasabi_carlock", "cd_garage", "okokGarage", "t1ger_keys", "none"
+Config.VehicleKeys = "cd_garage" -- or "qb-vehiclekeys", "jaksam-vehicles-keys", "qs-vehiclekeys", "mk_vehiclekeys", "wasabi_carlock", "cd_garage", "okokGarage", "t1ger_keys", "none"
 Config.Notifications = "default" -- or "okokNotify", "ox_lib", "ps-ui"
 
 Config.DrawText = "qb-DrawText" -- or "qb-DrawText", "okokTextUI", "ox_lib", "ps-ui"

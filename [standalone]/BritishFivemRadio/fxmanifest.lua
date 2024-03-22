@@ -20,7 +20,7 @@ supersede_radio "RADIO_11_TALK_02" { url = "https://stream.live.vc.bbcmedia.co.u
 supersede_radio "RADIO_12_REGGAE" { url = "https://stream.simulatorradio.com/320", volume = 0.5, name = "Simulator Radio" }
 supersede_radio "RADIO_13_JAZZ" { url = "https://icecast.thisisdax.com/CapitalMP3", volume = 0.5, name = "Capital UK" }
 supersede_radio "RADIO_14_DANCE_02" { url = "https://n04a-eu.rcs.revma.com/hyyz8327ptzuv?rj-ttl=5&rj-tok=AAABeKQ63i4A6BuRmhKFNfDSgA", volume = 0.5, name = "Star FM" }
-supersede_radio "RADIO_15_MOTOWN" { url = "https://stream.live.vc.bbcmedia.co.uk/bbc_radio_one", volume = 0.5, name = "BBC Radio 1" }
+supersede_radio "RADIO_15_MOTOWN" { url = "https://onlineradiobox.com/uk/bbcradio1/?cs=uk.bbcradio1&played=1", volume = 0.5, name = "BBC Radio 1" }
 supersede_radio "RADIO_16_SILVERLAKE" { url = "https://edge-bauerall-01-gos2.sharp-stream.com/absoluteradiohigh.aac", volume = 0.5, name = "Absolute Radio" }
 supersede_radio "RADIO_17_FUNK" { url = "https://n04.radiojar.com/v9srurnvty8uv?___cb=392695469630891&rj-ttl=5&rj-tok=AAABf44YDLMAO75KUdfhr9-1yA", volume = 0.5, name = "BRadio" }
 supersede_radio "RADIO_18_90S_ROCK" { url = "https://stream.live.vc.bbcmedia.co.uk/bbc_radio_two?s=1617478323&e=1617492723&h=91df78cbf184354294a472f3649a6cfd", volume = 0.5, name = "BBC Radio 2" }

@@ -1,6 +1,7 @@
-fx_version 'bodacious'
-game { 'gta5' }
-author 'Stickerz#1337'
+fx_version 'cerulean'
+game 'gta5'
+author 'discord.gg/codesign'
+
 
 this_is_a_map 'yes'
 

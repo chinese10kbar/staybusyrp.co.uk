@@ -236,8 +236,8 @@ Config.FakePlates = {
 
 
 Config.VehicleKeys = {
-    ENABLE = false, --Do you want to use the built in vehicle keys system?
-    allow_shared_vehicles = false, --If this is enabled, when you give another player a "saved" key to one of your vehicles, it will allow them to spawn your vehicles from their garage.
+    ENABLE = true, --Do you want to use the built in vehicle keys system?
+    allow_shared_vehicles = true, --If this is enabled, when you give another player a "saved" key to one of your vehicles, it will allow them to spawn your vehicles from their garage.
 
     Commands = {
         temporary_key = 'givekey', --These keys will be deleted on script/server restart (but keys will save if you relog).
@@ -408,7 +408,7 @@ Config.InsideGarage = {
     shell_z_axis = 30, --This is how low under the ground the garage shell will spawn, you could use math.random(10,50) to make it random each time so players dont see each other in their garage.
     shell_time_script = 'easytime', --Choose which time script you are using so we can set the time when you enter the shell. [ 'easytime' / 'vsync' / 'qbcore' / 'other' ].
     engines_on = false, --Do you want the vehicles engine will be turned on when you enter the inside garage?
-    lights_on = false, --Do you want the vehicles headlights will be turned on when you enter the inside garage?
+    lights_on = true, --Do you want the vehicles headlights will be turned on when you enter the inside garage?
     use_spotlight = true, --Do you want the spotlight to shine on the closest vehicle?
     
     Insidegarage_Blacklist = { --Vehicles inside this table will not be spawned inside the garage, this is used for large vehicles that will not fit.

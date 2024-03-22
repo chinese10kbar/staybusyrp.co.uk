@@ -295,6 +295,28 @@ Config.MenuItems = {
             }
         }
     },
+    [3] = {
+        id = 'emotes',
+        title = 'Emotes',
+        icon = 'face-grin-wink',
+        items = {
+            {
+                id = 'sitchair',
+                title = 'Sit Chair',
+                icon = 'chair',
+                type = 'command',
+                event = 'e sitchair',
+                shouldClose = true
+            }, {
+                id = 'emotecancel',
+                title = 'Cancel Emote',
+                icon = 'ban',
+                type = 'command',
+                event = 'e c',
+                shouldClose = true
+            }
+        },
+    },
 }
 
 Config.VehicleDoors = {
@@ -458,6 +480,13 @@ Config.VehicleSeats = {
 Config.JobInteractions = {
     ["ambulance"] = {
         {
+        id = 'toggleduty',
+        title = 'Toggle Duty',
+        icon = 'toggle-on',
+        type = 'client',
+        event = 'qb-policejob:ToggleDuty',
+        shouldClose = true
+        },{
             id = 'statuscheck',
             title = 'Check Health Status',
             icon = 'heart-pulse',
@@ -483,7 +512,7 @@ Config.JobInteractions = {
             title = 'Emergency button',
             icon = 'bell',
             type = 'client',
-            event = 'police:client:SendPoliceEmergencyAlert',
+            event = 'cd_dispatch:CallCommand:Panic',
             shouldClose = true
         }, {
             id = 'escort',
@@ -491,6 +520,86 @@ Config.JobInteractions = {
             icon = 'user-group',
             type = 'client',
             event = 'police:client:EscortPlayer',
+            shouldClose = true
+        }, {
+            id = 'mdt',
+            title = 'MDT',
+            icon = 'tablet-screen-button',
+            type = 'server',
+            event = 'mdt:server:openMDT',
+            shouldClose = true
+        }, {
+            id = 'stretcheroptions',
+            title = 'Stretcher',
+            icon = 'bed-pulse',
+            items = {
+                {
+                    id = 'spawnstretcher',
+                    title = 'Spawn Stretcher',
+                    icon = 'plus',
+                    type = 'client',
+                    event = 'qb-radialmenu:client:TakeStretcher',
+                    shouldClose = false
+                }, {
+                    id = 'despawnstretcher',
+                    title = 'Remove Stretcher',
+                    icon = 'minus',
+                    type = 'client',
+                    event = 'qb-radialmenu:client:RemoveStretcher',
+                    shouldClose = false
+                }
+            }
+        }
+    },
+    ["fire"] = {
+        {
+        id = 'toggleduty',
+        title = 'Toggle Duty',
+        icon = 'toggle-on',
+        type = 'client',
+        event = 'qb-policejob:ToggleDuty',
+        shouldClose = true
+        },{
+            id = 'statuscheck',
+            title = 'Check Health Status',
+            icon = 'heart-pulse',
+            type = 'client',
+            event = 'hospital:client:CheckStatus',
+            shouldClose = true
+        },{
+            id = 'revivep',
+            title = 'Revive',
+            icon = 'user-doctor',
+            type = 'client',
+            event = 'hospital:client:RevivePlayer',
+            shouldClose = true
+        },{
+            id = 'treatwounds',
+            title = 'Heal wounds',
+            icon = 'bandage',
+            type = 'client',
+            event = 'hospital:client:TreatWounds',
+            shouldClose = true
+        }, {
+            id = 'emergencybutton2',
+            title = 'Emergency button',
+            icon = 'bell',
+            type = 'client',
+            event = 'cd_dispatch:CallCommand:Panic',
+            shouldClose = true
+        }, {
+            id = 'escort',
+            title = 'Escort',
+            icon = 'user-group',
+            type = 'client',
+            event = 'police:client:EscortPlayer',
+            shouldClose = true
+        }, {
+            id = 'mdt',
+            title = 'MDT',
+            icon = 'tablet-screen-button',
+            type = 'server',
+            event = 'mdt:server:openMDT',
             shouldClose = true
         }, {
             id = 'stretcheroptions',
@@ -566,13 +675,30 @@ Config.JobInteractions = {
             shouldClose = true
         }
     },
-    ["police"] = {
+    ["realestate"] = {
         {
+            id = 'realestate',
+            title = 'Real Estate Menu',
+            icon = 'toggle-on',
+            type = 'client',
+            event = 'qb-houses:client:OpenRealEstateMenu',
+            shouldClose = true
+        }
+    },
+    ["police"] = {
+         {
             id = 'emergencybutton',
             title = 'Emergency button',
             icon = 'bell',
             type = 'client',
-            event = 'police:client:SendPoliceEmergencyAlert',
+            event = 'cd_dispatch:PanicButtonEvent',
+            shouldClose = true
+        }, {
+            id = 'mdt',
+            title = 'MDT',
+            icon = 'tablet',
+            type = 'server',
+            event = 'mdt:server:openMDT',
             shouldClose = true
         }, {
             id = 'checkvehstatus',
@@ -594,6 +720,13 @@ Config.JobInteractions = {
             icon = 'id-card',
             type = 'client',
             event = 'police:client:SeizeDriverLicense',
+            shouldClose = true
+        }, {
+            id = 'checkvin',
+            title = 'Check VIN',
+            icon = 'magnifying-glass',
+            type = 'client',
+            event = 'jl-carboost:client:checkvin',
             shouldClose = true
         }, {
             id = 'policeinteraction',
@@ -678,6 +811,13 @@ Config.JobInteractions = {
                     event = 'police:client:spawnLight',
                     shouldClose = false
                 }, {
+                    id = 'firstaid',
+                    title = 'First Aid Kit',
+                    icon = 'bandage',
+                    type = 'client',
+                    event = 'police:client:spawnFirstaid',
+                    shouldClose = false
+                }, {
                     id = 'spikestrip',
                     title = 'Spike Strips',
                     icon = 'caret-up',
@@ -702,6 +842,16 @@ Config.JobInteractions = {
             icon = 'hotdog',
             type = 'client',
             event = 'qb-hotdogjob:client:ToggleSell',
+            shouldClose = true
+        }
+    },
+    ["pizzeria"] = {
+        {
+            id = 'toggleduty',
+            title = 'Toggle Duty',
+            icon = 'toggle-on',
+            type = 'client',
+            event = 'qb-policejob:ToggleDuty',
             shouldClose = true
         }
     }

@@ -114,7 +114,7 @@ Config.AdminGroups = {
 
 Config.BotName = 'ServerName' -- Write the desired bot name
 
-Config.ServerName = 'ServerName' -- Write your server's name
+Config.ServerName = 'SBRP' -- Write your server's name
 
 Config.IconURL = '' -- Insert your desired image link
 

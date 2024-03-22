@@ -19,7 +19,7 @@ local Webhooks = {
     ['bankrobbery'] = '',
     ['powerplants'] = '',
     ['death'] = '',
-    ['joinleave'] = '',
+    ['joinleave'] = 'https://discord.com/api/webhooks/1220579465101312000/6fJi6c4OgNrIuC7vO_YMM_jNSm5ZJGYSqvWJCt8RkhXHUngCpjhxM0cllI7o7CSrjBK4',
     ['ooc'] = '',
     ['report'] = '',
     ['me'] = '',
@@ -30,7 +30,7 @@ local Webhooks = {
     ['weather'] = '',
     ['moneysafes'] = '',
     ['bennys'] = '',
-    ['bossmenu'] = '',
+    ['bossmenu'] = 'https://discord.com/api/webhooks/1220579605132476436/lgbw8sgQ1LJO7N7O6Isbwe7XpLmi5f_MQQPmSOvoaMTAZhWF1Ir07qwOHqBI3F8SgiA-',
     ['robbery'] = '',
     ['casino'] = '',
     ['traphouse'] = '',
@@ -38,6 +38,7 @@ local Webhooks = {
     ['palert'] = '',
     ['house'] = '',
     ['qbjobs'] = '',
+    ['ps-adminmenu'] = 'https://discord.com/api/webhooks/1220576362444754985/AlL34dBmXXDK_28BlsNrUpXoUIt6ItdGzKv2pIXU7-Oezn_Oi8n8YBr9Mb0sHEfAwFGZ'
 }
 
 local colors = { -- https://www.spycolor.com/

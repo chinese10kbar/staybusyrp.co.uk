@@ -5,7 +5,7 @@ Config.QBPermissionsUpdate = true -- set it to true if you have the latest Permi
 --------------------------------
 -- [Discord Logs]
 
-Config.EnableDiscordLogs = false
+Config.EnableDiscordLogs = true
 
 Config.IconURL = ""
 

@@ -4,7 +4,7 @@ Config.Framework = GetResourceState('qb-core') == 'started' and 'qb' or GetResou
 Config.Language = 'en'                                                                                                                        -- Set the language in which you want to have the script [en, en].
 Config.Debug = false                                                                                                         -- Enable debug mode by setting this to true (Multiple console prints showing debug information and enabling color shapes for zones). -- true make the script very slow
 Config.AllowImages = true                                                                                                   -- this option can delay the alert
-Config.DiscordWebHook = 'https://discord.com/api/webhooks/1215709474833178634/3QTUW2TZa8NoxRcd_olcQByTWhiegJmxdRfAnbwrCWzm6-WICXgQDLJcni0Ky33AQKnd' -- Discord webhook to upload new images
+Config.DiscordWebHook = 'https://discord.com/api/webhooks/1220577122368884736/VgbhVoc1Wdo3VeLqr426ajRvk7Hw9ooQ_hC4CB66PuHbn623fXX2P1L2J-DohC2YlTW4' -- Discord webhook to upload new images
 Config.vehiclesTable = Config.Framework == "esx" and 'owned_vehicles' or 'player_vehicles'                                                                                                       -- Table name for vehicles
 Config.useLogo = false                                                                                                       -- Use logo in the Dispatch
 Config.plateImage = 'https://www.quasar-store.com/static/5012-AT_6_x_12.png'

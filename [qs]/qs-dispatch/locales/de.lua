@@ -5,7 +5,7 @@ end
 Locales = {
     ['UNKNOWN'] = 'Unbekannt',
     ['SPEED_LIMIT_MESSAGE'] =
-    'Sie fahren zu schnell! Die Geschwindigkeitsbegrenzung in der Zone %s beträgt %s km/h. Ihre aktuelle Geschwindigkeit beträgt %s km/h. Sie haben eine Strafe von £ %s erhalten.', -- Entfernen Sie keine %s aus der Nachricht
+    'Sie fahren zu schnell! Die Geschwindigkeitsbegrenzung in der Zone %s beträgt %s km/h. Ihre aktuelle Geschwindigkeit beträgt %s km/h. Sie haben eine Strafe von $ %s erhalten.', -- Entfernen Sie keine %s aus der Nachricht
     ['YOU_LEFT'] = 'Sie haben verlassen',
     ['ENTERING_IN_ZONE'] = 'Sie betreten die Zone %s. Die Geschwindigkeitsbegrenzung beträgt %s km/h.',
     -- BENUTZEROBERFLÄCHE

@@ -3,7 +3,7 @@ if Config.Billing ~= "qs-billing" then
 end
 
 function CreateBill(amount, text)
-    TriggerServerEvent("okokBilling:CreateCustomInvoice", GetPlayerServerId(PlayerId()), tonumber(amount), text, 'Traffic Radar', 'police', 'Police')                                                                                                          -- if you using okokBilling you can uncomment this line
+    -- TriggerServerEvent("okokBilling:CreateCustomInvoice", GetPlayerServerId(PlayerId()), tonumber(amount), text, 'Traffic Radar', 'police', 'Police')                                                                                                          -- if you using okokBilling you can uncomment this line
 
 
     -- receiverid = the player receiving the invoice
@@ -13,5 +13,5 @@ function CreateBill(amount, text)
     -- giveitem = true if you want to give the invoice item, false if you don't.
     -- questToGiveitem = True asks the player if he wants to receive it, false only delivers the invoice or not and does not ask the player
     -- customSocietyName = you can set a custom name to the company, or set it to nil
-    --TriggerServerEvent('qs-billing:server:CreateInvoice', GetPlayerServerId(PlayerId()), 'Traffic Radar', text, tonumber(amount), true, false, false, false, 'society_police')
+    TriggerServerEvent('qs-billing:server:CreateInvoice', GetPlayerServerId(PlayerId()), 'Traffic Radar', text, tonumber(amount), true, false, false, false, 'society_police')
 end

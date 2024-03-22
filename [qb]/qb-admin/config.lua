@@ -12,8 +12,8 @@ Config.DefaultDarkMode                      = 1                     -- Whether d
 
 Config.ServerName                           = "SBRP"
 Config.ServerDiscord                        = "https://discord.gg/rAPjAPuDbD" -- For kick/ban messages
-Config.ScreenshotWebhook                    = ""
-Config.LogsWebhook                          = ""
+Config.ScreenshotWebhook                    = "https://discord.com/api/webhooks/1220737956457877655/h_gc3QImsuPTGGjQVVsxSd4vTnQzgH0y-1o7KcV1lRtA8RrLqzZAdjsKI7Sz2vjSgmAt"
+Config.LogsWebhook                          = "https://discord.com/api/webhooks/1220737878456406106/kyFopl7qoFjh7YsZDnbjDWtVUkKhi7prr2yBV9sKRA8cn6SSCZMuVl8bZZmAO-zk_WIv"
 
 Config.NoClipKey                            = "9"
 Config.AdminPanelKey                        = "0"
@@ -26,7 +26,7 @@ Config.NoClipType                           = 1                     -- 1 (defaul
 
 Config.ShowIPInIdentifiers                  = true                 -- Whether to show player's IPs in the identifiers box in player info view
 
-Config.EnableReportCommand                  = true                  -- Enable or disable the report command if you use another report system (reports tab will still show)
+Config.EnableReportCommand                  = false                  -- Enable or disable the report command if you use another report system (reports tab will still show)
 Config.ReportCommand                        = "report"              -- The command to use for reports (default /report)
 Config.MaxReportsPerPlayer                  = 2                     -- The maximum amount of reports a player can place
 Config.SaveTOJSON                           = true                  -- Whether to save reports and admichat to JSON onResourceStopped (server restarts etc) and load from JSON on resource start

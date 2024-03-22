@@ -7,8 +7,8 @@
 Webhooks = Webhooks or {}
 
 Webhooks = {
-    ['deposit'] = 'https://discordapp.com/api/webhooks/1216363875646050405/F5iQy00mRUD86lVqAbNv59ptma5HTiSq8h2vEVjTJAqPk-EZHWj6prlkCT4wljpnF9ir',
-    ['withdraw'] = 'https://discordapp.com/api/webhooks/1216363983062302801/SIJbaR66BbsbylRLkEEHqiAmfUGQFkfoWhPK8WBrRGbKUAS7WVnhRVX6JmmKZtuxt0XX',
-    ['transfer'] = 'https://discordapp.com/api/webhooks/1216364101572362240/Wv-EjpddaYPMH-EmK-Admk46bhIrlrWBjE4M7gACAQ0l8TbgFshB2u33ApO9R93OaNLY',
-    ['create_card'] = 'https://discordapp.com/api/webhooks/1216364173714395226/r16wQ8BiU1rsV6ER1HsErx1--rcYUb2OlbgUWERXpI6HVbFZN06duzmb2SlyuNOFmRDz',
+    ['deposit'] = 'https://discord.com/api/webhooks/1220735085326766090/4ObkX9KmO4gI3dTeIO885M1sInsk7UwBH9V_1BxH1t2e-NWCTpApKdvOZYsv2_GBUXyW',
+    ['withdraw'] = 'https://discord.com/api/webhooks/1220735128058466364/puBfOZvkqpB3RlKzfRkDJC7jVVJBjJgsLd4Urihy4Ll9KU8NxbCVwxPYLizoM1z251CK',
+    ['transfer'] = 'https://discord.com/api/webhooks/1220735171654062080/rUzRq2FCjnZr1R5e3xa4XxCZ14ANnk5xCorHXKiHwdQE0190mM3QPE9cBIjrtHS1TUcS',
+    ['create_card'] = 'https://discord.com/api/webhooks/1220735210581135391/zoOta7PWhYQIBJYOoSzWEH9NCqNTIHEHTyGPFBz9xzHe9FsNx-FGg8Si9BTMyJCHNQS9',
 }

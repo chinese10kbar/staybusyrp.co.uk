@@ -5,7 +5,7 @@ end
 Locales = {
     ['UNKNOWN'] = 'Unknown',
     ['SPEED_LIMIT_MESSAGE'] =
-    'You are driving too fast! The speed limit in %s zone is %s km/h. Your current speed is %s km/h. you received a penalization of £ %s', -- Dont remove any %s from the message
+    'You are driving too fast! The speed limit in %s zone is %s km/h. Your current speed is %s km/h. you received a penalization of $ %s', -- Dont remove any %s from the message
     ['YOU_LEFT'] = 'You left',
     ['ENTERING_IN_ZONE'] = 'You entering in %s zone. The velocity limit is %s km/h.',
     -- FRONT END
@@ -15,8 +15,8 @@ Locales = {
     ['MESSAGE'] = 'Message',
     ['NOTHING'] = 'Nothing...',
     ['NOT_ASIGNED'] = 'NOT ASIGNED',
-    ['ACCEPT_KEY_SMALL'] = 'Accept [J]',
-    ['CANCEL_KEY_SMALL'] = 'Cancel [J]',
+    ['ACCEPT_KEY_SMALL'] = 'Accept [I]',
+    ['CANCEL_KEY_SMALL'] = 'Cancel [I]',
     ['SETTINGS'] = 'Settings',
     ['PLAYERS'] = 'Players',
     ['DELETE'] = 'Delete',

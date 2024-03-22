@@ -1,6 +1,6 @@
 fx_version "cerulean"
 
-description "qs-outlawalert-dlc - Outlaw Alert DLC for QS-DISPATCH"
+description "qs-outlawalert-dlc - Outlaw Alert DLC for qs-dispatch"
 author "quasar-store.com"
 version '1.0.0'
 lua54 'yes'

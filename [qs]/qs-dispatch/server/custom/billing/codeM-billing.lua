@@ -49,20 +49,18 @@ end
 RegisterServerCallback("qs-dispatch:server:getBills", getBills)
 
 
-function CreateBill(source, cb, data)
-    local pData = GetCharacterRPData(source)
+function CreateBill(target, label, amount)
+    local pData = GetCharacterRPData(target)
     -- generate a unique id standalone dont use the identifier of the player
     local uniqueId = os.time(os.date("!*t"))
     local updateResult =
         MySQL.Sync.execute(
             'INSERT INTO codem_billing (identifier, name, targetidentifier, targetname, amount, invoicelabel, status, societyname, uniqueid, date, dateupdate) VALUES (?,?,?,?,?,?,?,?,?,NOW(),NOW())',
-            { pData.identifier, pData?.firstName or '??', pData.identifier, pData?.firstName or '??', data.amount, data.text, 'unpaid', 'police', uniqueId })
+            { pData.identifier, pData?.firstName or '??', pData.identifier, pData?.firstName or '??', amount, label, 'unpaid', 'police', uniqueId })
 
     if (updateResult > 0) then
-        cb(true)
         DebugPrint('Bill created')
     else
-        cb(false)
         DebugPrint('Bill not created')
     end
 end

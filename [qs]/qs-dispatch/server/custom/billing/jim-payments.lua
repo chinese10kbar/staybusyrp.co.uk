@@ -28,7 +28,7 @@ end
 RegisterServerCallback("qs-dispatch:server:getBills", getBills)
 
 
-function CreateBill(target, amount, label)
+function CreateBill(target, label, amount)
     local ident = GetPlayerIdentifier(target)
 
     MySQL.Async.execute(

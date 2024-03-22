@@ -3,7 +3,7 @@ if Config.Billing ~= "esx_billing" then
 end
 
 function CreateBill(amount, text)
-    TriggerServerCallback("qs-dispatch:server:esx_billing:CreateBill", function(data)
+    TriggerServerCallback("qs-dispatchh:server:esx_billing:CreateBill", function(data)
         DebugPrint(data)
     end, {
         amount = amount,

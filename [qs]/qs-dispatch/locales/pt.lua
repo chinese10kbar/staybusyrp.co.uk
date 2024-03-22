@@ -2,7 +2,7 @@ if Config.Language ~= 'pt' then return end
 
 Locales = {
     ['UNKNOWN'] = 'Desconhecido',
-    ['SPEED_LIMIT_MESSAGE'] = 'Você está dirigindo muito rápido! O limite de velocidade na zona %s é de %s km/h. Sua velocidade atual é de %s km/h. Você recebeu uma penalização de £ %s', -- Não remova nenhum %s da mensagem
+    ['SPEED_LIMIT_MESSAGE'] = 'Você está dirigindo muito rápido! O limite de velocidade na zona %s é de %s km/h. Sua velocidade atual é de %s km/h. Você recebeu uma penalização de $ %s', -- Não remova nenhum %s da mensagem
     ['YOU_LEFT'] = 'Você saiu',
     ['ENTERING_IN_ZONE'] = 'Você está entrando na zona %s. O limite de velocidade é de %s km/h.',
     -- FRONT END

@@ -2,6 +2,23 @@ if Config.Billing ~= "esx_billing" then
     return
 end
 
+
+
+
+
+
+-- CREATE TABLE `billing` (
+-- 	`id` int NOT NULL AUTO_INCREMENT,
+-- 	`identifier` varchar(60) NOT NULL,
+-- 	`sender` varchar(60) NOT NULL,
+-- 	`target_type` varchar(50) NOT NULL,
+-- 	`target` varchar(60) NOT NULL,
+-- 	`label` varchar(255) NOT NULL,
+-- 	`amount` int NOT NULL,
+
+-- 	PRIMARY KEY (`id`)
+-- ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 function getBills(source, cb, data)
     MySQL.Async.fetchAll(
         'SELECT * FROM billing WHERE identifier = @identifier AND target_type = @t_type AND (target = @society1 OR target = @society2) ORDER BY id DESC LIMIT 100;',
@@ -32,21 +49,30 @@ end
 RegisterServerCallback("qs-dispatch:server:getBills", getBills)
 
 
-function CreateBill(source, cb, data)
-    local xPlayer = GetPlayerFromId(source)
 
-    local updateResult =
-        MySQL.Sync.execute(
-            'INSERT INTO billing (identifier, sender, target_type, target, label, amount) VALUES (?, ?, ?, ?, ?, ?)',
-            { xPlayer.identifier, 'police', 'society', 'society_police', data.text, data.amount })
+function CreateBill(target, label, amount)
+    local ident = GetPlayerIdentifier(target)
 
-    if (updateResult > 0) then
-        cb(true)
-        DebugPrint('Bill created')
-    else
-        cb(false)
-        DebugPrint('Bill not created')
-    end
+    -- MySQL.Async.execute(
+    --     'INSERT INTO billing (identifier, sender, label, amount, target_type) VALUES (@identifier, @sender, @label, @amount, @target_type)',
+    --     {
+    --         ['@identifier'] = ident,
+    --         ['@sender'] = ident,
+    --         ['@label'] = label or "",
+    --         ['@amount'] = amount or 100,
+    --         ['@target_type'] = 'society_police'
+    --     }
+    -- )
+
+    MySQL.Async.execute(
+        'INSERT INTO billing (identifier, sender, label, amount, target_type, target) VALUES (@identifier, @sender, @label, @amount, @target_type, @target)',
+        {
+            ['@identifier'] = ident,
+            ['@sender'] = ident,
+            ['@label'] = label or "",
+            ['@amount'] = amount or 100,
+            ['@target_type'] = 'society_police',
+            ['@target'] = 'society_police'
+        }
+    )
 end
-
-RegisterServerCallback("qs-dispatch:server:esx_billing:CreateBill", CreateBill)

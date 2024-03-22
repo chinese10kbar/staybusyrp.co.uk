@@ -4,7 +4,7 @@ game "gta5"
 
 author "quasar-store.com"
 -- 
-version "2.0.3"
+version "2.0.4"
 description ""
 
 
@@ -39,7 +39,7 @@ client_scripts {
 }
 
 server_scripts {
-    "@oxmysql/lib/MySQL.lua",
+    "@mysql-async/lib/MySQL.lua",
     "server/utils.lua",
     "server/lib/*.lua",
     "server/exports/*.lua",

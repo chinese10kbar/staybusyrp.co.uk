@@ -5,7 +5,7 @@ end
 Locales = {
     ['UNKNOWN'] = 'Desconocido',
     ['SPEED_LIMIT_MESSAGE'] =
-    '¡Estás conduciendo demasiado rápido! El límite de velocidad en la zona %s es de %s km/h. Tu velocidad actual es de %s km/h. Has recibido una penalización de £ %s',
+    '¡Estás conduciendo demasiado rápido! El límite de velocidad en la zona %s es de %s km/h. Tu velocidad actual es de %s km/h. Has recibido una penalización de $ %s',
     ['YOU_LEFT'] = 'Has salido',
     ['ENTERING_IN_ZONE'] = 'Estás entrando en la zona %s. El límite de velocidad es de %s km/h.',
     -- FRONT END

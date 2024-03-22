@@ -43,22 +43,13 @@ QueryToGetPrincipalMDTSearch = [[
 ]]
 
 
-
--- SELECT
---   u.identifier,
---   u.firstname,
---   u.lastname,
---   u.job,
---   u.dateofbirth,
---   md.pfp,
---   md.notes,
---   md.tags
--- FROM users u
--- LEFT JOIN dispatch_mdt_data md ON u.identifier = md.identifier AND md.jobtype = @jobtype
--- WHERE
---   LOWER(CONCAT(u.firstname, ' ', u.lastname) COLLATE utf8mb4_unicode_ci) LIKE @query COLLATE utf8mb4_unicode_ci
---   OR LOWER(u.identifier COLLATE utf8mb4_unicode_ci) LIKE @query COLLATE utf8mb4_unicode_ci
--- LIMIT 20;
+-- Create a thread to get the Collate of users.identifier and set the collate of dispatch_mdt_data.identifier same as users.identifier collate
+Citizen.CreateThread(function ()
+    local collate = MySQL.Sync.fetchScalar("SELECT COLLATION_NAME FROM information_schema.COLUMNS WHERE TABLE_NAME = 'users' AND COLUMN_NAME = 'identifier';")
+    MySQL.Async.execute("ALTER TABLE dispatch_mdt_data MODIFY identifier VARCHAR(255) COLLATE "..collate..";")
+    -- print the collate of the users.identifier
+    print("^2[AUTOCFG]^7 Dispatch MDT Data table was successfully updated to the correct collate `"..collate.."`.")
+end)
 
 
 identifierTypes = "identifier"

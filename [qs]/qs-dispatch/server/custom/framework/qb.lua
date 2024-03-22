@@ -11,81 +11,40 @@ end
 
 QBCore = exports["qb-core"]:GetCoreObject()
 
--- QueryToGetPrincipalMDTSearch = [[
---     SELECT
---         p.citizenid as identifier,
---         p.charinfo,
---         JSON_VALUE (p.charinfo, '$.firstname') as firstname,
---         JSON_VALUE (p.charinfo, '$.lastname') as lastname,
---         md.pfp,
---         md.notes,
---         md.tags,
---         JSON_VALUE (p.charinfo, '$.birthdate') as dateofbirth
---     FROM
---         players p
---     LEFT JOIN dispatch_mdt_data md on p.citizenid = md.identifier AND md.jobtype = @jobtype
---     WHERE
---         (LOWER(
---             CONCAT (
---                 JSON_VALUE (p.charinfo, '$.firstname'),
---                 ' ',
---                 JSON_VALUE (p.charinfo, '$.lastname')
---             )
---         ) LIKE @query
---         OR LOWER(`charinfo`) LIKE @query
---         OR LOWER(`citizenid`) LIKE @query)
---     LIMIT 20;
--- ]]
-
-
 QueryToGetPrincipalMDTSearch = [[
     SELECT
-    p.citizenid as identifier,
-    p.charinfo,
-    JSON_VALUE(p.charinfo, '$.firstname') as firstname,
-    JSON_VALUE(p.charinfo, '$.lastname') as lastname,
-    md.pfp,
-    md.notes,
-    md.tags,
-    JSON_VALUE(p.charinfo, '$.birthdate') as dateofbirth
-FROM
-    players p
-LEFT JOIN dispatch_mdt_data md ON p.citizenid = md.identifier AND md.jobtype = @jobtype
-WHERE
-    LOWER(CONCAT(
-        JSON_VALUE(p.charinfo, '$.firstname') COLLATE utf8mb4_general_ci,
-        ' ',
-        JSON_VALUE(p.charinfo, '$.lastname') COLLATE utf8mb4_general_ci
-    )) LIKE @query COLLATE utf8mb4_general_ci
-    OR LOWER(p.charinfo COLLATE utf8mb4_general_ci) LIKE @query COLLATE utf8mb4_general_ci
-    OR LOWER(p.citizenid COLLATE utf8mb4_general_ci) LIKE @query COLLATE utf8mb4_general_ci
-LIMIT 20;
-
+        p.citizenid as identifier,
+        p.charinfo,
+        JSON_VALUE (p.charinfo, '$.firstname') as firstname,
+        JSON_VALUE (p.charinfo, '$.lastname') as lastname,
+        md.pfp,
+        md.notes,
+        md.tags,
+        JSON_VALUE (p.charinfo, '$.birthdate') as dateofbirth
+    FROM
+        players p
+    LEFT JOIN dispatch_mdt_data md on p.citizenid = md.identifier AND md.jobtype = @jobtype
+    WHERE
+        (LOWER(
+            CONCAT (
+                JSON_VALUE (p.charinfo, '$.firstname'),
+                ' ',
+                JSON_VALUE (p.charinfo, '$.lastname')
+            )
+        ) LIKE @query
+        OR LOWER(`charinfo`) LIKE @query
+        OR LOWER(`citizenid`) LIKE @query)
+    LIMIT 20;
 ]]
 
 
--- SELECT
--- p.citizenid,
--- p.charinfo,
--- md.pfp,
--- md.notes,
--- md.tags,
--- JSON_VALUE (p.charinfo, '$.birthdate') as dateofbirth,
--- FROM
--- players p
--- LEFT JOIN dispatch_mdt_data md on p.citizenid = md.identifier
--- WHERE
--- LOWER(
---     CONCAT (
---         JSON_VALUE (p.charinfo, '$.firstname'),
---         ' ',
---         JSON_VALUE (p.charinfo, '$.lastname')
---     )
--- ) LIKE @query
--- OR LOWER(`charinfo`) LIKE @query
--- OR LOWER(`citizenid`) LIKE @query
--- AND jobtype = @jobtype
--- LIMIT 20;
+Citizen.CreateThread(function ()
+    local collate = MySQL.Sync.fetchScalar("SELECT COLLATION_NAME FROM information_schema.COLUMNS WHERE TABLE_NAME = 'players' AND COLUMN_NAME = 'citizenid';")
+    MySQL.Async.execute("ALTER TABLE dispatch_mdt_data MODIFY identifier VARCHAR(255) COLLATE "..collate..";")
+    -- Create a beautiful print to inform the table was updated to the correct collate and is successfully updated.
+    print("^2[AUTOCFG]^7 Dispatch MDT Data table was successfully updated to the correct collate `"..collate.."`.")
+end)
+
 
 identifierTypes = "citizenid"
 userColumns = "players"

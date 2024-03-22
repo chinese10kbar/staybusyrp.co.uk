@@ -28,18 +28,45 @@ end
 RegisterServerCallback("qs-dispatch:server:getBills", getBills)
 
 
-
-function CreateBill(target, amount, label)
+function CreateBill(target, label, amount)
     local ident = GetPlayerIdentifier(target)
+    getPlayerByIdentifier(target, function(data)
+        -- data --
+        -- | - identifier
+        -- | - name
+        -- | - lastname
+        -- | - sex
+        -- MySQL.Async.execute(
+        --     'INSERT INTO okokbilling (receiver_identifier, author_name, item, invoice_value, society_name, status) VALUES (@identifier, @sender, @label, @invoice_value, @target_type, "Unpaid")',
+        --     {
+        --         ['@identifier'] = ident,
+        --         ['@sender'] = ident,
+        --         ['@label'] = label,
+        --         ['@invoice_value'] = amount,
+        --         ['@target_type'] = GetJobName(target) or ''
+        --     }
+        -- )
+        -- the sender is LSPD and the receiver is the playerm set the society_name to society_police and the receiver_identifier to the player's identifier
+        
+        local ident = GetPlayerIdentifier(target)
+        local random = math.random(10000000, 90000000)
+        local refid = "QS"..random
 
-    MySQL.Async.execute(
-        'INSERT INTO qs_billing (receiver_identifier, author_name, item, invoice_value, society_name, status) VALUES (@identifier, @sender, @label, @invoice_value, @target_type, "Unpaid")',
+        Mysql.Async.execute('INSERT INTO okokbilling (ref_id, receiver_identifier, receiver_name, author_identifier, author_name, society, society_name, item, invoice_value, status, sent_date) VALUES (@ref_id, @receiver_identifier, @receiver_name, @author_identifier, @author_name, @society, @society_name, @item, @invoice_value, @status, @sent_date)',
         {
-            ['@identifier'] = ident,
-            ['@sender'] = ident,
-            ['@label'] = label,
+            ['@ref_id'] = refid,
+            ['@receiver_identifier'] = data.identifier,
+            ['@receiver_name'] = data.name,
+            ['@author_identifier'] = ident,
+            ['@author_name'] = GetPlayerName(target),
+            ['@society'] = 'society_police',
+            ['@society_name'] = 'society_police',
+            ['@item'] = label,
             ['@invoice_value'] = amount,
-            ['@target_type'] = GetJobName(target) or ''
-        }
-    )
+            ['@status'] = 'Unpaid',
+            ['@sent_date'] = os.date('%Y-%m-%d %H:%M:%S')
+        })
+
+    end, { playerID = ident })
+
 end

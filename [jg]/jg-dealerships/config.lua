@@ -99,6 +99,36 @@ Config.DealershipLocations = {
     job = "cardealer", -- Owned dealerships only
     directSaleDistance = 50,
   },
+  ["luxury"] = {
+    type = "self-service", -- or "owned", "self-service"
+    openShowroom = vector3(-1257.4, -369.12, 36.98),
+    openManagement = vector3(-1249.04, -346.96, 37.34),
+    purchaseSpawn = vector4(-1233.46, -346.81, 37.33, 23.36),
+    testDriveSpawn = vector4(-1233.46, -346.81, 37.33, 23.36),
+    sellVehicle = vector4(-1233.46, -346.81, 37.33, 23.36),
+    camera = {
+      name = "Car",
+      coords = vector4(-146.6166, -596.6301, 166.0000, 120.0),
+      positions = {5.0, 8.0, 12.0, 8.0}
+    },
+    categories = {"sportsclassics", "super", "sports"},
+    enableSellVehicle = true, -- Allow players to sell vehicles back to dealer
+    sellVehiclePercent = 0.6,  -- 60% of current sale price
+    enableTestDrive = true,
+    enableFinance = true,
+    hideBlip = false,
+    blip = {
+      id = 523,
+      color = 2,
+      scale = 0.6
+    },
+    hideMarkers = false,
+    markers = { id = 21, size = { x = 0.3, y = 0.3, z = 0.3 }, color = { r = 255, g = 255, b = 255, a = 120 }, bobUpAndDown = 0, faceCamera = 0, rotate = 1, drawOnEnts = 0 },
+    showroomJobWhitelist = {},
+    showroomGangWhitelist = {},
+    societyPurchaseJobWhitelist = {},
+    societyPurchaseGangWhitelist = {},
+  },
 }
 
 Config.ReturnToPreviousRoutingBucket = false

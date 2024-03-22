@@ -167,7 +167,7 @@ Config.Locations[#Config.Locations+1] = { --[[ LS CUSTOMS IN CITY ]]--
 	},
 	payments = {
 		img = "https://static.wikia.nocookie.net/gtawiki/images/f/f2/GTAV-LSCustoms-Logo.png",
-		{ coords = vec4(158.71, -1047.51, 15.87, 335.43), prop = true, },
+		{ coords = vector4(159.13690185547, -1046.9724121094, 16.010087966919, 0.0), prop = true, },
 	},
 	Restrictions = {
 		Vehicle = { "Compacts", "Sedans", "SUVs", "Coupes", "Muscle", "Sports Classics", "Sports", "Super", "Motorcycles", "Off-road", "Industrial", "Utility", "Vans", "Cycles", "Service", "Emergency", "Commercial", },

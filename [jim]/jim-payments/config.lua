@@ -14,9 +14,9 @@ Config = {
 	-- Default Job Payment Systems --
 	---------------------------------
 
-	Banking = "qb-banking", 	
+	Banking = "qb-management", 	
 								-- "qb-management" 	- This is for the older version of QBCore
-								-- "qb-banking" 	- This is for the latest QBCore updates
+								-- "qs-banking" 	- This is for the latest QBCore updates
 								-- "renewed"
 								-- "fd" 			- currently default supported
 								-- "okok"			- make sure to add societies to Config.Societies in okokBanking, This is for the latest QBCore updates
@@ -47,7 +47,7 @@ Config = {
 	Usebzzz = false, -- enable if you're using the prop from bzzz
 	Enablecommand = true, -- Enables the cashregister command
 
-	PhoneBank = false, 	-- Set this to false to use the popup payment system FOR CARD/BANK PAYMENTS instead of using phone invoices
+	PhoneBank = true, 	-- Set this to false to use the popup payment system FOR CARD/BANK PAYMENTS instead of using phone invoices
 						-- This doesn't affect Cash payments as they by default use confirmation now
 						-- This is helpful for phones that don't support invoices well
 
@@ -76,6 +76,8 @@ Config = {
 		['burgershot'] = { MinAmountforTicket = 50, PayPerTicket = 50 , Commission = 0.10, },
 		['catcafe'] = { MinAmountforTicket = 50, PayPerTicket = 50, Commission = 0.10, },
 		['henhouse'] = { MinAmountforTicket = 50, PayPerTicket = 50, Commission = 0.10, },
+		['busymechanic'] = { MinAmountforTicket = 50, PayPerTicket = 50, Commission = 0.10, },
+
 		['pizzathis'] = { MinAmountforTicket = 50, PayPerTicket = 50, Commission = 0.10, },
 		['popsdiner'] = { MinAmountforTicket = 50, PayPerTicket = 50, Commission = 0.10, },
 		['tequilala'] = { MinAmountforTicket = 50, PayPerTicket = 50, Commission = 0.10, },
@@ -129,7 +131,7 @@ Config = {
 	---------------------
 	useATM = false, -- Enable this to use the scripts ATM's and controls
 	useBanks = false, -- Enable this to use my banking stuff
-	BankBlips = false, -- Enable this if you disabled qb-banking and need bank locations
+	BankBlips = false, -- Enable this if you disabled qs-banking and need bank locations
 	ATMBlips = false, -- Enable this if you are a pyscho and need every ATM to be on the map too
 
 	Gabz = false, 	-- "true" to enable Gabz Bank locations

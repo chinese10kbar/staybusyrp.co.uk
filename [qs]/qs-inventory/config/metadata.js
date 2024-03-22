@@ -43,6 +43,13 @@ function FormatItemInfo(itemData) {
                 itemData.info.serial +
                 "</span></p>"
             );
+        } else if (itemData.name == "visa" || itemData.name == "creditcard") {
+            $(".item-info-title").html('<p>' + label + '</p>')
+                var str = "" + itemData.info.cardNumber + "";
+                var res = str.slice(12);
+                var cardNumber = "************" + res;
+                $(".item-info-description").html('<p><strong>Card Owner: </strong><span>' + itemData.info.ownerName + '</span></p><p><strong>Card Type: </strong><span>' + itemData.info.cardType + '</span></p><p><strong>Card Number: </strong><span>' + cardNumber + '</span></p>'
+        );
         } else if (itemData.name == "photo") {
             $(".item-info-title").html("<p>" + `${itemData.info.label || label}` + "</p>");
             $(".item-info-description").html(

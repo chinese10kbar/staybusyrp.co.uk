@@ -191,11 +191,11 @@ FineJobList = true, -- "true" to use nearby player list feature in the cash regi
 ## Banking
 ![](https://i.imgur.com/RYADcI2.jpeg)
 - This script has simple banking systems built in
-  - Works as a basic replacement for qb-banking and qb-atms
+  - Works as a basic replacement for qs-banking and qb-atms
 - Adjust the options in config.lua:
   - `useATM` Choose wether to make atm's usable
   - `useBanks` Choose wether to make bank desks/teller's usable
-  - `BankBlips` Enable this if you disabled qb-banking and need bank locations
+  - `BankBlips` Enable this if you disabled qs-banking and need bank locations
   - `ATMBlips` Enable this if you are a pyscho and need every ATM to be on the map too
   - `Gabz` Enable to change to Gabz Bank locations, this corrects the ATM/Bank Cashier + Ticket Cash in
 ---

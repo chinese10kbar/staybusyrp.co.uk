@@ -1,4 +1,4 @@
--- This script is a simple replacement for QB-Banking and QB-ATMs
+-- This script is a simple replacement for qs-banking and QB-ATMs
 -- It uses QB-Input and server callbacks to retreive info about accounts and cash
 -- This requires QB-Target and has the location of every ATM, ATM prop and bank window
 

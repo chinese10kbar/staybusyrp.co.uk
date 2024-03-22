@@ -2017,4 +2017,10 @@ blueberryelfbar                 = { name = 'blueberryelfbar', label = 'Elf Bar',
 ["garden_pitcher"] 						= {["name"] = "garden_pitcher",  	     	["label"] = "Garden Pitcher",	 		["weight"] = 25, 		["type"] = "item", 		["image"] = "garden_pitcher.png", 			["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = ""},
 ["garden_shovel"] 						= {["name"] = "garden_shovel",  	     	["label"] = "Garden Shovel",	 		["weight"] = 25, 		["type"] = "item", 		["image"] = "garden_shovel.png", 			["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = ""},
 ["payticket"] 					 = {["name"] = "payticket", 				["label"] = "Receipt", 	     			["weight"] = 150, 		["type"] = "item", 		["image"] = "ticket.png", 				["unique"] = false,   	["useable"] = false,    ["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = "Cash these in at the bank!"},
+
+-- prisons
+["wood"] 					= {["name"] = "wood",  	     		        ["label"] = "Wood",	 		    ["weight"] = 1, 		["type"] = "item", 		["image"] = "wood.png", 				["unique"] = false, 	    ["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = ""},
+["metal"] 					= {["name"] = "metal",  	     		    ["label"] = "Metal",	 		    ["weight"] = 1, 		["type"] = "item", 		["image"] = "metal.png", 				["unique"] = false, 	    ["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = ""},
+["rope"] 					= {["name"] = "rope",  	     		        ["label"] = "Rope",	 		    ["weight"] = 1, 		["type"] = "item", 		["image"] = "rope.png", 				["unique"] = false, 	    ["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = ""},
+["shovel"] 					= {["name"] = "shovel",  	     		    ["label"] = "Shovel",	 		    ["weight"] = 1, 		["type"] = "item", 		["image"] = "shovel.png", 				["unique"] = false, 	    ["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = ""},
 }

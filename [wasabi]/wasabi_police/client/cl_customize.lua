@@ -55,7 +55,7 @@ RegisterNetEvent('wasabi_police:sendToJail', function()
         TriggerServerEvent('mx_jail:jailPlayer', target, time, target)
         TriggerServerEvent('mx_jail:setTime', target, time)
     elseif Config.Jail.jail == 'custom' then
-        -- Custom logic here?
+        TriggerServerEvent("pickle_prisons:jailPlayer", target, time) -- Custom logic here?
     end
 end)
 

@@ -87,72 +87,52 @@ QBShared.Jobs = {
             },
         },
 	},
-	police = {
-		label = 'MET POLICE',
-		type = 'leo',
+	['police'] = {
+		label = 'Metropolitan Police',
+        type = "leo",
 		defaultDuty = true,
 		offDutyPay = false,
 		grades = {
-			['0'] = { name = 'PCSO', payment = 14 },
-			['1'] = { name = 'ERPT - Constable', payment = 16 },
-			['2'] = { name = 'ERPT - Sergeant', payment = 18 },
-			['3'] = { name = 'ERPT - Inspector', payment = 20 },
-			['4'] = { name = 'ERPT - Chief Inspector', payment = 22 },
-			['5'] = { name = 'ERPT - Superintendent', payment = 24 },
-			['6'] = { name = 'ERPT - Chief Superintendent', payment = 26 },
-                        ['7'] = { name = 'RPU - Constable', payment = 17 },
-                        ['8'] = { name = 'RPU - Sergeant', payment = 19 },
-                        ['9'] = { name = 'RPU - Inspector', payment = 21 },
-						['10'] = { name = 'RPU - Chief Inspector', payment = 23 },
-                        ['11'] = { name = 'RPU - Superintendent', payment = 25 },
-                        ['12'] = { name = 'RPU - Chief Superintendent', payment = 27 },
-						['13'] = { name = 'DSU - Constable', payment = 18 },
-						['14'] = { name = 'DSU - Sergeant', payment = 20 },
-						['15'] = { name = 'DSU - Inspector', payment = 22 },
-						['16'] = { name = 'DSU - Chief Inspector', payment = 24 },
-						['17'] = { name = 'DSU - Superintendent', payment = 26 },
-						['18'] = { name = 'DSU - Chief Superintendent', payment = 28 },
-						['19'] = { name = 'RCU - Constable', payment = 19 },
-						['20'] = { name = 'RCU - Sergeant', payment = 21 },
-						['21'] = { name = 'RCU - Inspector', payment = 23 },
-						['22'] = { name = 'RCU - Chief Inspector', payment = 25 },
-						['23'] = { name = 'RCU - Superintendent', payment = 27 },
-						['24'] = { name = 'RCU - Chief Superintendent', payment = 29 },
-						['25'] = { name = 'CID - Constable', payment = 20 },
-						['26'] = { name = 'CID - Sergeant', payment = 22 },
-						['27'] = { name = 'CID - Inspector', payment = 24 },
-						['28'] = { name = 'CID - Chief Inspector', payment = 26 },
-						['29'] = { name = 'CID - Superintendent', payment = 28 },
-						['30'] = { name = 'CID - Chief Superintendent', payment = 30 },
-						['31'] = { name = 'AFO - Constable', payment = 19 },
-						['32'] = { name = 'AFO - Sergeant', payment = 21 },
-						['33'] = { name = 'AFO - Inspector', payment = 23 },
-						['34'] = { name = 'AFO - Chief Inspector', payment = 25 },
-						['35'] = { name = 'AFO - Superintendent', payment = 27 },
-						['36'] = { name = 'AFO - Chief Superintendent', payment = 29 },
-						['37'] = { name = 'SCO-19 - Constable', payment = 19 },
-						['38'] = { name = 'SCO-19 - Sergeant', payment = 21 },
-						['39'] = { name = 'SCO-19 - Inspector', payment = 23 },
-						['40'] = { name = 'SCO-19 - Chief Inspector', payment = 25 },
-						['41'] = { name = 'SCO-19 - Superintendent', payment = 27 },
-						['42'] = { name = 'SCO-19 - Chief Superintendent', payment = 29 },
-						['43'] = { name = 'CTSFO - Constable', payment = 19 },
-						['44'] = { name = 'CTSFO - Sergeant', payment = 21 },
-						['45'] = { name = 'CTSFO - Inspector', payment = 23 },
-						['46'] = { name = 'CTSFO - Chief Inspector', payment = 25 },
-						['47'] = { name = 'CTSFO - Superintendent', payment = 27 },
-						['48'] = { name = 'CTSFO - Chief Superintendent', payment = 29 },
-						['49'] = { name = 'Bronze Command - Sergeant', payment = 22 },
-						['50'] = { name = 'Bronze Command - Inspector', payment = 24 },
-						['51'] = { name = 'Silver Command - Chief Inspector', payment = 26 },
-						['52'] = { name = 'Silver Command - Superintendent', payment = 28 },
-						['53'] = { name = 'Silver Command - Chief Superintendent', payment = 30 },
-						['54'] = { name = 'Gold Command - RCU Deputy Commissioner', isboss = true, payment = 36 },
-						['55'] = { name = 'Gold Command - RCU Commissioner', isboss = true, payment = 40 },
-						['56'] = { name = 'Gold Command - Assistant Commissioner', isboss = true, payment = 32 },
-						['57'] = { name = 'Gold Command - Deputy Commissioner', isboss = true, payment = 36 },
-                        ['58'] = { name = 'Gold Command - Commissioner', isboss = true, payment = 40 }, 
-		},
+            ['0'] = {
+                name = 'PCSO',
+                payment = 1000
+            },
+            ['1'] = {
+                name = 'Response',
+                payment = 2000
+            },
+            ['2'] = {
+                name = 'CID',
+                payment = 2000
+            },
+            ['3'] = {
+                name = 'MO-4',
+                payment = 2000
+            },
+            ['4'] = {
+                name = 'MO-8',
+                payment = 2000
+            },
+            ['5'] = {
+                name = 'MO-19',
+                payment = 2000
+            },
+            ['6'] = {
+                name = 'NPAS',
+                payment = 2000
+            },
+
+            ['7'] = {
+                name = 'MO-1',
+       		 	isboss = true,
+                payment = 2000
+            },
+            ['8'] = {
+                name = 'army',
+       		 	isboss = true,
+                payment = 2000
+            },
+        },
 	},
 	['ambulance'] = {
 		label = 'London Ambulance Service',

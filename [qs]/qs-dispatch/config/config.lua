@@ -79,8 +79,38 @@ Config.Radar = {
         "police"
     },
     vehiclesWhitelist = {
-        'police3', -- Vehicle name
-        'police',
+        "rppolice1",
+        "rpPolice2",
+        "rpPolice3",
+        "rpPolice4",
+        "rpPolice5",
+        "rpPolice6",
+        "rppolice7",
+        "rpPolice8",
+        "rpPolice9",
+        "rpPolice10",
+        "rppolice11",
+        "rpPolice12",
+        "rpPolice13",
+        "rpPolice14",
+        "rpPolice15",
+        "rpPolice16",
+        "rpPoliceB1",
+        "rpPoliceB2",
+        "rpPoliceR1",
+        "rpPoliceR2",
+        "rpPoliceUC1",
+        "rpPoliceUC2",
+        "rpPoliceUC3",
+        "rpPoliceUC4",
+        "rpPoliceUC5",
+        "rpPoliceUC6",
+        "rpPoliceUC7",
+        "rpPoliceUC8",
+        "rpPoliceUC9",
+        "rpPoliceUC10",
+        "rpPoliceUC11",
+        "sheriff2"
     }
 }
 
@@ -183,11 +213,10 @@ Config.MDT = {
                 [2] = true,
                 [3] = true,
                 [4] = true,
-                ['recluit'] = true,
-                ['officer'] = true,
-                ['sergeant'] = true,
-                ['lieutenant'] = true,
-                ['boss'] = true,
+                [5] = true,
+                [6] = true,
+                [7] = true,
+                [8] = true,
             },
             categoryes = {
                 ['citizens'] = {

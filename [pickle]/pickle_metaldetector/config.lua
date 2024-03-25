@@ -20,13 +20,13 @@ Config.ScannerLocations = {
         hideObject = false, -- Don't show the scanner prop (Useful for scanners already on the map).
     },
     {
-        location = vec3(371.89437866211,-1591.4560546875,28.292030334473),
-        heading = 139.63796997070312,
+        location = vector3(-310.21932983398, 218.62112426758, 86.926116943359),
+        heading = 6.9999814033508,
         hideObject = false, -- Don't show the scanner prop (Useful for scanners already on the map).
     },
     {
-        location = vec3(351.07470703125,-1606.8995361328,22.803632736206),
-        heading = 139.759033203125,
+        location = vector3(-308.97048950195, 218.80581665039, 86.926116943359),
+        heading = 8.9999837875366,
         hideObject = false, -- Don't show the scanner prop (Useful for scanners already on the map).
     },
     {
@@ -103,6 +103,7 @@ Config.Scanner = {
     flashDistance = 20.0, -- Object Flash Distance
     groups = { -- Groups that see the display text
         ["police"] = 0,
+        ["security"] = 0,
     },
     items = Config.MetalItems -- Items the scanner can detect
 }

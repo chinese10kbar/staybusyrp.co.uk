@@ -506,7 +506,7 @@ Config.JobVehicles = {
         
         ['police'] = { --If you choose to add more tables here for more jobs, they must be the jobs name, not the label.
             --MISSION ROW PD
-            [1] = {coords = vector3(451.27, -1016.05, 28.48), spawn_coords = vector4(450.19, -1021.18, 28.4, 93.47), distance = 10, garage_type = 'car', method = 'regular'}, --Mission Row PD (cars)
+            [1] = {coords = vector3(431.77, -1017.66, 28.89), spawn_coords = vector4(439.05392456055, -1025.3310546875, 28.327388763428, 6.5340085029602), distance = 10, garage_type = 'car', method = 'regular'}, --Mission Row PD (cars)
             [2] = {coords = vector3(449.27, -981.24, 43.69), spawn_coords = vector4(449.27, -981.24, 43.69, 94.13), distance = 5, garage_type = 'air', method = 'regular'}, --Mission Row PD (helipad)
             --SANDY PD
             [3] = {coords = vector3(1868.33, 3686.05, 33.78), spawn_coords = vector4(1872.68, 3687.19, 33.65, 211.34), distance = 10, garage_type = 'car', method = 'regular'}, --Sandy PD (cars)
@@ -538,21 +538,22 @@ Config.JobVehicles = {
         --model: The spawn name of this vehicle. (this is not supposed to be a string, these symbols get the hash key of this vehicle).
 
         ['police'] = {
-            [1] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `arv_xc90`},
-            [2] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `response_cupra`},
-            [3] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `rpu_530i`},
-            [4] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `arv_x5`},
-            [5] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `arv_focus`},
-            [6] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `response_mondeo`},
-            [7] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `pcso_308`},
-            [8] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `response_Octava`},
-            [9] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `pcso_20mk7`},
-            [10] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `arv_range`},
-            [11] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `polsportland`},
-            [12] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `polvxr`},
-            [13] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `rpu_x5`},
-            [14] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `pdrs6abtm`},
-            [15] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `m3tels`},
+            [1] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `rppolice1`},
+            [2] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `rpPolice2`},
+            [3] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `rpPolice3`},
+            [4] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `rpPolice4`},
+            [5] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `rpPolice5`},
+            [6] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `rpPolice6`},
+            [7] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `rppolice7`},
+            [8] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `rpPolice8`},
+            [9] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `rpPolice9`},
+            [10] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `rpPolice10`},
+            [11] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `rpPolice11`},
+            [12] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `rpPolice12`},
+            [13] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `rpPolice13`},
+            [14] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `rpPolice14`},
+            [15] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `rpPolice15`},
+            [16] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `rpPolice16`},
             -- [15] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `gc_focus`},
             -- [1] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `sc_235i`},
 

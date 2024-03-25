@@ -79,7 +79,7 @@ Config = {
 
 		crashKill = true,			-- Set to true if you want ejecting when crashing to kill/injure
 
-		AltEjection = false,		-- Enabling this may make some varibles above not be used
+		AltEjection = true,		-- Enabling this may make some varibles above not be used
 									-- Requires adding a couple lines to your server.cfg to activate
 									-- Attempts to use in engine logic for crashes but its still theres a chance it may not work in your server
 									-- Can't hurt to try

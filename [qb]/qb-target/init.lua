@@ -51,7 +51,7 @@ Config.OutlineColor = { 255, 255, 255, 255 }
 Config.EnableDefaultOptions = true
 
 -- Disable the target eye whilst being in a vehicle
-Config.DisableInVehicle = true
+Config.DisableInVehicle = false
 
 -- Key to open the target eye, here you can find all the names: https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/
 Config.OpenKey = 'LMENU' -- Left Alt

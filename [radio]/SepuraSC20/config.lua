@@ -14,7 +14,7 @@ Config = {}
 -- ─██████████████─██████████████─██████──────────██████─██████████████─██████──██████████─██████──██████─██████████████─
 -- ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 
-Config.Debug = true -- Make this true if you require support or asked by OfficerGalvin.
+Config.Debug = false -- Make this true if you require support or asked by OfficerGalvin.
 
 Config.Framework = 'QB' -- Standalone, ESX, QB, ESX Legacy.
 Config.VoiceResource = 'PMA' -- PMA or Mumble.

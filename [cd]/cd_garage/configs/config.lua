@@ -217,7 +217,7 @@ Config.FakePlates = {
     RemovePlate = {
         chat_command = 'removefakeplate', --Customise the chat command to remove a fake plate from a vehicle.
         allowed_jobs = {
-            ENABLE = false, --Do you want to allow certain jobs to remove a fake plate? (the vehicles owner will always be able to remove plates).
+            ENABLE = true, --Do you want to allow certain jobs to remove a fake plate? (the vehicles owner will always be able to remove plates).
             table = { --The list of jobs who can remove a fake plate.
                 ['police'] = true,
                 --['add_more_here'] = true,
@@ -429,52 +429,6 @@ Config.InsideGarage = {
             [8] = {x = -12, y = 15.1, z = -99.42, h = 225.00},--8
             [9] = {x = -12, y = 10.8, z = -99.43, h = 225.00},--9
             [10] = {x = -12, y = 6.5, z = -99.42, h = 225.00}--10
-        },
-
-        ['40cargarage_shell'] = {
-            [1] = {x = 7.0, y = -7.0, z = 0, h = 352.0},--1
-            [2] = {x = 11.0, y = -8.0, z = 0, h = 352.0},--2
-            [3] = {x = 15.0, y = -9.0, z = 0, h = 352.0},--3
-            [4] = {x = 19.0, y = -10.0, z = 0, h = 352.0},--4
-            [5] = {x = 23.0, y = -11.0, z = 0, h = 352.0},--5
-            [6] = {x = 27.0, y = -12.0, z = 0, h = 352.0},--6
-            [7] = {x = 31.0, y = -13.0, z = 0, h = 352.0},--7
-            [8] = {x = 35.0, y = -14.0, z = 0, h = 352.0},--8
-            [9] = {x = 39.0, y = -15.0, z = 0, h = 352.0},--9
-            [10] = {x = 43.0, y = -16.0, z = 0, h = 352.0},--10
-
-            [11] = {x = 7.0, y = 5.0, z = 0, h = 162.0},--11
-            [12] = {x = 11.0, y = 4.0, z = 0, h = 162.0},--12
-            [13] = {x = 15.0, y = 3.0, z = 0, h = 162.0},--13
-            [14] = {x = 19.0, y = 2.0, z = 0, h = 162.0},--14
-            [15] = {x = 23.0, y = 1.0, z = 0, h = 162.0},--15
-            [16] = {x = 27.0, y = 0.0, z = 0, h = 162.0},--16
-            [17] = {x = 31.0, y = -1.0, z = 0, h = 162.0},--17
-            [18] = {x = 35.0, y = -2.0, z = 0, h = 162.0},--18
-            [19] = {x = 39.0, y = -3.0, z = 0, h = 162.0},--19
-            [20] = {x = 43.0, y = -4.0, z = 0, h = 162.0},--20
-
-            [21] = {x = -7.0, y = 5.0, z = 0, h = 192.0},--21
-            [22] = {x = -11.0, y = 4.0, z = 0, h = 192.0},--22
-            [23] = {x = -15.0, y = 3.0, z = 0, h = 192.0},--23
-            [24] = {x = -19.0, y = 2.0, z = 0, h = 192.0},--24
-            [25] = {x = -23.0, y = 1.0, z = 0, h = 192.0},--25
-            [26] = {x = -27.0, y = 0.0, z = 0, h = 192.0},--26
-            [27] = {x = -31.0, y = -1.0, z = 0, h = 192.0},--27
-            [28] = {x = -35.0, y = -2.0, z = 0, h = 192.0},--28
-            [29] = {x = -39.0, y = -3.0, z = 0, h = 192.0},--29
-            [30] = {x = -43.0, y = -4.0, z = 0, h = 192.0},--30
-
-            [31] = {x = -7.0, y = -7.0, z = 0, h = 13.0},--31
-            [32] = {x = -11.0, y = -8.0, z = 0, h = 13.0},--32
-            [33] = {x = -15.0, y = -9.0, z = 0, h = 13.0},--33
-            [34] = {x = -19.0, y = -10.0, z = 0, h = 13.0},--34
-            [35] = {x = -23.0, y = -11.0, z = 0, h = 13.0},--35
-            [36] = {x = -27.0, y = -12.0, z = 0, h = 13.0},--36
-            [37] = {x = -31.0, y = -13.0, z = 0, h = 13.0},--37
-            [38] = {x = -35.0, y = -14.0, z = 0, h = 13.0},--38
-            [39] = {x = -39.0, y = -15.0, z = 0, h = 13.0},--39
-            [40] = {x = -43.0, y = -16.0, z = 0, h = 13.0},--40
         }
     }
 }
@@ -490,8 +444,8 @@ Config.InsideGarage = {
 
 Config.JobVehicles = {
     ENABLE = true, --Do you want players with defined jobs (below) to be able to use the garage ui to spawn job vehicles? (if disabled none of the options below will be used).
-    choose_liverys = false, --Do you want players to be able to change liverys when they spawn a vehicle at a job garage?
-    share_job_keys = false, --Do you want job vehicle keys to be automatically shared with other players with the same job? (requires you to be using the built in cd_garage keys feature).
+    choose_liverys = true, --Do you want players to be able to change liverys when they spawn a vehicle at a job garage?
+    share_job_keys = true, --Do you want job vehicle keys to be automatically shared with other players with the same job? (requires you to be using the built in cd_garage keys feature).
 
     Locations = {
         --coords: Where the job garage can be accessed from.
@@ -538,28 +492,49 @@ Config.JobVehicles = {
         --model: The spawn name of this vehicle. (this is not supposed to be a string, these symbols get the hash key of this vehicle).
 
         ['police'] = {
-            [1] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `rppolice1`},
-            [2] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `rpPolice2`},
-            [3] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `rpPolice3`},
-            [4] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `rpPolice4`},
-            [5] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `rpPolice5`},
-            [6] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `rpPolice6`},
-            [7] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `rppolice7`},
-            [8] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `rpPolice8`},
-            [9] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `rpPolice9`},
-            [10] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `rpPolice10`},
-            [11] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `rpPolice11`},
-            [12] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `rpPolice12`},
-            [13] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `rpPolice13`},
-            [14] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `rpPolice14`},
-            [15] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `rpPolice15`},
-            [16] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `rpPolice16`},
-            -- [15] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `gc_focus`},
-            -- [1] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `sc_235i`},
+            [1] = {job = 'police', spawn_max = true, plate = 'JK1L', job_grade = 0, garage_type = 'car', model = `rppolice1`},
+            [2] = {job = 'police', spawn_max = true, plate = 'JK1L', job_grade = 0, garage_type = 'car', model = `rpPolice2`},
+            [3] = {job = 'police', spawn_max = true, plate = 'JK1L', job_grade = 0, garage_type = 'car', model = `rpPolice3`},
+            [4] = {job = 'police', spawn_max = true, plate = 'JK1L', job_grade = 0, garage_type = 'car', model = `rpPolice4`},
+            [5] = {job = 'police', spawn_max = true, plate = 'JK1L', job_grade = 0, garage_type = 'car', model = `rpPolice5`},
+            [6] = {job = 'police', spawn_max = true, plate = 'JK1L', job_grade = 0, garage_type = 'car', model = `rpPolice6`},
+            [7] = {job = 'police', spawn_max = true, plate = 'JK1L', job_grade = 0, garage_type = 'car', model = `rppolice7`},
+            [8] = {job = 'police', spawn_max = true, plate = 'JK1L', job_grade = 0, garage_type = 'car', model = `rpPolice8`},
+            [9] = {job = 'police', spawn_max = true, plate = 'JK1L', job_grade = 0, garage_type = 'car', model = `rpPolice9`},
+            [10] = {job = 'police', spawn_max = true, plate = 'JK1L', job_grade = 0, garage_type = 'car', model = `rpPolice10`},
+            [11] = {job = 'police', spawn_max = true, plate = 'JK1L', job_grade = 0, garage_type = 'car', model = `rpPolice11`},
+            [12] = {job = 'police', spawn_max = true, plate = 'JK1L', job_grade = 0, garage_type = 'car', model = `rpPolice12`},
+            [13] = {job = 'police', spawn_max = true, plate = 'JK1L', job_grade = 0, garage_type = 'car', model = `rpPolice13`},
+            [14] = {job = 'police', spawn_max = true, plate = 'JK1L', job_grade = 0, garage_type = 'car', model = `rpPolice14`},
+            [15] = {job = 'police', spawn_max = true, plate = 'JK1L', job_grade = 0, garage_type = 'car', model = `rpPolice15`},
+            [16] = {job = 'police', spawn_max = true, plate = 'JK1L', job_grade = 0, garage_type = 'car', model = `rpPolice16`},
 
-            [18] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'air', model = `polmav`},
+            -- unmarked
 
-            [19] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'boat', model = `predator`},
+            [17] = {job = 'police', spawn_max = true, plate = 'JK1L', job_grade = 0, garage_type = 'car', model = `rpPoliceUC1`},
+            [18] = {job = 'police', spawn_max = true, plate = 'JK1L', job_grade = 0, garage_type = 'car', model = `rpPoliceUC2`},
+            [19] = {job = 'police', spawn_max = true, plate = 'JK1L', job_grade = 0, garage_type = 'car', model = `rpPoliceUC3`},
+            [20] = {job = 'police', spawn_max = true, plate = 'JK1L', job_grade = 0, garage_type = 'car', model = `rpPoliceUC4`},
+            [21] = {job = 'police', spawn_max = true, plate = 'JK1L', job_grade = 0, garage_type = 'car', model = `rpPoliceUC5`},
+            [22] = {job = 'police', spawn_max = true, plate = 'JK1L', job_grade = 0, garage_type = 'car', model = `rpPoliceUC6`},
+            [23] = {job = 'police', spawn_max = true, plate = 'JK1L', job_grade = 0, garage_type = 'car', model = `rpPoliceUC7`},
+            [24] = {job = 'police', spawn_max = true, plate = 'JK1L', job_grade = 0, garage_type = 'car', model = `rpPoliceUC8`},
+            [25] = {job = 'police', spawn_max = true, plate = 'JK1L', job_grade = 0, garage_type = 'car', model = `rpPoliceUC9`},
+            [26] = {job = 'police', spawn_max = true, plate = 'JK1L', job_grade = 0, garage_type = 'car', model = `rpPoliceUC10`},
+            [27] = {job = 'police', spawn_max = true, plate = 'JK1L', job_grade = 0, garage_type = 'car', model = `rpPoliceUC11`},
+            [28] = {job = 'police', spawn_max = true, plate = 'JK1L', job_grade = 0, garage_type = 'car', model = `sheriff2`},
+            -- riot
+
+            [29] = {job = 'police', spawn_max = true, plate = 'JK1L', job_grade = 0, garage_type = 'car', model = `rpPoliceR1`},
+            [30] = {job = 'police', spawn_max = true, plate = 'JK1L', job_grade = 0, garage_type = 'car', model = `rpPoliceR2`},
+
+            -- [15] = {job = 'police', spawn_max = true, plate = 'JK1L', job_grade = 0, garage_type = 'car', model = `gc_focus`},
+            -- [1] = {job = 'police', spawn_max = true, plate = 'JK1L', job_grade = 0, garage_type = 'car', model = `sc_235i`},
+
+            [31] = {job = 'police', spawn_max = true, plate = 'JK1L', job_grade = 0, garage_type = 'air', model = `rpPoliceH1`},
+
+            [32] = {job = 'police', spawn_max = true, plate = 'JK1L', job_grade = 0, garage_type = 'boat', model = `rpPoliceB1`},
+            [33] = {job = 'police', spawn_max = true, plate = 'JK1L', job_grade = 0, garage_type = 'boat', model = `rpPoliceB2`},
         },
         ['ambulance'] = {
             [1] = {job = 'ambulance', spawn_max = true, plate = 'EMS', job_grade = 0, garage_type = 'car', model = `ambulance`},
@@ -612,16 +587,16 @@ Config.GangGarages = {
 Config.Unique_Blips = true --Do you want each garage to be named by its unique id, for example: 'Garage A'? (If disabled all garages will be called 'Garage').
 Config.Blip = { --You can find more info on blips here - https://docs.fivem.net/docs/game-references/blips.
     ['car'] = {
-        sprite = 357, --Icon of the blip.
+        sprite = 50, --Icon of the blip.
         scale = 0.6, --Size of the blip.
-        colour = 9, --Colour of the blip.
+        colour = 3, --Colour of the blip.
         name = L('garage')..' ' --You dont need to change this.
     },
-
+    
     ['boat'] = {
-        sprite = 357,
+        sprite = 427,
         scale = 0.6,
-        colour = 9,
+        colour = 15,
         name = L('harbor')..' '
     },
 
@@ -907,9 +882,9 @@ Config.ImpoundLocations = { --DO NOT CHANGE THE TABLE IDENTIFIERSs, for example 
         coords = {x = 401.28, y = -1631.44, z = 29.29}, --This is the location of the garage, where you press e to open for example.
         spawnpoint = {x = 404.66, y = -1642.03, z = 29.29, h = 225.5}, --This is the location where the vehicle spawns.
         blip = {
-            sprite = 357, --Icon of the blip.
+            sprite = 317, --Icon of the blip.
             scale = 0.5, --Size of the blip.
-            colour = 3, --Colour of the blip.
+            colour = 47, --Colour of the blip.
             name = L('car_city_impound'), --This can be changed in the Locales.
         }
     },
@@ -919,9 +894,9 @@ Config.ImpoundLocations = { --DO NOT CHANGE THE TABLE IDENTIFIERSs, for example 
         coords = {x = 1893.48, y = 3713.50, z = 32.77},
         spawnpoint = {x = 1887.123, y = 3710.348, z = 31.92, h = 212.0},
         blip = {
-            sprite = 357,
+            sprite = 317,
             scale = 0.5,
-            colour = 3,
+            colour = 47,
             name = L('car_sandy_impound'),
         }
     },
@@ -931,9 +906,9 @@ Config.ImpoundLocations = { --DO NOT CHANGE THE TABLE IDENTIFIERSs, for example 
         coords = {x = -848.8, y = -1368.42, z = 1.6},
         spawnpoint = {x = -848.4, y = -1362.8, z = -0.47, h = 113.0},
         blip = {
-            sprite = 357,
+            sprite = 317,
             scale = 0.5,
-            colour = 3,
+            colour = 47,
             name = L('boat_impound'),
         }
     },
@@ -943,9 +918,9 @@ Config.ImpoundLocations = { --DO NOT CHANGE THE TABLE IDENTIFIERSs, for example 
         coords = {x = -956.49, y = -2919.74, z = 13.96},
         spawnpoint = {x = -960.22, y = -2934.4, z = 13.95, h = 153.0},
         blip = {
-            sprite = 357,
+            sprite = 317,
             scale = 0.5,
-            colour = 3,
+            colour = 47,
             name = L('air_impound'),
         }
     },

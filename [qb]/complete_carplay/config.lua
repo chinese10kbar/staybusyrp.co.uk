@@ -41,7 +41,7 @@ Config.PhoneType                = 'lbphone'
 -- === NAVIGATOR ===
 Config.EnableNavigator          = true
 Config.NavigatorPosition        = 'top-middle' -- COPY-PASE ONE OF THIS: top-left | top-middle | top-right | middle-left | middle-middle | middle-right | bottom-left | bottom-middle | bottom-right
-Config.DisplayCurrentStreet     = true
+Config.DisplayCurrentStreet     = false
 
 -- === CARPLAY INSTALLATION ===
 Config.NoInstall                = true -- all vehicles will be able to use carplay also without installing it 

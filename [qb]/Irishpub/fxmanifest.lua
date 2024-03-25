@@ -24,6 +24,6 @@ client_script {
 dependencies {
     'qb-core',
     'PolyZone',
-    'qb-target',
+    --'qb-target',
     'qb-menu'
 }

@@ -10,7 +10,7 @@ shared_scripts {
     'config.lua',
 }
 
-dependencies { 'qb-target', 'ps-ui', 'boostinghack' }
+dependencies {'ps-ui', 'boostinghack' }
 
 
 client_scripts{

@@ -10,13 +10,13 @@ Config.IgnoreGroups = false -- Doesn't scan people who can see scan results.
 
 Config.ScannerLocations = {
     {
-        location = vec3(365.58471679688,-1609.8415527344,28.292036056519),
-        heading = 140.2734527587891,
+        location = vector3(439.75732421875, -985.68084716797, 29.739603042603),
+        heading = 88.499435424805,
         hideObject = false, -- Don't show the scanner prop (Useful for scanners already on the map).
     },
     {
-        location = vec3(356.2782, -1588.7589, 22.8036),
-        heading = 228.8944274902344,
+        location = vector3(439.7737121582, -987.201171875, 29.739603042603),
+        heading = 87.499534606934,
         hideObject = false, -- Don't show the scanner prop (Useful for scanners already on the map).
     },
     {

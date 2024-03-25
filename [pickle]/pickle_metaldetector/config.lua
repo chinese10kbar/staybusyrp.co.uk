@@ -92,6 +92,13 @@ Config.MetalItems = { -- List of Detected Items
 'weapon_scarh',
 'weapon_akm',
 'weapon_ak47handmade',
+'weapon_beanbagshotgun',
+'weapon_sr25',
+'weapon_g36',
+'weapon_mpx',
+'weapon_sig516',
+'weapon_glock17'
+
 }
 
 Config.Scanner = {

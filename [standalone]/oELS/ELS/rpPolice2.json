@@ -176,6 +176,10 @@
         ]
     },
     "misc": {
+        "optiLink": {
+            "enabled": true,
+            "999Mode": true
+        },
         "steadyBurns": {
             "enabled": false,
             "extras": [

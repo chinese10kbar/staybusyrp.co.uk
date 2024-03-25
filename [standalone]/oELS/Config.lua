@@ -45,7 +45,7 @@ Config.Soundpacks = {
 }
 
 Config.Optilink = {
-    Enabled = true,
+    Enabled = false,
     Use999Sound = {
         -- Marked
         `rpPolice1`,

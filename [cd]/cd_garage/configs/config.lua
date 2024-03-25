@@ -462,15 +462,19 @@ Config.JobVehicles = {
             --MISSION ROW PD
             [1] = {coords = vector3(431.77, -1017.66, 28.89), spawn_coords = vector4(439.05392456055, -1025.3310546875, 28.327388763428, 6.5340085029602), distance = 10, garage_type = 'car', method = 'regular'}, --Mission Row PD (cars)
             [2] = {coords = vector3(449.27, -981.24, 43.69), spawn_coords = vector4(449.27, -981.24, 43.69, 94.13), distance = 5, garage_type = 'air', method = 'regular'}, --Mission Row PD (helipad)
-            --SANDY PD
-            [3] = {coords = vector3(1868.33, 3686.05, 33.78), spawn_coords = vector4(1872.68, 3687.19, 33.65, 211.34), distance = 10, garage_type = 'car', method = 'regular'}, --Sandy PD (cars)
-            [4] = {coords = vector3(1866.09, 3655.66, 33.9), spawn_coords = vector4(1866.09, 3655.66, 33.9, 27.07), distance = 5, garage_type = 'air', method = 'regular'}, --Sandy PD (helipad)
+            [3] = {coords = vector3(-724.19, -1444.02, 5.00), spawn_coords = vector4(-724.19, -1444.02, 5.00, 306), distance = 5, garage_type = 'air', method = 'regular'}, --Mission Row PD (helipad)
+            [4] = {coords = vector3(-744.93, -1468.06, 5.00), spawn_coords = vector4(-744.93, -1468.06, 5.00, 315), distance = 5, garage_type = 'air', method = 'regular'}, --Mission Row PD (helipad)
+
+            [5] = {coords = vector3(1868.33, 3686.05, 33.78), spawn_coords = vector4(1872.68, 3687.19, 33.65, 211.34), distance = 10, garage_type = 'car', method = 'regular'}, --Sandy PD (cars)
+            [6] = {coords = vector3(1866.09, 3655.66, 33.9), spawn_coords = vector4(1866.09, 3655.66, 33.9, 27.07), distance = 5, garage_type = 'air', method = 'regular'}, --Sandy PD (helipad)
             --PALETO PD
-            [5] = {coords = vector3(-463.43, 6039.67, 31.34), spawn_coords = vector4(-459.3, 6042.86, 31.34, 134.85), distance = 10, garage_type = 'car', method = 'regular'}, --Paleto PD (cars)
-            [6] = {coords = vector3(-466.82, 5997.14, 31.25), spawn_coords = vector4(-475.41, 5988.47, 31.34, 318.3), distance = 5, garage_type = 'air', method = 'regular'}, --Paleto PD (helipad)
+            [7] = {coords = vector3(-463.43, 6039.67, 31.34), spawn_coords = vector4(-459.3, 6042.86, 31.34, 134.85), distance = 10, garage_type = 'car', method = 'regular'}, --Paleto PD (cars)
+            [8] = {coords = vector3(-466.82, 5997.14, 31.25), spawn_coords = vector4(-475.41, 5988.47, 31.34, 318.3), distance = 5, garage_type = 'air', method = 'regular'}, --Paleto PD (helipad)
             --BOATS
-            [7] = {coords = vector3(-1598.49, -1201.4, 0.82), spawn_coords = vector4(-1609.96, -1210.83, -0.03, 134.45), distance = 20, garage_type = 'boat', method = 'regular'}, --Vespucci Beach (boats)
-            [8] = {coords = vector3(1426.31, 3750.12, 31.76), spawn_coords = vector4(1430.37, 3771.52, 29.86, 336.36), distance = 20, garage_type = 'boat', method = 'regular'}, --Sandy Lake (boats)
+           -- [9] = {coords = vector3(-1598.49, -1201.4, 0.82), spawn_coords = vector4(-1609.96, -1210.83, -0.03, 134.45), distance = 20, garage_type = 'boat', method = 'regular'}, --Vespucci Beach (boats)
+            [9] = {coords = vector3(-765.74, -1421.90, 1.60), spawn_coords = vector4(-775.92, -1419.54, -0.47, 80), distance = 20, garage_type = 'boat', method = 'regular'}, --Sandy Lake (boats)
+            [10] = {coords = vector3(-781.03, -1494.64, 1.59), spawn_coords = vector4(-793.41, -1501.05, -0.47, 115), distance = 20, garage_type = 'boat', method = 'regular'}, --Sandy Lake (boats)
+
         },
         ['ambulance'] = {
             --PILLBOX HOSPITAL
@@ -882,8 +886,8 @@ Config.ImpoundLocations = { --DO NOT CHANGE THE TABLE IDENTIFIERSs, for example 
         coords = {x = 401.28, y = -1631.44, z = 29.29}, --This is the location of the garage, where you press e to open for example.
         spawnpoint = {x = 404.66, y = -1642.03, z = 29.29, h = 225.5}, --This is the location where the vehicle spawns.
         blip = {
-            sprite = 317, --Icon of the blip.
-            scale = 0.5, --Size of the blip.
+            sprite = 357, --Icon of the blip.
+            scale = 0.6, --Size of the blip.
             colour = 47, --Colour of the blip.
             name = L('car_city_impound'), --This can be changed in the Locales.
         }
@@ -894,8 +898,8 @@ Config.ImpoundLocations = { --DO NOT CHANGE THE TABLE IDENTIFIERSs, for example 
         coords = {x = 1893.48, y = 3713.50, z = 32.77},
         spawnpoint = {x = 1887.123, y = 3710.348, z = 31.92, h = 212.0},
         blip = {
-            sprite = 317,
-            scale = 0.5,
+            sprite = 357,
+            scale = 0.6,
             colour = 47,
             name = L('car_sandy_impound'),
         }
@@ -906,8 +910,8 @@ Config.ImpoundLocations = { --DO NOT CHANGE THE TABLE IDENTIFIERSs, for example 
         coords = {x = -848.8, y = -1368.42, z = 1.6},
         spawnpoint = {x = -848.4, y = -1362.8, z = -0.47, h = 113.0},
         blip = {
-            sprite = 317,
-            scale = 0.5,
+            sprite = 357,
+            scale = 0.6,
             colour = 47,
             name = L('boat_impound'),
         }
@@ -918,8 +922,8 @@ Config.ImpoundLocations = { --DO NOT CHANGE THE TABLE IDENTIFIERSs, for example 
         coords = {x = -956.49, y = -2919.74, z = 13.96},
         spawnpoint = {x = -960.22, y = -2934.4, z = 13.95, h = 153.0},
         blip = {
-            sprite = 317,
-            scale = 0.5,
+            sprite = 357,
+            scale = 0.6,
             colour = 47,
             name = L('air_impound'),
         }

@@ -147,9 +147,9 @@ Config.PrivSlots = Slots.List -- Set a custom total slots for the user whose lic
 Config.CinematicMode = false -- If you want to use cinematic mode, you can make it true (um special?)
 
 Config.BackgroundMusic = {
-    Status = false, -- If you want to use background music, you can make it true.
-    Name = 'bgmusic.mp3', -- [web/build/audio/]
-    Volume = 0.2
+    Status = true, -- If you want to use background music, you can make it true.
+    Name = 'JBJustBusinessTag17.mp3', -- [web/build/audio/]
+    Volume = 1.0
 }
 
 Config.Pages = {
@@ -188,7 +188,7 @@ Config.Animation = {
 
 Config.TimeSettings = {
     SyncStatus = true, -- Synchronize with the weather on the server if you don't want to set custom weather and time in multicharacter
-    Time = 23, -- recommended 10-23 | not 00 or 00:00
+    Time = 10, -- recommended 10-23 | not 00 or 00:00
     Weather = 'EXTRASUNNY' -- CLEAR, EXTRASUNNY, CLOUDS, OVERCAST, RAIN, CLEARING , THUNDER, SMOG, FOGGY, XMAS , SNOWLIGHT, BLIZZARD
 }
 

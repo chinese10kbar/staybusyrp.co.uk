@@ -12,14 +12,14 @@ Config.targetExport = "qb-target"                               -- The name of t
 Config.PearlsSellsBlip = vector3(-1816.406, -1193.334, 13.305)  -- Blip to sell fish you have caught
 
 Config.BoatSpawnLocation = {
-    LaPuerta	= vector4(-802.05, -1504.36, -0.47, 112.27),        
+--    LaPuerta	= vector4(-802.05, -1504.36, -0.47, 112.27),        
 	PaletoCove 	= vector4(-1599.932, 5259.831, 1.578, 20.6317),        
 	ElGordo 	= vector4(3372.705, 5188.673, 0.121, 272.03),        
 	ActDam 		= vector4(1701.506, 43.897, 161.767, 188.579),
 	AlamoSea 	= vector4(1294.363, 4232.013, 31.709, 160.441),        
 }
 Config.PlayerReturnLocation = {
-    LaPuerta 	= vector4(-802.883, -1495.654, 1.595, 294.265),      
+  --  LaPuerta 	= vector4(-802.883, -1495.654, 1.595, 294.265),      
 	PaletoCove 	= vector4(-1605.342, 5258.052, 2.083, 292.725),       
 	ElGordo 	= vector4(3371.141, 5183.996, 1.46, 99.634),     
 	ActDam 		= vector4(1695.805, 43.456, 161.767, 103.579),
@@ -60,13 +60,6 @@ Config.largeLootboxRewards = {                                  -- Rewards found
 
 -- [SOURCE: https://github.com/sjpfeiffer/ped_spawner]
 Config.PedList = {                                              -- Peds that will be spawned in (if you change a ped model here you need to also change the ped model in client/addons.lua qb-target exports)
-	{
-		model = "s_m_y_ammucity_01",                            -- Boat/Gear Menu
-		coords = vector3(-806.17, -1496.57, 0.6),               
-		heading = 100.0,
-		gender = "male",
-        scenario = "WORLD_HUMAN_STAND_FISHING"
-	},
 	{
 		model = "u_m_m_filmdirector",                            -- Boat/Gear Menu
 		coords = vector3(-1604.236, 5256.483, 1.073),               

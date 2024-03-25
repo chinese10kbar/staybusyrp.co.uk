@@ -1,5 +1,5 @@
 local QBCore = GetQBVersion()
-
+--exports['qs-dispatch']:GetPlayerInfo()
 local nearATM = nil
 
 

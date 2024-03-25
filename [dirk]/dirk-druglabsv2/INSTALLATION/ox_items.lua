@@ -1,3 +1,38 @@
+['lab-key'] = {
+  ['weight'] = 100,
+  ['label'] = 'Lab Keys',
+
+},
+['actionfigure'] = {
+  ['weight'] = 100,
+  ['label'] = 'Action Figure',
+
+},
+['cocainepackage'] = {
+  ['weight'] = 100,
+  ['label'] = 'Cocaine Package',
+
+},
+['raidtool'] = {
+  ['weight'] = 100,
+  ['label'] = 'Raid Tool',
+
+},
+['boxmeth'] = {
+  ['weight'] = 100,
+  ['label'] = 'Box of Meth',
+
+},
+['untrimmed_weed'] = {
+  ['weight'] = 100,
+  ['label'] = 'Untrimmed Weed',
+
+},
+['cutcocaine'] = {
+  ['weight'] = 100,
+  ['label'] = 'Cut Cocaine',
+
+},
 ['trimmed_weed'] = {
   ['weight'] = 100,
   ['label'] = 'Trimmed Weed',
@@ -8,29 +43,9 @@
   ['label'] = 'Sodium Benzoate',
 
 },
-['rawcocaine'] = {
+['propelyeneglycol'] = {
   ['weight'] = 100,
-  ['label'] = 'Raw Cocaine',
-
-},
-['bagmeth'] = {
-  ['weight'] = 100,
-  ['label'] = 'Bag of Meth',
-
-},
-['untrimmed_weed'] = {
-  ['weight'] = 100,
-  ['label'] = 'Untrimmed Weed',
-
-},
-['raidtool'] = {
-  ['weight'] = 100,
-  ['label'] = 'Raid Tool',
-
-},
-['cutcocaine'] = {
-  ['weight'] = 100,
-  ['label'] = 'Cut Cocaine',
+  ['label'] = 'Propelyene Glycol',
 
 },
 ['bakingsoda'] = {
@@ -38,28 +53,13 @@
   ['label'] = 'Baking Soda',
 
 },
-['actionfigure'] = {
+['bagmeth'] = {
   ['weight'] = 100,
-  ['label'] = 'Action Figure',
+  ['label'] = 'Bag of Meth',
 
 },
-['propelyeneglycol'] = {
+['rawcocaine'] = {
   ['weight'] = 100,
-  ['label'] = 'Propelyene Glycol',
-
-},
-['lab-key'] = {
-  ['weight'] = 100,
-  ['label'] = 'Lab Keys',
-
-},
-['cocainepackage'] = {
-  ['weight'] = 100,
-  ['label'] = 'Cocaine Package',
-
-},
-['boxmeth'] = {
-  ['weight'] = 100,
-  ['label'] = 'Box of Meth',
+  ['label'] = 'Raw Cocaine',
 
 },

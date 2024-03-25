@@ -26,7 +26,6 @@ function addChannelCheck(channel, cb)
 	radioChecks[channel] = cb
 	logger.info("%s added a check to channel %s", GetInvokingResource(), channel)
 end
-
 exports('addChannelCheck', addChannelCheck)
 
 local function radioNameGetter_orig(source)
@@ -44,19 +43,15 @@ function overrideRadioNameGetter(channel, cb)
 	radioNameGetter = cb
 	logger.info("%s added a check to channel %s", GetInvokingResource(), channel)
 end
-
 exports('overrideRadioNameGetter', overrideRadioNameGetter)
 
 --- adds a player to the specified radion channel
 ---@param source number the player to add to the channel
 ---@param radioChannel number the channel to set them to
----@return boolean wasAdded if the player was successfuly added to the radio channel, or if it failed.
-function addPlayerToRadio(source, radioChannel)
+function addPlayerToRadio(source, radioChannel, pRadioChannelName)
 	if not canJoinChannel(source, radioChannel) then
 		-- remove the player from the radio client side
-		TriggerClientEvent("pma-voice:radioChangeRejected", source)
-		TriggerClientEvent('pma-voice:removePlayerFromRadio', source, source)
-		return false
+		return TriggerClientEvent('pma-voice:removePlayerFromRadio', source, source)
 	end
 	logger.verbose('[radio] Added %s to radio %s', source, radioChannel)
 
@@ -70,9 +65,7 @@ function addPlayerToRadio(source, radioChannel)
 	voiceData[source] = voiceData[source] or defaultTable(source)
 	voiceData[source].radio = radioChannel
 	radioData[radioChannel][source] = false
-	TriggerClientEvent('pma-voice:syncRadioData', source, radioData[radioChannel],
-		GetConvarInt("voice_syncPlayerNames", 0) == 1 and plyName)
-	return true
+	TriggerClientEvent('pma-voice:syncRadioData', source, radioData[radioChannel], GetConvarInt("voice_syncPlayerNames", 0) == 1 and plyName)
 end
 
 --- removes a player from the specified channel
@@ -93,7 +86,7 @@ end
 --- sets the players current radio channel
 ---@param source number the player to set the channel of
 ---@param _radioChannel number the radio channel to set them to (or 0 to remove them from radios)
-function setPlayerRadio(source, _radioChannel)
+function setPlayerRadio(source, _radioChannel, pRadioChannelName)
 	if GetConvarInt('voice_enableRadios', 1) ~= 1 then return end
 	voiceData[source] = voiceData[source] or defaultTable(source)
 	local isResource = GetInvokingResource()
@@ -102,55 +95,51 @@ function setPlayerRadio(source, _radioChannel)
 	if not radioChannel then
 		-- only full error if its sent from another server-side resource
 		if isResource then
-			error(("'radioChannel' expected 'number', got: %s"):format(type(_radioChannel)))
+			error(("'radioChannel' expected 'number', got: %s"):format(type(_radioChannel))) 
 		else
-			return logger.warn("%s sent a invalid radio, 'radioChannel' expected 'number', got: %s", source,
-				type(_radioChannel))
+			return logger.warn("%s sent a invalid radio, 'radioChannel' expected 'number', got: %s", source,type(_radioChannel))
 		end
 	end
 	if isResource then
 		-- got set in a export, need to update the client to tell them that their radio
 		-- changed
-		TriggerClientEvent('pma-voice:clSetPlayerRadio', source, radioChannel)
+		TriggerClientEvent('pma-voice:clSetPlayerRadio', source, radioChannel, pRadioChannelName)
 	end
-	if radioChannel ~= 0 then
-		if plyVoice.radio > 0 then
-			removePlayerFromRadio(source, plyVoice.radio)
-		end
-		local wasAdded = addPlayerToRadio(source, radioChannel)
-		Player(source).state.radioChannel = wasAdded and radioChannel or 0
+	Player(source).state.radioChannel = radioChannel
+	if radioChannel ~= 0 and plyVoice.radio == 0 then
+		addPlayerToRadio(source, radioChannel, pRadioChannelName)
 	elseif radioChannel == 0 then
 		removePlayerFromRadio(source, plyVoice.radio)
-		Player(source).state.radioChannel = 0
+	elseif plyVoice.radio > 0 then
+		removePlayerFromRadio(source, plyVoice.radio)
+		addPlayerToRadio(source, radioChannel, pRadioChannelName)
 	end
 end
-
 exports('setPlayerRadio', setPlayerRadio)
 
-RegisterNetEvent('pma-voice:setPlayerRadio', function(radioChannel)
-	setPlayerRadio(source, radioChannel)
+RegisterNetEvent('pma-voice:setPlayerRadio', function(radioChannel, pRadioChannelName)
+	setPlayerRadio(source, radioChannel, pRadioChannelName)
 end)
 
 --- syncs the player talking across all radio members
 ---@param talking boolean sets if the palyer is talking.
-function setTalkingOnRadio(talking)
+function setTalkingOnRadio(talking, pRadioChannelName, pRadioFolderName)
 	if GetConvarInt('voice_enableRadios', 1) ~= 1 then return end
 	voiceData[source] = voiceData[source] or defaultTable(source)
 	local plyVoice = voiceData[source]
 	local radioTbl = radioData[plyVoice.radio]
 	if radioTbl then
 		radioTbl[source] = talking
-		logger.verbose('[radio] Set %s to talking: %s on radio %s', source, talking, plyVoice.radio)
+		logger.verbose('[radio] Set %s to talking: %s on radio %s',source, talking, plyVoice.radio)
+		TriggerEvent('OGRadio:SpeakingOnRadio', talking, source, pRadioChannelName, pRadioFolderName)
 		for player, _ in pairs(radioTbl) do
 			if player ~= source then
 				TriggerClientEvent('pma-voice:setTalkingOnRadio', player, source, talking)
-				logger.verbose('[radio] Sync %s to let them know %s is %s', player, source,
-					talking and 'talking' or 'not talking')
+				logger.verbose('[radio] Sync %s to let them know %s is %s',player, source, talking and 'talking' or 'not talking')
 			end
 		end
 	end
 end
-
 RegisterNetEvent('pma-voice:setTalkingOnRadio', setTalkingOnRadio)
 
 AddEventHandler("onResourceStop", function(resource)
@@ -159,20 +148,19 @@ AddEventHandler("onResourceStop", function(resource)
 		local functionResource = string.match(functionRef, resource)
 		if functionResource then
 			radioChecks[channel] = nil
-			logger.warn('Channel %s had its radio check removed because the resource that gave the checks stopped',
-				channel)
+			logger.warn('Channel %s had its radio check removed because the resource that gave the checks stopped', channel)
 		end
 	end
 
 	if type(radioNameGetter) == "table" then
 		local radioRef = radioNameGetter.__cfx_functionReference
 		if radioRef then
-			local isResource = string.match(radioRef, resource)
+			local isResource = string.match(functionRef, resource)
 			if isResource then
 				radioNameGetter = radioNameGetter_orig
-				logger.warn(
-					'Radio name getter is resetting to default because the resource that gave the cb got turned off')
+				logger.warn('Radio name getter is resetting to default because the resource that gave the cb got turned off')
 			end
 		end
 	end
+
 end)

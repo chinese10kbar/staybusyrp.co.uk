@@ -101,7 +101,7 @@ Config.DealershipLocations = {
   },
   ["luxury"] = {
     type = "self-service", -- or "owned", "self-service"
-    openShowroom = vector3(-1257.4, -369.12, 36.98),
+    openShowroom = vector3(-1253.44, -350.39, 36.91),
     openManagement = vector3(-1249.04, -346.96, 37.34),
     purchaseSpawn = vector4(-1233.46, -346.81, 37.33, 23.36),
     testDriveSpawn = vector4(-1233.46, -346.81, 37.33, 23.36),

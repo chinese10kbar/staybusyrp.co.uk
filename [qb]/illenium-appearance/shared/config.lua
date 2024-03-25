@@ -105,7 +105,7 @@ Config.Blips = {
         Sprite = 366,
         Color = 47,
         Scale = 0.7,
-        Name = "Clothing Store",
+        Name = "JD Sports",
     },
     ["barber"] = {
         Show = true,
@@ -135,7 +135,7 @@ Config.TargetConfig = {
         model = "s_f_m_shop_high",
         scenario = "WORLD_HUMAN_STAND_MOBILE",
         icon = "fas fa-tshirt",
-        label = "Open Clothing Store",
+        label = "Open JD Sports",
         distance = 3
     },
     ["barber"] = {

@@ -63,8 +63,8 @@ Config.Locations[#Config.Locations+1] = { --[[ Fast Customs ]]--
 	}
 }
 Config.Locations[#Config.Locations+1] = { --[[ GABZ ALTA STREET BENNYS ]]--
-	Enabled = true,
-	job = "mechanic",
+	Enabled = false,
+	job = "",
 	zones = {
 		vec2(-263.99075317382, -1349.6701660156),
 		vec2(-263.5015258789, -1298.9702148438),
@@ -128,7 +128,7 @@ Config.Locations[#Config.Locations+1] = { --[[ GABZ ALTA STREET BENNYS ]]--
 	}
 }
 
-Config.Locations[#Config.Locations+1] = { --[[ LS CUSTOMS IN CITY ]]--
+Config.Locations[#Config.Locations+1] = { --[[ Busy Customs ]]--
 	Enabled = true,
 	job = "busymechanic",
 	zones = {
@@ -190,8 +190,8 @@ Config.Locations[#Config.Locations+1] = { --[[ LS CUSTOMS IN CITY ]]--
 }
 
 Config.Locations[#Config.Locations+1] = { --[[ HAYES AUTOS ]]--
-	Enabled = true,
-	job = "mechanic",
+	Enabled = false,
+	job = "",
 	zones = {
 		vec2(490.57400512695, -1302.0946044922),
 		vec2(490.27529907227, -1305.3948974609),
@@ -250,8 +250,8 @@ Config.Locations[#Config.Locations+1] = { --[[ HAYES AUTOS ]]--
 }
 
 Config.Locations[#Config.Locations+1] = { -- [[LS CUSTOMS ROUTE 68]] --
-	Enabled = true,
-	job = "mechanic",
+	Enabled = false,
+	job = "",
 	zones = {
 		vec2(1190.58, 2645.39),
 		vec2(1190.72, 2634.46),
@@ -309,8 +309,8 @@ Config.Locations[#Config.Locations+1] = { -- [[LS CUSTOMS ROUTE 68]] --
 }
 
 Config.Locations[#Config.Locations+1] = { --[[ BEEKERS GARAGE PALETO ]]--
-	Enabled = true,
-	job = "mechanic",
+	Enabled = false,
+	job = "",
 	zones = {
 		vec2(117.79, 6625.31),
 		vec2(102.88, 6611.96),
@@ -367,8 +367,8 @@ Config.Locations[#Config.Locations+1] = { --[[ BEEKERS GARAGE PALETO ]]--
 }
 
 Config.Locations[#Config.Locations+1] = { --[[ GABZ LS TUNER SHOP ]]--
-	Enabled = true,
-	job = "mechanic",
+	Enabled = false,
+	job = "",
 	zones = {
 		vec2(154.69816589355, -3007.0153808594),
 		vec2(120.64015197754, -3006.7275390625),
@@ -432,8 +432,8 @@ Config.Locations[#Config.Locations+1] = { --[[ GABZ LS TUNER SHOP ]]--
 }
 
 Config.Locations[#Config.Locations+1] = { --[[ AIRPORT LS CUSTOMS ]]--
-	Enabled = true,
-	job = "mechanic",
+	Enabled = false,
+	job = "",
 	zones = {
 		vec2(-1118.5782470703, -2017.4730224609),
 		vec2(-1143.9351806641, -2042.6685791016),
@@ -493,8 +493,8 @@ Config.Locations[#Config.Locations+1] = { --[[ AIRPORT LS CUSTOMS ]]--
 }
 
 Config.Locations[#Config.Locations+1] = { --[[ POPULAR STREET LS CUSTOMS ]]--
-	Enabled = true,
-	job = "mechanic",
+	Enabled = false,
+	job = "",
 	zones = {
 		vec2(712.07940673828, -1092.9447021484),
 		vec2(712.08245849609, -1052.4462890625),
@@ -553,8 +553,8 @@ Config.Locations[#Config.Locations+1] = { --[[ POPULAR STREET LS CUSTOMS ]]--
 }
 
 Config.Locations[#Config.Locations+1] = { --[[ OTTOS AUTOS ]]--
-	Enabled = true,
-	job = "mechanic",
+	Enabled = false,
+	job = "",
 	zones = {
 		vec2(824.64721679688, -802.48284912109),
 		vec2(838.40698242188, -802.47802734375),
@@ -613,8 +613,8 @@ Config.Locations[#Config.Locations+1] = { --[[ OTTOS AUTOS ]]--
 }
 
 Config.Locations[#Config.Locations+1] = { --[[ HAYES AUTOS ]]--
-	Enabled = true,
-	job = "mechanic",
+	Enabled = false,
+	job = "",
 	zones = {
 		vec2(-1439.9047851563, -443.4548034668),
 		vec2(-1426.0206298828, -466.5227355957),
@@ -671,7 +671,7 @@ Config.Locations[#Config.Locations+1] = { --[[ HAYES AUTOS ]]--
 
 Config.Locations[#Config.Locations+1] = { --[[ BENNYS NEXT TO PDM ]]--
 	Enabled = false,
-	job = "mechanic",
+	job = "",
 	zones = {
 		vec2(-39.657638549805, -1026.12890625),
 		vec2(-54.971218109131, -1066.3665771484),
@@ -724,8 +724,8 @@ Config.Locations[#Config.Locations+1] = { --[[ BENNYS NEXT TO PDM ]]--
 }
 
 Config.Locations[#Config.Locations+1] = { --[[ LA MESA IMPORT SHOP ]]--
-	Enabled = true,
-	job = "mechanic",
+	Enabled = false,
+	job = "",
 	zones = {
 		vec2(912.01, -987.16),
 		vec2(911.06, -973.9),
@@ -811,7 +811,7 @@ Config.Locations[#Config.Locations+1] = { --[[ LA MESA IMPORT SHOP ]]--
 
 Config.Locations[#Config.Locations+1] = { --[[ REDLINE ]]--
     Enabled = false,
-    job = "mechanic",
+    job = "",
     zones = {
         vec2(-548.77136230469, -940.03454589844),
         vec2(-541.89007568359, -918.62713623047),
@@ -881,7 +881,7 @@ Config.Locations[#Config.Locations+1] = { --[[ REDLINE ]]--
 
 Config.Locations[#Config.Locations+1] = { --[[ RISING SUN ]]--
     Enabled = false,
-    job = "mechanic",
+    job = "",
     zones = {
         vec2(-335.01919555664, -146.61500549316),
         vec2(-352.28985595703, -148.73826599121),
@@ -945,7 +945,7 @@ Config.Locations[#Config.Locations+1] = { --[[ RISING SUN ]]--
 
 Config.Locations[#Config.Locations+1] = { --[[ FLYWHEELS ]]--
     Enabled = false,
-    job = "mechanic",
+    job = "",
 	zones = {
 		vec2(1737.6037597656, 3335.5266113281),
         vec2(1772.2158203125, 3355.8051757812),
@@ -1005,7 +1005,7 @@ Config.Locations[#Config.Locations+1] = { --[[ FLYWHEELS ]]--
 
 Config.Locations[#Config.Locations+1] = { --[[ RFC LS CUSTOMS ]]--
     Enabled = false,
-    job = "mechanic",
+    job = "",
     zones = {
         vec2(-357.11694335938, -138.5697479248),
         vec2(-350.16461181641, -150.59289550781),

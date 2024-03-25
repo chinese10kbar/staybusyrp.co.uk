@@ -304,7 +304,7 @@ Config.Exercises = {
 Config.Gyms = {
 	{
 		gymcoords = vector3(-1207.25, -1571.51, 4.59), -- coords for blip and also coords for gym menu (if gympayed is disables menu will not show)
-		gymname = "Muscle Sands",
+		gymname = "Muscle Beach",
 		gymblip = {blip = true, blipiconid = 311, blipdisplay = 4, blipcolor = 60, blipshortrange = true, blipscale = 1.0},
 		gympayed = true, -- enable this if you want payed gym for player, so players need always pay for use machines in gym)
 		gymprice = 1000, -- the price of entry to the gym
@@ -408,7 +408,7 @@ Config.Gyms = {
 	},	
 	{
 		gymcoords = vector3(259.01, -269.51, 52.96), -- coords for blip and also coords for gym menu (if gympayed is disables menu will not show)
-		gymname = "LA Fitness", -- https://www.youtube.com/watch?v=LXm9ix0fF4Y (Map)
+		gymname = "Wave Leisure Centre", -- https://www.youtube.com/watch?v=LXm9ix0fF4Y (Map)
 		gymblip = {blip = true, blipiconid = 311, blipdisplay = 4, blipcolor = 60, blipshortrange = true, blipscale = 1.0},
 		gympayed = true, -- enable this if you want payed gym for player, so players need always pay for use machines in gym)
 		gymprice = 2000, -- the price of entry to the gym
@@ -552,74 +552,7 @@ Config.Gyms = {
 			},					
 		},
 	},		
-	{
-		gymcoords = vector3(-53.35, -1289.33, 29.9), -- coords for blip and also coords for gym menu (if gympayed is disables menu will not show)
-		gymname = "Los Santos GYM", -- https://forum.cfx.re/t/release-mlo-los-santos-gym/1051705 (Map)
-		gymblip = {blip = true, blipiconid = 311, blipdisplay = 4, blipcolor = 60, blipshortrange = true, blipscale = 1.0},
-		gympayed = true, -- enable this if you want payed gym for player, so players need always pay for use machines in gym)
-		gymprice = 2000, -- the price of entry to the gym
-		gymtime = 60, -- time a player can be in the gym after payment (in minutes)
-		gympassdays = 30, -- after how many days does it take away a person's gym pass
-		gymowneable = true, -- enable this if you want to have buyable gyms (you need enable also Config.OwneableGyms)
-		gymmanagmentcoords = vector3(-52.53, -1291.92, 29.9), -- coords for gym buy and managment menu
-		gymowneableprice = 1000, -- price of gym for sale
-		exercises = {
-			{
-				exercisetype = "chinups", -- types - bench, squat, chinups, barbell1, barbell2, box, run
-				coords = vector3(-59.12, -1285.0, 30.9), 
-				heading = 179.5,
-				status = {taken = false, takenplayerid = nil}, -- dont edit this
-			},		
-			{
-				exercisetype = "squat", -- types - bench, squat, chinups, barbell1, barbell2, box, run
-				coords = vector3(-63.02, -1289.04, 29.9), 
-				heading = 270.0,
-				status = {taken = false, takenplayerid = nil}, -- dont edit this
-			},	
-			{
-				exercisetype = "squat", -- types - bench, squat, chinups, barbell1, barbell2, box, run
-				coords = vector3(-62.82, -1285.75, 29.9), 
-				heading = 270.0,
-				status = {taken = false, takenplayerid = nil}, -- dont edit this
-			},			
-			{
-				exercisetype = "bench", -- types - bench, squat, chinups, barbell1, barbell2, box, run
-				coords = vector3(-62.74, -1278.79, 30.35), 
-				heading = 179.5,
-				status = {taken = false, takenplayerid = nil}, -- dont edit this
-			},
-			{
-				exercisetype = "bench", -- types - bench, squat, chinups, barbell1, barbell2, box, run
-				coords = vector3(-59.16, -1278.99, 30.35), 
-				heading = 179.5,
-				status = {taken = false, takenplayerid = nil}, -- dont edit this
-			},	
-			{
-				exercisetype = "barbell2", -- types - bench, squat, chinups, barbell1, barbell2, box, run
-				coords = vector3(-59.32, -1282.51, 30.9), 
-				heading = 269.5,
-				status = {taken = false, takenplayerid = nil}, -- dont edit this
-			},	
-			{
-				exercisetype = "barbell1", -- types - bench, squat, chinups, barbell1, barbell2, box, run
-				coords = vector3(-62.64, -1282.38, 30.9), 
-				heading = 269.5,
-				status = {taken = false, takenplayerid = nil}, -- dont edit this
-			},	
-			{
-				exercisetype = "box", -- types - bench, squat, chinups, barbell1, barbell2, box, run
-				coords = vector3(-59.85, -1290.81, 30.9), 
-				heading = 178.5,
-				status = {taken = false, takenplayerid = nil}, -- dont edit this
-			},	
-			{
-				exercisetype = "box", -- types - bench, squat, chinups, barbell1, barbell2, box, run
-				coords = vector3(-62.05, -1290.79, 30.9), 
-				heading = 178.5,
-				status = {taken = false, takenplayerid = nil}, -- dont edit this
-			},					
-		},
-	},			
+	
 } 
 
 Config.Showers = {

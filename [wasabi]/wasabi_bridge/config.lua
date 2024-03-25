@@ -13,7 +13,7 @@ Config.CheckForUpdates = true
 -- Options: 'top', 'top-right', 'top-left', 'bottom',           --
 -- 'bottom-right', 'bottom-left', 'center-right', 'center-left' --
 ------------------------------------------------------------------
-Config.NotificationLocation = 'center-left'
+Config.NotificationLocation = 'center-right'
 
 ---------------------------------------------------------
 --     Specify the target system being used here.      --    

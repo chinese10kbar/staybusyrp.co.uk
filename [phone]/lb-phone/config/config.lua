@@ -311,10 +311,10 @@ Config.FrameColor = "#39334d" -- This is the color of the phone frame. Default (
 Config.AllowFrameColorChange = true -- Allow players to change the color of their phone frame?
 
 Config.PhoneNumber = {}
-Config.PhoneNumber.Format = "{13}" -- Don't touch unless you know what you're doing. IMPORTANT: The sum of the numbers needs to be equal to the phone number length + prefix length
-Config.PhoneNumber.Length = 11 -- This is the length of the phone number WITHOUT the prefix.
+Config.PhoneNumber.Format = "{11}" -- Don't touch unless you know what you're doing. IMPORTANT: The sum of the numbers needs to be equal to the phone number length + prefix length
+Config.PhoneNumber.Length = 8 -- This is the length of the phone number WITHOUT the prefix.
 Config.PhoneNumber.Prefixes = { -- These are the first numbers of the phone number, usually the area code.
-    "07"
+    "079"
 }
 
 Config.Battery = {} -- WITH THESE SETTINGS, A FULL CHARGE WILL LAST AROUND 2 HOURS.
@@ -343,15 +343,15 @@ Config.SyncFlash = true -- should flashlights be synced across all players? May 
 Config.EndLiveClose = false -- should InstaPic live end when you close the phone?
 
 Config.AllowExternal = { -- allow people to upload external images? (note: this means they can upload nsfw / gore etc)
-    Twitter = false, -- set to true to enable external images on that specific app, set to false to disable it.
-    Instagram = false,
-    Tinder = false,
-    TikTok = false,
-    YellowPages = false,
-    MarketPlace = false,
-    Mail = false,
-    Messages = false,
-    Other = false, -- other apps that don't have a specific setting (ex: setting a profile picture for a contact, backgrounds for the phone etc)
+    Twitter = true, -- set to true to enable external images on that specific app, set to false to disable it.
+    Instagram = true,
+    Tinder = true,
+    TikTok = true,
+    YellowPages = true,
+    MarketPlace = true,
+    Mail = true,
+    Messages = true,
+    Other = true, -- other apps that don't have a specific setting (ex: setting a profile picture for a contact, backgrounds for the phone etc)
 }
 
 Config.WordBlacklist = {}

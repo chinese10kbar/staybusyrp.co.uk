@@ -74,7 +74,7 @@ Config.Respond = 'I'       --Key to respond/unrespond on the small UI. (G defaul
 
 Config.Radar = {
     enabled = true,
-    needVehicleInWhitelist = false, -- need vehicle in whitelist to use radar
+    needVehicleInWhitelist = true, -- need vehicle in whitelist to use radar
     jobsAllowedToUseRadar = {       -- Jobs allowed to use the radar
         "police"
     },
@@ -574,7 +574,7 @@ Config.VelocityRadar = { -- Velocity Radar Config
                         { key = "Speed", value = math.floor(math.abs(kmh or 0)) .. " km/h" },
                         { key = "Zone",  value = zone.label or "Not concluse" },
                         { key = "Limit", value = getFirstLimit(zone.velocityRanges) or kmh },
-                        { key = "Fine",  value = amount .. "$" },
+                        { key = "Fine",  value = amount .. "£" },
                         { key = "Image", value = image or 'No image available' }
                     }
                 }

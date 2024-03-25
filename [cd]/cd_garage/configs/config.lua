@@ -46,10 +46,10 @@ Config.FrameworkTriggers = {
 --╚═╝╚═╝     ╚═╝╚═╝      ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝
 
 
-Config.PlateFormats = 'trimmed' --[ 'trimmed' /  'with_spaces' / 'mixed' ] CHOOSE CAREFULLY! Read our documentation website for more info on this if you are unsure! [https://docs.codesign.pro/paid-scripts/garage#step-6-vehicle-plate-format].
+Config.PlateFormats = 'mixed' --[ 'trimmed' /  'with_spaces' / 'mixed' ] CHOOSE CAREFULLY! Read our documentation website for more info on this if you are unsure! [https://docs.codesign.pro/paid-scripts/garage#step-6-vehicle-plate-format].
 Config.UsingOnesync = true --Do you use OneSync legacy/infinity?
 Config.IdentifierType = 'license' --[ 'steamid' / 'license' ] Choose the identifier type that your server uses.
-Config.UseFrameworkDutySystem = true --Do you want to use your frameworks (esx/qbcore) built-in duty system?
+Config.UseFrameworkDutySystem = false --Do you want to use your frameworks (esx/qbcore) built-in duty system?
 Config.Debug = false --To enable debug prints.
 
 
@@ -68,7 +68,7 @@ Config.Keys = {
     StartHotwire_Key = Config.Keys['E'] --The key to start hotwiring a vehicle (default E).
 }
 
-Config.UniqueGarages = true --Do you want to only be able to get your car from the garage you last put it in?
+Config.UniqueGarages = false --Do you want to only be able to get your car from the garage you last put it in?
 Config.SaveAdvancedVehicleDamage = true --Do you want to save poped tyres, broken doors and broken windows and re-apply them all when spawning a vehicle?
 Config.UseExploitProtection = false --Do you want to enable the cheat engine protection to check the vehicle hashes when a vehicle is stored?
 Config.ResetGarageState = true --Do you want the in_garage state of all vehicles to be reset when the script starts/restarts?
@@ -95,9 +95,9 @@ Config.VehiclesData = {
 }
 
 Config.GarageTax = {
-    ENABLE = true, --Do you want to enable the vehicle tax system? (each vehicle will be taxed 1 time per server restart).
+    ENABLE = false, --Do you want to enable the vehicle tax system? (each vehicle will be taxed 1 time per server restart).
     method = 'default', --[ 'default' / 'vehicles_data' ] Read below for more info on each on these 2 options.
-    default_price = 100, --If 'default' method is chosen, then it will be a set price to return any vehicle. (eg., $500 fee).
+    default_price = 1000, --If 'default' method is chosen, then it will be a set price to return any vehicle. (eg., $500 fee).
     vehiclesdata_price_multiplier = 1 --If 'vehicles_data' method is chosen, the return vehicle price will be a % of the vehcles value. (eg., 1% of a $50,000 car would be a $500 fee).
 }
 
@@ -129,7 +129,7 @@ Config.Impound = {
 
     Impound_Fee = { --This is the price players pay for their vehicle to be unimpounded.
         method = 'default', --[ 'default' / 'vehicles_data' ] Read below for more info on each of these 2 options. (Config.VehiclesData.ENABLE must be enabled if you want to use 'vehicles_data').
-        default_price = 2500, --If 'default' method is chosen, then it will be a set price to unimpounded any vehicle. (eg., $1000 fee).
+        default_price = 1000, --If 'default' method is chosen, then it will be a set price to unimpounded any vehicle. (eg., $1000 fee).
         vehiclesdata_price_multiplier = 1 --If 'vehicles_data' method is chosen, the unimpounded vehicle price will be a % of the vehcles value. (eg., 1% of a $50,000 car would be a $500 fee).
     }
 }
@@ -217,7 +217,7 @@ Config.FakePlates = {
     RemovePlate = {
         chat_command = 'removefakeplate', --Customise the chat command to remove a fake plate from a vehicle.
         allowed_jobs = {
-            ENABLE = true, --Do you want to allow certain jobs to remove a fake plate? (the vehicles owner will always be able to remove plates).
+            ENABLE = false, --Do you want to allow certain jobs to remove a fake plate? (the vehicles owner will always be able to remove plates).
             table = { --The list of jobs who can remove a fake plate.
                 ['police'] = true,
                 --['add_more_here'] = true,
@@ -408,7 +408,7 @@ Config.InsideGarage = {
     shell_z_axis = 30, --This is how low under the ground the garage shell will spawn, you could use math.random(10,50) to make it random each time so players dont see each other in their garage.
     shell_time_script = 'easytime', --Choose which time script you are using so we can set the time when you enter the shell. [ 'easytime' / 'vsync' / 'qbcore' / 'other' ].
     engines_on = false, --Do you want the vehicles engine will be turned on when you enter the inside garage?
-    lights_on = true, --Do you want the vehicles headlights will be turned on when you enter the inside garage?
+    lights_on = false, --Do you want the vehicles headlights will be turned on when you enter the inside garage?
     use_spotlight = true, --Do you want the spotlight to shine on the closest vehicle?
     
     Insidegarage_Blacklist = { --Vehicles inside this table will not be spawned inside the garage, this is used for large vehicles that will not fit.
@@ -490,8 +490,8 @@ Config.InsideGarage = {
 
 Config.JobVehicles = {
     ENABLE = true, --Do you want players with defined jobs (below) to be able to use the garage ui to spawn job vehicles? (if disabled none of the options below will be used).
-    choose_liverys = true, --Do you want players to be able to change liverys when they spawn a vehicle at a job garage?
-    share_job_keys = true, --Do you want job vehicle keys to be automatically shared with other players with the same job? (requires you to be using the built in cd_garage keys feature).
+    choose_liverys = false, --Do you want players to be able to change liverys when they spawn a vehicle at a job garage?
+    share_job_keys = false, --Do you want job vehicle keys to be automatically shared with other players with the same job? (requires you to be using the built in cd_garage keys feature).
 
     Locations = {
         --coords: Where the job garage can be accessed from.
@@ -538,13 +538,27 @@ Config.JobVehicles = {
         --model: The spawn name of this vehicle. (this is not supposed to be a string, these symbols get the hash key of this vehicle).
 
         ['police'] = {
-            [1] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `police`},
-            [2] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `police2`},
-            [3] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `police3`},
+            [1] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `arv_xc90`},
+            [2] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `response_cupra`},
+            [3] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `rpu_530i`},
+            [4] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `arv_x5`},
+            [5] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `arv_focus`},
+            [6] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `response_mondeo`},
+            [7] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `pcso_308`},
+            [8] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `response_Octava`},
+            [9] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `pcso_20mk7`},
+            [10] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `arv_range`},
+            [11] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `polsportland`},
+            [12] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `polvxr`},
+            [13] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `rpu_x5`},
+            [14] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `pdrs6abtm`},
+            [15] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `m3tels`},
+            -- [15] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `gc_focus`},
+            -- [1] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'car', model = `sc_235i`},
 
-            [4] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'air', model = `polmav`},
+            [18] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'air', model = `polmav`},
 
-            [5] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'boat', model = `predator`},
+            [19] = {job = 'police', spawn_max = true, plate = 'PD', job_grade = 0, garage_type = 'boat', model = `predator`},
         },
         ['ambulance'] = {
             [1] = {job = 'ambulance', spawn_max = true, plate = 'EMS', job_grade = 0, garage_type = 'car', model = `ambulance`},
@@ -789,6 +803,62 @@ Config.Locations = {
         ShellType = '10cargarage_shell',
     },
 
+    
+    {
+        Garage_ID = 'L', --PALETO
+        Type = 'car',
+        Dist = 10,
+        x_1 = -364.97, y_1 = -92.67, z_1 = 45.67,
+        EventName1 = 'cd_garage:QuickChoose',
+        EventName2 = 'cd_garage:EnterGarage',
+        Name = UIText,
+        x_2 = -364.97, y_2 = -92.67, z_2 = 45.67, h_2 = 334.68,
+        EnableBlip = true,
+        JobRestricted = nil,
+        ShellType = '10cargarage_shell',
+    },
+
+    {
+        Garage_ID = 'M', --PALETO
+        Type = 'car',
+        Dist = 10,
+        x_1 = -743.76, y_1 = -1038.33, z_1 = 12.65,
+        EventName1 = 'cd_garage:QuickChoose',
+        EventName2 = 'cd_garage:EnterGarage',
+        Name = UIText,
+        x_2 = -743.76, y_2 = -1038.33, z_2 = 12.65, h_2 = 28.1,
+        EnableBlip = true,
+        JobRestricted = nil,
+        ShellType = '10cargarage_shell',
+    },
+
+    {
+        Garage_ID = 'N', --PALETO
+        Type = 'car',
+        Dist = 10,
+        x_1 = -1515.78, y_1 = -422.6, z_1 = 35.44,
+        EventName1 = 'cd_garage:QuickChoose',
+        EventName2 = 'cd_garage:EnterGarage',
+        Name = UIText,
+        x_2 = -1515.78, y_2 = -422.6, z_2 = 35.44, h_2 = 137.46,
+        EnableBlip = true,
+        JobRestricted = nil,
+        ShellType = '10cargarage_shell',
+    },
+
+    {
+        Garage_ID = 'o', --PALETO
+        Type = 'car',
+        Dist = 10,
+        x_1 = -1440.32, y_1 = -628.87, z_1 = 35.76,
+        EventName1 = 'cd_garage:QuickChoose',
+        EventName2 = 'cd_garage:EnterGarage',
+        Name = UIText,
+        x_2 = -1440.32, y_2 = -628.87, z_2 = 35.76, h_2 = 303.23,
+        EnableBlip = true,
+        JobRestricted = nil,
+        ShellType = '10cargarage_shell',
+    },
 
 
 

@@ -136,7 +136,7 @@ Config.Bank = { -- All physical banks
     the bench, if you want to disable it you can do it!
 ]]
 
-Config.EnablePeds = false -- Enable or disable the peds system
+Config.EnablePeds = true -- Enable or disable the peds system
 Config.Peds = {
     {
         position = vector4(149.5513, -1042.1570, 29.3680, 341.6520),

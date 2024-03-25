@@ -38,7 +38,7 @@ Los Santos GYM
 https://forum.cfx.re/t/release-mlo-los-santos-gym/1051705
 Pump & Run GYM
 https://www.gta5-mods.com/maps/mlo-pump-run-gym-add-on-sp-fivem-ragemp
-La Fitness
+Wave Leisure Centre
 https://www.youtube.com/watch?v=LXm9ix0fF4Y'
 
 Commands for admins:

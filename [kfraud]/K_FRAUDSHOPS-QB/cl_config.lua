@@ -11,11 +11,11 @@ KonfigCL.BankerNPC = "u_m_m_bankman"
 --items to sell to banker
 
 
-KonfigCL.ElectronicsBuyLocation = vector3(-658.8, -854.79, 24.51)
-KonfigCL.BlackMarketBuyLocation = vector3(-173.93, -1265.92, 32.6)
-KonfigCL.WhiteSlipBuyLocation = vector3(263.2, 211.56, 110.29)
+KonfigCL.ElectronicsBuyLocation = vector3(0,0,12321)
+KonfigCL.BlackMarketBuyLocation = vector3(455.96, 5570.77, 781.18)
+KonfigCL.WhiteSlipBuyLocation = vector3(0,0,12321)
 
-KonfigCL.BankerLocation = vector3(248.85, 224.34, 106.29)
+KonfigCL.BankerLocation = vector3(264.68, 214.83, 110.29)
 
 KonfigCL.QBTarget = true
 
@@ -26,7 +26,7 @@ KonfigCL.BlackmarketItems = {
     [1] = {
         name = "skimmer",
         price = 5000,
-        amount = 1,
+        amount = 1000,
         info = {},
         type = "item",
         slot = 1,
@@ -34,7 +34,7 @@ KonfigCL.BlackmarketItems = {
     [2] = {
         name = "blankcard",
         price = 400,
-        amount = 10,
+        amount = 1000,
         info = {},
         type = "item",
         slot = 2,
@@ -42,7 +42,7 @@ KonfigCL.BlackmarketItems = {
     [3] = {
         name = "infousb",
         price = 600,
-        amount = 10,
+        amount = 1000,
         info = {},
         type = "item",
         slot = 3,
@@ -50,10 +50,18 @@ KonfigCL.BlackmarketItems = {
     [4] = {
         name = "stolencard",
         price = 600,
-        amount = 10,
+        amount = 1000,
         info = {},
         type = "item",
         slot = 4,
+    },
+    [5] = {
+        name = "whiteslip",
+        price = 500,
+        amount = 1000,
+        info = {},
+        type = "item",
+        slot = 5,
     },
 }
 
@@ -61,7 +69,7 @@ KonfigCL.SlipItems = {
     [1] = {
         name = "whiteslip",
         price = 500,
-        amount = 10,
+        amount = 1000,
         info = {},
         type = "item",
         slot = 1,

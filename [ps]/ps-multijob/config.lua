@@ -1,7 +1,7 @@
 Config = Config or {}
 
 -- Side of the screen where you want the ui to be on. Can either be "left" or "right"
-Config.Side = "left"
+Config.Side = "right"
 
 Config.MaxJobs = 5
 Config.IgnoredJobs = {
@@ -28,7 +28,7 @@ Config.Descriptions = {
 	["ambulance"] = "Fix the bullet holes",
 	["mechanic"] = "Fix the bullet holes",
 	["tow"] = "Pickup the tow truck and steal some vehicles",
-	["taxi"] = "Pickup people around the city and drive them to their destination",
+	["uber"] = "Pickup people around the city and drive them to their destination",
 	["bus"] = "Pickup multiple people around the city and drive them to their destination",
 	["realestate"] = "Sell houses or something",
 	["cardealer"] = "Sell cars or something",

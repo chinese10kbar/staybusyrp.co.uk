@@ -143,8 +143,8 @@
             "images": ["1.png", "2.png"]
         },
         "Twitter": {
-            "name": "Birdy",
-            "icon": "./assets/img/icons/apps/Birdy.png",
+            "name": "BusyTweet",
+            "icon": "./assets/img/icons/apps/Twitter.png",
             "description": "Live news, sports and chat",
             "removable": true,
             "size": 256700,
@@ -172,24 +172,24 @@
             "size": 28200
         },
         "Instagram": {
-            "name": "InstaPic",
-            "icon": "./assets/img/icons/apps/InstaPic.png",
+            "name": "Insta",
+            "icon": "./assets/img/icons/apps/Instagram.png",
             "description": "Share photos and videos",
             "removable": true,
             "size": 223000,
             "images": ["1.png", "2.png", "3.png", "4.png", "5.png"]
         },
         "Tinder": {
-            "name": "Spark",
-            "icon": "./assets/img/icons/apps/Spark.png",
+            "name": "Swinder",
+            "icon": "./assets/img/icons/apps/Tinder.png",
             "description": "Meet new people",
             "removable": true,
             "size": 187500,
             "images": ["1.png", "2.png", "3.png", "4.png", "5.png"]
         },
         "TikTok": {
-            "name": "Trendy",
-            "icon": "./assets/img/icons/apps/Trendy.png",
+            "name": "FlickTok",
+            "icon": "./assets/img/icons/apps/TikTok.png",
             "description": "Share photos and videos",
             "removable": true,
             "size": 223000

@@ -1,5 +1,5 @@
 Locales['en'] = {
-    ['BANKING_BLIP_NAME'] = 'Bank',
+    ['BANKING_BLIP_NAME'] = 'Natwest',
     ['BANKING_HELPTEXT_OPEN_BANKING'] = 'Press ~INPUT_PICKUP~ to open bank',
     ['BANKING_HELPTEXT_OPEN_CREATE_CARD'] = 'Press ~INPUT_PICKUP~ to create a card',
     ['BANKING_HELPTEXT_OPEN_ATM'] = 'Press ~INPUT_PICKUP~ to open ATM',

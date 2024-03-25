@@ -14,7 +14,7 @@ function getBills(a, cb, data)
                     ["author_name"] = value["sender"] or 'Not defined', -- value["row_name of author name in your SQL"]
                     ["timestamp"] = 'N/A', -- value["row_name of timestamp in your SQL"]
                     ["status"] = 'N/A', -- value["row_name of status in your SQL"]
-                    ["item"] = (value["amount"] or '0') .. '$', -- value["row_name of item/text in your SQL"]
+                    ["item"] = (value["amount"] or '0') .. '£', -- value["row_name of item/text in your SQL"]
                 }
             )
         end

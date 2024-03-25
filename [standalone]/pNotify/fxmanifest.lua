@@ -1,11 +1,11 @@
-description "Simple Notification Script using https://notifyjs.com/"
+fx_version 'cerulean'
+game 'gta5'
+description 'pNotify'
 
 ui_page "html/index.html"
 
 client_script "cl_notify.lua"
 
-export "SetQueueMax"
-export "SendNotification"
 
 files {
     "html/index.html",
@@ -15,3 +15,6 @@ files {
     "html/themes.css",
     "html/sound-example.wav"
 }
+
+export "SetQueueMax"
+export "SendNotification"

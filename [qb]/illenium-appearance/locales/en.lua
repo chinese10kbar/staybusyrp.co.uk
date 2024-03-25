@@ -276,7 +276,7 @@ Locales["en"] = {
         title = "Buy Clothing - £%d",
         titleNoPrice = "Change Clothing",
         options = {
-            title = "👔 | Clothing Store Options",
+            title = "👔 | JD Sports Options",
             description = "Pick from a wide range of items to wear"
         },
         outfits = {

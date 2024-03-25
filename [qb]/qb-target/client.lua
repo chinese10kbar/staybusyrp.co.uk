@@ -101,36 +101,39 @@ local function DrawTarget()
 end
 
 local function RaycastCamera(flag, playerCoords)
-	if not playerPed then playerPed = PlayerPedId() end
-	if not playerCoords then playerCoords = GetEntityCoords(playerPed) end
+    local playerPed = PlayerPedId()
+    if not playerCoords then
+        playerCoords = GetEntityCoords(playerPed)
+    end
 
-	local rayPos, rayDir = ScreenPositionToCameraRay()
-	local destination = rayPos + 16 * rayDir
-	local rayHandle = StartShapeTestLosProbe(rayPos.x, rayPos.y, rayPos.z, destination.x, destination.y, destination.z,
-		flag or -1, playerPed, 4)
+    local rayPos, rayDir = ScreenPositionToCameraRay()
+    local destination = rayPos + 16 * rayDir
+    local rayHandle = StartShapeTestLosProbe(rayPos.x, rayPos.y, rayPos.z, destination.x, destination.y, destination.z,
+        flag or -1, playerPed, 4)
 
-	while true do
-		local result, _, endCoords, _, entityHit = GetShapeTestResult(rayHandle)
+    while true do
+        local result, _, endCoords, _, entityHit = GetShapeTestResult(rayHandle)
 
-		if result ~= 1 then
-			local distance = playerCoords and #(playerCoords - endCoords)
+        if result ~= 1 then
+            local distance = playerCoords and #(playerCoords - endCoords)
 
-			if flag == 30 and entityHit then
-				entityHit = HasEntityClearLosToEntity(entityHit, playerPed, 7) and entityHit
-			end
+            if flag == 30 and entityHit then
+                entityHit = HasEntityClearLosToEntity(entityHit, playerPed, 7) and entityHit or nil
+            end
 
-			local entityType = entityHit and GetEntityType(entityHit)
+            local entityType = entityHit and GetEntityType(entityHit)
 
-			if entityType == 0 and pcall(GetEntityModel, entityHit) then
-				entityType = 3
-			end
+            if entityType == 0 and pcall(GetEntityModel, entityHit) then
+                entityType = 3
+            end
 
-			return endCoords, distance, entityHit, entityType or 0
-		end
+            return endCoords, distance, entityHit, entityType or 0
+        end
 
-		Wait(0)
-	end
+        Wait(0)
+    end
 end
+
 
 exports('RaycastCamera', RaycastCamera)
 

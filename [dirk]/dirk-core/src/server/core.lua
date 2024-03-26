@@ -84,8 +84,8 @@ Core = {
           if not suc then failures[k] = msg; end 
         end
         for k,v in pairs(failures) do
-          print("^2Dirk-Core^1 | AUTO ADD ITEM ERROR^7")
-          print(string.format("%s couldn't be added because: %s", k,v))
+        --  print("^2Dirk-Core^1 | AUTO ADD ITEM ERROR^7")
+         -- print(string.format("%s couldn't be added because: %s", k,v))
         end
       end
 

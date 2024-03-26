@@ -1,8 +1,8 @@
 if not Slots.DiscordPerm.status then return end
 
 local discordConfig = {
-    guild_id = '',
-    bot_token = '',
+    guild_id = '1213803011973849149',
+    bot_token = 'MTIxOTAxNjY2NjkzMTkyNTA3Mg.G4a1Rk.oE8MnRk8hDCZr81VOsIzxtuHOCqUoY_3fznVco',
 }
 
 -- @see error_codes_defined from here: https://github.com/JaredScar/Badger_Discord_API/blob/main/server.lua#L3

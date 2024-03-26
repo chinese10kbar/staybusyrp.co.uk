@@ -20,12 +20,9 @@ Slots.List = {
 -- based on specific Discord roles that they possess
 
 Slots.DiscordPerm = {
-    status = false, -- Set to true to enable this feature, or false to disable it.
+    status = true, -- Set to true to enable this feature, or false to disable it.
     role = {
-        {id = "roleid", addExtraSlot = 20}, -- Example: Users with this role will have 20 + Config.DefaultSlots = 25 in total.
-        {id = "roleid", addExtraSlot = 3}, -- Replace 'roleid' with your Discord role ID and specify the total extra slots.
-        {id = "roleid", addExtraSlot = 4}, -- Repeat this pattern for as many roles as you need.
-        {id = "roleid", addExtraSlot = 5},
-        {id = "roleid", addExtraSlot = 6},
+        {id = "1219005013469171824", addExtraSlot = 20}, -- Example: Users with this role will have 20 + Config.DefaultSlots = 25 in total.
+        {id = "1219005045685878784", addExtraSlot = 1}, -- Replace 'roleid' with your Discord role ID and specify the total extra slots.
     }
 }

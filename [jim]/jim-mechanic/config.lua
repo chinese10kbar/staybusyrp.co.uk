@@ -98,10 +98,10 @@ Config = {
 		increaseEngDamage = true,		-- enabling this adds extra damage based on what the body damage has just taken
 
 		damageLimits = {
-			petrolTank = 750.0,			-- Prevents tankHealth ever going below ( if this goes too low fuel leaks and instantly destorys the engine)
-			engine = 50.0,				-- Prevents engine Damage ever going below 50.0
+			petrolTank = 650.0,			-- Prevents tankHealth ever going below ( if this goes too low fuel leaks and instantly destorys the engine)
+			engine = 30.0,				-- Prevents engine Damage ever going below 50.0
 			engineUndriveable = true,	-- If engine is at the above level, make it undriveable
-			body = 50.0,				-- Prevent body damage going below 50.0
+			body = 30.0,				-- Prevent body damage going below 50.0
 		}
 	},
 

@@ -4,6 +4,7 @@ minify "yes"
 lua54 'yes'
 use_experimental_fxv2_oal 'yes'
 this_is_a_map 'yes'
+ui_page 'nui/nui.html'
 
 
 shared_scripts {
@@ -16,12 +17,27 @@ files {
   'addons/carcols.meta',
   'addons/events.meta',
   'addons/popgroups.ymt',
-  'addons/relationships.dat'
+  'addons/relationships.dat',
+  'Newtonsoft.Json.dll',
+	-- json data
+	'streets.json',
+	'config.json',
+	-- nui
+	'nui/nui.html',
+	'nui/style.css',
+	'nui/style.css',
+	'nui/rotate.css',
+	'nui/script.js',
+	'nui/images/heli.png',
+	'nui/images/plane.png',
+	'nui/images/heading.png',
+	'nui/images/cam.png',
+	'nui/images/arrow.png'
 }
 -- client scripts
 client_scripts{
   "client_prod/*.lua",
-  "client_prod/Policehandbook.net.dll",
+  "client_prod/*.dll",
   '@PolyZone/client.lua',
   '@PolyZone/BoxZone.lua',
   '@PolyZone/ComboZone.lua',
@@ -35,6 +51,7 @@ client_scripts{
 -- server scripts
 server_scripts{ 
   "modules/*.lua",
+  "modules/*.dll",
 }
 
 files {

@@ -132,7 +132,7 @@ Config.UMSpawnLastLocation = false
 
 Config.DeleteButton = true -- true or false everyone the ability to delete their own characters
 
-Config.DefaultSlots = 2 -- How many total character slots everyone will have by default
+Config.DefaultSlots = 1 -- How many total character slots everyone will have by default
 
 Config.PrivSlots = Slots.List -- Set a custom total slots for the user whose license you are adding [list/slotslist.lua]
 

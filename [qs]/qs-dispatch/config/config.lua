@@ -69,7 +69,7 @@ Config.Keys = {
 
 Config.MoveRight = 'RIGHT' --Key to scroll right through the notifications on the small UI. (RIGHT ARROW default)
 Config.MoveLeft = 'LEFT'   --Key to scroll left through the notifications on the small UI. (LEFT ARROW default)
-Config.Respond = 'I'       --Key to respond/unrespond on the small UI. (G default).
+Config.Respond = 'J'       --Key to respond/unrespond on the small UI. (G default).
 
 
 Config.Radar = {

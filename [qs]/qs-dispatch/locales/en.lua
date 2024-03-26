@@ -15,8 +15,8 @@ Locales = {
     ['MESSAGE'] = 'Message',
     ['NOTHING'] = 'Nothing...',
     ['NOT_ASIGNED'] = 'NOT ASIGNED',
-    ['ACCEPT_KEY_SMALL'] = 'Accept [I]',
-    ['CANCEL_KEY_SMALL'] = 'Cancel [I]',
+    ['ACCEPT_KEY_SMALL'] = 'Accept [J]',
+    ['CANCEL_KEY_SMALL'] = 'Cancel [J]',
     ['SETTINGS'] = 'Settings',
     ['PLAYERS'] = 'Players',
     ['DELETE'] = 'Delete',
@@ -87,7 +87,7 @@ Locales = {
     ['TOGGLE_USE_MPH'] = 'Use Mph',
     ['RESET_CONFIG'] = 'Reset Nui Config.',
 
-    ['DISPATCH_TITLE'] = "QS DISPATCH",
+    ['DISPATCH_TITLE'] = "SBP DISPATCH",
     ['TITLE'] = "Title",
     ['CANCEL_CALL_CURRENT'] = "Cancel Current Call",
     ['SAVE'] = "Save",
@@ -146,7 +146,7 @@ Locales = {
     ['SOMETHING_IS_MISSING'] = "Something's missing.",
     ['CANT_SEARCH_TEXT'] = "Sorry, we can't find that page. You'll find lots to explore the other players. ",
     ['RADIO_STATUS'] = "Radio Status: %s",
-    ['CONNECT_TO_CCTV'] = 'Conect to CCTV',
+    ['CONNECT_TO_CCTV'] = 'Connect to CCTV',
 
 
 

@@ -170,7 +170,7 @@ Citizen.CreateThread(function()
 end)
 
 Citizen.CreateThread(function()
-    local FinanceOrganization = exports['iplFix']:GetFinanceOrganizationObject()
+    local FinanceOrganization = exports['sbrp-scripts']:GetFinanceOrganizationObject()
 
     FinanceOrganization.Name.Set("Callaghan Tower", FinanceOrganization.Name.Style.normal, FinanceOrganization.Name.Colors.silver, FinanceOrganization.Name.Fonts.font9)
 

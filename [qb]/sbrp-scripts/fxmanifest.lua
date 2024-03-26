@@ -26,6 +26,11 @@ client_scripts{
   '@PolyZone/BoxZone.lua',
   '@PolyZone/ComboZone.lua',
   'addons/vehicle_names.lua',
+  'scripts/twoislands.lua', -- Both Islands Visible At One Time
+  'scripts/cayo_perico_entitysets.lua', -- Responsible for spawning in heist props in El Rubio's Mansion safe. You can use this file to change the prop that appears.
+  'scripts/blips.lua', -- Map Blips
+  'scripts/zones.lua', -- Displays all map zones, fixing the 'bug' of showing North Yankton, and instead, showing Cayo Perico
+  'scripts/static_emitters.lua' -- Disables annoying 'cheering' SFXs from Arena Wars location near North Yankton / Cayo Perico
 }
 -- server scripts
 server_scripts{ 

@@ -15,7 +15,8 @@ local blips = {
     -- Border Patrol
     { title = "Border Patrol", colour = 26, id = 455, x = -697.08, y = -1387.27, z = 8.55 },
 
-
+    -- Red Circle Club
+    { title = "Red Circle Club", colour = 69, id = 815, x = -303.68, y = 215.05, z = 100.79 },
 }
 
 Citizen.CreateThread(function()

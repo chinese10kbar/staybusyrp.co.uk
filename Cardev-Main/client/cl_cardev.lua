@@ -289,12 +289,8 @@ RageUI.CreateWhile(1.0, RMenu:Get('cardev', 'mainmenu'), nil, function()
 		end
 	end)
 end)
-local function B()
-	RageUI.Visible(RMenu:Get('cardev', 'mainmenu'), not RageUI.Visible(RMenu:Get('cardev', 'mainmenu')))
-end
-RegisterCommand("cardev", function(C)
-	B()
-end)
+
+
 
 local E = {
 	{
@@ -1440,31 +1436,8 @@ Citizen.CreateThread(function()
 	end
 end)
 
-RegisterCommand("getmytempid", function()
-	TriggerEvent("chatMessage", "^1Your TempID: " .. tostring(GetPlayerServerId(PlayerId())))
-end, false)
 
-RegisterCommand('car', function(source, args, rawCommand)
-    local x,y,z = table.unpack(GetOffsetFromEntityInWorldCoords(PlayerPedId(), 0.0, 0.0, 0.0))
-    local veh = args[1]
-    if veh == nil then veh = "adder" end
-    vehiclehash = GetHashKey(veh)
-    RequestModel(vehiclehash)
-    
-    Citizen.CreateThread(function() 
-        local waiting = 0
-        while not HasModelLoaded(vehiclehash) do
-            waiting = waiting + 100
-            Citizen.Wait(100)
-            if waiting > 5000 then
-                print("car couldnt be loaded")
-                break
-            end
-        end
-        local vehicle1 = CreateVehicle(vehiclehash, x, y, z, GetEntityHeading(PlayerPedId()))
-        SetPedIntoVehicle(PlayerPedId(), vehicle1, -1)
-    end)
-end)
+
 
 
 

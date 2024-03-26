@@ -1,0 +1,1033 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CLensFlareSettings>
+<arrFlareTypeFX>
+<Item>
+<arrFlareFX>
+<Item>
+<fDistFromLight value="0"/>
+<fSize value="1"/>
+<fWidthRotate value="0.04"/>
+<fScrollSpeed value="0"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="60"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFFFFFFFF"/>
+<fGradientMultiplier value="1"/>
+<nTexture value="3"/>
+<nSubGroup value="0"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="0"/>
+<fSize value="0.1"/>
+<fWidthRotate value="0.2"/>
+<fScrollSpeed value="0"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="1024"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFFFFFFFF"/>
+<fGradientMultiplier value="1"/>
+<nTexture value="3"/>
+<nSubGroup value="0"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="0"/>
+<fSize value="0.03"/>
+<fWidthRotate value="-0.06"/>
+<fScrollSpeed value="0"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="5"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="1.75"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFFFFFFFF"/>
+<fGradientMultiplier value="1"/>
+<nTexture value="0"/>
+<nSubGroup value="0"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="0"/>
+<fSize value="0.01"/>
+<fWidthRotate value="-0.06"/>
+<fScrollSpeed value="0"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="50"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0.6"/>
+<fAnimorphicScaleFactorV value="0.02"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFFFFFFFF"/>
+<fGradientMultiplier value="1"/>
+<nTexture value="0"/>
+<nSubGroup value="0"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="0"/>
+<fSize value="0.03"/>
+<fWidthRotate value="0.26"/>
+<fScrollSpeed value="0"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="4"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="1.75"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFFFFFFFF"/>
+<fGradientMultiplier value="1"/>
+<nTexture value="0"/>
+<nSubGroup value="0"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="0"/>
+<fSize value="0.01"/>
+<fWidthRotate value="0.26"/>
+<fScrollSpeed value="0"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="50"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0.6"/>
+<fAnimorphicScaleFactorV value="0.02"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFFFFFFFF"/>
+<fGradientMultiplier value="1"/>
+<nTexture value="0"/>
+<nSubGroup value="0"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="0"/>
+<fSize value="0.03"/>
+<fWidthRotate value="-0.4"/>
+<fScrollSpeed value="0"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="4"/>
+<fIntensityFade value="2.9"/>
+<fAnimorphicScaleFactorU value="1.75"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFFFFFFFF"/>
+<fGradientMultiplier value="1"/>
+<nTexture value="0"/>
+<nSubGroup value="0"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="0"/>
+<fSize value="0.01"/>
+<fWidthRotate value="-0.4"/>
+<fScrollSpeed value="0"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="50"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0.6"/>
+<fAnimorphicScaleFactorV value="0.02"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFFFFFFFF"/>
+<fGradientMultiplier value="1"/>
+<nTexture value="0"/>
+<nSubGroup value="0"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="0.025"/>
+<fSize value="0.135"/>
+<fWidthRotate value="0.1"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="0.1"/>
+<fIntensityFade value="0.2"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFFDB95BC"/>
+<fGradientMultiplier value="1"/>
+<nTexture value="2"/>
+<nSubGroup value="0"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="0.2"/>
+<fSize value="0.294"/>
+<fWidthRotate value="0.255"/>
+<fScrollSpeed value="0.12"/>
+<fDistanceInnerOffset value="0.605"/>
+<fIntensityScale value="0.05"/>
+<fIntensityFade value="0.1"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFFDB95BC"/>
+<fGradientMultiplier value="1"/>
+<nTexture value="2"/>
+<nSubGroup value="0"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-2.152"/>
+<fSize value="0.005"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.14"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="25"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFF0026FF"/>
+<fGradientMultiplier value="1"/>
+<nTexture value="1"/>
+<nSubGroup value="4"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-2.149"/>
+<fSize value="0.0035"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="21"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFF006AFF"/>
+<fGradientMultiplier value="1"/>
+<nTexture value="1"/>
+<nSubGroup value="4"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-2.146"/>
+<fSize value="0.003"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="18"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFF00BFFF"/>
+<fGradientMultiplier value="1"/>
+<nTexture value="1"/>
+<nSubGroup value="4"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-2.143"/>
+<fSize value="0.0026"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="12"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFF00FFA6"/>
+<fGradientMultiplier value="1"/>
+<nTexture value="1"/>
+<nSubGroup value="4"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-2.14"/>
+<fSize value="0.0024"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="10"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFF00FF40"/>
+<fGradientMultiplier value="1"/>
+<nTexture value="1"/>
+<nSubGroup value="4"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-2.137"/>
+<fSize value="0.0023"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="8"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFF22FF00"/>
+<fGradientMultiplier value="1"/>
+<nTexture value="1"/>
+<nSubGroup value="4"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-2.134"/>
+<fSize value="0.0024"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="7"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFFAAFF00"/>
+<fGradientMultiplier value="1"/>
+<nTexture value="1"/>
+<nSubGroup value="4"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-2.131"/>
+<fSize value="0.0025"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="6"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFFFFE030"/>
+<fGradientMultiplier value="1"/>
+<nTexture value="1"/>
+<nSubGroup value="4"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-2.128"/>
+<fSize value="0.0027"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="5"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFFFFA245"/>
+<fGradientMultiplier value="1"/>
+<nTexture value="1"/>
+<nSubGroup value="4"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-2.125"/>
+<fSize value="0.003"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="2"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFFFF3D3D"/>
+<fGradientMultiplier value="1"/>
+<nTexture value="1"/>
+<nSubGroup value="4"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-2.16"/>
+<fSize value="0.008"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="70"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFF0033FF"/>
+<fGradientMultiplier value="1"/>
+<nTexture value="1"/>
+<nSubGroup value="4"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-2.4"/>
+<fSize value="0.02"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="666"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFFFF0000"/>
+<fGradientMultiplier value="-0.6"/>
+<nTexture value="1"/>
+<nSubGroup value="4"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-2.405"/>
+<fSize value="0.02"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="666"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFF00FF00"/>
+<fGradientMultiplier value="-0.6"/>
+<nTexture value="1"/>
+<nSubGroup value="4"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-2.41"/>
+<fSize value="0.02"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="888"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFF0000FF"/>
+<fGradientMultiplier value="-0.5"/>
+<nTexture value="1"/>
+<nSubGroup value="4"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-1.865"/>
+<fSize value="0.01"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="9"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFF3079FF"/>
+<fGradientMultiplier value="2"/>
+<nTexture value="1"/>
+<nSubGroup value="6"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-1.84"/>
+<fSize value="0.007"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="21"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFF0077FF"/>
+<fGradientMultiplier value="1"/>
+<nTexture value="1"/>
+<nSubGroup value="4"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-1.84"/>
+<fSize value="0.0007"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="200"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFF0044FF"/>
+<fGradientMultiplier value="1"/>
+<nTexture value="1"/>
+<nSubGroup value="3"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-1.839"/>
+<fSize value="0.0012"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="200"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFF003DFF"/>
+<fGradientMultiplier value="1"/>
+<nTexture value="1"/>
+<nSubGroup value="3"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-1.838"/>
+<fSize value="0.0017"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="200"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFF002BFF"/>
+<fGradientMultiplier value="1"/>
+<nTexture value="1"/>
+<nSubGroup value="3"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-1.8"/>
+<fSize value="0.0015"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="22"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFFC8C8FF"/>
+<fGradientMultiplier value="1"/>
+<nTexture value="1"/>
+<nSubGroup value="4"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-1.799"/>
+<fSize value="0.0013"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="96.8"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFF32BEFF"/>
+<fGradientMultiplier value="1"/>
+<nTexture value="1"/>
+<nSubGroup value="4"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-1.798"/>
+<fSize value="0.0012"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="140.6"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFF0078FF"/>
+<fGradientMultiplier value="1"/>
+<nTexture value="1"/>
+<nSubGroup value="4"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-1.797"/>
+<fSize value="0.0013"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="125.1999"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFF005AFF"/>
+<fGradientMultiplier value="1"/>
+<nTexture value="1"/>
+<nSubGroup value="4"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-1.796"/>
+<fSize value="0.0014"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="66"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFF004BFF"/>
+<fGradientMultiplier value="1"/>
+<nTexture value="1"/>
+<nSubGroup value="4"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-1.795"/>
+<fSize value="0.0015"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="46.2"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFF003CFF"/>
+<fGradientMultiplier value="1"/>
+<nTexture value="1"/>
+<nSubGroup value="4"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-1.794"/>
+<fSize value="0.0016"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="33"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFF0032FF"/>
+<fGradientMultiplier value="1"/>
+<nTexture value="1"/>
+<nSubGroup value="4"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-1.793"/>
+<fSize value="0.0017"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="34"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFF0028FF"/>
+<fGradientMultiplier value="1"/>
+<nTexture value="1"/>
+<nSubGroup value="4"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-1.792"/>
+<fSize value="0.0018"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="34"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFF001EFF"/>
+<fGradientMultiplier value="1"/>
+<nTexture value="1"/>
+<nSubGroup value="4"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-1.791"/>
+<fSize value="0.002"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="34"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFF0014FF"/>
+<fGradientMultiplier value="1"/>
+<nTexture value="1"/>
+<nSubGroup value="4"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-1.782"/>
+<fSize value="0.018"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="188"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFFFF0000"/>
+<fGradientMultiplier value="-0.4"/>
+<nTexture value="1"/>
+<nSubGroup value="4"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-1.784"/>
+<fSize value="0.018"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="188"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFF00FF00"/>
+<fGradientMultiplier value="-0.4"/>
+<nTexture value="1"/>
+<nSubGroup value="4"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-1.79"/>
+<fSize value="0.018"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="199"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFF0000FF"/>
+<fGradientMultiplier value="-0.4"/>
+<nTexture value="1"/>
+<nSubGroup value="4"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-1.787"/>
+<fSize value="0.015"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="15"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFF0A9DFF"/>
+<fGradientMultiplier value="1"/>
+<nTexture value="1"/>
+<nSubGroup value="6"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-1.785"/>
+<fSize value="0.015"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="18"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFF123C59"/>
+<fGradientMultiplier value="8"/>
+<nTexture value="1"/>
+<nSubGroup value="6"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-1.66"/>
+<fSize value="0.028"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="2.2"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFF64ECFF"/>
+<fGradientMultiplier value="1.1"/>
+<nTexture value="1"/>
+<nSubGroup value="6"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-1.66"/>
+<fSize value="0.028"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="2.2"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFF002FFF"/>
+<fGradientMultiplier value="3"/>
+<nTexture value="1"/>
+<nSubGroup value="6"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="0.4"/>
+<fSize value="0"/>
+<fWidthRotate value="0.21"/>
+<fScrollSpeed value="0.1"/>
+<fDistanceInnerOffset value="0.5"/>
+<fIntensityScale value="0.05"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFFFFFFFF"/>
+<fGradientMultiplier value="1"/>
+<nTexture value="2"/>
+<nSubGroup value="0"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-1.49"/>
+<fSize value="0.032"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="1"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFF002FFF"/>
+<fGradientMultiplier value="1"/>
+<nTexture value="1"/>
+<nSubGroup value="1"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-1.49"/>
+<fSize value="0.028"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="3"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="false"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFF00A2FF"/>
+<fGradientMultiplier value="0.7"/>
+<nTexture value="1"/>
+<nSubGroup value="4"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-1.385"/>
+<fSize value="0.01"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="0.2"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="true"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFFFF0000"/>
+<fGradientMultiplier value="8"/>
+<nTexture value="1"/>
+<nSubGroup value="4"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-1.37"/>
+<fSize value="0.01"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="0.2"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="true"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFF00FF00"/>
+<fGradientMultiplier value="8"/>
+<nTexture value="1"/>
+<nSubGroup value="4"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-1.355"/>
+<fSize value="0.01"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="0.8"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="true"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFF0000FF"/>
+<fGradientMultiplier value="8"/>
+<nTexture value="1"/>
+<nSubGroup value="4"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+<Item>
+<fDistFromLight value="-1.34"/>
+<fSize value="0.038"/>
+<fWidthRotate value="0"/>
+<fScrollSpeed value="0.15"/>
+<fDistanceInnerOffset value="0"/>
+<fIntensityScale value="4"/>
+<fIntensityFade value="0"/>
+<fAnimorphicScaleFactorU value="0"/>
+<fAnimorphicScaleFactorV value="0"/>
+<bAnimorphicBehavesLikeArtefact value="true"/>
+<bAlignRotationToSun value="false"/>
+<color value="0xFF0000FF"/>
+<fGradientMultiplier value="0.01"/>
+<nTexture value="1"/>
+<nSubGroup value="1"/>
+<fPositionOffsetU value="0"/>
+<fTextureColorDesaturate value="0"/>
+</Item>
+</arrFlareFX>
+</Item>
+</arrFlareTypeFX>
+<fSunVisibilityFactor value="0.4"/>
+<iSunVisibilityAlphaClip value="10"/>
+<fSunFogFactor value="0.5"/>
+<fChromaticTexUSize value="0.05"/>
+<fExposureScaleFactor value="8"/>
+<fExposureIntensityFactor value="1"/>
+<fExposureRotationFactor value="0.5"/>
+<fChromaticFadeFactor value="0.75"/>
+<fArtefactDistanceFadeFactor value="0"/>
+<fArtefactRotationFactor value="12"/>
+<fArtefactScaleFactor value="6"/>
+<fArtefactGradientFactor value="0"/>
+<fCoronaDistanceAdditionalSize value="0.1"/>
+<fMinExposureScale value="0.8"/>
+<fMaxExposureScale value="0.8"/>
+<fMinExposureIntensity value="0.3"/>
+<fMaxExposureIntensity value="0.3"/>
+</CLensFlareSettings>

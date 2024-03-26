@@ -75,8 +75,8 @@ function ApplyVehicleMods(vehicle, vehicleData)
     QB.Functions.SetVehicleProperties(vehicle, vehicleData.mods)
     TriggerEvent("vehiclekeys:client:SetOwner", QB.Functions.GetPlate(vehicle))
 
-    if GetResourceState("LegacyFuel") == "started" and vehicleData.fuel then
-        exports.LegacyFuel:SetFuel(vehicle, vehicleData.fuel)
+    if GetResourceState("cdn-fuel") == "started" and vehicleData.fuel then
+        exports.cdn-fuel:SetFuel(vehicle, vehicleData.fuel)
     end
 
     if Config.Valet.FixTakeOut then

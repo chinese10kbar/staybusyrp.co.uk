@@ -286,8 +286,8 @@ end)
 
 
 function GetFuel(vehicle, plate) --This gets triggered just before you store your vehicle.
-    if GetResourceState('LegacyFuel') == 'started' then
-        return exports['LegacyFuel']:GetFuel(vehicle)
+    if GetResourceState('cdn-fuel') == 'started' then
+        return exports['cdn-fuel']:GetFuel(vehicle)
     
     elseif GetResourceState('esx-sna-fuel') == 'started' then
         return exports['esx-sna-fuel'], GetFuel(vehicle)
@@ -316,8 +316,8 @@ function GetFuel(vehicle, plate) --This gets triggered just before you store you
 end
 
 function SetFuel(vehicle, plate, fuel_level) --This gets triggered after you spawn your vehicle.
-    if GetResourceState('LegacyFuel') == 'started' then
-        exports['LegacyFuel']:SetFuel(vehicle, fuel_level)
+    if GetResourceState('cdn-fuel') == 'started' then
+        exports['cdn-fuel']:SetFuel(vehicle, fuel_level)
     
     elseif GetResourceState('esx-sna-fuel') == 'started' then
         exports['esx-sna-fuel']:SetFuel(vehicle, fuel_level)

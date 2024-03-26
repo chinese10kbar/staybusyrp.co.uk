@@ -5,6 +5,9 @@ lua54 'yes'
 use_experimental_fxv2_oal 'yes'
 this_is_a_map 'yes'
 ui_page 'nui/nui.html'
+experimental_features_enabled '0'
+client_debug_mode 'false'
+server_debug_mode 'false'
 
 
 shared_scripts {
@@ -32,7 +35,8 @@ files {
 	'nui/images/plane.png',
 	'nui/images/heading.png',
 	'nui/images/cam.png',
-	'nui/images/arrow.png'
+	'nui/images/arrow.png',
+  'settings.ini'
 }
 -- client scripts
 client_scripts{
@@ -374,3 +378,6 @@ data_file 'DLC_ITYP_REQUEST' 'stream/[props]/brum_truly_pineapple.ytyp'
 data_file 'DLC_ITYP_REQUEST' 'stream/[props]/brum_truly_pomegeanate.ytyp'
 data_file 'DLC_ITYP_REQUEST' 'stream/[props]/brum_truly_strawberry.ytyp'
 data_file 'DLC_ITYP_REQUEST' 'stream/[cayo]/mads_no_exp_pumps.ytyp'
+
+data_file 'DLC_ITYP_REQUEST' 'stream/[fuel]/[electric_nozzle]/electric_nozzle_typ.ytyp'
+data_file 'DLC_ITYP_REQUEST' 'stream/[fuel]/[electric_charger]/electric_charger_typ.ytyp'

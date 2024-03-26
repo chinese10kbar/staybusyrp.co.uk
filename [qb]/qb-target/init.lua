@@ -67,6 +67,8 @@ Config.DisableControls = true
 -------------------------------------------------------------------------------
 
 -- These are all empty for you to fill in, refer to the .md files for help in filling these in
+local Allowrefuel = false
+local AllowElectricRefuel = false
 
 Config.CircleZones = {
 
@@ -81,6 +83,31 @@ Config.PolyZones = {
 }
 
 Config.TargetBones = {
+	["trunk"] = {
+		bones = {
+			"boot"
+		},
+	options = {
+	{
+		type = "client",
+		event = "cdn-fuel:client:SendMenuToServer",
+		icon = "fas fa-gas-pump",
+		label = "Insert Nozzle",
+		canInteract = function() return Allowrefuel end
+	},
+{
+		type = "client",
+		action = function()
+			TriggerEvent('cdn-fuel:client:electric:RefuelMenu')
+		end,
+		icon = "fas fa-bolt",
+		label = "Insert Electric Nozzle",
+		canInteract = function() return AllowElectricRefuel end
+	},
+},
+distance = 3.0
+	},
+
 
 }
 
@@ -183,6 +210,22 @@ CreateThread(function()
 			end
 			return false
 		end
+		local function AllowRefuel(state, electric) 
+			if state then
+				if electric then
+					AllowElectricRefuel = true
+				else
+					Allowrefuel = true
+				end
+			else
+				if electric then
+					AllowElectricRefuel = false
+				else
+					Allowrefuel = false
+				end
+			end
+		end 
+		exports('AllowRefuel', AllowRefuel)
 
 		CitizenCheck = function(citizenid)
 			return citizenid == PlayerData.citizenid or citizenid[PlayerData.citizenid]

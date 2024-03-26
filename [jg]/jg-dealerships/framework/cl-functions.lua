@@ -107,7 +107,7 @@ function Framework.Client.SetVehicleProperties(vehicle, props)
 end
 
 function Framework.Client.VehicleGetFuel(vehicle)
-  if (Config.FuelSystem == "LegacyFuel" or Config.FuelSystem == "ps-fuel" or Config.FuelSystem == "lj-fuel" or Config.FuelSystem == "cdn-fuel" or Config.FuelSystem == "hyon_gas_station" or Config.FuelSystem == "okokGasStation" or Config.FuelSystem == "nd_fuel" or Config.FuelSystem == "myFuel") then
+  if (Config.FuelSystem == "cdn-fuel" or Config.FuelSystem == "ps-fuel" or Config.FuelSystem == "lj-fuel" or Config.FuelSystem == "cdn-fuel" or Config.FuelSystem == "hyon_gas_station" or Config.FuelSystem == "okokGasStation" or Config.FuelSystem == "nd_fuel" or Config.FuelSystem == "myFuel") then
     return exports[Config.FuelSystem]:GetFuel(vehicle)
   elseif Config.FuelSystem == "ti_fuel" then
     local level, type = exports["ti_fuel"]:getFuel(vehicle)
@@ -121,7 +121,7 @@ function Framework.Client.VehicleGetFuel(vehicle)
 end
 
 function Framework.Client.VehicleSetFuel(vehicle, fuel)
-  if (Config.FuelSystem == "LegacyFuel" or Config.FuelSystem == "ps-fuel" or Config.FuelSystem == "lj-fuel" or Config.FuelSystem == "cdn-fuel" or Config.FuelSystem == "hyon_gas_station" or Config.FuelSystem == "okokGasStation" or Config.FuelSystem == "nd_fuel" or Config.FuelSystem == "myFuel") then
+  if (Config.FuelSystem == "cdn-fuel" or Config.FuelSystem == "ps-fuel" or Config.FuelSystem == "lj-fuel" or Config.FuelSystem == "cdn-fuel" or Config.FuelSystem == "hyon_gas_station" or Config.FuelSystem == "okokGasStation" or Config.FuelSystem == "nd_fuel" or Config.FuelSystem == "myFuel") then
     exports[Config.FuelSystem]:SetFuel(vehicle, fuel)
   elseif Config.FuelSystem == "ti_fuel" then
     Framework.Client.TriggerCallback("jg-dealerships:server:get-ti-fuel-type", function(type)

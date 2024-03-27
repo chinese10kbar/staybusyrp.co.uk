@@ -133,9 +133,6 @@ Config.ElectricVehicles = { -- List of Electric Vehicles in the Base Game.
     ["raiden"] = {
         isElectric = true,
     },
-    ["cyclone"] = {
-        isElectric = true,
-    },
     ["tezeract"] = {
         isElectric = true,
     },
@@ -180,7 +177,7 @@ Config.ElectricVehicles = { -- List of Electric Vehicles in the Base Game.
     },
     ["tesroad20"] = {
         isElectric = true,
-    },
+    }
     
 }
 Config.ElectricSprite = 620 -- This is for when the player is in an electric charger, the blips with change to this sprite. (Sprite with a car with a bolt going through it: 620)

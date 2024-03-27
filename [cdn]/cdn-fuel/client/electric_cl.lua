@@ -687,35 +687,26 @@ if Config.ElectricVehicleCharging then
     if Config.ElectricChargerModel then
         CreateThread(function()
             RequestModel('electric_charger')
-            RequestModel('ItzNikos_TeslaSuperCharger') -- Request the additional model
-            while not HasModelLoaded('electric_charger') or not HasModelLoaded('ItzNikos_TeslaSuperCharger') do
+            while not HasModelLoaded('electric_charger') do
                 Wait(50)
             end
-    
+
             if Config.FuelDebug then
-                print("Electric Charger Models Loaded!")
+                print("Electric Charger Model Loaded!")
             end
-    
+
             for i = 1, #Config.GasStations do
                 if Config.GasStations[i].electricchargercoords ~= nil then
                     if Config.FuelDebug then print(i) end
                     local heading = Config.GasStations[i].electricchargercoords[4] - 180
-                    -- Create the electric charger object
                     Config.GasStations[i].electriccharger = CreateObject('electric_charger', Config.GasStations[i].electricchargercoords.x, Config.GasStations[i].electricchargercoords.y, Config.GasStations[i].electricchargercoords.z, false, true, true)
-                    -- Create the Tesla Super Charger object
-                    Config.GasStations[i].teslasupercharger = CreateObject('ItzNikos_TeslaSuperCharger', Config.GasStations[i].electricchargercoords.x, Config.GasStations[i].electricchargercoords.y, Config.GasStations[i].electricchargercoords.z, false, true, true)
-                    if Config.FuelDebug then print("Created Electric Charger and Tesla Super Charger @ Location #"..i) end
-                    -- Set the heading for both chargers
+                    if Config.FuelDebug then print("Created Electric Charger @ Location #"..i) end
                     SetEntityHeading(Config.GasStations[i].electriccharger, heading)
-                    SetEntityHeading(Config.GasStations[i].teslasupercharger, heading)
-                    -- Freeze both chargers' position
                     FreezeEntityPosition(Config.GasStations[i].electriccharger, 1)
-                    FreezeEntityPosition(Config.GasStations[i].teslasupercharger, 1)
                 end	
             end
         end)
     end
-    
 
     -- Resource Stop
 

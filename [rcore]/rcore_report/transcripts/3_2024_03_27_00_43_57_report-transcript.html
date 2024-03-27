@@ -1,0 +1,194 @@
+        <html> <head> <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&amp;display=swap" rel="stylesheet"> <style>body{background: #1f2133; font-family: "Poppins", sans-serif;}.wrapper{color: white; display: flex; padding: 10px; padding-right: 300px;}.chat{padding: 20px; padding-top: 10px; width: 600px; min-height: 600px; max-height: 600px; overflow-y: auto; background: rgba(0, 0, 0, 0.31);display:none;}.chat.active{display:block;}*::-webkit-scrollbar{width: 5px;}*::-webkit-scrollbar-track{background: #414256; border-radius: 2px;}*::-webkit-scrollbar-thumb{background: #7c7c7c; border-radius: 2px;}.message{width: 340px; padding: 10px; margin-top: 10px; background: rgba(0, 0, 0, 0.31);}.title{font-size: 14px;}.text{font-size: 12px; margin-top: 10px;}.time{font-size: 10px; display: flex; justify-content: flex-end;}.panel{padding: 20px; width: 300px; text-align: center; display: flex; position: relative; flex-direction: column; margin-left: 20px; background: rgba(0, 0, 0, 0.31);}.panel-label{font-size: 12px; color: white; font-weight: 200;}.panel-value{word-break: break-all; font-size: 12px; color: white; max-height: 120px; overflow-y: auto; font-weight: 600;}.panel-field{margin-top: 15px;}.panel-field-small{margin-top: 10px;}.panel-field-created-at{margin-top: auto;}.panel-title{font-size: 20px; font-weight: 600; color: white;}.panel-value-player{cursor: pointer;}.player-in-area-overlay{padding: 20px; position: absolute; top: 0; display: none; left: calc(100% + 20px); width: 280px; box-sizing: border-box; overflow-y: auto; color: white; height: 100%; background: rgba(0, 0, 0, 0.31);}.panel-value-player.active{color: lime;}.panel-value-player.active .player-in-area-overlay{display: block;}</style> <style>.timeline{position: relative; padding: 0; width: 100%; height: 100%; overflow-y: auto;}.timeline-wrapper{height: 100%;position: relative;}/* width */ .timeline::-webkit-scrollbar{width: 2px;}/* Track */ .timeline::-webkit-scrollbar-track{background: #414256; border-radius: 2px;}/* Handle */ .timeline::-webkit-scrollbar-thumb{background: #7c7c7c; border-radius: 2px;}.timeline-wrapper::before{content: ""; position: absolute; height: 100%; width: 3px; left: calc((100% - 1.5px) / 2); background: rgba(255, 255, 255, 0.1);}.timeline .timeline-item{margin-bottom: 0; display: flex; flex-direction: row; align-items: center;}.point{min-width: 20px; height: 20px; background: #ABA356; box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.25); border-radius: 100%; z-index: 2; position: relative; left: 1px;}.timeline .timeline-item .content{width: 50%; padding: 0 20px; display: flex; align-items: flex-start; flex-direction: column;}.timeline .timeline-item:nth-child(odd) .content{padding-left: 0; align-items: flex-end;}.timeline .timeline-item:nth-child(odd) .date{padding-right: 0;}.timeline .timeline-item:nth-child(even) .content{padding-right: 0;}.timeline .timeline-item:nth-child(even) .date{padding-left: 0;}.timeline .timeline-item .date{width: 50%; padding: 0 20px; font-weight: normal;}.timeline .timeline-item .date h4{width: max-content; text-align: center; padding: 5px 10px; font-size: 10px; font-weight: 500; min-width: 120px; color: #FFF; background: rgba(0, 0, 0, 0.68); border-radius: 2px;}.timeline .timeline-item .content h3{padding: 3px 20px; margin-bottom: 0; text-align: center; border-top-left-radius: 2px; border-top-right-radius: 2px; color: #FFF; font-size: 10px; font-weight: 500; background: rgba(225, 225, 225, 0.36); width: max-content; min-width: 320px;}.timeline .timeline-item .content p{padding: 20px 20px; margin-top: 0; text-align: center; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; color: #FFF; font-size: 10px; font-weight: 500; background: rgba(0, 0, 0, 0.68); width: max-content; min-width: 320px;}.timeline .timeline-item:nth-child(even){flex-direction: row-reverse;}.timeline .timeline-item:nth-child(even) .date h4{float: right}.timeline--small .timeline-item .content h3, .timeline--small .timeline-item .content p{min-width: 200px; max-width: 200px;}</style>  <style>.buttons{display: flex;}.button{display: flex; justify-content: center; align-items: center; width: 84px; height: 23px; background: #151723; font-size: 14px; font-weight: 300; color: white; cursor: pointer; margin-left: 10px;}</style>
+            <script>
+            function onClick(index) {
+                const elements = document.querySelectorAll('.panel-value-player')
+                elements.forEach((element) => {
+                    element.classList.remove('active')
+                })
+                document.querySelector(`.panel-value-player[index="${index}"]`).classList.add('active')
+            }
+        </script>
+        <script>
+            function toggleChat(chat) {
+                const elements = document.querySelectorAll('.chat')
+                elements.forEach((element) => {
+                    element.classList.remove('active')
+                })
+                document.querySelector(`.${chat}`).classList.add('active')
+            }
+        </script>
+        </head> <body>
+            <div class="buttons">
+            <button class="button" onclick="toggleChat('messagesChat')">CHAT</button>
+            <button class="button" onclick="toggleChat('timelineChat')">TIMELINE</button>
+        </div>
+    <div class="wrapper">        <div class="chat timelineChat">
+            <div class='timeline timeline--small'>
+                <div class='timeline-wrapper'>
+                                <div class='timeline-item'>
+                <div class='content'>
+                    <h3>Create Report</h3>
+                    <p>slickyonthestove created report with ID 3</p>
+                </div>
+                <div class='point'></div>
+                <div class='date'>
+                    <h4>2024-03-27 00:43:27</h4>
+                </div>
+            </div>
+                    <div class='timeline-item'>
+                <div class='content'>
+                    <h3>Add message</h3>
+                    <p>slickyonthestove added message with ID 1</p>
+                </div>
+                <div class='point'></div>
+                <div class='date'>
+                    <h4>2024-03-27 00:43:29</h4>
+                </div>
+            </div>
+                    <div class='timeline-item'>
+                <div class='content'>
+                    <h3>Add message</h3>
+                    <p>slickyonthestove added message with ID 2</p>
+                </div>
+                <div class='point'></div>
+                <div class='date'>
+                    <h4>2024-03-27 00:43:30</h4>
+                </div>
+            </div>
+                    <div class='timeline-item'>
+                <div class='content'>
+                    <h3>Set in resolve</h3>
+                    <p>slickyonthestove set in resolve report with ID 3</p>
+                </div>
+                <div class='point'></div>
+                <div class='date'>
+                    <h4>2024-03-27 00:43:30</h4>
+                </div>
+            </div>
+                    <div class='timeline-item'>
+                <div class='content'>
+                    <h3>Closed report</h3>
+                    <p>slickyonthestove closed report with ID 3</p>
+                </div>
+                <div class='point'></div>
+                <div class='date'>
+                    <h4>2024-03-27 00:43:57</h4>
+                </div>
+            </div>
+                        </div>
+            </div>
+        </div>
+    <div class="chat messagesChat active">        <div class="message">
+            <div class="title">slickyonthestove</div>
+            <div class="text">
+                P1: slickyonthestove (ID: 1)
+                <div>(click to zoom)</div>
+                <a href="https://cdn.discordapp.com/attachments/1220578542954221599/1222345214719692880/screenshot.jpg?ex=6615e0b1&is=66036bb1&hm=2d98fa2e64fc1d03c0d8cb05341c8cabbec05bb0151e34fd6d35db6558647c5e&" target="_blank">
+                    <img src="https://cdn.discordapp.com/attachments/1220578542954221599/1222345214719692880/screenshot.jpg?ex=6615e0b1&is=66036bb1&hm=2d98fa2e64fc1d03c0d8cb05341c8cabbec05bb0151e34fd6d35db6558647c5e&" width="340" />
+                </a>
+            </div>
+            <div class="time">
+                2024-03-27 00:43:29 
+            </div>
+        </div>
+            <div class="message">
+            <div class="title">slickyonthestove </div>
+            <div class="text">
+                hello 
+            </div>
+            <div class="time">
+                2024-03-27 00:43:30 
+            </div>
+        </div>
+            <div class="message">
+            <div class="title">slickyonthestove </div>
+            <div class="text">
+                Closed the report 
+            </div>
+            <div class="time">
+                2024-03-27 00:43:57 
+            </div>
+        </div>
+    </div>        <div class="panel">
+            <div class="panel-title">Rules breaker</div>
+            <div class="panel-title">#3</div>
+
+            
+            <div class="panel-field">
+                <div class="panel-label">AUTHOR</div>
+                <div class="panel-value">slickyonthestove</div>
+            </div>
+            <div class="panel-field">
+                <div class="panel-label">PLAYERS</div>
+                <div class="panel-value">
+                                    </div>
+            </div>
+            <div class="panel-field active">
+                <div class="panel-label">PLAYERS IN AREA</div>
+                <div class="panel-value">
+                                <div class="panel-value-player active" index="1" onclick="onClick(1)">
+                slickyonthestove
+                <div class="player-in-area-overlay">
+                    <div class="panel-title">slickyonthestove</div>
+                    
+                    <div class="panel-field panel-field-small" style="display:flex;justify-content:center;"><div class="panel-label">ID</div> <div class="panel-value" style="margin-left: 3px;">1</div> </div>
+                    <div class="panel-field panel-field-small" style="display:flex;justify-content:center;"><div class="panel-label">Health</div> <div class="panel-value" style="margin-left: 3px;">100</div> </div>
+                    <div class="panel-field panel-field-small" style="display:flex;justify-content:center;"><div class="panel-label">Armor</div> <div class="panel-value" style="margin-left: 3px;">0</div> </div>
+                    <div class="panel-field panel-field-small"><div class="panel-label">Discord ID</div> <div class="panel-value">-</div> </div>
+                    <div class="panel-field panel-field-small"><div class="panel-label">Steam ID</div> <div class="panel-value">-</div> </div>
+                    <div class="panel-field panel-field-small"><div class="panel-label">License</div> <div class="panel-value">8a0ce0760fd51edb00af2d959b7edf33d1b255a4</div> </div>
+                    <div class="panel-field panel-field-small">
+                        <div class="panel-label">Coords</div>
+                        <div class="panel-value">
+                            <div>X: 95.79</div>
+                            <div>Y: -1060.97</div>
+                            <div>Z: 29.18</div>
+                        </div>
+                    </div>
+                    <div class="panel-field panel-field-small">
+                        <div class="panel-label">Inventory</div>
+                        <div class="panel-value" style="background: rgba(0, 0, 0, 0.31);">
+                                                <div class="panel-field panel-field-small">
+                        <div class="panel-label">Cash</div>
+                        <div class="panel-value">
+                            -x
+                        </div>
+                    </div>
+                                    <div class="panel-field panel-field-small">
+                        <div class="panel-label">Jerry Can</div>
+                        <div class="panel-value">
+                            1x
+                        </div>
+                    </div>
+                                    <div class="panel-field panel-field-small">
+                        <div class="panel-label">Syphoning Kit</div>
+                        <div class="panel-value">
+                            1x
+                        </div>
+                    </div>
+                                    <div class="panel-field panel-field-small">
+                        <div class="panel-label">Jerry Can</div>
+                        <div class="panel-value">
+                            1x
+                        </div>
+                    </div>
+                                        </div>
+                    </div>
+                    <div class="panel-field panel-field-small">
+                        <div class="panel-label">Custom Data</div>
+                        <div class="panel-value">
+                            -                        </div>
+                    </div>
+                </div>
+            </div> 
+                        </div>
+            </div>
+
+            <div class="panel-field-created-at">
+                <div class="panel-label">Created at</div>
+                <div class="panel-value">2024-03-27 00:43:27</div>
+            </div>
+        </div>
+           
+        </div><script>function onClick(index){document.querySelectorAll('.panel-value-player').forEach((element)=>{element.classList.remove('active')}); document.querySelector(`.panel-value-player[index="${index}"]`).classList.add('active')}</script> <script>function toggleChat(chat){document.querySelectorAll('.chat').forEach((element)=>{element.classList.remove('active')}); document.querySelector(`.${chat}`).classList.add('active')}</script> </body></html>
+    

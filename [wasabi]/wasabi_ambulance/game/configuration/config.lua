@@ -250,7 +250,7 @@ Config.BleedoutTimer = 20 * minutes -- Time before it forces respawn
 
 Config.removeItemsOnDeath = true   -- Must have Config.Inventory set properly
 Config.Inventory =
-'qb'                                --Options include: 'ox' - (ox_inventory) / 'qb' - (QBCore qb-inventory) 'mf' - (mf-inventory) / 'qs' (qs-inventory) / 'esx' (default esx) / 'other' (whatever else can customize in client/cl_customize.lua)
+'qs'                                --Options include: 'ox' - (ox_inventory) / 'qb' - (QBCore qb-inventory) 'mf' - (mf-inventory) / 'qs' (qs-inventory) / 'esx' (default esx) / 'other' (whatever else can customize in client/cl_customize.lua)
 
 Config.AntiCombatLog = {            --  When enabled will kill player who logged out while dead
     enabled = true,                 --  enabled?
@@ -463,27 +463,15 @@ Config.Locations = {
             DisableHospitalBeds = false,                                                       -- Disable hospital beds for check-in at this location?(Player will spend Duration checking in before respawning in RespawnNoBedLocation when set to true)
             RespawnNoBedLocation = { coords = vec3(316.66, -581.3, 43.28), heading = 339.02 }, -- Coords and heading of where to spawn player if DisableHospitalBeds is set to true or beds are full
             HospitalBeds = {
-                --              { coords = vec3(332.62, -587.17, 42.84+0.3), heading = 160.0 },
-                { coords = vec3(317.67, -585.37, 42.84 + 0.3), heading = 160.0 },
-                { coords = vec3(319.41, -581.04, 42.84 + 0.3), heading = 340.0 },
-                { coords = vec3(314.47, -584.2, 42.84 + 0.3),  heading = 160.0 },
-                { coords = vec3(313.93, -579.04, 42.84 + 0.3), heading = 340.0 },
-                { coords = vec3(311.06, -582.96, 42.84 + 0.3), heading = 160.0 },
-                { coords = vec3(307.72, -581.75, 42.84 + 0.3), heading = 160.0 },
-                { coords = vec3(309.35, -577.38, 42.84 + 0.3), heading = 340.0 },
-                { coords = vec3(361.36, -581.3, 42.83 + 0.3),  heading = 250.0 },
-                { coords = vec3(359.54, -586.23, 42.84 + 0.3), heading = 250.0 },
-                { coords = vec3(354.44, -600.19, 42.85 + 0.3), heading = 250.0 },
-                { coords = vec3(324.26, -582.8, 42.84 + 0.3),  heading = 340.0 },
-                -- Stock qb-ambulance hospital bed coords:
-                --                { coords = vec3(353.1, -584.6, 43.11), heading = 152.08 },
-                --                { coords = vec3(356.79, -585.86, 43.11), heading = 152.08 },
-                --                { coords = vec3(354.12, -593.12, 43.1), heading = 336.32 },
-                --                { coords = vec3(350.79, -591.8, 43.1), heading = 336.32 },
-                --                { coords = vec3(346.99, -590.48, 43.1), heading = 336.32 },
-                --                { coords = vec3(360.32, -587.19, 43.02), heading = 152.08 },
-                --                { coords = vec3(349.82, -583.33, 43.02), heading = 152.08 },
-                --                { coords = vec3(326.98, -576.17, 43.02), heading = 152.08 }
+
+                             { coords = vec3(353.1, -584.6, 43.11), heading = 152.08 },
+                                { coords = vec3(356.79, -585.86, 43.11), heading = 152.08 },
+                                { coords = vec3(354.12, -593.12, 43.1), heading = 336.32 },
+                                { coords = vec3(350.79, -591.8, 43.1), heading = 336.32 },
+                                { coords = vec3(346.99, -590.48, 43.1), heading = 336.32 },
+                                { coords = vec3(360.32, -587.19, 43.02), heading = 152.08 },
+                                { coords = vec3(349.82, -583.33, 43.02), heading = 152.08 },
+                                { coords = vec3(326.98, -576.17, 43.02), heading = 152.08 }
             }
 
         },

@@ -44,7 +44,7 @@ SetCarFuel = function(vehicle, value)
 	if Config.FuelSystem == 'ox' then
 		Entity(vehicle).state.fuel = value
 	elseif Config.FuelSystem == 'legacy' then
-		exports.cdn-fuel.SetFuel(vehicle, value)
+		exports['cdn-fuel']:SetFuel(vehicle, value)
 	else
 		SetVehicleFuelLevel(vehicle, value)
 	end

@@ -1,10 +1,8 @@
-shared_script '@WaveShield/resource/waveshield.lua' --this line was automatically written by WaveShield
-
 fx_version 'cerulean'
 game 'gta5'
 
 client_scripts {
-    "client/jsonparse.lua",
+   -- "client/jsonparse.lua",
     "client/controller_lights.lua",
     "client/controller_sounds.lua",
     "client/controller_keypress.lua",
@@ -12,7 +10,7 @@ client_scripts {
 }
 
 server_scripts {
-    "server/jsonparse.lua",
+   -- "server/jsonparse.lua",
     "server/controller_server.lua",
 }
 

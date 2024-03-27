@@ -46,27 +46,38 @@ end
 -- Functions
 
 function GetClosestPump(coords, isElectric)
-	if isElectric then 
-		local electricPump = nil
-		electricPump = GetClosestObjectOfType(coords.x, coords.y, coords.z, 3.0, joaat("electric_charger"), true, true, true)
-		local pumpCoords = GetEntityCoords(electricPump)
-		if Config.FuelDebug then
-			print(electricPump, pumpCoords)
-		end
-		return pumpCoords, electricPump
-	else 
-		local pump = nil
-		local pumpCoords
-		for i = 1, #props, 1 do
-			local currentPumpModel = props[i]
-			pump = GetClosestObjectOfType(coords.x, coords.y, coords.z, 3.0, joaat(currentPumpModel), true, true, true)
-			pumpCoords = GetEntityCoords(pump)
-			if Config.FuelDebug then print("Gas Pump: ".. pump,  "Pump Coords: "..pumpCoords) end
-			if pump ~= 0 then break end
-		end
-		return pumpCoords, pump
-	end
+    if isElectric then 
+        local electricPump = nil
+        -- Search for the closest electric charger or Tesla Super Charger
+        electricPump = GetClosestObjectOfType(coords.x, coords.y, coords.z, 3.0, GetHashKey("electric_charger"), true, true, true)
+        local teslaSuperCharger = GetClosestObjectOfType(coords.x, coords.y, coords.z, 3.0, GetHashKey("ItzNikos_TeslaSuperCharger"), true, true, true)
+        if teslaSuperCharger ~= 0 then
+            electricPump = teslaSuperCharger -- Use Tesla Super Charger if found
+        end
+        local pumpCoords = GetEntityCoords(electricPump)
+        if Config.FuelDebug then
+            print("Electric Pump: "..electricPump, "Pump Coords: "..tostring(pumpCoords))
+        end
+        return pumpCoords, electricPump
+    else 
+        local pump = nil
+        local pumpCoords
+        for i = 1, #props, 1 do
+            local currentPumpModel = props[i]
+            -- Search for the closest gas pump
+            pump = GetClosestObjectOfType(coords.x, coords.y, coords.z, 3.0, GetHashKey(currentPumpModel), true, true, true)
+            pumpCoords = GetEntityCoords(pump)
+            if Config.FuelDebug then 
+                print("Gas Pump: "..pump, "Pump Coords: "..tostring(pumpCoords)) 
+            end
+            if pump ~= 0 then 
+                break 
+            end
+        end
+        return pumpCoords, pump
+    end
 end
+
 
 local function FetchStationInfo(info)
 	if not Config.PlayerOwnedGasStationsEnabled then ReserveLevels = 1000 StationFuelPrice = Config.CostMultiplier return end

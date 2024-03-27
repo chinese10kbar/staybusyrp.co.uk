@@ -539,6 +539,9 @@ Config.JobVehicles = {
 
             [32] = {job = 'police', spawn_max = true, plate = 'SBP', job_grade = 0, garage_type = 'boat', model = `rpPoliceB1`},
             [33] = {job = 'police', spawn_max = true, plate = 'SBP', job_grade = 0, garage_type = 'boat', model = `rpPoliceB2`},
+
+            [34] = {job = 'police', spawn_max = true, plate = 'SBP', job_grade = 0, garage_type = 'car', model = `policeb`},
+
         },
         ['ambulance'] = {
             [1] = {job = 'ambulance', spawn_max = true, plate = 'EMS', job_grade = 0, garage_type = 'car', model = `ambulance`},

@@ -1,270 +1,270 @@
-['dosidos_untrimmed_bud'] = {
-  ['weight'] = 0,
-  ['label'] = 'DosiDos Un-Trimmed Bud',
-
-},
-['rainbowbelts_seed'] = {
-  ['weight'] = 0,
-  ['label'] = 'Rainbow Belts Seed',
-
-},
-['northernlights_trimmed_bud'] = {
-  ['weight'] = 0,
-  ['label'] = 'Northern Lights Trimmed Bud',
-
-},
-['colombiangold_leaf'] = {
-  ['weight'] = 0,
-  ['label'] = 'Colombian Gold Leaf',
-
-},
-['lemonskunk_seed'] = {
-  ['weight'] = 0,
-  ['label'] = 'Lemon Skunk Seed',
-
-},
-['hiqualitysoil'] = {
-  ['weight'] = 0,
-  ['label'] = 'Soil (HQ)',
-
-},
-['acapulcogold_seed'] = {
-  ['weight'] = 0,
-  ['label'] = 'Acapulco Gold Seed',
-
-},
-['skunk1_trimmed_bud'] = {
-  ['weight'] = 0,
-  ['label'] = 'Skunk 1 Trimmed Bud',
-
-},
-['stardawg_untrimmed_bud'] = {
-  ['weight'] = 0,
-  ['label'] = 'Star Dawg Un-Trimmed Bud',
-
-},
-['pureafghani_untrimmed_bud'] = {
-  ['weight'] = 0,
-  ['label'] = 'Pure Afghani Un-Trimmed Bud',
-
-},
-['stardawg_trimmed_bud'] = {
-  ['weight'] = 0,
-  ['label'] = 'Star Dawg Trimmed Bud',
-
-},
-['gelato41_seed'] = {
-  ['weight'] = 0,
-  ['label'] = 'Gelato 41 Seed',
-
-},
-['pureafghani_leaf'] = {
-  ['weight'] = 0,
-  ['label'] = 'Pure Afghani Leaf',
-
-},
-['weed_grow_fan1'] = {
-  ['weight'] = 0,
-  ['label'] = 'Grow Fan',
-
-},
-['stardawg_leaf'] = {
-  ['weight'] = 0,
-  ['label'] = 'Star Dawg Leaf',
-
-},
-['lowqualitysoil'] = {
-  ['weight'] = 0,
-  ['label'] = 'Soil (LQ)',
-
-},
-['skunk1_seed'] = {
-  ['weight'] = 0,
-  ['label'] = 'Skunk 1 Seed',
-
-},
-['pureafghani_trimmed_bud'] = {
-  ['weight'] = 0,
-  ['label'] = 'Pure Afghani Trimmed Bud',
-
-},
-['acapulcogold_trimmed_bud'] = {
-  ['weight'] = 0,
-  ['label'] = 'Acapulco Gold Trimmed Bud',
-
-},
-['rainbowbelts_untrimmed_bud'] = {
-  ['weight'] = 0,
-  ['label'] = 'Rainbow Belts Un-Trimmed Bud',
-
-},
-['dosidos_seed'] = {
-  ['weight'] = 0,
-  ['label'] = 'DosiDos Seed',
-
-},
-['lemonskunk_trimmed_bud'] = {
-  ['weight'] = 0,
-  ['label'] = 'Lemon Skunk Trimmed Bud',
-
-},
-['ogkush_seed'] = {
-  ['weight'] = 0,
-  ['label'] = 'OG Kush Seed',
-
-},
-['skunk1_untrimmed_bud'] = {
-  ['weight'] = 0,
-  ['label'] = 'Skunk 1 Un-Trimmed Bud',
-
-},
-['ogkush_leaf'] = {
-  ['weight'] = 0,
-  ['label'] = 'OG Kush Leaf',
-
-},
-['rainbowbelts_leaf'] = {
-  ['weight'] = 0,
-  ['label'] = 'Rainbow Belts Leaf',
-
-},
-['northernlights_leaf'] = {
-  ['weight'] = 0,
-  ['label'] = 'Northern Lights Leaf',
-
-},
-['lemonskunk_leaf'] = {
-  ['weight'] = 0,
-  ['label'] = 'Lemon Skunk Leaf',
-
-},
-['rainbowbelts_trimmed_bud'] = {
-  ['weight'] = 0,
-  ['label'] = 'Rainbow Belts Trimmed Bud',
-
-},
-['colombiangold_seed'] = {
-  ['weight'] = 0,
-  ['label'] = 'Colombian Gold Seed',
-
-},
-['dosidos_trimmed_bud'] = {
-  ['weight'] = 0,
-  ['label'] = 'DosiDos Trimmed Bud',
-
-},
-['lowqualnutrients'] = {
-  ['weight'] = 0,
-  ['label'] = 'Growing Nutrients (LQ)',
-
-},
-['stardawg_seed'] = {
-  ['weight'] = 0,
-  ['label'] = 'Star Dawg Seed',
-
-},
-['acapulcogold_untrimmed_bud'] = {
-  ['weight'] = 0,
-  ['label'] = 'Acapulco Gold Un-Trimmed Bud',
-
-},
-['northernlights_seed'] = {
-  ['weight'] = 0,
-  ['label'] = 'Northern Lights Seed',
-
-},
-['lemonskunk_untrimmed_bud'] = {
-  ['weight'] = 0,
-  ['label'] = 'Lemon Skunk Un-Trimmed Bud',
-
-},
 ['scissors'] = {
-  ['weight'] = 0,
   ['label'] = 'Scissors',
-
-},
-['northernlights_untrimmed_bud'] = {
   ['weight'] = 0,
-  ['label'] = 'Northern Lights Un-Trimmed Bud',
-
-},
-['medqualnutrients'] = {
-  ['weight'] = 0,
-  ['label'] = 'Growing Nutrients (MQ)',
-
-},
-['ogkush_untrimmed_bud'] = {
-  ['weight'] = 0,
-  ['label'] = 'OG Kush Un-Trimmed Bud',
-
-},
-['acapulcogold_leaf'] = {
-  ['weight'] = 0,
-  ['label'] = 'Acapulco Gold Leaf',
 
 },
 ['colombiangold_untrimmed_bud'] = {
-  ['weight'] = 0,
   ['label'] = 'Colombian Gold Un-Trimmed Bud',
+  ['weight'] = 0,
 
 },
-['colombiangold_trimmed_bud'] = {
+['stardawg_seed'] = {
+  ['label'] = 'Star Dawg Seed',
   ['weight'] = 0,
-  ['label'] = 'Colombian Gold Trimmed Bud',
-
-},
-['gelato41_trimmed_bud'] = {
-  ['weight'] = 0,
-  ['label'] = 'Gelato 41 Trimmed Bud',
 
 },
 ['weed_grow_light1'] = {
-  ['weight'] = 0,
   ['label'] = 'Grow Light',
-
-},
-['gelato41_leaf'] = {
   ['weight'] = 0,
-  ['label'] = 'Gelato 41 Leaf',
-
-},
-['pureafghani_seed'] = {
-  ['weight'] = 0,
-  ['label'] = 'Pure Afghani Seed',
-
-},
-['wateringcan'] = {
-  ['weight'] = 0,
-  ['label'] = 'Watering Can',
-
-},
-['skunk1_leaf'] = {
-  ['weight'] = 0,
-  ['label'] = 'Skunk 1 Leaf',
 
 },
 ['hiqualnutrients'] = {
-  ['weight'] = 0,
   ['label'] = 'Growing Nutrients (HQ)',
+  ['weight'] = 0,
 
 },
-['gelato41_untrimmed_bud'] = {
+['acapulcogold_leaf'] = {
+  ['label'] = 'Acapulco Gold Leaf',
   ['weight'] = 0,
-  ['label'] = 'Gelato 41 Un-Trimmed Bud',
+
+},
+['lemonskunk_seed'] = {
+  ['label'] = 'Lemon Skunk Seed',
+  ['weight'] = 0,
+
+},
+['dosidos_seed'] = {
+  ['label'] = 'DosiDos Seed',
+  ['weight'] = 0,
+
+},
+['stardawg_trimmed_bud'] = {
+  ['label'] = 'Star Dawg Trimmed Bud',
+  ['weight'] = 0,
+
+},
+['gelato41_seed'] = {
+  ['label'] = 'Gelato 41 Seed',
+  ['weight'] = 0,
+
+},
+['skunk1_trimmed_bud'] = {
+  ['label'] = 'Skunk 1 Trimmed Bud',
+  ['weight'] = 0,
+
+},
+['pureafghani_trimmed_bud'] = {
+  ['label'] = 'Pure Afghani Trimmed Bud',
+  ['weight'] = 0,
+
+},
+['acapulcogold_untrimmed_bud'] = {
+  ['label'] = 'Acapulco Gold Un-Trimmed Bud',
+  ['weight'] = 0,
+
+},
+['northernlights_trimmed_bud'] = {
+  ['label'] = 'Northern Lights Trimmed Bud',
+  ['weight'] = 0,
+
+},
+['colombiangold_seed'] = {
+  ['label'] = 'Colombian Gold Seed',
+  ['weight'] = 0,
+
+},
+['acapulcogold_trimmed_bud'] = {
+  ['label'] = 'Acapulco Gold Trimmed Bud',
+  ['weight'] = 0,
+
+},
+['gelato41_leaf'] = {
+  ['label'] = 'Gelato 41 Leaf',
+  ['weight'] = 0,
+
+},
+['skunk1_leaf'] = {
+  ['label'] = 'Skunk 1 Leaf',
+  ['weight'] = 0,
 
 },
 ['plantpot'] = {
-  ['weight'] = 0,
   ['label'] = 'Plant Pot',
+  ['weight'] = 0,
 
 },
-['ogkush_trimmed_bud'] = {
+['hiqualitysoil'] = {
+  ['label'] = 'Soil (HQ)',
   ['weight'] = 0,
-  ['label'] = 'OG Kush Trimmed Bud',
+
+},
+['medqualnutrients'] = {
+  ['label'] = 'Growing Nutrients (MQ)',
+  ['weight'] = 0,
+
+},
+['colombiangold_leaf'] = {
+  ['label'] = 'Colombian Gold Leaf',
+  ['weight'] = 0,
+
+},
+['stardawg_leaf'] = {
+  ['label'] = 'Star Dawg Leaf',
+  ['weight'] = 0,
+
+},
+['pureafghani_untrimmed_bud'] = {
+  ['label'] = 'Pure Afghani Un-Trimmed Bud',
+  ['weight'] = 0,
+
+},
+['dosidos_untrimmed_bud'] = {
+  ['label'] = 'DosiDos Un-Trimmed Bud',
+  ['weight'] = 0,
+
+},
+['gelato41_trimmed_bud'] = {
+  ['label'] = 'Gelato 41 Trimmed Bud',
+  ['weight'] = 0,
+
+},
+['pureafghani_seed'] = {
+  ['label'] = 'Pure Afghani Seed',
+  ['weight'] = 0,
+
+},
+['lowqualnutrients'] = {
+  ['label'] = 'Growing Nutrients (LQ)',
+  ['weight'] = 0,
+
+},
+['lowqualitysoil'] = {
+  ['label'] = 'Soil (LQ)',
+  ['weight'] = 0,
+
+},
+['rainbowbelts_leaf'] = {
+  ['label'] = 'Rainbow Belts Leaf',
+  ['weight'] = 0,
+
+},
+['lemonskunk_untrimmed_bud'] = {
+  ['label'] = 'Lemon Skunk Un-Trimmed Bud',
+  ['weight'] = 0,
+
+},
+['weed_grow_fan1'] = {
+  ['label'] = 'Grow Fan',
+  ['weight'] = 0,
 
 },
 ['dosidos_leaf'] = {
-  ['weight'] = 0,
   ['label'] = 'DosiDos Leaf',
+  ['weight'] = 0,
+
+},
+['pureafghani_leaf'] = {
+  ['label'] = 'Pure Afghani Leaf',
+  ['weight'] = 0,
+
+},
+['rainbowbelts_trimmed_bud'] = {
+  ['label'] = 'Rainbow Belts Trimmed Bud',
+  ['weight'] = 0,
+
+},
+['rainbowbelts_seed'] = {
+  ['label'] = 'Rainbow Belts Seed',
+  ['weight'] = 0,
+
+},
+['northernlights_seed'] = {
+  ['label'] = 'Northern Lights Seed',
+  ['weight'] = 0,
+
+},
+['lemonskunk_trimmed_bud'] = {
+  ['label'] = 'Lemon Skunk Trimmed Bud',
+  ['weight'] = 0,
+
+},
+['ogkush_seed'] = {
+  ['label'] = 'OG Kush Seed',
+  ['weight'] = 0,
+
+},
+['ogkush_trimmed_bud'] = {
+  ['label'] = 'OG Kush Trimmed Bud',
+  ['weight'] = 0,
+
+},
+['lemonskunk_leaf'] = {
+  ['label'] = 'Lemon Skunk Leaf',
+  ['weight'] = 0,
+
+},
+['colombiangold_trimmed_bud'] = {
+  ['label'] = 'Colombian Gold Trimmed Bud',
+  ['weight'] = 0,
+
+},
+['dosidos_trimmed_bud'] = {
+  ['label'] = 'DosiDos Trimmed Bud',
+  ['weight'] = 0,
+
+},
+['gelato41_untrimmed_bud'] = {
+  ['label'] = 'Gelato 41 Un-Trimmed Bud',
+  ['weight'] = 0,
+
+},
+['wateringcan'] = {
+  ['label'] = 'Watering Can',
+  ['weight'] = 0,
+
+},
+['ogkush_untrimmed_bud'] = {
+  ['label'] = 'OG Kush Un-Trimmed Bud',
+  ['weight'] = 0,
+
+},
+['stardawg_untrimmed_bud'] = {
+  ['label'] = 'Star Dawg Un-Trimmed Bud',
+  ['weight'] = 0,
+
+},
+['northernlights_leaf'] = {
+  ['label'] = 'Northern Lights Leaf',
+  ['weight'] = 0,
+
+},
+['skunk1_seed'] = {
+  ['label'] = 'Skunk 1 Seed',
+  ['weight'] = 0,
+
+},
+['skunk1_untrimmed_bud'] = {
+  ['label'] = 'Skunk 1 Un-Trimmed Bud',
+  ['weight'] = 0,
+
+},
+['ogkush_leaf'] = {
+  ['label'] = 'OG Kush Leaf',
+  ['weight'] = 0,
+
+},
+['acapulcogold_seed'] = {
+  ['label'] = 'Acapulco Gold Seed',
+  ['weight'] = 0,
+
+},
+['northernlights_untrimmed_bud'] = {
+  ['label'] = 'Northern Lights Un-Trimmed Bud',
+  ['weight'] = 0,
+
+},
+['rainbowbelts_untrimmed_bud'] = {
+  ['label'] = 'Rainbow Belts Un-Trimmed Bud',
+  ['weight'] = 0,
 
 },

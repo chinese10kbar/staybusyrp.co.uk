@@ -37,6 +37,17 @@ QBShared.Jobs = {
             },
         },
 	},
+    ['busysecurity'] = {
+		label = 'Security',
+		defaultDuty = true,
+		offDutyPay = false,
+		grades = {
+            ['0'] = {
+                name = 'Security Guard',
+                payment = 10
+            },
+        },
+	},
 	['deliveroo'] = {
 		label = 'Delivery Driver',
 		defaultDuty = true,

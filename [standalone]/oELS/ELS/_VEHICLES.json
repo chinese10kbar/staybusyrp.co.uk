@@ -30,5 +30,27 @@
     "rpPoliceUC9",
     "rpPoliceUC10",
     "rpPoliceUC11",
-    "sheriff2"
+    "sheriff2",
+
+    "rpG68",
+    "rpG61",
+    "rpG64",
+
+    "rpRanger1",
+    "rpRanger2",
+    "rpRanger3",
+    "rpRanger4",
+
+    "ambulance",
+    "rpNHS1",
+    "rpNHS2",
+    "rpNHS3",
+    "rpNHS4",
+    "rpNHS5",
+    "rpNHS6",
+    "rpNHS7",
+    "rpNHS8",
+    "rpNHS9",
+    "rpNHS10"
+
 ]

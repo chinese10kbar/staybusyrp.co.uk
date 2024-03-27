@@ -105,6 +105,36 @@ Config.Companies.Services = {
         }
     },
     {
+        job = "busysecurity",
+        name = "Busy Security Firm",
+        icon = "https://cdn.discordapp.com/attachments/1221959084396380220/1222355819983798283/Untitled-1.png?ex=6615ea91&is=66037591&hm=2220e8ba67e1d0c24dcf98ae3f43a922b72a9e170f1e86a86c7b67129ae99674&",
+        canCall = true, -- if true, players can call the company
+        canMessage = true, -- if true, players can message the company
+        bossRanks = {}, -- ranks that can manage the company
+        location = {
+            name = "Busy Sec HQ",
+            coords = {
+                x = 1188.8081054688,
+                y = -1466.8724365234,
+            }
+        }
+    },
+    {
+        job = "busymechanic",
+        name = "Busy Motors",
+        icon = "https://cdn.discordapp.com/attachments/1064487132795777066/1222359379454464101/image0-removebg-preview.png?ex=6615ede2&is=660378e2&hm=6be0ea570affdecff1d441e00282b7ebe110148c22758fa2f627befac1f2f27f&",
+        canCall = true, -- if true, players can call the company
+        canMessage = true, -- if true, players can message the company
+        bossRanks = {}, -- ranks that can manage the company
+        location = {
+            name = "Busy Motors HQ",
+            coords = {
+                x = 1188.8081054688,
+                y = -1466.8724365234,
+            }
+        }
+    },
+    {
         job = "uber",
         name = "Uber",
         icon = "https://th.bing.com/th/id/OIP.7FzBf3Kxd0RtNloMTIsMPQHaHa?w=168&h=180&c=7&r=0&o=5&pid=1.7",

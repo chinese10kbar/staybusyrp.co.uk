@@ -385,6 +385,8 @@ data_file 'DLC_ITYP_REQUEST' 'stream/[cayo]/mads_no_exp_pumps.ytyp'
 
 data_file 'DLC_ITYP_REQUEST' 'stream/[fuel]/[electric_nozzle]/electric_nozzle_typ.ytyp'
 data_file 'DLC_ITYP_REQUEST' 'stream/[fuel]/[electric_charger]/electric_charger_typ.ytyp'
+data_file 'DLC_ITYP_REQUEST' 'stream/[textures]/v_clouds.ytyp'
+
 
 
 

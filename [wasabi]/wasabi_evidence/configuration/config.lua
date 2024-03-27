@@ -10,25 +10,25 @@ Config = {}
 Config.CheckForUpdates = true -- Disable checking for updates by setting this to false
 
 Config.PoliceJobs = { -- Police jobs/grades able to use evidence system
-    ['police'] = 0,1,2,3,4, -- ['JOB_NAME'] = GRADE_LEVEL
+    ['police'] = 0, -- ['JOB_NAME'] = GRADE_LEVEL
 --  ['sheriff'] = 2 -- Example
 }
 Config.CriminalsCanCleanEvidence = {
-    enabled = true, -- Criminals are able to clean up bullets/blood when enabled
+    enabled = false, -- Criminals are able to clean up bullets/blood when enabled
     requiredBloodCleanItem = 'bleachwipes', -- Item name required in inventory for criminals to wipe blood evidence
     removeBloodCleanItemOnUse = true, -- Remove item when clean blood
 }
-Config.MaxEvidence = 15 -- Max evidence that can be collected at once prior to going to evidence lab for analyzing
+Config.MaxEvidence = 5 -- Max evidence that can be collected at once prior to going to evidence lab for analyzing
 Config.FlashlightRange = 15 -- Default: 15 / Distance one can see evidence with flashlight (MUST BE ABOVE 2)
 Config.AutoDestroy = 5 * minutes -- Auto destory evidence after so long (Default 5 * minutes / Set to false if no destroy)
 Config.BloodProps = true -- Have prop on ground for blood splatter
 Config.BossCanDeleteStorage = true -- Boss ranks can delete storage from storage(If enabled)
-Config.ManualFingerprintDatabase = true -- Police can add players prints to a manual database, which will show their name
+Config.ManualFingerprintDatabase = false -- Police can add players prints to a manual database, which will show their name
 
 -----------------------
 -- Evidence Settings --
 -----------------------
-Config.AnalyzingTime = 10 * seconds -- Time it takes to analyze evidence at the crime lab
+Config.AnalyzingTime = 6 * seconds -- Time it takes to analyze evidence at the crime lab
 
 Config.VehicleFingerPrinting = {
     enabled = true, -- Enable finger printing vehicle steering wheel?
@@ -169,13 +169,13 @@ Config.EvidenceLabs = { -- Locations where Config.PoliceJobs can analyze evidenc
         label = 'LSPD', -- Label to display during certain situations/notifications
 
         analyze = {
-            coords = vector3(458.6, -979.2, 24.92), -- Coords for location(If target is not enabled)
+            coords = vec3(483.63, -987.9, 30.68), -- Coords for location(If target is not enabled)
             range = 1.8, -- Range to show TextUI (If target is not enabled)
             label = '[E] - Analyze Evidence', -- TextUI string(If target is not enabled)
             target = {
                 enabled = false, -- Enable Target? (Can be customized in cl_customize.lua the target system)
                 label = 'Analyze Evidence',
-                coords = vector3(458.6, -979.2, 24.92),
+                coords = vec3(483.63, -987.9, 30.68),
                 heading = 181.42,
                 width = 2.0,
                 length = 1.0,
@@ -186,13 +186,13 @@ Config.EvidenceLabs = { -- Locations where Config.PoliceJobs can analyze evidenc
 
         fingerprinting = {
             enabled = true, -- Enable a finger printing station. By default this will be used to reveal any 'unknown' fingerprints that are ran through the system.
-            coords = vector3(467.11, -995.27, 24.92), -- Coords for location(If target is not enabled)
+            coords = vec3(473.24, -1007.58, 26.26), -- Coords for location(If target is not enabled)
             range = 1.8, -- Range to show TextUI (If target is not enabled)
             label = '[E] - Take Suspect\'s Fingerprints', -- TextUI string(If target is not enabled)
             target = {
-                enabled = true, -- Enable Target? (Can be customized in cl_customize.lua the target system)
+                enabled = false, -- Enable Target? (Can be customized in cl_customize.lua the target system)
                 label = 'Take Suspect\'s Fingerprints',
-                coords = vector3(467.11, -995.27, 24.92),
+                coords = vec3(473.24, -1007.58, 26.26),
                 heading = 357.17,
                 width = 2.0,
                 length = 1.0,
@@ -202,7 +202,7 @@ Config.EvidenceLabs = { -- Locations where Config.PoliceJobs can analyze evidenc
         },
 
         storage = {
-            enabled = false, -- Enable archive access in-game via storage location?
+            enabled = true, -- Enable archive access in-game via storage location?
             coords = vec3(480.84, -984.55, 30.68), -- Coords for location(If target is not enabled)
             range = 1.8, -- Range to show TextUI (If target is not enabled)
             label = '[E] - Access Evidence Storage', -- TextUI string(If target is not enabled)

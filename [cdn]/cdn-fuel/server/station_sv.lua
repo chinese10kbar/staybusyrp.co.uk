@@ -81,7 +81,7 @@ if Config.PlayerOwnedGasStationsEnabled then -- This is so Player Owned Gas Stat
         local src = source
         local Player = QBCore.Functions.GetPlayer(src)
         local setamount = (StationBalance - amount)
-        if Config.FuelDebug then print("Attempting to withdraw $"..amount.." from Location #"..location.."'s Balance!") end
+        if Config.FuelDebug then print("Attempting to withdraw £"..amount.." from Location #"..location.."'s Balance!") end
         if amount > StationBalance then TriggerClientEvent('QBCore:Notify', src, Lang:t("station_withdraw_too_much"), 'success') return end
         MySQL.Async.execute('UPDATE fuel_stations SET balance = ? WHERE `location` = ?', {setamount, location})
         Player.Functions.AddMoney("bank", amount, Lang:t("station_withdraw_payment_label")..Config.GasStations[location].label)
@@ -92,7 +92,7 @@ if Config.PlayerOwnedGasStationsEnabled then -- This is so Player Owned Gas Stat
         local src = source
         local Player = QBCore.Functions.GetPlayer(src)
         local setamount = (StationBalance + amount)
-        if Config.FuelDebug then print("Attempting to deposit $"..amount.." to Location #"..location.."'s Balance!") end
+        if Config.FuelDebug then print("Attempting to deposit £"..amount.." to Location #"..location.."'s Balance!") end
         if Player.Functions.RemoveMoney("bank", amount, Lang:t("station_deposit_payment_label")..Config.GasStations[location].label) then
             MySQL.Async.execute('UPDATE fuel_stations SET balance = ? WHERE `location` = ?', {setamount, location})
             TriggerClientEvent('QBCore:Notify', src, Lang:t("station_success_deposit_1")..amount..Lang:t("station_success_deposit_2"), 'success')
@@ -113,7 +113,7 @@ if Config.PlayerOwnedGasStationsEnabled then -- This is so Player Owned Gas Stat
 
     RegisterNetEvent('cdn-fuel:station:server:updatefuelprice', function(fuelprice, location)
         local src = source
-        if Config.FuelDebug then print('Attempting to update Location #'..location.."'s Fuel Price to a new price: $"..fuelprice) end
+        if Config.FuelDebug then print('Attempting to update Location #'..location.."'s Fuel Price to a new price: £"..fuelprice) end
         MySQL.Async.execute('UPDATE fuel_stations SET fuelprice = ? WHERE `location` = ?', {fuelprice, location})
         TriggerClientEvent('QBCore:Notify', src, Lang:t("station_fuel_price_success")..fuelprice..Lang:t("station_per_liter"), 'success')
     end)
@@ -176,8 +176,8 @@ if Config.PlayerOwnedGasStationsEnabled then -- This is so Player Owned Gas Stat
         else
             if Config.FuelDebug then print("No Result Fetched!!") end
         end
-        if Config.FuelDebug then print("Attempting Sale Server Side for location: #"..location.." for Price: $"..price) end
-        if ReserveBuyPossible and Player.Functions.RemoveMoney("bank", price, "Purchased"..amount.."L of Reserves for: "..Config.GasStations[location].label.." @ $"..Config.FuelReservesPrice.." / L!") then
+        if Config.FuelDebug then print("Attempting Sale Server Side for location: #"..location.." for Price: £"..price) end
+        if ReserveBuyPossible and Player.Functions.RemoveMoney("bank", price, "Purchased"..amount.."L of Reserves for: "..Config.GasStations[location].label.." @ £"..Config.FuelReservesPrice.." / L!") then
             if not Config.OwnersPickupFuel then
                 MySQL.Async.execute('UPDATE fuel_stations SET fuel = ? WHERE `location` = ?', {NewAmount, location})
                 if Config.FuelDebug then print("SQL Execute Update: fuel_station level to: "..NewAmount.. " Math: ("..amount.." + "..OldAmount.." = "..NewAmount) end

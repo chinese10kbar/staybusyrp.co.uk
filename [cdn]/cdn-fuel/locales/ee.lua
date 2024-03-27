@@ -38,9 +38,9 @@ local Translations = {
 
     -- Phone --
     electric_phone_header = "Laadimispunkt",
-    electric_phone_notification = "Kogu maksumus: $",
+    electric_phone_notification = "Kogu maksumus: £",
     fuel_phone_header = "Tankla",
-    phone_notification = "Kogu maksumus: $",
+    phone_notification = "Kogu maksumus: £",
     phone_refund_payment_label = "Tagasimakse @ Tankla!",
 
     -- Stations
@@ -57,16 +57,16 @@ local Translations = {
     station_name_too_long = "Nimi ei saa olla pikem, kui "..Config.NameChangeMaxChar.." tähemärki.",
     station_name_too_short = "Nimi peab olema pikem, kui "..Config.NameChangeMinChar.." tähemärki.",
     station_withdraw_too_much = "Sa ei saa väljasta rohkem, kui tanklas on!", 
-    station_withdraw_too_little = "Sa ei saa väljastad vähem, kui $1!",
-    station_success_withdrew_1 = "Edukalt väljastatud: $",
+    station_withdraw_too_little = "Sa ei saa väljastad vähem, kui £1!",
+    station_success_withdrew_1 = "Edukalt väljastatud: £",
     station_success_withdrew_2 = " tankla arvelt!", -- Leave the space @ the front!
     station_deposit_too_much = "Sa ei saa sisestada rohkem, kui sul endal on arvel!", 
-    station_deposit_too_little = "Sa ei saa sisestada vähem, kui $1!",
-    station_success_deposit_1 = "Edukalt sisestatud: $",
+    station_deposit_too_little = "Sa ei saa sisestada vähem, kui £1!",
+    station_success_deposit_1 = "Edukalt sisestatud: £",
     station_success_deposit_2 = " tankla arvele!", -- Leave the space @ the front!
-    station_cannot_afford_deposit = "Te ei saa endale sissemakset lubada: $",
+    station_cannot_afford_deposit = "Te ei saa endale sissemakset lubada: £",
     station_shutoff_success = "Selle asukoha sulgventiili oleku muutmine õnnestus!",
-    station_fuel_price_success = "Kütusehinna muutmine õnnestus, hind: $",
+    station_fuel_price_success = "Kütusehinna muutmine õnnestus, hind: £",
     station_reserve_cannot_fit = "Reservi, ei mahu nii palju!",
     station_reserves_over_max =  "Te ei saa seda kogust osta, kuna see on suurem kui maksimaalne kogus "..Config.MaxFuelReserves.." liitrit",
     station_name_change_success = "Edukalt muudetud nime, uus nimi: ", -- Leave the space @ the end!
@@ -85,7 +85,7 @@ local Translations = {
     menu_header_cash = "Sularaha",
     menu_header_bank = "Pangakonto",
     menu_header_close = "Katkesta",
-    menu_pay_with_cash = "Maksa sularahas. \nSul on: $",
+    menu_pay_with_cash = "Maksa sularahas. \nSul on: £",
     menu_pay_with_bank = "Maksa pangakaardiga.", 
     menu_refuel_header = "Tankla",
     menu_refuel_accept = "Tankima.",
@@ -118,19 +118,19 @@ local Translations = {
     menu_ped_close_footer = "Mai soovi enam sinuga midagi rääkida...",
 
     menu_station_reserves_header = "Osta reserve ",
-    menu_station_reserves_purchase_header = "Osta reserve, hinnaga: $",
-    menu_station_reserves_purchase_footer = "Jah, ma soovin osta kütuse reserve, hinnaga: $",
+    menu_station_reserves_purchase_header = "Osta reserve, hinnaga: £",
+    menu_station_reserves_purchase_footer = "Jah, ma soovin osta kütuse reserve, hinnaga: £",
     menu_station_reserves_cancel_footer = "Mõtlesin ümber, ei soovi ikka osta!",
     
-    menu_purchase_station_header_1 = "Kogu maksumus on: $",
+    menu_purchase_station_header_1 = "Kogu maksumus on: £",
     menu_purchase_station_header_2 = " sisse lisatud ka maksud.",
     menu_purchase_station_confirm_header = "Kinnita",
-    menu_purchase_station_confirm_footer = "Soovin osta selle tankla, hinnaga: $",
+    menu_purchase_station_confirm_footer = "Soovin osta selle tankla, hinnaga: £",
     menu_purchase_station_cancel_footer = "Mõtlesin ümber, enam küll ei taha seda tanklat osta, hind on liiga kirves!",
 
     menu_sell_station_header = "Müü ",
     menu_sell_station_header_accept = "Müü tanklat",
-    menu_sell_station_footer_accept = "Jah, ma soovin müüa tankla maha, hinnaga: $",
+    menu_sell_station_footer_accept = "Jah, ma soovin müüa tankla maha, hinnaga: £",
     menu_sell_station_footer_close = "Mõtlesin ümber, ei soovi ikka müüa.",
 
     menu_manage_header = "Juhtimine ",
@@ -139,11 +139,11 @@ local Translations = {
     menu_manage_reserves_footer_2 =  " L  \nSaad osta kütust juurde alt poolt!",
     
     menu_manage_purchase_reserves_header = "Kütuse reservi ost",
-    menu_manage_purchase_reserves_footer = "Soovin osta rohkem kütusevarusid, hinnaga: $",
+    menu_manage_purchase_reserves_footer = "Soovin osta rohkem kütusevarusid, hinnaga: £",
     menu_manage_purchase_reserves_footer_2 = " / L!",
 
     menu_alter_fuel_price_header = "Muuda kütusehinda",
-    menu_alter_fuel_price_footer_1 = "Soovin muuta oma Tankla kütuse hinda! \nPraegu on: $",
+    menu_alter_fuel_price_footer_1 = "Soovin muuta oma Tankla kütuse hinda! \nPraegu on: £",
     
     menu_manage_company_funds_header = "Hallake ettevõtte vahendeid",
     menu_manage_company_funds_footer = "Tahan hallata selle tankla arveldust.",
@@ -158,12 +158,12 @@ local Translations = {
     menu_manage_change_name_header = "Muuda tankla nime",
     menu_manage_change_name_footer = "Soov muuta tankla nime.",
 
-    menu_manage_sell_station_footer = "Müü oma tankla maha, hinnaga: $",
+    menu_manage_sell_station_footer = "Müü oma tankla maha, hinnaga: £",
 
     menu_manage_close = "Ei taha sellest enam rääkida!", 
 
     -- Jerry Can Menus 
-    menu_jerry_can_purchase_header = "Osta kütusekanister, hinnaga: $",
+    menu_jerry_can_purchase_header = "Osta kütusekanister, hinnaga: £",
     menu_jerry_can_footer_full_gas = "Sinu kütusekanister on täis!",
     menu_jerry_can_footer_refuel_gas = "Täida oma kütusekanistrit!",
     menu_jerry_can_footer_use_gas = "Täida oma kütusekanistrit kütusega!",
@@ -190,13 +190,13 @@ local Translations = {
     input_max_fuel_footer_2 = "L kütust.",
     input_insert_nozzle = "Tangi", -- Used for Target as well!
 
-    input_purchase_reserves_header_1 = "Osta reserve  \nHetkene hind: $",
+    input_purchase_reserves_header_1 = "Osta reserve  \nHetkene hind: £",
     input_purchase_reserves_header_2 = Config.FuelReservesPrice .. " / L  \nHetkel olemas olevad reservid: ",
-    input_purchase_reserves_header_3 = " L  \nReservide täitmiseks läheb maksma: $",
+    input_purchase_reserves_header_3 = " L  \nReservide täitmiseks läheb maksma: £",
     input_purchase_reserves_submit_text = "Osta reserve",
     input_purchase_reserves_text = 'Osta kütuse reserve.',
 
-    input_alter_fuel_price_header_1 = "Muuda kütuse hinda  \nHetkene hind: $",
+    input_alter_fuel_price_header_1 = "Muuda kütuse hinda  \nHetkene hind: £",
     input_alter_fuel_price_header_2 = " / L",
     input_alter_fuel_price_submit_text = "Muuda kütuse hinda ja ole pede nagu eesti riik",
 
@@ -205,11 +205,11 @@ local Translations = {
     input_change_name_submit_text = "Kinnita nime muutus",
     input_change_name_text = "Uus nimi..",
 
-    input_withdraw_funds_header = "Väljasta arvelt  \nArvel on: $",
+    input_withdraw_funds_header = "Väljasta arvelt  \nArvel on: £",
     input_withdraw_submit_text = "Väljasta",
     input_withdraw_text = "",
 
-    input_deposit_funds_header = "Sisesta arvele  \nArvel on: $",
+    input_deposit_funds_header = "Sisesta arvele  \nArvel on: £",
     input_deposit_submit_text = "Sisesta",
     input_deposit_text = "",
 

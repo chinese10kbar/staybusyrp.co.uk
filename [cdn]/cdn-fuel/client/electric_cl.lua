@@ -123,7 +123,7 @@ if Config.ElectricVehicleCharging then
                         FuelPrice = FuelPrice - (FuelPrice*discount)
 
                         if Config.FuelDebug then
-                            print("Your discount for Emergency Services is set @ "..discount.."%. Setting new price to: $"..FuelPrice)
+                            print("Your discount for Emergency Services is set @ "..discount.."%. Setting new price to: £"..FuelPrice)
                         end
                     end
                 else
@@ -140,11 +140,11 @@ if Config.ElectricVehicleCharging then
         local maxfuel = (100 - finalfuel - 1)
         local wholetankcost = (FuelPrice * maxfuel)
         local wholetankcostwithtax = math.ceil((wholetankcost) + GlobalTax(wholetankcost))
-        if Config.FuelDebug then print("Attempting to open Input with the total: $"..wholetankcostwithtax.." at $"..FuelPrice.." / L".." Maximum Fuel Amount: "..maxfuel) end
+        if Config.FuelDebug then print("Attempting to open Input with the total: £"..wholetankcostwithtax.." at £"..FuelPrice.." / L".." Maximum Fuel Amount: "..maxfuel) end
         if Config.Ox.Input then
             Electricity = lib.inputDialog('Electric Charger', {
                 { type = "input", label = 'Electric Price',
-                default = '$'.. FuelPrice .. '/KWh',
+                default = '£'.. FuelPrice .. '/KWh',
                 disabled = true },
                 { type = "input", label = 'Current Charge',
                 default = finalfuel .. ' KWh',
@@ -152,7 +152,7 @@ if Config.ElectricVehicleCharging then
                 { type = "input", label = 'Required Full Charge',
                 default = maxfuel,
                 disabled = true },
-                { type = "slider", label = 'Full Charge Cost: $' ..wholetankcostwithtax.. '',
+                { type = "slider", label = 'Full Charge Cost: £' ..wholetankcostwithtax.. '',
                 default = maxfuel,
                 min = 0,
                 max = maxfuel
@@ -177,8 +177,8 @@ if Config.ElectricVehicleCharging then
             end
         else
             Electricity = exports['qb-input']:ShowInput({
-                header = "Select the Amount of Fuel<br>Current Price: $" ..
-                FuelPrice .. " / KWh <br> Current Charge: " .. finalfuel .. " KWh <br> Full Charge Cost: $" ..
+                header = "Select the Amount of Fuel<br>Current Price: £" ..
+                FuelPrice .. " / KWh <br> Current Charge: " .. finalfuel .. " KWh <br> Full Charge Cost: £" ..
                 wholetankcostwithtax .. "",
                 submitText = "Insert Charger",
                 inputs = {{
@@ -397,7 +397,7 @@ if Config.ElectricVehicleCharging then
                         FuelPrice = FuelPrice - (FuelPrice*discount)
 
                         if Config.FuelDebug then
-                            print("Your discount for Emergency Services is set @ "..discount.."%. Setting new price to: $"..FuelPrice)
+                            print("Your discount for Emergency Services is set @ "..discount.."%. Setting new price to: £"..FuelPrice)
                         end
                     end
                 else
@@ -655,7 +655,7 @@ if Config.ElectricVehicleCharging then
                             FuelPrice = FuelPrice - (FuelPrice*discount)
 
                             if Config.FuelDebug then
-                                print("Your discount for Emergency Services is set @ "..discount.."%. Setting new price to: $"..FuelPrice)
+                                print("Your discount for Emergency Services is set @ "..discount.."%. Setting new price to: £"..FuelPrice)
                             end
                         end
                     else

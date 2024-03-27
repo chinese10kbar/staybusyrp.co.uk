@@ -82,7 +82,7 @@ RegisterNetEvent("cdn-fuel:server:PayForFuel", function(amount, purchasetype, Fu
 	end
 	local moneyremovetype = purchasetype
 	if Config.FuelDebug then print("Player is attempting to purchase fuel with the money type: " ..moneyremovetype) end
-	if Config.FuelDebug then print("Attempting to charge client: $"..total.." for Fuel @ "..FuelPrice.." PER LITER | PER KW") end
+	if Config.FuelDebug then print("Attempting to charge client: £"..total.." for Fuel @ "..FuelPrice.." PER LITER | PER KW") end
 	if purchasetype == "bank" then
 		moneyremovetype = "bank"
 	elseif purchasetype == "cash" then

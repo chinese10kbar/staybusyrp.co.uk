@@ -15,6 +15,12 @@ WeaponList = {
         ['ammotype'] = nil,
         ['damagereason'] = 'Melee killed / Whacked / Executed / Beat down / Murdered / Battered'
     },
+    ['WEAPON_ACIDPACKAGE'] = {
+        ['name'] = 'WEAPON_ACIDPACKAGE',
+        ['label'] = 'Newspaper',
+        ['ammotype'] = nil,
+        ['throwable'] = true
+    },
     [`weapon_dagger`]                = {
         ['name'] = 'weapon_dagger',
         ['label'] = 'Dagger',

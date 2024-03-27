@@ -332,7 +332,7 @@ if Config.PlayerOwnedGasStationsEnabled then -- This is so Player Owned Gas Stat
         end, location)
         Wait(Config.WaitTime)
         if CanSell then
-            if Config.FuelDebug then print("Attempting to sell for: $"..SalePrice) end
+            if Config.FuelDebug then print("Attempting to sell for: £"..SalePrice) end
             TriggerServerEvent('cdn-fuel:stations:server:sellstation', location)
             if Config.FuelDebug then print("Event Triggered") end
         else
@@ -446,7 +446,7 @@ if Config.PlayerOwnedGasStationsEnabled then -- This is so Player Owned Gas Stat
             if Config.Ox.Input then
                 local reserves = lib.inputDialog('Purchase Reserves', {
 					{ type = "input", label = 'Current Price',
-					default = '$'.. Config.FuelReservesPrice .. ' Per Liter',
+					default = '£'.. Config.FuelReservesPrice .. ' Per Liter',
 					disabled = true },
 					{ type = "input", label = 'Current Reserves',
 					default = Currentreserveamount,
@@ -454,7 +454,7 @@ if Config.PlayerOwnedGasStationsEnabled then -- This is so Player Owned Gas Stat
 					{ type = "input", label = 'Required Reserves',
 					default = Config.MaxFuelReserves - Currentreserveamount,
 					disabled = true },
-					{ type = "slider", label = 'Full Reserve Cost: $' ..math.ceil(GlobalTax((Config.MaxFuelReserves - Currentreserveamount) * Config.FuelReservesPrice) + ((Config.MaxFuelReserves - Currentreserveamount) * Config.FuelReservesPrice)).. '',
+					{ type = "slider", label = 'Full Reserve Cost: £' ..math.ceil(GlobalTax((Config.MaxFuelReserves - Currentreserveamount) * Config.FuelReservesPrice) + ((Config.MaxFuelReserves - Currentreserveamount) * Config.FuelReservesPrice)).. '',
 					default = Config.MaxFuelReserves - Currentreserveamount,
 					min = 0,
 					max = Config.MaxFuelReserves - Currentreserveamount
@@ -538,7 +538,7 @@ if Config.PlayerOwnedGasStationsEnabled then -- This is so Player Owned Gas Stat
             if Config.Ox.Input then
                 local fuelprice = lib.inputDialog('Fuel Prices', {
                     { type = "input", label = 'Current Price',
-                    default = '$'.. Comma_Value(StationFuelPrice) .. ' Per Liter',
+                    default = '£'.. Comma_Value(StationFuelPrice) .. ' Per Liter',
                     disabled = true },
                     { type = "number", label = 'Enter New Fuel Price Per Liter',
                     default = StationFuelPrice,
@@ -784,7 +784,7 @@ if Config.PlayerOwnedGasStationsEnabled then -- This is so Player Owned Gas Stat
                                 location = location,
                             },
                             metadata = {
-                                {label = 'Current Fuel Price: ', value = "$"..Comma_Value(StationFuelPrice)..Lang:t("input_alter_fuel_price_header_2")},
+                                {label = 'Current Fuel Price: ', value = "£"..Comma_Value(StationFuelPrice)..Lang:t("input_alter_fuel_price_header_2")},
                             },
                             disabled = CanNotChangeFuelPrice,
                         },
@@ -853,7 +853,7 @@ if Config.PlayerOwnedGasStationsEnabled then -- This is so Player Owned Gas Stat
                     {
                         header = Lang:t("menu_alter_fuel_price_header"),
                         icon = "fas fa-usd",
-                        txt = "I want to change the price of fuel at my Gas Station! <br> Currently, it is $"..StationFuelPrice..Lang:t("input_alter_fuel_price_header_2") ,
+                        txt = "I want to change the price of fuel at my Gas Station! <br> Currently, it is £"..StationFuelPrice..Lang:t("input_alter_fuel_price_header_2") ,
                         params = {
                             event = "cdn-fuel:stations:client:changefuelprice",
                             args = {
@@ -1035,7 +1035,7 @@ if Config.PlayerOwnedGasStationsEnabled then -- This is so Player Owned Gas Stat
             if Config.Ox.Input then
                 local Withdraw = lib.inputDialog('Withdraw Funds', {
                     { type = "input", label = 'Current Station Balance',
-                    default = '$'..Comma_Value(StationBalance),
+                    default = '£'..Comma_Value(StationBalance),
                     disabled = true },
                     { type = "number", label = 'Withdraw Amount',
                     },
@@ -1109,7 +1109,7 @@ if Config.PlayerOwnedGasStationsEnabled then -- This is so Player Owned Gas Stat
             if Config.Ox.Input then
                 local Deposit = lib.inputDialog('Deposit Funds', {
                     { type = "input", label = 'Current Station Balance',
-                    default = '$'..Comma_Value(StationBalance),
+                    default = '£'..Comma_Value(StationBalance),
                     disabled = true },
                     { type = "number", label = 'Deposit Amount',
                     },
@@ -1186,7 +1186,7 @@ if Config.PlayerOwnedGasStationsEnabled then -- This is so Player Owned Gas Stat
 
 
         if bankmoney < costofstation then
-            QBCore.Functions.Notify(Lang:t("not_enough_money_in_bank").." $"..costofstation, 'error', 7500) return
+            QBCore.Functions.Notify(Lang:t("not_enough_money_in_bank").." £"..costofstation, 'error', 7500) return
         end
 
         if Config.Ox.Menu then
@@ -1204,7 +1204,7 @@ if Config.PlayerOwnedGasStationsEnabled then -- This is so Player Owned Gas Stat
                             location = location,
                         },
                         metadata = {
-                            {label = 'Station Cost: $', value = Comma_Value(costofstation)..Lang:t("menu_purchase_station_header_2")},
+                            {label = 'Station Cost: £', value = Comma_Value(costofstation)..Lang:t("menu_purchase_station_header_2")},
                         },
                     },
                     {

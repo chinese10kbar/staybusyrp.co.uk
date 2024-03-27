@@ -79,7 +79,7 @@ Config.Radar = {
         "police"
     },
     vehiclesWhitelist = {
-        "rppolice1",
+        "rpPolice1",
         "rpPolice2",
         "rpPolice3",
         "rpPolice4",
@@ -89,12 +89,17 @@ Config.Radar = {
         "rpPolice8",
         "rpPolice9",
         "rpPolice10",
-        "rppolice11",
+        "rpPolice11",
         "rpPolice12",
         "rpPolice13",
         "rpPolice14",
         "rpPolice15",
         "rpPolice16",
+        "rpPolice17",
+        "rpPoliceB1",
+        "rpPoliceB2",
+        "rpPoliceR1",
+        "rpPoliceR2",
         "rpPoliceUC1",
         "rpPoliceUC2",
         "rpPoliceUC3",
@@ -106,7 +111,34 @@ Config.Radar = {
         "rpPoliceUC9",
         "rpPoliceUC10",
         "rpPoliceUC11",
-        "sheriff2"
+        "rpPoliceUC12",
+        "sheriff2",
+    
+        "rpG68",
+        "rpG61",
+        "rpG64",
+    
+        "rpRanger1",
+        "rpRanger2",
+        "rpRanger3",
+        "rpRanger4",
+    
+        "ambulance",
+        "rpNHS1",
+        "rpNHS2",
+        "rpNHS3",
+        "rpNHS4",
+        "rpNHS5",
+        "rpNHS6",
+        "rpNHS7",
+        "rpNHS8",
+        "rpNHS9",
+        "rpNHS10",
+    
+        "rpFire1",
+        "rpFire2",
+        "rpFire3",
+        "firetruk"
     }
 }
 

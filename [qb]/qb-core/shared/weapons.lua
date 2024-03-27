@@ -28,7 +28,11 @@ QBShared.Weapons = {
 	[`weapon_awerp`] 		= {['name'] = 'weapon_awerp', 				['label'] = 'AW Knife', 			['weapontype'] = 'Melee',					['ammotype'] = nil,				['damagereason'] = 'Knifed / Stabbed / Eviscerated'},
 	[`weapon_pigeon`] 		= {['name'] = 'weapon_pigeon', 				['label'] = 'Pigeon', 			['weapontype'] = 'Melee',					['ammotype'] = nil,				['damagereason'] = 'GET SHIT ON'},
 	[`weapon_slipper`] 		= {['name'] = 'weapon_slipper', 				['label'] = 'Slipper', 			['weapontype'] = 'Melee',					['ammotype'] = nil,				['damagereason'] = 'GET SHIT ON'},
-
+	['WEAPON_ACIDPACKAGE'] = {
+		label = 'Newspaper',
+		weight = 0,
+		throwable = true,
+	},
 	--  Custom Weapons -- Hand Guns
 	[`weapon_glock18c`] 		 = {['name'] = 'weapon_glock18c', 			['label'] = 'Glock-18 Custom',		        ['weapontype'] = 'Pistol',					['ammotype'] = 'AMMO_PISTOL',			['damagereason'] = 'Pistoled / Blasted / Plugged / Bust a cap in'},
 	[`weapon_glock22`] 		 = {['name'] = 'weapon_glock22', 			['label'] = 'Glock-22',		    		['weapontype'] = 'Pistol',					['ammotype'] = 'AMMO_PISTOL',			['damagereason'] = 'Pistoled / Blasted / Plugged / Bust a cap in'},

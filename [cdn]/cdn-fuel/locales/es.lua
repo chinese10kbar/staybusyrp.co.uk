@@ -38,8 +38,8 @@ local Translations = {
     -- Phone --
     electric_phone_header = "Carga Eléctrica",
     fuel_phone_header = "Estación de Gasolina",
-    electric_phone_notification = "Coste total de electricidad: $",
-    phone_notification = "Coste total: $",
+    electric_phone_notification = "Coste total de electricidad: £",
+    phone_notification = "Coste total: £",
     phone_refund_payment_label = "Reembolsar @ Estación de Gasolina!",
 
     -- Stations
@@ -56,16 +56,16 @@ local Translations = {
     station_name_too_long = "EL nombre no puede ser mas largo de "..Config.NameChangeMaxChar.." characters.",
     station_name_too_short = "El nombre debe ser mas largo que "..Config.NameChangeMinChar.." characters.",
     station_withdraw_too_much = "No puedes retirar mas de lo que tiene la Estación!", 
-    station_withdraw_too_little = "No puedes retirar menos de $1!",
-    station_success_withdrew_1 = "Retiraste $",
+    station_withdraw_too_little = "No puedes retirar menos de £1!",
+    station_success_withdrew_1 = "Retiraste £",
     station_success_withdrew_2 = " desde el balance de esta Estación!", -- Leave the space @ the front!
     station_deposit_too_much = "No puedes depositar mas de lo que tienes!", 
-    station_deposit_too_little = "No puedes depositar menos de $1!",
-    station_success_deposit_1 = "Depositaste $",
+    station_deposit_too_little = "No puedes depositar menos de £1!",
+    station_success_deposit_1 = "Depositaste £",
     station_success_deposit_2 = " dentro del balance de esta Estación!", -- Leave the space @ the front!
-    station_cannot_afford_deposit = "No teienes suficiente para depositar $",
+    station_cannot_afford_deposit = "No teienes suficiente para depositar £",
     station_shutoff_success = "Activaste la válvula de cierre para esta Ubicación!",
-    station_fuel_price_success = "Cambiaste el precio del Combustible a $",
+    station_fuel_price_success = "Cambiaste el precio del Combustible a £",
     station_reserve_cannot_fit = "Las reservas no se ajustan a esto!",
     station_reserves_over_max =  "No puedes comprar esta cantidad ya que será mayor a la cantidad máxima de "..Config.MaxFuelReserves.." Liters",
     station_name_change_success = "Cambiaste el nombre a: ", -- Leave the space @ the end!
@@ -84,7 +84,7 @@ local Translations = {
     menu_header_cash = "Dinero",
     menu_header_bank = "Banco",
     menu_header_close = "Cancelar",
-    menu_pay_with_cash = "Pagar con Dinero. <br> Tienes: $", 
+    menu_pay_with_cash = "Pagar con Dinero. <br> Tienes: £", 
     menu_pay_with_bank = "Pagar con Banco.", 
     menu_refuel_header = "Estación de Gasolina",
     menu_refuel_accept = "Quisiera comprar el Combustible.",
@@ -117,19 +117,19 @@ local Translations = {
     menu_ped_close_footer = "En realidad ya no quiero hablar mas.",
 
     menu_station_reserves_header = "Comprar reservas para ",
-    menu_station_reserves_purchase_header = "Comprar reservas por: $",
-    menu_station_reserves_purchase_footer = "Si, quiero comprar las reservas de Combustible por $",
+    menu_station_reserves_purchase_header = "Comprar reservas por: £",
+    menu_station_reserves_purchase_footer = "Si, quiero comprar las reservas de Combustible por £",
     menu_station_reserves_cancel_footer = "En realidad no quiero comprar mas reservas!",
     
-    menu_purchase_station_header_1 = "El costo total será de: $",
+    menu_purchase_station_header_1 = "El costo total será de: £",
     menu_purchase_station_header_2 = " Incluyendo impuestos.",
     menu_purchase_station_confirm_header = "Confirmar",
-    menu_purchase_station_confirm_footer = "Quiero comprar esta Ubicación por $",
+    menu_purchase_station_confirm_footer = "Quiero comprar esta Ubicación por £",
     menu_purchase_station_cancel_footer = "En realidad ya no quiero comprar esta Ubicación. El precio es demaciado alto!",
 
     menu_sell_station_header = "Vender ",
     menu_sell_station_header_accept = "Vender Estación de Gasolina",
-    menu_sell_station_footer_accept = "Si, quiero vender esta Ubicación por $",
+    menu_sell_station_footer_accept = "Si, quiero vender esta Ubicación por £",
     menu_sell_station_footer_close = "En realidad no tengo nada mas de que hablar.",
 
     menu_manage_header = "Mantenimiento de ",
@@ -138,11 +138,11 @@ local Translations = {
     menu_manage_reserves_footer_2 =  " litros <br> Puedes comprar más reservas a continuación!",
     
     menu_manage_purchase_reserves_header = "Comprar mas reservas de Combustible",
-    menu_manage_purchase_reserves_footer = "Quiero comprar mas reservas de Combustible por $",
+    menu_manage_purchase_reserves_footer = "Quiero comprar mas reservas de Combustible por £",
     menu_manage_purchase_reserves_footer_2 = " / L!",
 
     menu_alter_fuel_price_header = "Alterar precio del Combustible",
-    menu_alter_fuel_price_footer_1 = "Quiero cambiar el precio del Combustible en mi Estación de Gasolina! <br> Actualmente es $",
+    menu_alter_fuel_price_footer_1 = "Quiero cambiar el precio del Combustible en mi Estación de Gasolina! <br> Actualmente es £",
     
     menu_manage_company_funds_header = "Administrar Fondos de la Compañia",
     menu_manage_company_funds_footer = "Quiero Administrar los fondos de esta Ubicación.",
@@ -157,12 +157,12 @@ local Translations = {
     menu_manage_change_name_header = "Cambiar el nombre de la Ubicación",
     menu_manage_change_name_footer = "Quiero cambiar el nombre de esta Ubicación.",
 
-    menu_manage_sell_station_footer = "Vender tu Estación de Galosina por $",
+    menu_manage_sell_station_footer = "Vender tu Estación de Galosina por £",
 
     menu_manage_close = "En realidad no tengo nada mas que hablar!", 
 
     -- Jerry Can Menus 
-    menu_jerry_can_purchase_header = "Comprar Bidón por $",
+    menu_jerry_can_purchase_header = "Comprar Bidón por £",
     menu_jerry_can_footer_full_gas = "Tu Bidón está lleno!",
     menu_jerry_can_footer_refuel_gas = "Rellena tu Bidón!",
     menu_jerry_can_footer_use_gas = "Ponga su gasolina a usar y reposte el vehículo!",
@@ -189,13 +189,13 @@ local Translations = {
     input_max_fuel_footer_2 = "L de Gasolina.",
     input_insert_nozzle = "Insertar Boquilla en el auto", -- Used for Target as well!
 
-    input_purchase_reserves_header_1 = "Comprar reservas<br>Precio actual: $",
+    input_purchase_reserves_header_1 = "Comprar reservas<br>Precio actual: £",
     input_purchase_reserves_header_2 = Config.FuelReservesPrice .. " / Litro <br> Reservas actuales: ",
-    input_purchase_reserves_header_3 = " Litros <br> Todas las reservas cuestan: $",
+    input_purchase_reserves_header_3 = " Litros <br> Todas las reservas cuestan: £",
     input_purchase_reserves_submit_text = "Comprar reservas",
     input_purchase_reserves_text = 'Comprar reservas de Combustible.',
 
-    input_alter_fuel_price_header_1 = "Alterar precio del Combustible <br>Precio actual: $",
+    input_alter_fuel_price_header_1 = "Alterar precio del Combustible <br>Precio actual: £",
     input_alter_fuel_price_header_2 = " / Litro",
     input_alter_fuel_price_submit_text = "Cambiar precio del Combustible",
 
@@ -204,11 +204,11 @@ local Translations = {
     input_change_name_submit_text = "Actualizar cambio de Nombre",
     input_change_name_text = "Nombre Nuevo..",
 
-    input_withdraw_funds_header = "Retirar Fondos<br>Balance Actual: $",
+    input_withdraw_funds_header = "Retirar Fondos<br>Balance Actual: £",
     input_withdraw_submit_text = "Retirar",
     input_withdraw_text = "Retirar Fondos",
 
-    input_deposit_funds_header = "Depositar Fondos<br>Balance Actual: $",
+    input_deposit_funds_header = "Depositar Fondos<br>Balance Actual: £",
     input_deposit_submit_text = "Depositar",
     input_deposit_text = "Depositar Fondos",
 

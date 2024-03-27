@@ -7,16 +7,16 @@ let previousVolume = volume;
 SetRadioStationDisabled("RADIO_34_DLC_HEI4_KULT", true);
 SetRadioStationDisabled("RADIO_35_DLC_HEI4_MLR", true);
 
-for (let i = 0, length = GetNumResourceMetadata("sbrp-scripts", "supersede_radio"); i < length; i++) {
-    const radio = GetResourceMetadata("sbrp-scripts", "supersede_radio", i);
+for (let i = 0, length = GetNumResourceMetadata("BritishFivemRadio", "supersede_radio"); i < length; i++) {
+    const radio = GetResourceMetadata("BritishFivemRadio", "supersede_radio", i);
 
     if (!availableRadios.includes(radio)) {
-        console.error(`sbrp-scripts: ${radio} is an invalid radio.`);
+        console.error(`BritishFivemRadio: ${radio} is an invalid radio.`);
         continue;
     }
 
     try {
-        const data = JSON.parse(GetResourceMetadata("sbrp-scripts", "supersede_radio_extra", i));
+        const data = JSON.parse(GetResourceMetadata("BritishFivemRadio", "supersede_radio_extra", i));
         if (data !== null) {
             customRadios.push({
                 "isPlaying": false,
@@ -27,15 +27,15 @@ for (let i = 0, length = GetNumResourceMetadata("sbrp-scripts", "supersede_radio
                 AddTextEntry(radio, data.name);
             }
         } else {
-            console.error(`sbrp-scripts: Missing data for ${radio}.`);
+            console.error(`BritishFivemRadio: Missing data for ${radio}.`);
         }
     } catch (e) {
         console.error(e);
     }
 }
 
-RegisterNuiCallbackType("sbrp-scripts:ready");
-on("__cfx_nui:sbrp-scripts:ready", (data, cb) => {
+RegisterNuiCallbackType("BritishFivemRadio:ready");
+on("__cfx_nui:BritishFivemRadio:ready", (data, cb) => {
     SendNuiMessage(JSON.stringify({ "type": "create", "radios": customRadios, "volume": volume }));
     previousVolume = -1;
 });

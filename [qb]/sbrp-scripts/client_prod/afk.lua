@@ -67,6 +67,7 @@ CreateThread(function()
                     end
                 end
                 prevPos = currPos
+                
             end
         end
     end

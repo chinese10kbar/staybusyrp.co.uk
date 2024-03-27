@@ -297,7 +297,7 @@ Config.AutoMessages = {
 Config.NotificationsText = {
 	['disable_chat'] = { title = 'SYSTEM', message = 'You disabled the chat', time = 5000, type = 'info'},
 	['enable_chat'] = { title = 'SYSTEM', message = 'You enabled the chat', time = 5000, type = 'info'},
-	['ad_success'] = { title = 'ADVERTISEMENT', message = 'Advertisement successfully made for ${price}€', time = 5000, type = 'success'},
+	['ad_success'] = { title = 'ADVERTISEMENT', message = 'Advertisement successfully made for ${price}£', time = 5000, type = 'success'},
 	['ad_no_money'] = { title = 'ADVERTISEMENT', message = "You don't have enough money to make an advertisement", time = 5000, type = 'error'},
 	['ad_too_quick'] = { title = 'ADVERTISEMENT', message = "You can't advertise so quickly", time = 5000, type = 'info'},
 	['mute_not_adm'] = { title = 'SYSTEM', message = 'You are not an admin', time = 5000, type = 'error'},
@@ -305,7 +305,7 @@ Config.NotificationsText = {
 	['mute_time_inv'] = { title = 'SYSTEM', message = 'The mute time is invalid', time = 5000, type = 'error'},
 	['alr_muted'] = { title = 'SYSTEM', message = 'This person is already muted', time = 5000, type = 'error'},
 	['alr_unmuted'] = { title = 'SYSTEM', message = 'This person is already unmuted', time = 5000, type = 'error'},
-	['an_success'] = { title = 'ANONYMOUS', message = 'Advertisement successfully made for price€', time = 5000, type = 'success'},
+	['an_success'] = { title = 'ANONYMOUS', message = 'Advertisement successfully made for price£', time = 5000, type = 'success'},
 	['an_no_money'] = { title = 'ANONYMOUS', message = "You don't have enough money to make an advertisement", time = 5000, type = 'error'},
 	['an_too_quick'] = { title = 'ANONYMOUS', message = "You can't advertise so quickly", time = 5000, type = 'error'},
 	['an_not_allowed'] = { title = 'ANONYMOUS', message = "You are not allowed to send messages in the anonymous chat", time = 5000, type = 'error'},

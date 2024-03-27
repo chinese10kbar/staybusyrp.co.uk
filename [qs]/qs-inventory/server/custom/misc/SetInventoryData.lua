@@ -621,7 +621,7 @@ RegisterNetEvent(Config.InventoryPrefix .. ':server:SetInventoryData', function(
 					AddItem(src, itemData.name, 1, toSlot, itemData.info, nil)
 					TriggerClientEvent('qb-drugs:client:updateDealerItems', src, itemData, 1)
 					TriggerClientEvent(Config.InventoryPrefix .. ':client:sendTextMessage', src, itemInfo['label'] .. ' ' .. Lang('INVENTORY_NOTIFICATION_BOUGHT'), 'success')
-					SendWebhook(Webhooks.swap, 'Swapped Item', 7393279, '**' .. GetPlayerName(src) .. '** bought a ' .. itemInfo['label'] .. ' for €' .. price)
+					SendWebhook(Webhooks.swap, 'Swapped Item', 7393279, '**' .. GetPlayerName(src) .. '** bought a ' .. itemInfo['label'] .. ' for £' .. price)
 					if isWeapon then
 						TriggerClientEvent(Config.InventoryPrefix .. ':client:forceCloseInventory', src)
 					end
@@ -634,7 +634,7 @@ RegisterNetEvent(Config.InventoryPrefix .. ':server:SetInventoryData', function(
 					AddItem(src, itemData.name, fromAmount, toSlot, itemData.info, nil)
 					TriggerClientEvent('qb-drugs:client:updateDealerItems', src, itemData, fromAmount)
 					TriggerClientEvent(Config.InventoryPrefix .. ':client:sendTextMessage', src, itemInfo['label'] .. ' ' .. Lang('INVENTORY_NOTIFICATION_BOUGHT'), 'success')
-					SendWebhook(Webhooks.swap, 'Swapped Item', 7393279, '**' .. GetPlayerName(src) .. '** bought a ' .. itemInfo['label'] .. '  for €' .. price)
+					SendWebhook(Webhooks.swap, 'Swapped Item', 7393279, '**' .. GetPlayerName(src) .. '** bought a ' .. itemInfo['label'] .. '  for £' .. price)
 				else
 					TriggerClientEvent(Config.InventoryPrefix .. ':client:sendTextMessage', src, Lang('INVENTORY_NOTIFICATION_NO_MONEY'), 'error')
 					return
@@ -679,7 +679,7 @@ RegisterNetEvent(Config.InventoryPrefix .. ':server:SetInventoryData', function(
 				AddItem(src, itemData.name, fromAmount, toSlot, itemData.info)
 				TriggerClientEvent('shops:client:UpdateShop', src, SplitStr(shopType, '_')[2], itemData, fromAmount)
 				TriggerClientEvent(Config.InventoryPrefix .. ':client:sendTextMessage', src, itemInfo['label'] .. ' ' .. Lang('INVENTORY_NOTIFICATION_BOUGHT'), 'success')
-				SendWebhook(Webhooks.bought, 'Shop item bought', 7393279, '**' .. GetPlayerName(src) .. '** bought a ' .. itemInfo['label'] .. ' for €' .. price)
+				SendWebhook(Webhooks.bought, 'Shop item bought', 7393279, '**' .. GetPlayerName(src) .. '** bought a ' .. itemInfo['label'] .. ' for £' .. price)
 				if isWeapon then
 					TriggerClientEvent(Config.InventoryPrefix .. ':client:forceCloseInventory', src)
 				end
@@ -692,7 +692,7 @@ RegisterNetEvent(Config.InventoryPrefix .. ':server:SetInventoryData', function(
 				RemoveAccountMoney(src, 'money', price or 0)
 				AddItem(src, itemData.name, fromAmount, toSlot, itemData.info)
 				TriggerClientEvent(Config.InventoryPrefix .. ':client:sendTextMessage', src, itemInfo['label'] .. ' ' .. Lang('INVENTORY_NOTIFICATION_BOUGHT'), 'success')
-				SendWebhook(Webhooks.bought, 'Shop item bought', 7393279, '**' .. GetPlayerName(src) .. '** bought a ' .. itemInfo['label'] .. ' for €' .. price)
+				SendWebhook(Webhooks.bought, 'Shop item bought', 7393279, '**' .. GetPlayerName(src) .. '** bought a ' .. itemInfo['label'] .. ' for £' .. price)
 			else
 				TriggerClientEvent(Config.InventoryPrefix .. ':client:sendTextMessage', src, Lang('INVENTORY_NOTIFICATION_NO_MONEY'), 'error')
 				return

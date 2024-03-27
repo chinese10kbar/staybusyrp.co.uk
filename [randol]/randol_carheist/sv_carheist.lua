@@ -68,7 +68,7 @@ lib.callback.register('randol_carheist:server:finishHeist', function(source, hei
     DeleteEntity(vehicle)
 
     local amt = math.random(Server.Min, Server.Max)
-    local metadata = {amount = amt, cid = cid, description = ('$%s'):format(amt)}
+    local metadata = {amount = amt, cid = cid, description = ('£%s'):format(amt)}
     AddHeistPapers(Player, metadata)
 
     carHeist[src], thief = nil
@@ -138,7 +138,7 @@ lib.callback.register('randol_carheist:server:returnPapers', function(source)
     RemoveHeistPapers(Player, item.name, item.slot)
     AddRewardMoney(Player, metadata.amount)
 
-    DoNotification(src, ('You received $%s for delivering the vehicle.'):format(metadata.amount), 'success')
+    DoNotification(src, ('You received £%s for delivering the vehicle.'):format(metadata.amount), 'success')
 end)
 
 AddEventHandler('onResourceStart', function(resource)

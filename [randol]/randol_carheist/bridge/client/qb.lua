@@ -24,5 +24,28 @@ function DoNotification(text, nType)
 end
 
 function AlertPolice(vehicle)
-    exports['ps-dispatch']:VehicleTheft(vehicle)
+    local callData = {
+        job = { 'police'},
+        callLocation = GetEntityCoords(vehicle),
+        callCode = { code = 'Theft', snippet = 'Vehicle Theft' },
+        message = "Vehicle theft in progress!",
+        flashes = false,
+        image = "", -- No image for vehicle theft
+        blip = {
+            sprite = 227,
+            scale = 1.5,
+            colour = 1,
+            flashes = true,
+            text = 'Vehicle Theft',
+            time = (20 * 1000)
+        },
+        otherData = {
+            {
+                text = 'Red Obscure',
+                icon = 'fas fa-user-secret'
+            }
+        }
+    }
+    
+    TriggerServerEvent('qs-dispatch:server:CreateDispatchCall', callData)
 end

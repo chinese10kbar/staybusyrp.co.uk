@@ -16,8 +16,8 @@ local function LoadAnimDict(dict)
 end
 
 RegisterKeyMapping('handsup', Lang('INVENTORY_KEYMAPPING_HANDSUP_LABEL'), 'keyboard', Config.KeyBinds.handsup)
-
 RegisterCommand('handsup', function()
+    if exports.wasabi_ambulance:isPlayerDead() then return end
     if not IsPedInAnyVehicle(PlayerPedId(), false) and GetEntityHealth(PlayerPedId()) > 1 then
         RequestAnimDict(lib)
         while not HasAnimDictLoaded(lib) do

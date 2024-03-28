@@ -1,0 +1,30 @@
+{
+  "name": "discord-commits-github",
+  "version": "1.0.0",
+  "description": "This GitHub Action can produce fancy and more meaningful discord messages for your commits.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChatDisabled/discord-commits.git"
+  },
+  "keywords": [
+    "github",
+    "action",
+    "discord",
+    "webhook"
+  ],
+  "author": "Chat",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/ChatDisabled/discord-commits/issues"
+  },
+  "homepage": "https://github.com/ChatDisabled/discord-commits#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.3",
+    "@actions/github": "^2.1.1",
+    "discord.js": "^13.6.0"
+  }
+}

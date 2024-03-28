@@ -237,7 +237,7 @@ Config.FakePlates = {
 
 Config.VehicleKeys = {
     ENABLE = true, --Do you want to use the built in vehicle keys system?
-    allow_shared_vehicles = true, --If this is enabled, when you give another player a "saved" key to one of your vehicles, it will allow them to spawn your vehicles from their garage.
+    allow_shared_vehicles = false, --If this is enabled, when you give another player a "saved" key to one of your vehicles, it will allow them to spawn your vehicles from their garage.
 
     Commands = {
         temporary_key = 'givekey', --These keys will be deleted on script/server restart (but keys will save if you relog).

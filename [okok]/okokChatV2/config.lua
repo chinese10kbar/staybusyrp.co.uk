@@ -154,7 +154,7 @@ Config.TryMessageTitle = 'TRY'
 --------------------------------
 -- [Staff]
 
-Config.EnableStaffCommand = true
+Config.EnableStaffCommand = false
 
 Config.StaffCommand = 'staff'
 

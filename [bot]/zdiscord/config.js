@@ -30,7 +30,7 @@ const DiscordBotToken = "MTIxOTAxNjY2NjkzMTkyNTA3Mg.G4a1Rk.oE8MnRk8hDCZr81VOsIzx
 const DiscordGuildId = "1213803011973849149";
 
 // STAFF CHAT
-const EnableStaffChatForwarding = true;
+const EnableStaffChatForwarding = false;
 const DiscordStaffChannelId = "1219005270252851281";
 const AdditionalStaffChatRoleIds = [
      "1219005014547239006",

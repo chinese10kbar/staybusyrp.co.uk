@@ -16,13 +16,6 @@ RegisterCommand('postal', function(_, args)
         if pBlip then
             RemoveBlip(pBlip.hndl)
             pBlip = nil
-            TriggerEvent('chat:addMessage', {
-                color = { 255, 0, 0 },
-                args = {
-                    'Postals',
-                    config.blip.deleteText
-                }
-            })
         end
         return
     end
@@ -49,21 +42,9 @@ RegisterCommand('postal', function(_, args)
         AddTextComponentSubstringPlayerName(format(config.blip.blipText, pBlip.p.code))
         EndTextCommandSetBlipName(blip)
 
-        TriggerEvent('chat:addMessage', {
-            color = { 255, 0, 0 },
-            args = {
-                'Postals',
-                format(config.blip.drawRouteText, foundPostal.code)
-            }
-        })
+
     else
-        TriggerEvent('chat:addMessage', {
-            color = { 255, 0, 0 },
-            args = {
-                'Postals',
-                config.blip.notExistText
-            }
-        })
+
     end
 end)
 

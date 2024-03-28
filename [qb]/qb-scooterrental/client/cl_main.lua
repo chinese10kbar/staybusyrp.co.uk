@@ -73,7 +73,7 @@ RegisterNetEvent('qb-scooterrentals:client:ScooterMenu', function()
         },
         {
             header = "Scooter",
-            txt =  "$ ".. Config.ScooterPrice .. "w/ Tax",
+            txt =  "£ ".. Config.ScooterPrice .. "w/ Tax",
             params = {
                 event = "qb-scooterrentals:client:Spawn",
                 args = {

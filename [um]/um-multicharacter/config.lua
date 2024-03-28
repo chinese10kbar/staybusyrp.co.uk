@@ -100,7 +100,7 @@ Config.QBEvents = {
       for um-spawn: 'um-spawn:client:startSpawnUI'
       for ps-housing: 'ps-housing:client:setupSpawnUI'
       for qb-apartments: 'apartments:client:setupSpawnUI'
-]]    spawnEventUI = 'apartments:client:setupSpawnUI',
+]]    spawnEventUI = 'um-spawn:client:startSpawnUI',
 
 --[[
      if you are not using a custom event don't change it illenium-appearance

@@ -14,7 +14,7 @@ um.property = {
         script = 'qb', -- qb, qbx , ps
     },
     houses = {
-        status = true, -- If you want to show the house system, set it to true.
+        status = false, -- If you want to show the house system, set it to true.
         script = 'qb', -- qb, qbx , ps , qs , nolag, bcs
     }
 }

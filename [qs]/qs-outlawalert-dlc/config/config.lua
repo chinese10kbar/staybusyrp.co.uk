@@ -284,7 +284,7 @@ Config.ShootingDriveByData = function(cb)
     end
 
     local data = {
-        job = { 'police', 'swat', 'sheriff' },
+        job = { 'police'},
         callLocation = playerData.coords,
         callCode = { code = 'Shootings in Zone', snippet = 'Fireeeeee' },
         message = 'A ' ..

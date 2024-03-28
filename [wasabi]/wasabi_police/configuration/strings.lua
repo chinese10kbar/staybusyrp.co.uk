@@ -20,7 +20,7 @@ Strings = {
     gps_deactive_desc = 'Player %s deactivated their GPS',
 
     no_wsb = '^0[^3WARNING^0] wasabi_bridge was NOT started AFTER framework and/or BEFORE resource: %s',
-    currency = '$',
+    currency = '£',
     success = 'Success',
     go_back = '< Go Back',
     cloakroom = 'Cloakroom',
@@ -112,16 +112,16 @@ Strings = {
     prop_help_text2 = 'Press ~INPUT_CONTEXT~ to place the object.',
 
     fine_sent = 'Fines Sent',
-    fine_sent_desc = 'You have successfully sent fine for $%s!',
+    fine_sent_desc = 'You have successfully sent fine for £%s!',
     fine_received = 'Fine Received',
-    fine_received_desc = 'You have received a fine for $%s',
+    fine_received_desc = 'You have received a fine for £%s',
     male = 'Male',
     female = 'Female',
     mr = 'Mr.',
     mrs = 'Mrs.',
     debt_collection = 'Debt Collection',
     db_email =
-    'Dear %s %s, <br /><br />The Central Judicial Collection Agency (CJCA) charged the fines you received from the police.<br />There is <strong>$%s</strong> withdrawn from your account.<br /><br />Kind regards,<br />Mr. Wasabi',
+    'Dear %s %s, <br /><br />The Central Judicial Collection Agency (CJCA) charged the fines you received from the police.<br />There is <strong>£%s</strong> withdrawn from your account.<br /><br />Kind regards,<br />Mr. Wasabi',
 
     spawn_blocked = 'Garage Blocked',
     spawn_blocked_desc = 'You can not pull your vehicle out because it is blocked!',

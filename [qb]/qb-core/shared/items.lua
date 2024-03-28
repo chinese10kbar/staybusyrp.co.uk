@@ -2059,7 +2059,11 @@ blueberryelfbar                 = { name = 'blueberryelfbar', label = 'Elf Bar',
     combinable = nil,
     description = 'Delivery documents.'
 },
+-- prescriptions
 
+['prescriptionpad'] 			 = {['name'] = 'prescriptionpad', 				['label'] = 'Prescription Pad', 		['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'prescriptionpad.png', 		['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Used to prescribe drugs'},
+['prescription'] 				 = {['name'] = 'prescription', 					['label'] = 'Prescription', 			['weight'] = 500, 		['type'] = 'item', 		['image'] = 'prescription.png', 		['unique'] = true, 		['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A prescription for legal drugs'},
+['amoxicillin'] 				 = {['name'] = 'amoxicillin', 					['label'] = 'Amoxicillin', 				['weight'] = 500, 		['type'] = 'item', 		['image'] = 'amoxicillin.png', 			['unique'] = true, 		['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A prescribed antibiotic'},
 -- spike strips
 
 spikestrip = { name = 'spikestrip', label = 'Spike strip', weight = 500, type = 'item', image = 'spikestrip.png', unique = false, useable = true, shouldClose = true, combinable = nil, description = 'Useful for stopping the bad guys' },

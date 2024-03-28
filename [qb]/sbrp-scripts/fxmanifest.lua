@@ -382,11 +382,23 @@ data_file 'DLC_ITYP_REQUEST' 'stream/[props]/brum_truly_pineapple.ytyp'
 data_file 'DLC_ITYP_REQUEST' 'stream/[props]/brum_truly_pomegeanate.ytyp'
 data_file 'DLC_ITYP_REQUEST' 'stream/[props]/brum_truly_strawberry.ytyp'
 data_file 'DLC_ITYP_REQUEST' 'stream/[cayo]/mads_no_exp_pumps.ytyp'
+data_file 'AUDIO_GAMEDATA' 'audioconfig/aq10nisvr38dett_game.dat'
+data_file 'AUDIO_SOUNDDATA' 'audioconfig/aq10nisvr38dett_sounds.dat'
+data_file 'AUDIO_WAVEPACK' 'sfx/dlc_aq10nisvr38dett'
+data_file 'AUDIO_GAMEDATA' 'audioconfig/s85b50_game.dat'
+data_file 'AUDIO_SOUNDDATA' 'audioconfig/s85b50_sounds.dat'
+data_file 'AUDIO_WAVEPACK' 'sfx/dlc_s85b50'
 
 data_file 'DLC_ITYP_REQUEST' 'stream/[fuel]/[electric_nozzle]/electric_nozzle_typ.ytyp'
 data_file 'DLC_ITYP_REQUEST' 'stream/[fuel]/[electric_charger]/electric_charger_typ.ytyp'
 data_file 'DLC_ITYP_REQUEST' 'stream/[textures]/v_clouds.ytyp'
+data_file 'AUDIO_GAMEDATA' 'audioconfig/n55b30t0_game.dat'
+data_file 'AUDIO_SOUNDDATA' 'audioconfig/n55b30t0_sounds.dat'
+data_file 'AUDIO_WAVEPACK' 'sfx/dlc_n55b30t0'
 
+data_file 'AUDIO_GAMEDATA' 'audioconfig/s55b30_game.dat'
+data_file 'AUDIO_SOUNDDATA' 'audioconfig/s55b30_sounds.dat'
+data_file 'AUDIO_WAVEPACK' 'sfx/dlc_s55b30'
 
 
 

@@ -177,6 +177,9 @@ Config.ElectricVehicles = { -- List of Electric Vehicles in the Base Game.
     },
     ["tesroad20"] = {
         isElectric = true,
+    },
+    ["scooter"] = {
+        isElectric = true,
     }
     
 }

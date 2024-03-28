@@ -213,7 +213,8 @@ Config.Locations = {
                     ['metal_wand'] = { label = 'Metal Wand', multiple = false, price = false }, -- Example
                     ['locker_chain'] = { label = 'Chain Clamp', multiple = false, price = false }, -- Example    
                     ['locker_wheel'] = { label = 'Wheel Clamp', multiple = false, price = false }, -- Example    
-                    ['clamp_lockpick'] = { label = 'Clamp Lockpick', multiple = false, price = false }, -- Example                   
+                    ['clamp_lockpick'] = { label = 'Clamp Lockpick', multiple = false, price = false }, -- Example       
+                    ['spikestrip'] = { label = 'Spike Strips', multiple = false, price = false }, -- Example                   
                 },
                 [1] = { -- This would be grade 1
                     ['radio'] = { label = 'Radio', multiple = false, price = false }, -- Set price to false if undesired

@@ -2059,4 +2059,8 @@ blueberryelfbar                 = { name = 'blueberryelfbar', label = 'Elf Bar',
     combinable = nil,
     description = 'Delivery documents.'
 },
+
+-- spike strips
+
+spikestrip = { name = 'spikestrip', label = 'Spike strip', weight = 500, type = 'item', image = 'spikestrip.png', unique = false, useable = true, shouldClose = true, combinable = nil, description = 'Useful for stopping the bad guys' },
 }

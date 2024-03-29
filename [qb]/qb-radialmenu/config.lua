@@ -18,7 +18,15 @@ Config.MenuItems = {
                 type = 'client',
                 event = 'qb-phone:client:GiveContactDetails',
                 shouldClose = true
-            }, {
+            }, 
+            {
+                id = 'openmenu',
+                title = 'Open Control Menu',
+                icon = 'car',
+                type = 'client',
+                event = 'vehcontrol:openExternal',
+                shouldClose = true
+             },{
                 id = 'getintrunk',
                 title = 'Get In Trunk',
                 icon = 'car',
@@ -79,7 +87,8 @@ Config.MenuItems = {
                         type = 'client',
                         event = 'police:client:KidnapPlayer',
                         shouldClose = true
-                    }, {
+                    }, 
+                    {
                         id = 'escort2',
                         title = 'Escort',
                         icon = 'user-group',
@@ -466,7 +475,8 @@ Config.VehicleExtras = {
             type = 'client',
             event = 'qb-radialmenu:client:setExtra',
             shouldClose = false
-        }
+        },
+
     }
 }
 
@@ -474,6 +484,13 @@ Config.VehicleSeats = {
     id = 'vehicleseats',
     title = 'Vehicle Seats',
     icon = 'chair',
+    items = {}
+}
+
+Config.VehicleMenu = {
+    id = 'openmenu',
+    title = 'Open Control Menu',
+    icon = 'car',
     items = {}
 }
 

@@ -62,7 +62,31 @@ Config.Categories = {
   suvs = "SUVs",
   commercial = "Commercial",
   cycles = "Cycles",
-  industrial = "Industrial"
+  industrial = "Industrial",
+  bmw = "BMW",
+  volvo = "Volvo",
+  volkswagen = "Volkswagen",
+  jaguar = "Jaguar",
+  peugeot = "Peugeot",
+  Mercedesbenz = "Mercedes Benz",
+  honda = "Honda",
+  audi = "Audi",
+  ford = "Ford",
+  landrover = "Land Rover",
+  mini = "Mini",
+  fiat = "Fiat",
+  renault = "Renault",
+  mazda = "Mazda",
+  nissan = "Nissan",
+  mitsubishi = "Mitsubishi",
+  vauxhall = "Vauxhall",
+  seat = "Seat",
+  lexus = "Lexus",
+  lamborghini = "Lamborghini",
+  kia = "kia",
+  suzuki = "Suzuki",
+  other = "Other"
+
 }
 
 Config.DealershipLocations = {
@@ -77,7 +101,7 @@ Config.DealershipLocations = {
       coords = vector4(-146.6166, -596.6301, 166.0000, 120.0),
       positions = {5.0, 8.0, 12.0, 8.0}
     },
-    categories = {"sedans", "compacts", "motorcycles", "offroad", "coupes", "muscle", "suvs"},
+    categories = {"bmw", "volvo", "volkswagen", "peugeot", "honda", "audi", "ford", "landrover", "mini", "fiat", "renault", "mazda", "nissan", "mitsubishi", "vauxhall", "seat", "lexus", "lamborghini", "kia", "suzuki", "Mercedesbenz", "other"},
     enableTestDrive = true,
     hideBlip = false,
     blip = {

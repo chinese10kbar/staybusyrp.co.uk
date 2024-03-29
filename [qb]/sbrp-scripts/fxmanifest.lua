@@ -404,5 +404,6 @@ data_file 'AUDIO_WAVEPACK' 'sfx/dlc_s55b30'
 
 
 
+data_file 'DLC_ITYP_REQUEST' 'stream/[valentines]/bzzz_love_valentines_beach.ytyp'
 
 export "Start"

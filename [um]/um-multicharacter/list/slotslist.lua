@@ -23,6 +23,6 @@ Slots.DiscordPerm = {
     status = true, -- Set to true to enable this feature, or false to disable it.
     role = {
         {id = "1219005013469171824", addExtraSlot = 20}, -- Example: Users with this role will have 20 + Config.DefaultSlots = 25 in total.
-        {id = "1219005045685878784", addExtraSlot = 1}, -- Replace 'roleid' with your Discord role ID and specify the total extra slots.
+        {id = "1219005045685878784", addExtraSlot = 2}, -- Replace 'roleid' with your Discord role ID and specify the total extra slots.
     }
 }

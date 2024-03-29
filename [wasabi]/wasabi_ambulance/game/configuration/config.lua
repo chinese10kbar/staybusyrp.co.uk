@@ -246,9 +246,9 @@ Config.billingSystem = false        -- Current options: 'esx' (For esx_billing) 
 Config.targetSystem = true          -- Target system for targetting players, medbags, and stretcher(If disabled with replace with menus/3D text) (Compatible out of the box with qTarget, qb-target, and ox_target)
 
 Config.RespawnTimer = 5 * minutes   -- Time before optional respawn
-Config.BleedoutTimer = 20 * minutes -- Time before it forces respawn
+Config.BleedoutTimer = 10 * minutes -- Time before it forces respawn
 
-Config.removeItemsOnDeath = true   -- Must have Config.Inventory set properly
+Config.removeItemsOnDeath = false   -- Must have Config.Inventory set properly
 Config.Inventory =
 'qs'                                --Options include: 'ox' - (ox_inventory) / 'qb' - (QBCore qb-inventory) 'mf' - (mf-inventory) / 'qs' (qs-inventory) / 'esx' (default esx) / 'other' (whatever else can customize in client/cl_customize.lua)
 
@@ -270,7 +270,7 @@ Config.CompleteDeath = { --DOES NOT APPLY TO QBCORE --  When enabled players can
 Config.Bandages = {
     enabled = false,       -- Useable bandages? (Leave false if ox_inventory because they're built in)
     item = 'bandage',      -- YOU MUST ADD THIS ITEM TO YOUR ITEMS, IT DOES NOT COME IN INSTALLATION(COMES WITH QBCORE BY DEFAULT AS ITEM)
-    hpRegen = 30,          -- Percentage of health it replenishes (30% by default)
+    hpRegen = 5,          -- Percentage of health it replenishes (30% by default)
     healBleed = false,     -- Heal bleed that is inflicted by injury system? (Requires injury system enabled)
     duration = 7 * seconds -- Time to use
 }
@@ -297,12 +297,12 @@ Config.EMSItems = {
 Config.ReviveRewards = {
     enabled = true,           -- Enable cash rewards for reviving
     paymentAccount = 'money', -- If you have old ESX 1.1 you may need to switch to 'cash'
-    no_injury = 4000,         -- If above enabled, how much reward for fully treated patient with no injury in diagnosis
-    burned = 3000,            -- How much if player is burned and revived without being treated
-    beat = 2500,              -- So on, so forth
-    stabbed = 2000,
-    bleedout = 2000,          -- NEW
-    shot = 1500,
+    no_injury = 1000,         -- If above enabled, how much reward for fully treated patient with no injury in diagnosis
+    burned = 1000,            -- How much if player is burned and revived without being treated
+    beat = 500,              -- So on, so forth
+    stabbed = 700,
+    bleedout = 1000,          -- NEW
+    shot = 800,
 }
 
 Config.ReviveHealth = { -- How much health to deduct for those revived without proper treatment
@@ -440,7 +440,7 @@ Config.Locations = {
         CheckIn = {                                      -- Hospital check-in
             Enabled = true,                              -- Enable ped and check-in area?
             Ped = 's_m_m_scientist_01',                  -- Check in ped
-            Coords = vec3(308.58, -595.31, 43.28 - 0.9), -- Coords of ped
+            Coords = vector3(305.07, -598.35, 42.29), -- Coords of ped
             Distance = 4.85,                             -- Distance to show textUI (If target is not enabled below)
             Heading = 63.26,                             -- Heading of ped
             Cost = 3000,                                 -- Cost of using hospital check-in. Set to false for free
@@ -452,7 +452,7 @@ Config.Locations = {
             Target = {
                 enabled = true,                          -- Enable Target? (Can be customized in wasabi_bridge/customize/cl_customize.lua the target system)
                 label = 'Check In',
-                coords = vec3(308.58, -595.31, 43.28),
+                coords = vector3(305.07, -598.35, 43.29),
                 heading = 63.26,
                 distance = 5.0,
                 width = 2.0,
@@ -564,19 +564,20 @@ Config.Locations = {
 
         MedicalSupplies = {                                                     -- EMS Shop for supplies
             Enabled = true,                                                     -- If set to false, rest of this table do not matter
-            Ped = 's_m_m_doctor_01',                                            -- Ped to target
-            Coords = vec3(306.63, -601.44, 43.28 - 0.95),                       -- Coords of ped/target
+            Ped = '',                                            -- Ped to target
+            Coords = vector3(310.37, -599.59, 44.29),                       -- Coords of ped/target
             Heading = 337.64,                                                   -- Heading of ped
             Supplies = {                                                        -- Supplies
-                { item = 'medbag',     label = 'Medical Bag',   price = 1000 }, -- Pretty self explanatory, price may be set to 'false' to make free
-                { item = 'medikit',    label = 'First-Aid Kit', price = 250 },
-                { item = 'morphine30', label = 'Morphine 30MG', price = 100 },
-                { item = 'morphine10', label = 'Morphine 10MG', price = 45 },
-                { item = 'perc30',     label = 'Percocet 30MG', price = 60 },
-                { item = 'perc10',     label = 'Percocet 10MG', price = 40 },
-                { item = 'perc5',      label = 'Percocet 5MG',  price = 30 },
-                { item = 'vic10',      label = 'Vicodin 10MG',  price = 30 },
-                { item = 'vic5',       label = 'Vicodin 5MG',   price = 15 },
+                { item = 'medbag',     label = 'Medical Bag',   price = false }, -- Pretty self explanatory, price may be set to 'false' to make free
+                { item = 'medikit',    label = 'First-Aid Kit', price = false },
+                { item = 'radio',      label = 'Radio',         price = false },
+                { item = 'morphine30', label = 'Morphine 30MG', price = 250 },
+                { item = 'morphine10', label = 'Morphine 10MG', price = 150 },
+                { item = 'perc30',     label = 'Percocet 30MG', price = 200 },
+                { item = 'perc10',     label = 'Percocet 10MG', price = 100 },
+                { item = 'perc5',      label = 'Percocet 5MG',  price = 170 },
+                { item = 'vic10',      label = 'Vicodin 10MG',  price = 75 },
+                { item = 'vic5',       label = 'Vicodin 5MG',   price = 50 },
             }
         },
 

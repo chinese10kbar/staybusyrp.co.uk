@@ -545,7 +545,22 @@ Config.JobVehicles = {
         },
         ['ambulance'] = {
             [1] = {job = 'ambulance', spawn_max = true, plate = 'EMS', job_grade = 0, garage_type = 'car', model = `ambulance`},
-            [2] = {job = 'ambulance', spawn_max = true, plate = 'EMS', job_grade = 0, garage_type = 'air', model = `polmav`},
+            [2] = {job = 'ambulance', spawn_max = true, plate = 'EMS', job_grade = 0, garage_type = 'car', model = `rpnhs1`},
+            [3] = {job = 'ambulance', spawn_max = true, plate = 'EMS', job_grade = 0, garage_type = 'car', model = `rpnhs2`},
+            [4] = {job = 'ambulance', spawn_max = true, plate = 'EMS', job_grade = 0, garage_type = 'car', model = `rpnhs3`},
+            [5] = {job = 'ambulance', spawn_max = true, plate = 'EMS', job_grade = 0, garage_type = 'car', model = `rpnhs4`},
+            [6] = {job = 'ambulance', spawn_max = true, plate = 'EMS', job_grade = 0, garage_type = 'car', model = `rpnhs5`},
+            [7] = {job = 'ambulance', spawn_max = true, plate = 'EMS', job_grade = 0, garage_type = 'car', model = `rpnhs6`},
+            [8] = {job = 'ambulance', spawn_max = true, plate = 'EMS', job_grade = 0, garage_type = 'car', model = `rpnhs7`},
+            [9] = {job = 'ambulance', spawn_max = true, plate = 'EMS', job_grade = 0, garage_type = 'car', model = `rpnhs8`},
+            [10] = {job = 'ambulance', spawn_max = true, plate = 'EMS', job_grade = 0, garage_type = 'car', model = `rpnhs9`},
+            [11] = {job = 'ambulance', spawn_max = true, plate = 'EMS', job_grade = 0, garage_type = 'car', model = `rpnhs10`},
+
+            [12] = {job = 'ambulance', spawn_max = true, plate = 'EMS', job_grade = 0, garage_type = 'air', model = `rpNHSH1`},
+            [13] = {job = 'ambulance', spawn_max = true, plate = 'EMS', job_grade = 0, garage_type = 'air', model = `rpNHSH2`},
+            [14] = {job = 'ambulance', spawn_max = true, plate = 'EMS', job_grade = 0, garage_type = 'air', model = `rpNHSH3`},
+
+
         },
     }
 }

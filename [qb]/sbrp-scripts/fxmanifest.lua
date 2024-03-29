@@ -237,7 +237,9 @@ data_file 'AUDIO_WAVEPACK' 'sfx/dlc_cvpiv8'--x5#
 data_file 'AUDIO_GAMEDATA' 'audioconfig/m113k_game.dat' --Range Rover Sport SVR
 data_file 'AUDIO_SOUNDDATA' 'audioconfig/m113k_sounds.dat'--Range Rover Sport SVR
 data_file 'AUDIO_WAVEPACK' 'sfx/dlc_m113k'--Range Rover Sport SVR
-
+data_file 'AUDIO_GAMEDATA' 'audioconfig/aq35ferf154cd_game.dat'
+data_file 'AUDIO_SOUNDDATA' 'audioconfig/aq35ferf154cd_sounds.dat'
+data_file 'AUDIO_WAVEPACK' 'sfx/dlc_aq35ferf154cd'
 
 provides {
 	'qb-smallresources',

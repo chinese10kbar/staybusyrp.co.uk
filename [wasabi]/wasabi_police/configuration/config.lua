@@ -5,7 +5,7 @@ local seconds, minutes = 1000, 60000
 Config = {}
 
 Config.jobMenu = 'F6'          -- Default job menu key
-Config.useTarget = false        -- Enable target for police functions (Supports qtarget, qb-target, and ox_target)
+Config.useTarget = true        -- Enable target for police functions (Supports qtarget, qb-target, and ox_target)
 Config.MobileMenu = {          -- THIS WILL USE A OX_LIB MENU RATHER THAN OX_LIB CONTEXT MENU!
     enabled = true,           -- Use a mobile menu from ox_lib rather than context? (Use arrow keys to navigate menu rather than mouse)
     position =

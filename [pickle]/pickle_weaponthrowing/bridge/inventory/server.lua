@@ -24,7 +24,7 @@ if GetResourceState('ox_inventory') == 'started' then
         end
         return data
     end
-elseif GetResourceState('sb-inventory') == 'started' then 
+elseif GetResourceState('qb-inventory') == 'started' then 
     Inventory.PlayerWeapons = {}
 
     Inventory.GetWeapon = function(source, name)

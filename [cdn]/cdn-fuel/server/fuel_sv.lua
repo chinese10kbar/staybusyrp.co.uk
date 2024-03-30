@@ -33,7 +33,7 @@ RegisterNetEvent("cdn-fuel:server:OpenMenu", function(amount, inGasStation, hasW
 				if Config.FuelDebug then print("going to open the context menu (OX)") end
 				TriggerClientEvent('cdn-fuel:client:OpenContextMenu', src, total, amount, purchasetype)
 			else
-				TriggerClientEvent('sb-menu:client:openMenu', src, {
+				TriggerClientEvent('qb-menu:client:openMenu', src, {
 					{
 						header = Lang:t("menu_refuel_header"),
 						isMenuHeader = true,
@@ -62,7 +62,7 @@ RegisterNetEvent("cdn-fuel:server:OpenMenu", function(amount, inGasStation, hasW
 						txt = Lang:t("menu_refuel_cancel"),
 						icon = "fas fa-times-circle",
 						params = {
-							event = "sb-menu:closeMenu",
+							event = "qb-menu:closeMenu",
 						}
 					},
 				})

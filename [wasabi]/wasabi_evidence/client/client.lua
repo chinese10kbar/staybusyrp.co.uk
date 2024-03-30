@@ -8,7 +8,7 @@ local nearbyEvidence
 
 QBCore = nil
 if wsb.framework == 'qb' then
-    QBCore = exports['sb-core']:GetCoreObject()
+    QBCore = exports['qb-core']:GetCoreObject()
 end
 
 -- Events

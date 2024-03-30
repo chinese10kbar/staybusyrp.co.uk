@@ -54,7 +54,7 @@ if Config.HouseScript == "auto" then
 
     local houseScripts = {
         "loaf_housing",
-        "sb-houses",
+        "qb-houses",
         "qs-housing"
     }
 
@@ -76,7 +76,7 @@ if Config.Item.Unique and Config.Item.Inventory == "auto" then
 
     local inventoryScripts = {
         "ox_inventory",
-        "sb-inventory",
+        "qb-inventory",
         "lj-inventory",
         "core_inventory",
         "mf-inventory",
@@ -102,7 +102,7 @@ if Config.Framework == "auto" then
 
     if isResourceStartedOrStarting("es_extended") then
         Config.Framework = "esx"
-    elseif isResourceStartedOrStarting("sb-core") then
+    elseif isResourceStartedOrStarting("qb-core") then
         Config.Framework = "qb"
     elseif isResourceStartedOrStarting("ox_core") then
         Config.Framework = "ox"

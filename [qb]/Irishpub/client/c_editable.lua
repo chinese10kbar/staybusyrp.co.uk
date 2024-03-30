@@ -1,4 +1,4 @@
-local QBCore = exports['sb-core']:GetCoreObject()
+local QBCore = exports['qb-core']:GetCoreObject()
 local alcoholCount = 0
 
 RegisterNetEvent('Ranjit-irishpub:client:Eat', function(itemName)

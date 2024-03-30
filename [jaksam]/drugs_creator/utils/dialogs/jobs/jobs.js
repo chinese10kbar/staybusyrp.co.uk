@@ -63,7 +63,7 @@ return new Promise(async (resolve, reject) => {
         `);
 
         for(let [grade, gradeData] of Object.entries(jobData.grades)) {
-            // sb-Core
+            // QB-Core
             if(gradeData.grade == undefined) {
                 gradeData.grade = grade;
                 gradeData.label = gradeData.name;

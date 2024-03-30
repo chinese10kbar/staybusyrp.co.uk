@@ -10,7 +10,7 @@ if Config.Framework ~= 'qb' then
     return
 end
 
-ESX = exports['sb-core']:GetCoreObject()
+ESX = exports['qb-core']:GetCoreObject()
 Config.Table = 'players'
 Config.Identifier = 'citizenid'
 WeaponList = ESX.Shared.Weapons

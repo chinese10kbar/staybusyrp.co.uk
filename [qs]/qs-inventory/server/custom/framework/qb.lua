@@ -2,7 +2,7 @@ if Config.Framework ~= 'qb' then
     return
 end
 
-QBCore = exports['sb-core']:GetCoreObject()
+QBCore = exports['qb-core']:GetCoreObject()
 
 userTable = 'players'
 Identifier = 'citizenid'

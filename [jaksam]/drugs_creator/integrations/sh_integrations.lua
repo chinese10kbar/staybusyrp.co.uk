@@ -3,21 +3,21 @@
     Example:
 
     EXTERNAL_SCRIPTS_NAMES = {
-        ["sb-core"] = "mygamemode_core",
+        ["qb-core"] = "mygamemode_core",
         ["es_extended"] = "custom_extended",
     }
 ]]
 
 EXTERNAL_SCRIPTS_NAMES = {
-    ["sb-core"] = "sb-core",
+    ["qb-core"] = "qb-core",
     ["es_extended"] = "es_extended",
 
     -- If you don't use these inventories, don't touch
     ["ox_inventory"] = "ox_inventory",
     ["qs-inventory"] = "qs-inventory",
 
-    ["sb-target"] = "sb-target",
-    ["sb-target"] = "sb-target",
+    ["qb-target"] = "qb-target",
+    ["qb-target"] = "qb-target",
 }
 
 -- Separator for values like £12.553.212 (default it's the dot '.')

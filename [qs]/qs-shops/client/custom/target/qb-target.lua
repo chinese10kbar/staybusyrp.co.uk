@@ -1,4 +1,4 @@
-if Config.UseTarget ~= 'sb-target' then
+if Config.UseTarget ~= 'qb-target' then
     return
 end
 
@@ -17,7 +17,7 @@ function createPeds()
         SetEntityInvincible(ShopPed[k], true)
         SetBlockingOfNonTemporaryEvents(ShopPed[k], true)
 
-        exports['sb-target']:AddTargetEntity(ShopPed[k], {
+        exports['qb-target']:AddTargetEntity(ShopPed[k], {
             options = {
                 {
                     label = v['targetLabel'],
@@ -146,7 +146,7 @@ end
 CreateThread(function()
     for i = 1, #Config.Stashes do
         local stash = Config.Stashes[i]
-        exports['sb-target']:AddBoxZone(stash, vec3(stash.coords.x, stash.coords.y, stash.coords.z), 0.5, 0.5, {
+        exports['qb-target']:AddBoxZone(stash, vec3(stash.coords.x, stash.coords.y, stash.coords.z), 0.5, 0.5, {
             name = stash,
             heading = 90.0,
             debugPoly = false,

@@ -53,8 +53,8 @@ function OnPlayerLoaded(bool)
     TriggerEvent('QBCore:Client:OnPlayerLoaded')
     Debug('OnPlayerLoaded')
     if resetInsideMeta then
-        TriggerServerEvent('sb-houses:server:SetInsideMeta', 0, false)
-        TriggerServerEvent('sb-apartments:server:SetInsideMeta', 0, 0, false)
+        TriggerServerEvent('qb-houses:server:SetInsideMeta', 0, false)
+        TriggerServerEvent('qb-apartments:server:SetInsideMeta', 0, 0, false)
         TriggerServerEvent('ps-housing:server:resetMetaData')
         Debug('Reset Inside Meta')
     end
@@ -64,13 +64,13 @@ function InsideHouseorApartments()
     local meta = GetInside()
     if meta.house ~= nil then
         local houseId = meta.house
-        TriggerEvent('sb-houses:client:LastLocationHouse', houseId)
+        TriggerEvent('qb-houses:client:LastLocationHouse', houseId)
         Debug('Player Inside House | ' .. '| ' .. houseId)
     elseif meta.apartment.apartmentType ~= nil or meta.apartment.apartmentId ~= nil then
         local apartmentType = meta.apartment.apartmentType
         local apartmentId = meta.apartment.apartmentId
         Debug('Player Inside Apartment | ' .. '| ' .. apartmentType .. ' | ' .. apartmentId)
-        TriggerEvent('sb-apartments:client:LastLocationHouse', apartmentType, apartmentId)
+        TriggerEvent('qb-apartments:client:LastLocationHouse', apartmentType, apartmentId)
     elseif meta.property_id ~= nil then
         TriggerServerEvent('ps-housing:server:resetMetaData')
     end

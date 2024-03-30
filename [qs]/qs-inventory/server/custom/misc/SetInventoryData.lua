@@ -211,8 +211,8 @@ RegisterNetEvent(Config.InventoryPrefix .. ':server:SetInventoryData', function(
 			elseif SplitStr(toInventory, '-')[1] == 'traphouse' then
 				-- Traphouse
 				local traphouseId = SplitStr(toInventory, '_')[2]
-				local toItemData = exports['sb-traphouse']:GetInventoryData(traphouseId, toSlot)
-				local IsItemValid = exports['sb-traphouse']:CanItemBeSaled(fromItemData.name:lower())
+				local toItemData = exports['qb-traphouse']:GetInventoryData(traphouseId, toSlot)
+				local IsItemValid = exports['qb-traphouse']:CanItemBeSaled(fromItemData.name:lower())
 				if IsItemValid then
 					RemoveItem(src, fromItemData.name, fromAmount, fromSlot)
 					TriggerEvent(Config.InventoryPrefix .. ':server:updateCash', src, fromItemData, fromAmount, 'remove')
@@ -222,7 +222,7 @@ RegisterNetEvent(Config.InventoryPrefix .. ':server:SetInventoryData', function(
 						toAmount = tonumber(toAmount) or toItemData.amount
 						if toItemData.amount >= toAmount then
 							if toItemData.name ~= fromItemData.name then
-								exports['sb-traphouse']:RemoveHouseItem(traphouseId, fromSlot, itemInfo['name'], toAmount)
+								exports['qb-traphouse']:RemoveHouseItem(traphouseId, fromSlot, itemInfo['name'], toAmount)
 								TriggerEvent(Config.InventoryPrefix .. ':server:updateCash', playerId, toItemData, toAmount, 'remove')
 								AddItem(src, toItemData.name, toAmount, fromSlot, toItemData.info, nil, fromItemData['created'])
 								TriggerEvent(Config.InventoryPrefix .. ':server:updateCash', src, toItemData, toAmount, 'add')
@@ -233,7 +233,7 @@ RegisterNetEvent(Config.InventoryPrefix .. ':server:SetInventoryData', function(
 						end
 					end
 					local itemInfo = ItemList[fromItemData.name:lower()]
-					exports['sb-traphouse']:AddHouseItem(traphouseId, toSlot, itemInfo['name'], fromAmount, fromItemData.info, fromItemData['created'], src)
+					exports['qb-traphouse']:AddHouseItem(traphouseId, toSlot, itemInfo['name'], fromAmount, fromItemData.info, fromItemData['created'], src)
 					SendWebhook(Webhooks.swap, 'Deposit Item', 7393279, '**' .. GetPlayerName(src) .. ' (id: ' .. src .. ') deposit item in traphouse!**\n**Name:** ' .. itemInfo['name'] .. '\n**Amount:** ' .. fromAmount .. '\n**Traphouse id:** ' .. traphouseId)
 				else
 					TriggerClientEvent(Config.InventoryPrefix .. ':client:sendTextMessage', src, Lang('INVENTORY_NOTIFICATION_CANT_SELL'), 'error')
@@ -552,13 +552,13 @@ RegisterNetEvent(Config.InventoryPrefix .. ':server:SetInventoryData', function(
 		end
 	elseif SplitStr(fromInventory, '-')[1] == 'traphouse' then
 		local traphouseId = SplitStr(fromInventory, '-')[2]
-		local fromItemData = exports['sb-traphouse']:GetInventoryData(traphouseId, fromSlot)
+		local fromItemData = exports['qb-traphouse']:GetInventoryData(traphouseId, fromSlot)
 		fromAmount = tonumber(fromAmount) or fromItemData.amount
 		if fromItemData and fromItemData.amount >= fromAmount then
 			local itemInfo = ItemList[fromItemData.name:lower()]
 			if toInventory == 'player' or toInventory == 'hotbar' then
 				local toItemData = GetItemBySlot(src, toSlot)
-				exports['sb-traphouse']:RemoveHouseItem(traphouseId, fromSlot, itemInfo['name'], fromAmount)
+				exports['qb-traphouse']:RemoveHouseItem(traphouseId, fromSlot, itemInfo['name'], fromAmount)
 				if toItemData then
 					itemInfo = ItemList[toItemData.name:lower()]
 					toAmount = tonumber(toAmount) or toItemData.amount
@@ -566,7 +566,7 @@ RegisterNetEvent(Config.InventoryPrefix .. ':server:SetInventoryData', function(
 						if toItemData.name ~= fromItemData.name then
 							RemoveItem(src, toItemData.name, toAmount, toSlot)
 							TriggerEvent(Config.InventoryPrefix .. ':server:updateCash', src, toItemData, toAmount, 'remove')
-							exports['sb-traphouse']:AddHouseItem(traphouseId, fromSlot, itemInfo['name'], toAmount, toItemData.info, fromItemData['created'], src)
+							exports['qb-traphouse']:AddHouseItem(traphouseId, fromSlot, itemInfo['name'], toAmount, toItemData.info, fromItemData['created'], src)
 							SendWebhook(Webhooks.swap, 'Swapped Item', 7393279, '**' .. GetPlayerName(src) .. ' (id: ' .. src .. ') swapped item!**\n**Name:** ' .. toItemData.name .. '\n**Amount:** ' .. toAmount .. '\n**With item:** ' .. fromItemData.name .. '\n**Amount:** ' .. fromAmount .. '\n**Stash id:** ' .. traphouseId)
 						end
 					else
@@ -576,22 +576,22 @@ RegisterNetEvent(Config.InventoryPrefix .. ':server:SetInventoryData', function(
 				TriggerEvent(Config.InventoryPrefix .. ':server:updateCash', src, fromItemData, fromAmount, 'add')
 				AddItem(src, fromItemData.name, fromAmount, toSlot, fromItemData.info, nil, fromItemData['created'])
 			else
-				local toItemData = exports['sb-traphouse']:GetInventoryData(traphouseId, toSlot)
-				exports['sb-traphouse']:RemoveHouseItem(traphouseId, fromSlot, itemInfo['name'], fromAmount)
+				local toItemData = exports['qb-traphouse']:GetInventoryData(traphouseId, toSlot)
+				exports['qb-traphouse']:RemoveHouseItem(traphouseId, fromSlot, itemInfo['name'], fromAmount)
 				if toItemData then
 					toAmount = tonumber(toAmount) or toItemData.amount
 					if toItemData.amount >= toAmount then
 						if toItemData.name ~= fromItemData.name then
 							itemInfo = ItemList[toItemData.name:lower()]
-							exports['sb-traphouse']:RemoveHouseItem(traphouseId, toSlot, itemInfo['name'], toAmount)
-							exports['sb-traphouse']:AddHouseItem(traphouseId, fromSlot, itemInfo['name'], toAmount, toItemData.info, fromItemData['created'], src)
+							exports['qb-traphouse']:RemoveHouseItem(traphouseId, toSlot, itemInfo['name'], toAmount)
+							exports['qb-traphouse']:AddHouseItem(traphouseId, fromSlot, itemInfo['name'], toAmount, toItemData.info, fromItemData['created'], src)
 						end
 					else
 						print('Dupe Blocked - 20')
 					end
 				end
 				itemInfo = ItemList[fromItemData.name:lower()]
-				exports['sb-traphouse']:AddHouseItem(traphouseId, toSlot, itemInfo['name'], fromAmount, fromItemData.info, fromItemData['created'], src)
+				exports['qb-traphouse']:AddHouseItem(traphouseId, toSlot, itemInfo['name'], fromAmount, fromItemData.info, fromItemData['created'], src)
 				SendWebhook(Webhooks.traphouse, 'Deposit Item', 7393279, '**' .. GetPlayerName(src) .. ' (id: ' .. src .. ') deposit item in traphouse!\n**Name:** ' .. itemInfo['name'] .. '\n**Amount:** ' .. fromAmount .. '\n**Traphouse id:** ' .. traphouseId)
 			end
 		else
@@ -619,7 +619,7 @@ RegisterNetEvent(Config.InventoryPrefix .. ':server:SetInventoryData', function(
 					itemData.info.serie = CreateSerialNumber()
 					itemData.info.quality = 100
 					AddItem(src, itemData.name, 1, toSlot, itemData.info, nil)
-					TriggerClientEvent('sb-drugs:client:updateDealerItems', src, itemData, 1)
+					TriggerClientEvent('qb-drugs:client:updateDealerItems', src, itemData, 1)
 					TriggerClientEvent(Config.InventoryPrefix .. ':client:sendTextMessage', src, itemInfo['label'] .. ' ' .. Lang('INVENTORY_NOTIFICATION_BOUGHT'), 'success')
 					SendWebhook(Webhooks.swap, 'Swapped Item', 7393279, '**' .. GetPlayerName(src) .. '** bought a ' .. itemInfo['label'] .. ' for £' .. price)
 					if isWeapon then
@@ -632,7 +632,7 @@ RegisterNetEvent(Config.InventoryPrefix .. ':server:SetInventoryData', function(
 			else
 				if money >= price then
 					AddItem(src, itemData.name, fromAmount, toSlot, itemData.info, nil)
-					TriggerClientEvent('sb-drugs:client:updateDealerItems', src, itemData, fromAmount)
+					TriggerClientEvent('qb-drugs:client:updateDealerItems', src, itemData, fromAmount)
 					TriggerClientEvent(Config.InventoryPrefix .. ':client:sendTextMessage', src, itemInfo['label'] .. ' ' .. Lang('INVENTORY_NOTIFICATION_BOUGHT'), 'success')
 					SendWebhook(Webhooks.swap, 'Swapped Item', 7393279, '**' .. GetPlayerName(src) .. '** bought a ' .. itemInfo['label'] .. '  for £' .. price)
 				else

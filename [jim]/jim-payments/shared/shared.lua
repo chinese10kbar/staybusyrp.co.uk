@@ -1,4 +1,4 @@
-QBCore = exports['sb-core']:GetCoreObject()
+QBCore = exports['qb-core']:GetCoreObject()
 
 local time = 1000
 function loadModel(model) if not HasModelLoaded(model) then

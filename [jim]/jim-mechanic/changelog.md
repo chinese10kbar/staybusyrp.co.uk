@@ -35,7 +35,7 @@
         - Players being able to skip harness progressbars - `extras.lua`
         - Custom Tires now default to off (no more text), but can be toggled - `rims.lua`, `preview.lua`, `emergency.lua`
         - `17mov_hud` causing esx errors on any server type if you have it installed - `extras.lua`
-        - Left over `sb-target` function, changed to jim_bridge's `createBoxTarget` - `locfunctions.lua`
+        - Left over `qb-target` function, changed to jim_bridge's `createBoxTarget` - `locfunctions.lua`
 
     Changes:
         - Attempt to optimize GetVehicleStatus() by using statebags instead of callbacks - `damages.lua`, `functions.lua`, `functionserver.lua` `encfunctionserver.lua`
@@ -145,7 +145,7 @@
         - Added Config option to old previous `preview` `preview.lua`, `config.lua`
         - Multi Phone script support with new event `sendNewMail` through `jim_bridge - 1.0.10` - `previews.lua`
             - As of this update, supported phones are:
-            - `gks-phone`, `yflip-phone`, `qs-smartphone`, `qs-smartphone-pro`, `roadphone`, `lbphone`, `sb-phone`
+            - `gks-phone`, `yflip-phone`, `qs-smartphone`, `qs-smartphone-pro`, `roadphone`, `lbphone`, `qb-phone`
 
 ## 3.3.4
 
@@ -204,12 +204,12 @@
         - `harness` kicking players if they tried to install it more than once - `performance.lua`
         - `repairkit` and `advancedrepairkits` events updated and fixed for all frameworks - `ox_items.txt`, `functions.lua`
         - Fix extra damage itemss labels for ox - `ox_items.txt`
-        - `qb_properties.txt` using Core instead of QBCore - `sb-properties.txt`
+        - `qb_properties.txt` using Core instead of QBCore - `qb-properties.txt`
         - `mechboard` item needing old removed config option to work with ox `functionserver.lua`
         - `nosrefill` checking the wrong place because of needing old removed config option to work with ox `locfunctions.lua`
         - `stashrepair` causing an error `repair.lua`
         - Hopefully stopped the damages.lua line 30 error - `damages.lua`
-        - Fix sb-callback for `mechCheck` erroring/crashing - `functionserver.lua`
+        - Fix qb-callback for `mechCheck` erroring/crashing - `functionserver.lua`
         - Rearrange and cutdown callback code and add duty check to mechCheck `functionserver.lua`
 
     Changes:
@@ -224,7 +224,7 @@
     New:
         - Full support for `qbx_core`
         - This includes a major rewrite of all the files
-        - If using `ox_lib` and/or `ox_inventory`, many of those functions will be used instead of sb-core's versions
+        - If using `ox_lib` and/or `ox_inventory`, many of those functions will be used instead of qb-core's versions
         - Experimental stash support for `qs-inventory` v2.0
         - Experimental support for `esx` (with `ox_lib`) and `ox_core`
         - Several events moved over to `jim_bridge` which is now a dependancy
@@ -258,7 +258,7 @@
     Fix:
         - Fix "test" print when using antilag
         - Added config option for `DamageRandomComponent()` being controlled inside jim-mechanic
-            - This was doubling the effect if you had `sb-vehiclefailure` installed
+            - This was doubling the effect if you had `qb-vehiclefailure` installed
         - Crafting/Repair StashNames are determined on entering a location, not the players specfic job
         - Seatbelt icon doesn't show on odometer on vehicle that don't have them
         - Extra damage parts can't be changed (or damaged) on bicycles
@@ -291,7 +291,7 @@
     New:
         - Added support for "qs-advancedgarages" repair event (if it is installed) when repairing body
         - Added a config options for the ability to continue using vehiclefailures features in `jim-mechanic`
-        - `repairkit`, `advancedrepairkit`, and `/fix` and prevention of flipping vehicle when upside down can now be used without `sb-vehiclefailure`
+        - `repairkit`, `advancedrepairkit`, and `/fix` and prevention of flipping vehicle when upside down can now be used without `qb-vehiclefailure`
             - `config.lua`, `functions.lua`, `functionserver.lua`
 
 ## 3.2.4
@@ -309,11 +309,11 @@
 
     New:
         - Added option to show vehicles odometer to all passengers `Config.Odometer.ShowToAll` - `extras.lua`, `config.lua`
-        - Added info on how to "mechboard" item card to newer sb-inventory - `install.md`
+        - Added info on how to "mechboard" item card to newer qb-inventory - `install.md`
 
     Changes:
         - Rewrite seatbelt code to optimize and combine events - `extras.lua`
-        - Move `DamageRandomComponent()` inside script, making sb-vehiclefailure (in theory) no longer a dependancy - `extras.lua`
+        - Move `DamageRandomComponent()` inside script, making qb-vehiclefailure (in theory) no longer a dependancy - `extras.lua`
             - `ExtraDamages` is now enabled in the default config as it will work on its own. - `config.lua`
         - Rearrange and remove duplicate `updateVeh` event for ExitVehicle to help reduce errors - `extras.lua`
         - Added extra checks for saving vehicle mods as some were getting the wrong model numbers - `extras.lua`, `functionserver.lua`
@@ -376,8 +376,8 @@
     Changes:
         - Version bump to signify the amount of code changes.
         - Pretty big rewrite of the menu creation in the script using a new shared file `wrapper.lua`
-        - This adds forced support progress bars in `sb-menu` *Experimental*
-        - Better integration of both `ox_lib` context menus and `sb-menu`
+        - This adds forced support progress bars in `qb-menu` *Experimental*
+        - Better integration of both `ox_lib` context menus and `qb-menu`
         - This includes alot fixes and better oraganisation
         - Tidier code, no uncessessary duplicate code for every time a menu is created
         - Better look for both menus...if you look closely
@@ -385,7 +385,7 @@
     Fixes:
         - Some mispellings of `isMenuHeader`
         - "List of cosmetics" menu showing internal and external mods when there weren't any
-        - added an event from `sb-mechanicjob` to help saving properties when parking with `sb-garages` - `functionserver.lua`
+        - added an event from `qb-mechanicjob` to help saving properties when parking with `qb-garages` - `functionserver.lua`
         - Manual Repair Banch now resets vehicle update timer to stop change of vehicle returning to previous damaged state - `manualrepair.lua`
         - Hopefully fixed the `qs-inventory stash` not saving
         - Added "mail" image for gks phone's preview mails
@@ -442,7 +442,7 @@
         - If missing a job, it will now let you know instead of erroring out - `locfunctions.lua`
         - Crafting Menu remembers location restrictions - `locfunctions.lua`
         - Better handling and detection of missing shared items when crafting - `locfunctions.lua`
-        - Hex code Paints now work again when using sb-menu - `paint.lua`
+        - Hex code Paints now work again when using qb-menu - `paint.lua`
         - Notification added for when lockEmergency is enabled - `locales`, `emergency.lua`
         - Fix typo allowing motorcycles to use seatbelts and harnesses - `extras.lua`
         - Suspension and Transmission shouldn't throw item exisiting errors after installing from default - `performance.lua`
@@ -483,7 +483,7 @@
         - Added harness icon option to odometer - `extras.lua` / `config.lua`
     - Added option to toggle itemboxes when items are given or removed - `config.lua`, `encfunctionserver.lua`, `functionserver.lua`
     - Fix only front wheel changing on bikes in previews - `preview.lua`
-    - Fixes to RGB paint when using sb-menu - `paints.lua`
+    - Fixes to RGB paint when using qb-menu - `paints.lua`
     - Better handling of engine + lights when changing xenon/underglow - `xenon.lua`
 
 ## 3.0.6.2
@@ -527,7 +527,7 @@
         - NO THERE ISNT A WAY TO TURN IT DOWN THE SOUND
         - If its too loud turn down game audio or disable this for now until i find an alternative.
     - Fix starting preview with harness attached would beak the previews - `extras.lua`
-    - Fix sb-target only changing the front rims on bikes - `rims.lua`
+    - Fix qb-target only changing the front rims on bikes - `rims.lua`
     - Attempt to fix formatting of emails - `previews.lua`
     - Attempt to fix line 460 table nil for some users - `functionserver.lua`
 
@@ -568,7 +568,7 @@
 
 ## 3.0.3
 
-    - Added info to `install.md` on how to make harness state show up in `sb-hud`
+    - Added info to `install.md` on how to make harness state show up in `qb-hud`
     - Fix "qs" not saving to stash - `functionsserver.lua`
     - Fix incorrect locale for suspension - `performance.lua`
     - Made the extra damage related items unusable if Config.Repairs.ExtraDamages is false
@@ -586,7 +586,7 @@
         - Fixes rare crash if restarting the script
     - Fix passengers not being affected by crashing - `extras.lua`
     - Added check to detect wether player is loaded in before loading zones - `locfunctions.lua`
-    - Fix mispellings making emergency bench paints not work for sb-target - `emergency.lua`
+    - Fix mispellings making emergency bench paints not work for qb-target - `emergency.lua`
     - Fix for `Config.Emergency.requireDutyCheck` - `emergency.lua`
     - Fix emergency bench suspension trying to change spoilers - `emergency.lua`
     - Fix nosrefill vec4 error with ox_target - `locfunctions.lua`
@@ -596,7 +596,7 @@
 ## 3.0.2
 
     - Add extra check for "null" results in database to stop errors - `functionserver.lua`
-    - Fix `sb-target` not being able to open `ox_inv` shops - `locfunctions.lua`
+    - Fix `qb-target` not being able to open `ox_inv` shops - `locfunctions.lua`
     - Fix performance parts not installing/uninstalling correctly - `performance.lua`
         - It should no longer complain about missing items when sucessfully installing
         - Antilag isntall now waits for info instead of throwing an error
@@ -633,7 +633,7 @@
             - Now players get harness prop attached to them when use a vehicle harness
             - These are persistant on each vehicle and can only be removed with the toolbox
         - Extra Damages are now integrated into the script
-            - No need for `sb-mechanicjob` to be running aswell anymore
+            - No need for `qb-mechanicjob` to be running aswell anymore
             - This allows for better control and less errors related to damages
             - Allows for new upgrades and items to be added related
         - Support for `OX_Target`, `OX_Lib Context Menus`, `OX_Lib ProgressBars`, `OX_Inventory`, `OX_Lib's Notifications`
@@ -655,7 +655,7 @@
     - Completely rewrote `repair.lua`
         - More Optimized, Fixed animations
         - Removed tyre change animations as it wasn't playing well with other scripts
-        - Added an attempt to reduce `sb-mechanicjob` related spam
+        - Added an attempt to reduce `qb-mechanicjob` related spam
         - Greatly improved stash removal of items, no more "tidyStash" exploits!
     - Compeletly re-wrote `check_tunes.lua`
         - Alot more optimzied and now supports `ox_lib` context menus

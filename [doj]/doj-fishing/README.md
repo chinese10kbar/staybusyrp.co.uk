@@ -3,14 +3,14 @@
 
 **[Source](https://github.com/Kuzkay/esx_AdvancedFishing)**
 
-**[Inspiration](https://github.com/sven20202020/sb-fishing)**
+**[Inspiration](https://github.com/sven20202020/qb-fishing)**
 
 # About
 - Optimized
 - Fish anywhere
 - Random loot pool
 - 3 diffrent skillbars to choose from
-- Utilizes sb-target,sb-menu,& text ui
+- Utilizes qb-target,qb-menu,& text ui
 
 # Info
 - **[Rent](https://streamable.com/bymhyv)** a fishing boat
@@ -32,10 +32,10 @@
 
 # Dependencies
 
-**[sb-menu](https://github.com/qbcore-framework/sb-menu)**
+**[qb-menu](https://github.com/qbcore-framework/qb-menu)**
 
 
-**[sb-target](https://github.com/BerkieBb/berkie-target)**
+**[qb-target](https://github.com/BerkieBb/berkie-target)**
 
 
 **[progressBars](https://drive.google.com/drive/folders/1uuxtWibJIZYx2yDY_7y4mnl5AbqDpSqt?usp=sharing)**
@@ -46,7 +46,7 @@
 
 **[np-skillbar](https://drive.google.com/drive/folders/1BqmRG_MBBHqXnsQoPs5iB4glj8MLQphv?usp=drive_link)**
 
-**[sb-skillbar](https://github.com/qbcore-framework/sb-skillbar)**
+**[qb-skillbar](https://github.com/qbcore-framework/qb-skillbar)**
 
 
 # images
@@ -86,7 +86,7 @@
 ![pearlscard](https://i.imgur.com/xFEmoLt.png)
 
 # Required
-- sb-core/shared/items.lua 
+- qb-core/shared/items.lua 
 ```
 	-- Regular Fish
 	['stingray'] 			     	 = {['name'] = 'stingray', 				    ['label'] = 'Stingray',            		['weight'] = 2500,      ['type'] = 'item',      ['image'] = 'stingray.png',         	['unique'] = true,     ['useable'] = false,     ['shouldClose'] = false,     ['combinable'] = nil,   ['description'] = 'Stingray'},
@@ -120,9 +120,9 @@
 
  ``` 
 
-# Optional (if you are not using my **[sb-inventory](https://github.com/dojwun/sb-inventory)**)
+# Optional (if you are not using my **[qb-inventory](https://github.com/dojwun/qb-inventory)**)
 - This code is to display **[Inventory Tooltip](https://i.imgur.com/vnpIb2b.png)** 
-- inside ```sb-inventory/html/js/app.js``` look for the ```function FormatItemInfo```
+- inside ```qb-inventory/html/js/app.js``` look for the ```function FormatItemInfo```
 ```
 	else if (itemData.name == "bass") {
             $(".item-info-title").html('<p>' + itemData.label + '</p>')

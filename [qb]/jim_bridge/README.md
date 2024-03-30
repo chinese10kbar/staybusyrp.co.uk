@@ -5,7 +5,7 @@ This script is intended to be used with my all my scripts (soon)
 It was started due to wanting to bring the same features from some scripts into others with minimal work and multiple updates
 - Having certain functions in one place(this script) makes it easier to update, enchance and fix things
 - This brings the possibility of branching to mutliple frameworks as I've added some already:
-    - `"sb-core"`
+    - `"qb-core"`
     - `"qbx-core"`
     - `"ox_core"`
     - `"es_extended"` (requires ox_lib and ox_inventory)
@@ -24,7 +24,7 @@ The installation of this script is simple
 - REMOVE `-main` from the folder name, like any other github hosted script
 - it just needs to start before any script that requires it
 - it can start before core scripts if you want
-- for `sb-core` I personally place this script in `resources > [standalone]`
+- for `qb-core` I personally place this script in `resources > [standalone]`
 
 
 ---
@@ -35,10 +35,10 @@ In exports.lua is the list of script folder names
 
 This is for people who have customised/renamed scripts
 
-eg. for people who use `ps-inventory`, this is mainly based on sb-inventory
+eg. for people who use `ps-inventory`, this is mainly based on qb-inventory
 so you need to rename
 ```lua
-    QBInv = "sb-inventory",
+    QBInv = "qb-inventory",
 ```
 to
 ```lua
@@ -65,25 +65,25 @@ Config = {
 							-- Revealing debug prints and debug boxes on targets
 
 		Menu = "qb", 		-- This specifies what menu script will be loaded
-							-- "qb" = `sb-menu` and edited versions of it
+							-- "qb" = `qb-menu` and edited versions of it
 							-- "ox" = `ox_lib`'s context menu system
 							-- "gta" = `WarMenu' a free script for a gta style menu
 
 		Notify = "gta",		-- This allows you to choose the notification system for scripts
-							-- "qb" = `sb-core`'s built in notifications
+							-- "qb" = `qb-core`'s built in notifications
 							-- "ox" = `ox_lib`'s built in notifications
 							-- "esx" = `esx_notify` esx's default notifications
 							-- "okok" = `okok-notify` okok's notifications
 							-- "gta" = Native GTA style popups
 
 		drawText = "gta",	-- The style of drawText you want to use
-							-- "qb" = `sb-core`'s drawText system
+							-- "qb" = `qb-core`'s drawText system
 							-- "ox" = `ox_lib`'s drawTextUI system
 							-- "gta" = Native GTA style popups
 
 
 		progressBar = "gta" -- The style of progressBar you want to use
-							-- "qb" = `sb-core`'s style progressBar
+							-- "qb" = `qb-core`'s style progressBar
 							-- "ox" = `ox_lib`'s default progressBar
 							-- "gta" = Native GTA style "spinner"
 	},
@@ -92,11 +92,11 @@ Config = {
 
 ### `openMenu(Menu, data)`
 
-This handles creation of menus using `OX_Lib`, `sb-menu` or `WarMenu`
+This handles creation of menus using `OX_Lib`, `qb-menu` or `WarMenu`
 
 It uses mixed/new functions to bring more compatability to one another
 
-`Menu` is your button entries and works like sb-menu or ox_lib, for example:
+`Menu` is your button entries and works like qb-menu or ox_lib, for example:
 
 ```lua
 local Menu = {}
@@ -104,11 +104,11 @@ Menu[#Menu + 1] = {
 	isMenuHeader = true, 			-- This makes the current button unclickable
 	icon = invImg("lockpick")		-- Supports fontawesome or custom images
 									-- This example use the custom function `invImg()` to retreive an nui:// link to the given item's image
-	arrow = true,					-- Adds a arrow icon to the button (in sb-menu overrides the icon)
+	arrow = true,					-- Adds a arrow icon to the button (in qb-menu overrides the icon)
 	header = "Header Test",			-- The header/title for the button
 	txt = "Text test",				-- The txt/description for the button
 
-	onSelect = function()			-- This brings the onSelect function to sb-menu
+	onSelect = function()			-- This brings the onSelect function to qb-menu
 		TriggerEvent("lolhi", { lol = hi }),
 	end,
 									-- Enter what happens when you click the button
@@ -314,12 +314,12 @@ It retrieves data from your vehicles.lua/database:
 
 ### `getVehicleProperties(vehicle)`
 Gets the current properties of the vehicle in a table
-- if using sb-core it will default to its version
+- if using qb-core it will default to its version
 - if not it will attempt to use ox_libs version
 
 ### `setVehicleProperties(vehicle, props)`
 Set's the vehicles properites using the `props` table provided
-- if using sb-core it will default to its version
+- if using qb-core it will default to its version
 - if not it will attempt to use ox_libs version
 
 ### `checkDifferences(vehicle, newProps)`
@@ -422,7 +422,7 @@ print(json.encode(PlayerInfo, { indent = true })
 ### `registerCommand(command, options)`
 This is a server side event that uses
 - `ox_lib`'s - `lib.addCommand`
-- `sb-core`'s - `QBCore.Commands.Add`
+- `qb-core`'s - `QBCore.Commands.Add`
 
 Example:
 ```lua

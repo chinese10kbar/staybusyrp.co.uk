@@ -23,12 +23,12 @@ local function setPlace(data)
         OnPlayerLoaded()
         if data.id ~= nil then
             TriggerServerEvent('ps-housing:server:enterProperty', tostring(data.type))
-            TriggerEvent("sb-apartments:client:LastLocationHouse", data.type, data.id)
+            TriggerEvent("qb-apartments:client:LastLocationHouse", data.type, data.id)
             Debug('Apartments: | Properties Name: '.. data.id .. ' | | ' .. 'Properties Type:' ..data.type)
         else
             TriggerEvent('Housing:enterHome', data.type)
             TriggerServerEvent('ps-housing:server:enterProperty', tostring(data.type))
-            TriggerEvent("sb-houses:client:LastLocationHouse", data.type)
+            TriggerEvent("qb-houses:client:LastLocationHouse", data.type)
             Debug('Houses: | Properties Name: '.. data.type)
         end
         Wait(500)

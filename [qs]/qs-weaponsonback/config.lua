@@ -1,7 +1,7 @@
 Config = {}
 
 local esxHas = GetResourceState('es_extended') == 'started'
-local qbHas = GetResourceState('sb-core') == 'started'
+local qbHas = GetResourceState('qb-core') == 'started'
 
 Config.Framework = esxHas and 'esx' or qbHas and 'qb' or 'esx'
 

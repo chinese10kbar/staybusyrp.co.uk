@@ -345,7 +345,7 @@ RegisterNetEvent('jim-mechanic:client:RGBHexMenu', function(data)
 		else
 			format = { { type = 'number', name = 'r', text = 'R - '..r }, { type = 'number', name = 'g', text = 'G - '..g }, { type = 'number', name = 'b', text = 'B - '..b }, finishes }
 		end
-			dialog = exports['sb-input']:ShowInput({
+			dialog = exports['qb-input']:ShowInput({
 				header = "<center>"..(data.hex and Loc[Config.Lan]["paintrgb"].hexP or Loc[Config.Lan]["paintrgb"].rgbP)..br.." ["..data.paint.."]"..br..
 						(data.hex and "[ #<span style='color:#"..rgbToHex(r,g,b):upper().."; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 0em 0em 0.5em white, 0em 0em 0.5em white'>"..rgbToHex(r,g,b):upper().." </span>]"
 						or "[<span style='color:#"..rgbToHex(r,g,b):upper().."; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 0em 0em 0.5em white, 0em 0em 0.5em white'> "..r.." "..g.." "..b.." </span>]"),

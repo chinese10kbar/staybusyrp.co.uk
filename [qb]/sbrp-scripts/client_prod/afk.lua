@@ -1,4 +1,4 @@
-local QBCore = exports['sb-core']:GetCoreObject()
+local QBCore = exports['qb-core']:GetCoreObject()
 local isLoggedIn = LocalPlayer.state.isLoggedIn
 local checkUser = true
 local prevPos, time = nil, nil
@@ -14,7 +14,7 @@ local timeMinutes = {
 }
 
 local function updatePermissionLevel()
-    QBCore.Functions.TriggerCallback('sb-afkkick:server:GetPermissions', function(userGroups)
+    QBCore.Functions.TriggerCallback('qb-afkkick:server:GetPermissions', function(userGroups)
         for k in pairs(userGroups) do
             if Config.AFK.ignoredGroups[k] then
                 checkUser = false

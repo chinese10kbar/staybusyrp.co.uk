@@ -1,5 +1,5 @@
-local QBCore = exports['sb-core']:GetCoreObject()
-RegisterNetEvent('QBCore:Client:UpdateObject', function() QBCore = exports['sb-core']:GetCoreObject() end)
+local QBCore = exports['qb-core']:GetCoreObject()
+RegisterNetEvent('QBCore:Client:UpdateObject', function() QBCore = exports['qb-core']:GetCoreObject() end)
 
 PlayerJob = {}
 PlayerGang = {}
@@ -29,7 +29,7 @@ CreateThread(function()
 	for k, v in pairs(Config.Jobs) do if v.gang then gangroles[tostring(k)] = 0 else jobroles[tostring(k)] = 0 end end
 	--Create Target at location
 	Targets["JimBank"] =
-	exports['sb-target']:AddCircleZone("JimBank", vector3(Config.CashInLocation.x, Config.CashInLocation.y, Config.CashInLocation.z), 2.0, { name="JimBank", debugPoly=Config.Debug, useZ=true, },
+	exports['qb-target']:AddCircleZone("JimBank", vector3(Config.CashInLocation.x, Config.CashInLocation.y, Config.CashInLocation.z), 2.0, { name="JimBank", debugPoly=Config.Debug, useZ=true, },
 		{ options = {
 			{ event = "jim-payments:Tickets:Menu", icon = "fas fa-receipt", label = Loc[Config.Lan].target["cashin_boss"], job = jobroles, },
 			{ event = "jim-payments:Tickets:Menu", icon = "fas fa-receipt", label = Loc[Config.Lan].target["cashin_gang"], gang = gangroles, } },
@@ -47,7 +47,7 @@ CreateThread(function()
 			local gang = nil
 			if v[i].gang then job = nil gang = k end
 			Targets["CustomRegister: "..k..i] =
-			exports['sb-target']:AddBoxZone("CustomRegister: "..k..i, v[i].coords.xyz, 0.47, 0.34, { name="CustomRegister: "..k..i, heading = v[i].coords[4], debugPoly=Config.Debug, minZ=v[i].coords.z-0.1, maxZ=v[i].coords.z+0.4 },
+			exports['qb-target']:AddBoxZone("CustomRegister: "..k..i, v[i].coords.xyz, 0.47, 0.34, { name="CustomRegister: "..k..i, heading = v[i].coords[4], debugPoly=Config.Debug, minZ=v[i].coords.z-0.1, maxZ=v[i].coords.z+0.4 },
 				{ options = { { event = "jim-payments:client:Charge", icon = "fas fa-credit-card", label = Loc[Config.Lan].target["charge"], job = job, gang = gang, img = "" }, },
 					distance = 2.0 })
 			if v[i].prop then
@@ -61,13 +61,13 @@ RegisterNetEvent('jim-payments:client:Charge', function(data, outside)
 	--Check if player is using /cashregister command
 	local dialog
 	if not outside and not onDuty and data.gang == nil then triggerNotify(nil, Loc[Config.Lan].error["not_onduty"], "error") return end
-	local newinputs = {} -- Begin sb-input creation here.
+	local newinputs = {} -- Begin qb-input creation here.
 	if Config.List then -- If nearby player list is wanted:
 		--Retrieve a list of nearby players from server
 		local p = promise.new() QBCore.Functions.TriggerCallback('jim-payments:MakePlayerList', function(cb) p:resolve(cb) end)
 		local onlineList = Citizen.Await(p)
 		local nearbyList = {}
-		--Convert list of players nearby into one sb-input understands + add distance info
+		--Convert list of players nearby into one qb-input understands + add distance info
 		for _, v in pairs(QBCore.Functions.GetPlayersFromCoords(GetEntityCoords(PlayerPedId()), Config.PaymentRadius)) do
 			local dist = #(GetEntityCoords(GetPlayerPed(v)) - GetEntityCoords(PlayerPedId()))
 			for i = 1, #onlineList do
@@ -90,7 +90,7 @@ RegisterNetEvent('jim-payments:client:Charge', function(data, outside)
 	end
 	--Check if image was given when opening the regsiter
 	local img = data.img or ""
-	--Continue adding payment options to sb-input
+	--Continue adding payment options to qb-input
 	if Config.Menu == "qb" then
 	newinputs[#newinputs+1] = { type = 'radio', name = 'billtype', text = Loc[Config.Lan].menu["type"], options = { { value = "cash", text = Loc[Config.Lan].menu["cash"] }, { value = "bank", text = Loc[Config.Lan].menu["card"] } } }
 	elseif Config.Menu == "ox" then
@@ -113,7 +113,7 @@ RegisterNetEvent('jim-payments:client:Charge', function(data, outside)
 	local gang = false
 	if data.gang then label = PlayerGang.label gang = true end
 	if Config.Menu == "qb" then 
-		dialog = exports['sb-input']:ShowInput({ header = img..label..Loc[Config.Lan].menu["cash_reg"], submitText = Loc[Config.Lan].menu["send"], inputs = newinputs})
+		dialog = exports['qb-input']:ShowInput({ header = img..label..Loc[Config.Lan].menu["cash_reg"], submitText = Loc[Config.Lan].menu["send"], inputs = newinputs})
 	elseif Config.Menu == "ox" then
 		dialog = exports.ox_lib:inputDialog(label..Loc[Config.Lan].menu["cash_reg"], newinputs)
 	end
@@ -134,13 +134,13 @@ RegisterNetEvent('jim-payments:client:PolCharge', function()
 	for k in pairs(Config.FineJobs) do if k == PlayerJob.name then allowed = true end end
 	if not allowed then triggerNotify(nil, Loc[Config.Lan].error["no_job"], "error") return end
 
-	local newinputs = {} -- Begin sb-input creation here.
+	local newinputs = {} -- Begin qb-input creation here.
 	if Config.FineJobList then -- If nearby player list is wanted:
 		--Retrieve a list of nearby players from server
 		local p = promise.new() QBCore.Functions.TriggerCallback('jim-payments:MakePlayerList', function(cb) p:resolve(cb) end)
 		local onlineList = Citizen.Await(p)
 		local nearbyList = {}
-		--Convert list of players nearby into one sb-input understands + add distance info
+		--Convert list of players nearby into one qb-input understands + add distance info
 		for _, v in pairs(QBCore.Functions.GetPlayersFromCoords(GetEntityCoords(PlayerPedId()), Config.PaymentRadius)) do
 			local dist = #(GetEntityCoords(GetPlayerPed(v)) - GetEntityCoords(PlayerPedId()))
 			for i = 1, #onlineList do
@@ -157,7 +157,7 @@ RegisterNetEvent('jim-payments:client:PolCharge', function()
 	else -- If Config.List is false, create input text box for ID's
 		newinputs[#newinputs+1] = { type = 'text', isRequired = true, required = true, name = 'citizen', label = Loc[Config.Lan].menu["person_id"], text = Loc[Config.Lan].menu["person_id"] }
 	end
-	--Continue adding payment options to sb-input
+	--Continue adding payment options to qb-input
 	if Config.Menu == "qb" then
 	newinputs[#newinputs+1] = { type = 'number', isRequired = true, name = 'price', text = Loc[Config.Lan].menu["amount_charge"] }
 	elseif Config.Menu == "ox" then
@@ -168,7 +168,7 @@ RegisterNetEvent('jim-payments:client:PolCharge', function()
 	local gang = false
 	local dialog  
 	if Config.Menu == "qb" then
-		dialog = exports['sb-input']:ShowInput({ header = label..Loc[Config.Lan].menu["charge"], submitText = Loc[Config.Lan].menu["send"], inputs = newinputs})
+		dialog = exports['qb-input']:ShowInput({ header = label..Loc[Config.Lan].menu["charge"], submitText = Loc[Config.Lan].menu["send"], inputs = newinputs})
 	elseif Config.Menu == "ox" then
 		dialog = exports.ox_lib:inputDialog(label..Loc[Config.Lan].menu["charge"], newinputs)
 	end
@@ -196,7 +196,7 @@ RegisterNetEvent('jim-payments:Tickets:Menu', function(data)
 	end
 			if sellable then -- if info is found then:
 				if Config.Menu == "qb" then
-				exports['sb-menu']:openMenu({
+				exports['qb-menu']:openMenu({
 					{ isMenuHeader = true, header = "🧾 "..label..Loc[Config.Lan].menu["receipt"], txt = Loc[Config.Lan].menu["trade_confirm"] },
 					{ isMenuHeader = true, header = "", txt = Loc[Config.Lan].menu["ticket_amount"]..amount..Loc[Config.Lan].menu["total_pay"]..(Config.Jobs[name].PayPerTicket * amount) },
 					{ icon = "fas fa-circle-check", header = Loc[Config.Lan].menu["yes"], txt = "", params = { event = "jim-payments:Tickets:Sell:yes" } },
@@ -222,7 +222,7 @@ end)
 RegisterNetEvent("jim-payments:client:PayPopup", function(amount, biller, billtype, img, billerjob, gang, outside)
 	local img = img or ""
 	if Config.Menu == "qb" then
-	exports['sb-menu']:openMenu({
+	exports['qb-menu']:openMenu({
 		{ isMenuHeader = true, header = img.."🧾 "..billerjob..Loc[Config.Lan].menu["payment"], txt = Loc[Config.Lan].menu["accept_payment"] },
 		{ isMenuHeader = true, header = "", txt = billtype:gsub("^%l", string.upper)..Loc[Config.Lan].menu["payment_amount"]..amount },
 		{ icon = "fas fa-circle-check", header = Loc[Config.Lan].menu["yes"], txt = "", params = { isServer = true, event = "jim-payments:server:PayPopup", args = { accept = true, amount = amount, biller = biller, billtype = billtype, gang = gang, outside = outside } } },
@@ -270,7 +270,7 @@ end)
 
 RegisterNetEvent("jim-payments:client:PolPopup", function(amount, biller, billerjob)
 	if Config.Menu == "qb" then
-	exports['sb-menu']:openMenu({
+	exports['qb-menu']:openMenu({
 		{ isMenuHeader = true, header = "🧾 "..billerjob..Loc[Config.Lan].menu["payment"], txt = Loc[Config.Lan].menu["accept_charge"] },
 		{ isMenuHeader = true, header = "", txt = Loc[Config.Lan].menu["bank_charge"]..amount },
 		{ icon = "fas fa-circle-check", header = Loc[Config.Lan].menu["yes"], txt = "", params = { isServer = true, event = "jim-payments:server:PolPopup", args = { accept = true, amount = amount, biller = biller } } },
@@ -291,10 +291,10 @@ RegisterNetEvent("jim-payments:client:PolPopup", function(amount, biller, biller
 end)
 
 RegisterNetEvent('jim-payments:Tickets:Sell:yes', function() TriggerServerEvent('jim-payments:Tickets:Sell') end)
-RegisterNetEvent('jim-payments:Tickets:Sell:no', function() exports['sb-menu']:closeMenu() end)
+RegisterNetEvent('jim-payments:Tickets:Sell:no', function() exports['qb-menu']:closeMenu() end)
 
 AddEventHandler('onResourceStop', function(r) if r ~= GetCurrentResourceName() then return end
-	for k in pairs(Targets) do exports['sb-target']:RemoveZone(k) end
+	for k in pairs(Targets) do exports['qb-target']:RemoveZone(k) end
 	for i = 1, #Till do DeleteEntity(Till[i]) end
 	unloadModel(GetEntityModel(BankPed)) DeletePed(BankPed)
 end)

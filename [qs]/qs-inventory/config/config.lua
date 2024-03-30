@@ -8,7 +8,7 @@ Locales = Locales or {}
 ]]
 
 local esxHas = GetResourceState('es_extended') == 'started'
-local qbHas = GetResourceState('sb-core') == 'started'
+local qbHas = GetResourceState('qb-core') == 'started'
 
 Config.Framework = esxHas and 'esx' or qbHas and 'qb' or 'esx'
 
@@ -16,13 +16,13 @@ Config.Language = 'en'
 
 --[[
     Target systems pre-configured by default:
-        'sb-target'
+        'qb-target'
         'ox_target'
 
         'none' It means that it is deactivated
 ]]
 
-Config.UseTarget = 'sb-target'               -- Choose between 'sb-target', 'ox_target' or 'none' disabled!
+Config.UseTarget = 'qb-target'               -- Choose between 'qb-target', 'ox_target' or 'none' disabled!
 
 Config.BlockedSwap = false              -- If set to true, you will not be able to swap between items
 Config.BlockedSlot = false              -- This is the sixth slot, the one that does not allow them to steal from that space

@@ -9,7 +9,7 @@ if Config.Framework ~= 'qb' then
     return
 end
 
-QBCore = exports['sb-core']:GetCoreObject()
+QBCore = exports['qb-core']:GetCoreObject()
 
 RegisterNetEvent('QBCore:Client:OnPlayerLoaded')
 AddEventHandler('QBCore:Client:OnPlayerLoaded', function(xPlayer)
@@ -19,7 +19,7 @@ end)
 
 AddEventHandler('onClientResourceStart', function(resourceName)
     if (GetCurrentResourceName() == resourceName) then
-        QBCore = exports['sb-core']:GetCoreObject()
+        QBCore = exports['qb-core']:GetCoreObject()
         Wait(10000)
         StartThread()
     end

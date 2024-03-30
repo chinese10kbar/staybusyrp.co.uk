@@ -1,4 +1,4 @@
-local QBCore = exports['sb-core']:GetCoreObject()
+local QBCore = exports['qb-core']:GetCoreObject()
 
 local PlayerData = {}
 local Experience = 0
@@ -159,7 +159,7 @@ Citizen.CreateThread(function()
 								}
 							})
 							Citizen.Wait(2500)
-							TriggerServerEvent("sb-clothes:loadPlayerSkin")
+							TriggerServerEvent("qb-clothes:loadPlayerSkin")
 							exports.pNotify:SendNotification({text = "<b>Boss</b></br>Thanks for the help", timeout = 4500})
 							JobStarted = false
 							DeletePed(BossPlaceNPC)	
@@ -268,7 +268,7 @@ Citizen.CreateThread(function()
 								}
 							})
 							Citizen.Wait(2500)
-							TriggerServerEvent("sb-clothes:loadPlayerSkin")
+							TriggerServerEvent("qb-clothes:loadPlayerSkin")
 							exports.pNotify:SendNotification({text = "<b>Boss</b></br>Thanks for the help", timeout = 4500})
 							JobStarted = false
 							DeletePed(BossPlaceNPC)	

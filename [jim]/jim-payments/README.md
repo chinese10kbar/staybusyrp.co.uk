@@ -1,6 +1,6 @@
 # jim-payments
 - QBCore based payment system
-- Enchanced sb-Input payment system from my other scripts now free on its own
+- Enchanced QB-Input payment system from my other scripts now free on its own
 
 ### If you need support I have a discord server available, it helps me keep track of issues and give better support.
 ## https://discord.gg/xKgQZ6wZvS
@@ -15,7 +15,7 @@
 
 - If you use a different phone/invoice system let me know and I will add support for it as best I can!
   - Currently supported are:
-    - sb-phone
+    - qb-phone
     - gks-phone
     - qs-smartphone - Leave the setting as "qb"
 
@@ -28,7 +28,7 @@
 - Example of my load order:
 ```CSS
 # QBCore & Extra stuff
-ensure sb-core
+ensure qb-core
 ensure [qb]
 ensure [standalone]
 ensure [voice]
@@ -50,13 +50,13 @@ Stream the prop and add the emote that is provided to rpemotes or dpemotes
 ---
 ## Item installation
 - To make use of the ticket reward system for workers you need to add the ticket item to your shared items lua
-- Naviage to `[qb] > sb-core / shared / items.lua` and add this line
+- Naviage to `[qb] > qb-core / shared / items.lua` and add this line
 ```lua
 ["payticket"] 					 = {["name"] = "payticket", 				["label"] = "Receipt", 	     			["weight"] = 150, 		["type"] = "item", 		["image"] = "ticket.png", 				["unique"] = false,   	["useable"] = false,    ["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = "Cash these in at the bank!"},
 ```
 
 - Add the ticket image to your inventory script:
-- Naviage to `[qb] > sb-inventory > html > images` and add this line
+- Naviage to `[qb] > qb-inventory > html > images` and add this line
 
 ![](https://github.com/jimathy/jim-payments/blob/main/images/ticket.png?raw=true)
 
@@ -67,11 +67,11 @@ Stream the prop and add the emote that is provided to rpemotes or dpemotes
 - If you want to use phone systems for these then you need to add the event for when a payment is accepted:
 - REMINDER: IF using phone invoices, the money being added to the society accounts is handled `BY THE PHONE`, not by my script. If money isn't going to the account its the phone system or bossmenu script.
 
-#### sb-Phone:
-- Go to `[qb] > sb-phone > client > main.lua`
+#### QB-Phone:
+- Go to `[qb] > qb-phone > client > main.lua`
  - Search for the event `RegisterNUICallback('PayInvoice', function(data, cb)` and look for the line:
 ```lua
-TriggerServerEvent('sb-phone:server:BillingEmail', data, true)
+TriggerServerEvent('qb-phone:server:BillingEmail', data, true)
 ```
 
 - Directly *above* this line add:
@@ -93,11 +93,11 @@ TriggerEvent('jim-payments:Tickets:Give', { sender = Ply.PlayerData.charinfo.fir
 ```
 - The phone should now be integrated with jim-payments
 
-#### Renewed sb-Phone:
-- Go to `sb-phone > server > invoices.lua`
-- Search for the event: `sb-phone:server:PayMyInvoice` and search for this line:
+#### Renewed QB-Phone:
+- Go to `qb-phone > server > invoices.lua`
+- Search for the event: `qb-phone:server:PayMyInvoice` and search for this line:
 ```lua
-TriggerEvent("sb-phone:server:InvoiceHandler", true, amount, src, resource)
+TriggerEvent("qb-phone:server:InvoiceHandler", true, amount, src, resource)
 ```
 
 - Directly under this line add this event:
@@ -191,7 +191,7 @@ FineJobList = true, -- "true" to use nearby player list feature in the cash regi
 ## Banking
 ![](https://i.imgur.com/RYADcI2.jpeg)
 - This script has simple banking systems built in
-  - Works as a basic replacement for qs-banking and sb-atms
+  - Works as a basic replacement for qs-banking and qb-atms
 - Adjust the options in config.lua:
   - `useATM` Choose wether to make atm's usable
   - `useBanks` Choose wether to make bank desks/teller's usable
@@ -204,7 +204,7 @@ FineJobList = true, -- "true" to use nearby player list feature in the cash regi
   - Support for renewed banking added
   - Toggle `RenewedBanking` in the config.lua to enable this
 
-### Renewed's sb-phone
+### Renewed's qb-phone
   - Simply leave the Config.PhoneType as `"qb"`
 
 ### AP-Goverment

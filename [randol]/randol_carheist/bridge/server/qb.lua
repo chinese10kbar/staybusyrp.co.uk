@@ -1,6 +1,6 @@
-if GetResourceState('sb-core') ~= 'started' then return end
+if GetResourceState('qb-core') ~= 'started' then return end
 
-local QBCore = exports['sb-core']:GetCoreObject()
+local QBCore = exports['qb-core']:GetCoreObject()
 local ox_inv = GetResourceState('ox_inventory') == 'started'
 
 function GetPlayer(id)

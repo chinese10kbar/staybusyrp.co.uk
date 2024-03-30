@@ -1,6 +1,6 @@
-if GetResourceState('sb-core') ~= 'started' then return end
+if GetResourceState('qb-core') ~= 'started' then return end
 
-QBCore = exports["sb-core"]:GetCoreObject()
+QBCore = exports["qb-core"]:GetCoreObject()
 
 function RegisterCallback(name, cb)
     QBCore.Functions.CreateCallback(name, cb)

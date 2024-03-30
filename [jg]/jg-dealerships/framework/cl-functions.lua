@@ -27,8 +27,8 @@ end
 function Framework.Client.ShowTextUI(text)
   if Config.DrawText == "jg-textui" then
     exports['jg-textui']:DrawText(text)
-  elseif Config.DrawText == "sb-DrawText" then
-    exports["sb-core"]:DrawText(text)
+  elseif Config.DrawText == "qb-DrawText" then
+    exports["qb-core"]:DrawText(text)
   elseif Config.DrawText == "okokTextUI" then
     exports['okokTextUI']:Open(text, 'lightblue', 'left')
   elseif Config.DrawText == "ox_lib" then
@@ -43,8 +43,8 @@ end
 function Framework.Client.HideTextUI()
   if Config.DrawText == "jg-textui" then
     exports['jg-textui']:HideText()
-  elseif Config.DrawText == "sb-DrawText" then
-    exports["sb-core"]:HideText()
+  elseif Config.DrawText == "qb-DrawText" then
+    exports["qb-core"]:HideText()
   elseif Config.DrawText == "okokTextUI" then
     exports['okokTextUI']:Close()
   elseif Config.DrawText == "ox_lib" then
@@ -135,7 +135,7 @@ function Framework.Client.VehicleSetFuel(vehicle, fuel)
 end
 
 function Framework.Client.VehicleGiveKeys(plate, vehicleEntity)
-  if Config.VehicleKeys == "sb-vehiclekeys" then
+  if Config.VehicleKeys == "qb-vehiclekeys" then
     TriggerEvent("vehiclekeys:client:SetOwner", plate)
   elseif Config.VehicleKeys == "jaksam-vehicles-keys" then
     TriggerServerEvent("vehicles_keys:selfGiveVehicleKeys", plate)
@@ -193,7 +193,7 @@ function Framework.Client.GetVehicleLabel(model)
   if type(model) == "string" and Config.Framework == "QBCore" then
     if not QBCore.Shared.Vehicles then
       print("^1---------------------------------------------------------------------------------------")
-      print("^1Error: sb-core/shared/vehicles.lua cannot be parsed. Learn more: jgscripts.com/qbshared")
+      print("^1Error: qb-core/shared/vehicles.lua cannot be parsed. Learn more: jgscripts.com/qbshared")
       print("^1---------------------------------------------------------------------------------------")
     end
 

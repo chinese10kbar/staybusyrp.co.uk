@@ -9,7 +9,7 @@ PlayerData = {}
 
 -- Initialization and player data loading
 Citizen.CreateThread(function()
-    QBCore = exports['sb-core']:GetCoreObject()
+    QBCore = exports['qb-core']:GetCoreObject()
 
     while QBCore.Functions.GetPlayerData().job == nil do
         Citizen.Wait(10)

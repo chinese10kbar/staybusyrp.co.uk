@@ -1,5 +1,5 @@
 Config = {}
-QBCore = exports['sb-core']:GetCoreObject()
+QBCore = exports['qb-core']:GetCoreObject()
 Config.Framework = "qbcore"  -- types (standalone, qbcore, esx)
 
 Config.ESXFramework = {
@@ -18,7 +18,7 @@ Config.PlayerLoadedEvent = { -- load methods of gym
 
 Config.DifferentStatsSystem = false -- enable this if you want disable our stat system, you can add your triggers in our other.lua file
 
-Config.QBCoreFrameworkResourceName = "sb-core" -- sb-core resource name, change this if you have different name of main resource of qbcore
+Config.QBCoreFrameworkResourceName = "qb-core" -- qb-core resource name, change this if you have different name of main resource of qbcore
 
 Config.InterfaceColor = "#ff66ff" -- change interface color, color must be in hex
 

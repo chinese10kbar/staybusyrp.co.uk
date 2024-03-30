@@ -2,7 +2,7 @@ if Config.Framework ~= "qbcore" then
 	return
 end
 
-QB = exports["sb-core"]:GetCoreObject()
+QB = exports["qb-core"]:GetCoreObject()
 
 function HasItem(source, item)
 	local qPlayer = QB.Functions.GetPlayer(source)

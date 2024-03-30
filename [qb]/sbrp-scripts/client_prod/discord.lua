@@ -1,4 +1,4 @@
-local QBCore = exports['sb-core']:GetCoreObject()
+local QBCore = exports['qb-core']:GetCoreObject()
 
 CreateThread(function()
     while Config.Discord.isEnabled do

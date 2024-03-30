@@ -14,8 +14,8 @@ Config = {
 	-- Default Job Payment Systems --
 	---------------------------------
 
-	Banking = "sb-management", 	
-								-- "sb-management" 	- This is for the older version of QBCore
+	Banking = "qb-management", 	
+								-- "qb-management" 	- This is for the older version of QBCore
 								-- "qs-banking" 	- This is for the latest QBCore updates
 								-- "renewed"
 								-- "fd" 			- currently default supported
@@ -52,7 +52,7 @@ Config = {
 						-- This is helpful for phones that don't support invoices well
 
 	PhoneType = "qb", -- Change this setting to make invoices work with your phone script [still testing this currently]
-						-- "qb" for sb-phone
+						-- "qb" for qb-phone
 						-- "gks"" for GKSPhone
 
 	CashInLocation = vector4(252.23, 223.11, 106.29, 159.2), -- Default Third Window along in Pacific Bank
@@ -151,7 +151,7 @@ Config = {
 		vector3(237.93, 216.94, 106.29),
 		vector3(238.36, 216.03, 106.29),
 	},
-	--sb-Target doesn't seem to like ALL ATM Props so need to manually add locations
+	--QB-Target doesn't seem to like ALL ATM Props so need to manually add locations
 	WallATMLocations = {
 		vector3(-386.54, 6046.29, 31.5),
 		vector3(-282.82, 6226.24, 31.49),

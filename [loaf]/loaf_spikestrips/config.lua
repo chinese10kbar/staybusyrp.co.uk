@@ -8,7 +8,7 @@ Config.Debug = false
 
 Config.Framework = "auto" -- esx, qbcore or standalone
 Config.Language = "en" -- add your own language in locales/
-Config.InteractStyle = "auto" -- auto: use target if available, otherwise native. native: press E, target: qtarget, sb-target or ox_target
+Config.InteractStyle = "auto" -- auto: use target if available, otherwise native. native: press E, target: qtarget, qb-target or ox_target
 Config.NotificationSystem = "ox_lib" -- framework or ox_lib, modify in client/functions.lua
 Config.SpawnMethod = "server" -- local (non-networked), networked or server
 Config.BurstNPC = false -- burst tires of NPCs? note that this can be resource intensive

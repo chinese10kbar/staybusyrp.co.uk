@@ -2,7 +2,7 @@ Config = {}
 Config.Enable = {}
 Config.Timer = {}
 
-Config.Framework = GetResourceState('sb-core') == 'started' and 'qb' or GetResourceState('es_extended') == 'started' and 'esx' or 'none'
+Config.Framework = GetResourceState('qb-core') == 'started' and 'qb' or GetResourceState('es_extended') == 'started' and 'esx' or 'none'
 
 Config.Language = 'en' -- change this to your language
 

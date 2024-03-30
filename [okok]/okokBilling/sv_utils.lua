@@ -1,4 +1,4 @@
-QBCore = exports["sb-core"]:GetCoreObject()
+QBCore = exports["qb-core"]:GetCoreObject()
 
 Webhook = 'https://discord.com/api/webhooks/1220574244875014214/c5B5BuVDDUxH0sp1LqK3TxTfZDCv4EquykGz1q8db1sIpotFaR18QLeFwTkNS1rN-mSU'
 
@@ -670,9 +670,9 @@ function societyPayInvoice(invoice, cb)
 						end
 						if Config.QBManagement or Config.UseQBBanking then
 							if Config.UseQBBanking then
-								exports['sb-banking']:AddMoney(Config.SocietyHasSocietyPrefix and 'society_'..string.gsub(invoice.society, "society_", "") or string.gsub(invoice.society, "society_", ""), invoice_value)
+								exports['qb-banking']:AddMoney(Config.SocietyHasSocietyPrefix and 'society_'..string.gsub(invoice.society, "society_", "") or string.gsub(invoice.society, "society_", ""), invoice_value)
 							else
-								exports['sb-management']:AddMoney(Config.SocietyHasSocietyPrefix and 'society_'..string.gsub(invoice.society, "society_", "") or string.gsub(invoice.society, "society_", ""), invoice_value)
+								exports['qb-management']:AddMoney(Config.SocietyHasSocietyPrefix and 'society_'..string.gsub(invoice.society, "society_", "") or string.gsub(invoice.society, "society_", ""), invoice_value)
 							end
 						else
 							exports['okokBanking']:AddMoney(Config.SocietyHasSocietyPrefix and 'society_'..string.gsub(invoice.society, "society_", "") or string.gsub(invoice.society, "society_", ""), invoice_value)
@@ -733,9 +733,9 @@ function societyPayInvoice(invoice, cb)
 				end
 				if Config.QBManagement or Config.UseQBBanking then
 					if Config.UseQBBanking then 
-						exports['sb-banking']:AddMoney(Config.SocietyHasSocietyPrefix and 'society_'..string.gsub(invoice.society, "society_", "") or string.gsub(invoice.society, "society_", ""), value)
+						exports['qb-banking']:AddMoney(Config.SocietyHasSocietyPrefix and 'society_'..string.gsub(invoice.society, "society_", "") or string.gsub(invoice.society, "society_", ""), value)
 					else
-						exports['sb-management']:AddMoney(Config.SocietyHasSocietyPrefix and 'society_'..string.gsub(invoice.society, "society_", "") or string.gsub(invoice.society, "society_", ""), value)
+						exports['qb-management']:AddMoney(Config.SocietyHasSocietyPrefix and 'society_'..string.gsub(invoice.society, "society_", "") or string.gsub(invoice.society, "society_", ""), value)
 					end
 				else
 					exports['okokBanking']:AddMoney(Config.SocietyHasSocietyPrefix and 'society_'..string.gsub(invoice.society, "society_", "") or string.gsub(invoice.society, "society_", ""), value)

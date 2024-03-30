@@ -22,7 +22,7 @@ shared_scripts { '@ox_lib/init.lua', 'game/configuration/config.lua', 'game/conf
 
 dependencies { 'ox_lib', 'wasabi_bridge' }
 
-provides { 'esx_ambulancejob', 'sb-ambulancejob' }
+provides { 'esx_ambulancejob', 'qb-ambulancejob' }
 
 escrow_ignore {
   'game/configuration/*.lua',

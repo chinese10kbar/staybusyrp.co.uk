@@ -16,11 +16,11 @@ Full Credit to wildbrick142 for the inclusion of the Chameleon Paints Mod
 # Item installation
 - There are two image folders, `images_alt` contains tiered images with their rank included
 
-- Add the chosen images to your inventory folder eg. `sb-inventory > html > images`
+- Add the chosen images to your inventory folder eg. `qb-inventory > html > images`
 
 - If using `ox_inventory` add the `ox_items.txt` to your `ox_inventory > data > items.lua`
 
-- If using `sb-inventory` or similar, add the lines from `qb_items.txt` to your `sb-core > shared > items.lua`
+- If using `qb-inventory` or similar, add the lines from `qb_items.txt` to your `qb-core > shared > items.lua`
 
 ----------------------
 # Dependancies
@@ -47,8 +47,8 @@ The `traveldistance` column adds an Odometer to the toolbox/mechanic_tools menus
 ----------------------
 # Extra Damages and Upgrades
 
-**As of v3.0 you no longer need `sb-mechanicjob` to use any of this script**
-**As of v3.2 you no longer need `sb-vehcilefailure` as several features are now built in**
+**As of v3.0 you no longer need `qb-mechanicjob` to use any of this script**
+**As of v3.2 you no longer need `qb-vehcilefailure` as several features are now built in**
 
 Extra Damages and their upgrades can be enabled/disabled in the config with `Config.Repairs.ExtraDamages = true`
 
@@ -78,8 +78,8 @@ This can be enabled or disabled in the config with `Config.Harness.HarnessContro
 
 If you enable this, there are a few steps you need to take as this is handled in `jim-mechanic`.
 
-1. Delete the file `seatbelt.lua` from `sb-smallresources > client`
-2. **REMOVE** these 3 events from `sb-smallresources > server > main.lua`:
+1. Delete the file `seatbelt.lua` from `qb-smallresources > client`
+2. **REMOVE** these 3 events from `qb-smallresources > server > main.lua`:
 
 ```lua
 QBCore.Functions.CreateUseableItem('harness', function(source, item)
@@ -124,14 +124,14 @@ To make your hud not complain about the harness export you will need to change t
 `ps-hud` > `client.lua` > line 80
 REPLACE:
 ```lua
-    local hasHarness = exports['sb-smallresources']:HasHarness()
+    local hasHarness = exports['qb-smallresources']:HasHarness()
 ```
 WITH:
 ```lua
     local hasHarness = exports['jim-mechanic']:HasHarness()
 ```
 
---sb-HUD--
+--QB-HUD--
 REPLACE:
 ```lua
 local function hasHarness(items)
@@ -155,10 +155,10 @@ WITH:
 local function hasHarness(items) harness = exports["jim-mechanic"]:HasHarness() end
 ```
 
---sb-RADIAL--
+--QB-RADIAL--
 Search for:
 ```lua
-    local HasHarnass = exports['sb-smallresources']:HasHarness()
+    local HasHarnass = exports['qb-smallresources']:HasHarness()
 ```
 and replace with:
 ```lua
@@ -195,9 +195,9 @@ The MechBoard item is an item given to the person who uses the preview menu and 
 
 To make full use of this item you need to add the ability for the item to show item info in your inventory system
 
-I have only done this with `sb-inventory` and `ps-inventory` as they are similar
+I have only done this with `qb-inventory` and `ps-inventory` as they are similar
 
-`sb-inventory/html/js/app.js`
+`qb-inventory/html/js/app.js`
 
 - Search for "harness" or Scroll down until you find:
 ```js
@@ -217,7 +217,7 @@ I have only done this with `sb-inventory` and `ps-inventory` as they are similar
     );
 ```
 
-- On newer sb-inventory:
+- On newer qb-inventory:
 - Search for "harness" or Scroll down until you find:
 ```js
 case "harness":
@@ -239,6 +239,6 @@ When successfully added the mechboards will show the vehicle and plate number
 If using `ox_lib`:
 - Replace the `getVehicleProperties` and `setVehicleProperties` in `ox_lib > resource > vehicleProperties > client.lua` with the ones from `properties_ox.lua`
 
-If using just `sb-core`:
-- Replace the `QBCore.Functions.GetVehicleProperties` and `QBCore.Functions.SetVehicleProperties` in `sb-core > client > functions.lua` with the ones from `properties_qb.lua`
+If using just `qb-core`:
+- Replace the `QBCore.Functions.GetVehicleProperties` and `QBCore.Functions.SetVehicleProperties` in `qb-core > client > functions.lua` with the ones from `properties_qb.lua`
 ```

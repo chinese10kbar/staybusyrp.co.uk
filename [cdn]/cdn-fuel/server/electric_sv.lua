@@ -25,7 +25,7 @@ RegisterNetEvent("cdn-fuel:server:electric:OpenMenu", function(amount, inGasStat
 			if Config.Ox.Menu then
 				TriggerClientEvent('cdn-electric:client:OpenContextMenu', src, math.ceil(total), amount, purchasetype)
 			else
-				TriggerClientEvent('sb-menu:client:openMenu', src, {
+				TriggerClientEvent('qb-menu:client:openMenu', src, {
 					{
 						header = Lang:t("menu_electric_header"),
 						isMenuHeader = true,
@@ -54,7 +54,7 @@ RegisterNetEvent("cdn-fuel:server:electric:OpenMenu", function(amount, inGasStat
 						txt = Lang:t("menu_electric_cancel"),
 						icon = "fas fa-times-circle",
 						params = {
-							event = "sb-menu:closeMenu",
+							event = "qb-menu:closeMenu",
 						}
 					},
 				})

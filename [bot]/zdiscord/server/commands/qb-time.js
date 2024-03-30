@@ -50,9 +50,9 @@ module.exports = {
     ],
 
     run: async (client, interaction, args) => {
-        if (GetResourceState("sb-weathersync") !== "started") return interaction.reply({ content: "This command requires QBCore's `sb-weathersync` to work", ephemeral: false });
+        if (GetResourceState("qb-weathersync") !== "started") return interaction.reply({ content: "This command requires QBCore's `qb-weathersync` to work", ephemeral: false });
         // doesn't give any feedback to rely on :/
-        emit("sb-weathersync:server:setTime", args.hour, "0");
+        emit("qb-weathersync:server:setTime", args.hour, "0");
         client.utils.log.info(`[${interaction.member.displayName}] set time to hour ${args.hour}`);
         return interaction.reply({ content: "Time has been set", ephemeral: false });
     },

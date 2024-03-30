@@ -158,7 +158,7 @@ AddEventHandler('wasabi_police:finePlayer', function()
                     gender = Strings.mrs
                 end
                 local charinfo = wsb.playerData.charinfo
-                TriggerServerEvent('sb-phone:server:sendNewMail', {
+                TriggerServerEvent('qb-phone:server:sendNewMail', {
                     sender = wsb.playerData.job.label,
                     subject = Strings.debt_collection,
                     message = (Strings.db_email):format(gender, charinfo.lastname, amount),

@@ -176,7 +176,7 @@ if Config.ElectricVehicleCharging then
                 end
             end
         else
-            Electricity = exports['sb-input']:ShowInput({
+            Electricity = exports['qb-input']:ShowInput({
                 header = "Select the Amount of Fuel<br>Current Price: £" ..
                 FuelPrice .. " / KWh <br> Current Charge: " .. finalfuel .. " KWh <br> Full Charge Cost: £" ..
                 wholetankcostwithtax .. "",
@@ -251,7 +251,7 @@ if Config.ElectricVehicleCharging then
                     })
                     lib.showContext('electricmenu')
                 else
-                    exports['sb-menu']:openMenu({
+                    exports['qb-menu']:openMenu({
                         {
                             header = Config.GasStations[FetchCurrentLocation()].label,
                             isMenuHeader = true,
@@ -280,7 +280,7 @@ if Config.ElectricVehicleCharging then
                             txt = Lang:t("menu_electric_cancel"),
                             icon = "fas fa-times-circle",
                             params = {
-                                event = "sb-menu:closeMenu",
+                                event = "qb-menu:closeMenu",
                             }
                         },
                     })
@@ -668,7 +668,7 @@ if Config.ElectricVehicleCharging then
             local cost = amount * FuelPrice
             local tax = GlobalTax(cost)
             local total = math.ceil(cost + tax)
-            local success = exports['sb-phone']:PhoneNotification(Lang:t("electric_phone_header"), Lang:t("electric_phone_notification")..total, 'fas fa-bolt', '#9f0e63', "NONE", 'fas fa-check-circle', 'fas fa-times-circle')
+            local success = exports['qb-phone']:PhoneNotification(Lang:t("electric_phone_header"), Lang:t("electric_phone_notification")..total, 'fas fa-bolt', '#9f0e63', "NONE", 'fas fa-check-circle', 'fas fa-times-circle')
             if success then
                 if QBCore.Functions.GetPlayerData().money['bank'] <= (GlobalTax(amount) + amount) then
                     QBCore.Functions.Notify(Lang:t("not_enough_money_in_bank"), "error")
@@ -729,7 +729,7 @@ if Config.ElectricVehicleCharging then
     -- Target
     local TargetResource = Config.TargetResource
     if Config.TargetResource == 'ox_target' then
-        TargetResource = 'sb-target'
+        TargetResource = 'qb-target'
     end
 
     exports[TargetResource]:AddTargetModel('electric_charger', {

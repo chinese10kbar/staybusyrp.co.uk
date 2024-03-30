@@ -4,7 +4,7 @@ Dependencies:
 
 - ox lib
 - [ran minigames](https://github.com/RanDXDev/ran-minigames)
-- sb-core
+- qb-core
 
 | Icon | Description   |
 | ---- | ------------- |

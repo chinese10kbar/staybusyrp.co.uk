@@ -5,7 +5,7 @@ Framework = {
 }
 
 if Config.Framework == "QBCore" then
-  QBCore = exports['sb-core']:GetCoreObject()
+  QBCore = exports['qb-core']:GetCoreObject()
   Framework.VehiclesTable = "player_vehicles"
   Framework.VehProps = "mods"
   Framework.PlayerId = "citizenid"

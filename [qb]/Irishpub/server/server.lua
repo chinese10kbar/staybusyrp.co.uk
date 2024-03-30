@@ -1,5 +1,5 @@
 
-local QBCore = exports['sb-core']:GetCoreObject()
+local QBCore = exports['qb-core']:GetCoreObject()
 
 QBCore.Functions.CreateUseableItem("irishpub_berry_hydrating", function(source, item)
     local src = source

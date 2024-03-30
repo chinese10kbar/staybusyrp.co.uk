@@ -3,7 +3,7 @@ local InRegZone, RegZoneID = false, nil
 local TempStoreData = {}
 local ox_inventory = exports.ox_inventory
 local ox_target = exports.ox_target
-local qb_target = exports['sb-target']
+local qb_target = exports['qb-target']
 CopCount = 0
 PlayerLoaded = false
 

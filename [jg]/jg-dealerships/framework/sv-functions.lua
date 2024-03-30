@@ -36,17 +36,17 @@ end
 -- 
 -- Society
 --
-local usingNewQBBanking = GetResourceState("sb-banking") == "started" and tonumber(string.sub(GetResourceMetadata("sb-banking", "version"), 1, 3)) >= 2
+local usingNewQBBanking = GetResourceState("qb-banking") == "started" and tonumber(string.sub(GetResourceMetadata("qb-banking", "version"), 1, 3)) >= 2
 
 function Framework.Server.RemoveFromSocietyFund(societyName, type, amount)
   if Config.Framework == "QBCore" then
     if usingNewQBBanking then
-      exports['sb-banking']:RemoveMoney(societyName, amount)
+      exports['qb-banking']:RemoveMoney(societyName, amount)
     else
       if type == "job" then
-        exports['sb-management']:RemoveMoney(societyName, amount)
+        exports['qb-management']:RemoveMoney(societyName, amount)
       elseif type == "gang" then
-        exports['sb-management']:RemoveGangMoney(societyName, amount)
+        exports['qb-management']:RemoveGangMoney(societyName, amount)
       end
     end
   elseif Config.Framework == "ESX" then
@@ -63,12 +63,12 @@ end
 Framework.Server.CreateCallback("jg-dealerships:server:get-society-balance", function(src, cb, society, type)
   if Config.Framework == "QBCore" then
     if usingNewQBBanking then
-      cb(exports['sb-banking']:GetAccountBalance(society))
+      cb(exports['qb-banking']:GetAccountBalance(society))
     else
       if type == "job" then
-        cb(exports['sb-management']:GetAccount(society))
+        cb(exports['qb-management']:GetAccount(society))
       elseif type == "gang" then
-        cb(exports['sb-management']:GetGangAccount(society))
+        cb(exports['qb-management']:GetGangAccount(society))
       end
     end
   elseif Config.Framework == "ESX" then

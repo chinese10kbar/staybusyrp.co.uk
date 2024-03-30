@@ -37,7 +37,7 @@ It also has a lot of innovations, such as multiple prison support, which lets yo
 
 Use my free XP system below, or port to another one inside of the bridge!
 
-https://forum.cfx.re/t/free-pickles-xp-system-standalone-works-with-esx-sb-multicharacter-identifiers/5088064
+https://forum.cfx.re/t/free-pickles-xp-system-standalone-works-with-esx-qb-multicharacter-identifiers/5088064
 
 ## Optional Metadata Support
 

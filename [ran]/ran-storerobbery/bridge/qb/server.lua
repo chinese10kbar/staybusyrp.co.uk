@@ -1,5 +1,5 @@
 ---@diagnostic disable: duplicate-set-field
-QBCore = exports['sb-core']:GetCoreObject()
+QBCore = exports['qb-core']:GetCoreObject()
 local ox_inventory = exports.ox_inventory
 
 function Functions.AddItem(src, itemname, count, metadata)

@@ -1,4 +1,4 @@
-local QBCore = exports["sb-core"]:GetCoreObject()
+local QBCore = exports["qb-core"]:GetCoreObject()
 
 local Webhook = 'https://discord.com/api/webhooks/1220574504724598925/9bjean9tK_CsxslGG_6w-3V8SSNZP1mn035EW1u621DdfWKK6VnkyYnI5-G59xsZrd5C' -- PUT YOUR WEBHOOK LINK HERE
 

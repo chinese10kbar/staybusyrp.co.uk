@@ -22,8 +22,8 @@ Core.Vehicle = {
   end,
 
   AddKeys = function(veh,plate) --#' This is the function called to add keys for a vehicle you own. '
-    if Config.KeySystem == "sb-vehiclekeys" then
-      TriggerServerEvent('sb-vehiclekeys:server:AcquireVehicleKeys', plate)
+    if Config.KeySystem == "qb-vehiclekeys" then
+      TriggerServerEvent('qb-vehiclekeys:server:AcquireVehicleKeys', plate)
     elseif Config.KeySystem == "cd_garage" then
       TriggerEvent('cd_garage:AddKeys', plate)
     elseif Config.KeySystem == "okokGarage" then
@@ -35,7 +35,7 @@ Core.Vehicle = {
     if Config.Framework == "es_extended" then
       local props = ESX.Game.GetVehicleProperties(veh)
       return props
-    elseif Config.Framework == "sb-core" then
+    elseif Config.Framework == "qb-core" then
       local props = QBCore.Functions.GetVehicleProperties(veh)
       return props
     end
@@ -44,7 +44,7 @@ Core.Vehicle = {
   SetProperties = function(veh, props)
     if Config.Framework == "es_extended" then
       ESX.Game.SetVehicleProperties(veh, props)
-    elseif Config.Framework == "sb-core" then
+    elseif Config.Framework == "qb-core" then
       QBCore.Functions.SetVehicleProperties(veh, props)
     end
   end,
@@ -53,7 +53,7 @@ Core.Vehicle = {
     if fw and Config.Framework == "es_extended" then
       local plate = ESX.Math.Trim(GetVehicleNumberPlateText(veh))
       return plate
-    elseif fw and Config.Framework == "sb-core" then
+    elseif fw and Config.Framework == "qb-core" then
       local plate = QBCore.Functions.GetPlate(veh)
       return plate
     else
@@ -65,7 +65,7 @@ Core.Vehicle = {
   SetPlate = function(veh, plate, fw)
     if fw and Config.Framework == "es_extended" then
       plate = ESX.Math.Trim(plate)
-    elseif fw and Config.Framework == "sb-core" then
+    elseif fw and Config.Framework == "qb-core" then
       plate = QBCore.Shared.Trim(plate)
     end
     return SetVehicleNumberPlateText(veh, plate)

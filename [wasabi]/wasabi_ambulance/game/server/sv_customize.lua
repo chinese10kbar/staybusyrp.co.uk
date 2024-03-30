@@ -4,7 +4,7 @@
 if not wsb then return print((Strings.no_wsb):format(GetCurrentResourceName())) end
 ESX, QBCore = nil, nil
 if wsb.framework == 'esx' then ESX = exports['es_extended']:getSharedObject() end -- Custom ESX Export?
-if wsb.framework == 'qb' then QBCore = exports['sb-core']:GetCoreObject() end     -- Custom QBCore Export?
+if wsb.framework == 'qb' then QBCore = exports['qb-core']:GetCoreObject() end     -- Custom QBCore Export?
 
 function MuteDeadPlayer(src, isDead)
     local bool = false
@@ -20,7 +20,7 @@ RegisterNetEvent('wasabi_ambulance:qbBill', function(target, amount, job)
         'success')
     TriggerClientEvent('wasabi_bridge:notify', target, Strings.fine_received,
         (Strings.fine_received_desc):format(addCommas(amount)), 'error')
-    exports['sb-management']:AddMoney(job, amount)
+    exports['qb-management']:AddMoney(job, amount)
 end)
 
 if wsb.framework == 'esx' then

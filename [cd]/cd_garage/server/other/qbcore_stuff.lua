@@ -1,6 +1,6 @@
 if Config.Framework == 'qbcore' then
     
-    QBCore.Functions.CreateCallback('sb-garage:server:GetPlayerVehicles', function(source, cb)
+    QBCore.Functions.CreateCallback('qb-garage:server:GetPlayerVehicles', function(source, cb)
         local Player = QBCore.Functions.GetPlayer(source)
         local Vehicles = {}
 
@@ -48,7 +48,7 @@ if Config.Framework == 'qbcore' then
         end
     end)
 
-    QBCore.Functions.CreateCallback("sb-garage:server:checkVehicleOwner", function(source, cb, plate)
+    QBCore.Functions.CreateCallback("qb-garage:server:checkVehicleOwner", function(source, cb, plate)
         local src = source
         local pData = QBCore.Functions.GetPlayer(src)
         MySQL.Async.fetchAll('SELECT * FROM player_vehicles WHERE plate = ? AND citizenid = ?',{plate, pData.PlayerData.citizenid}, function(result)

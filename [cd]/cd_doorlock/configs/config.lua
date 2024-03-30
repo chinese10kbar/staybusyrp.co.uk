@@ -22,8 +22,8 @@ Config.FrameworkTriggers = {
         load = 'esx:playerLoaded',
         job = 'esx:setJob'
     },
-    qbcore = { --If you have modified the default event names in the sb-core resource, change them here.
-        resource_name = 'sb-core',
+    qbcore = { --If you have modified the default event names in the qb-core resource, change them here.
+        resource_name = 'qb-core',
         main = 'QBCore:GetObject',
         load = 'QBCore:Client:OnPlayerLoaded',
         job = 'QBCore:Client:OnJobUpdate',

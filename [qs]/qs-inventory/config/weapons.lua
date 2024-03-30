@@ -1298,7 +1298,7 @@ end
 
 exports('getConfigWeaponTints', getConfigWeaponTints)
 
-RegisterNetEvent('sb-weapons:getWeaponsAttachments', function(cb)
+RegisterNetEvent('qb-weapons:getWeaponsAttachments', function(cb)
     cb(Config.WeaponAttachments)
 end)
 

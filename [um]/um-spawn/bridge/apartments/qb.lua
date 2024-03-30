@@ -1,6 +1,6 @@
 if not um.property.apartments.status or um.property.apartments.script ~= 'qb' then return end
 
-Debug('sb-apartments for apartments', 'debug')
+Debug('qb-apartments for apartments', 'debug')
 
 lib.callback.register('getApartments', function(source)
     local citizenid = GetCitizenID(GetPlayer(source))

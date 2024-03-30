@@ -5,7 +5,7 @@ local myData = {}
 
 local function yeetPed()
     if not DoesEntityExist(START_PED) then return end
-    exports['sb-target']:RemoveTargetEntity(START_PED, {'Start Job', 'Return Papers'})
+    exports['qb-target']:RemoveTargetEntity(START_PED, {'Start Job', 'Return Papers'})
     DeleteEntity(START_PED)
     START_PED = nil
 end
@@ -22,7 +22,7 @@ local function spawnPed()
     FreezeEntityPosition(START_PED, true)
     TaskStartScenarioInPlace(START_PED, 'WORLD_HUMAN_SMOKING_POT', 0, true)
 
-    exports['sb-target']:AddTargetEntity(START_PED, {
+    exports['qb-target']:AddTargetEntity(START_PED, {
         options = {
             {
                 icon = 'fa-solid fa-square-check',
@@ -155,7 +155,7 @@ RegisterNetEvent('randol_carheist:client:resetHeist', function()
     trackerActive = false
     HEIST_CAR, spawnBlip, blip2 = nil
     table.wipe(myData)
-    exports['sb-target']:RemoveZone('garage_enter')
+    exports['qb-target']:RemoveZone('garage_enter')
 end)
 
 RegisterNetEvent('randol_carheist:client:trackerOff', function()
@@ -194,7 +194,7 @@ RegisterNetEvent('randol_carheist:client:endRobbery', function()
     HEIST_CAR, spawnBlip, blip2 = nil
 
     table.wipe(myData)
-    exports['sb-target']:RemoveZone('garage_enter')
+    exports['qb-target']:RemoveZone('garage_enter')
 end)
 
 local function initVehicle(netid)
@@ -240,7 +240,7 @@ function stealPoint()
     PlaySoundFrontend(-1, 'Text_Arrive_Tone', 'Phone_SoundSet_Default', 1)
     DoNotification(('You need to retrieve a %s. It has been marked on your gps.'):format(label), 'success')
 
-    exports['sb-target']:AddCircleZone('garage_enter', coords.xyz, 1.0, {
+    exports['qb-target']:AddCircleZone('garage_enter', coords.xyz, 1.0, {
         name ='garage_enter',
         useZ =true,
     }, {options = {
@@ -248,7 +248,7 @@ function stealPoint()
             icon = 'fa-solid fa-circle',
             label = 'Enter Garage',
             action = function()
-                exports['sb-target']:RemoveZone('garage_enter')
+                exports['qb-target']:RemoveZone('garage_enter')
                 SetEntityHeading(cache.ped, coords.w)
                 SetEntityCoords(cache.ped, coords.x, coords.y, coords.z-1.0)
                 Wait(100)
@@ -278,7 +278,7 @@ AddEventHandler('onResourceStop', function(resource)
     if resource == GetCurrentResourceName() then
         if pedZone then pedZone:remove() pedZone = nil end
         yeetPed()
-        exports['sb-target']:RemoveZone('garage_enter')
+        exports['qb-target']:RemoveZone('garage_enter')
         table.wipe(myData)
     end
 end)
@@ -293,7 +293,7 @@ function OnPlayerLogout()
     HEIST_CAR, spawnBlip, blip2 = nil
     yeetPed()
 
-    exports['sb-target']:RemoveZone('garage_enter')
+    exports['qb-target']:RemoveZone('garage_enter')
     table.wipe(myData)
 end
 

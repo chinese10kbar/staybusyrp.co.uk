@@ -4,7 +4,7 @@ end
 
 local SupportedResources = {
   Inventory = {
-    ['sb-inventory']   = "sb-inventory/html/images/",
+    ['qb-inventory']   = "qb-inventory/html/images/",
     ['lj-inventory']   = "lj-inventory/html/images/",
     ['qs-inventory']   = "qs-inventory/html/images/",
     ['ps-inventory']   = "ps-inventory/html/images/",
@@ -12,14 +12,14 @@ local SupportedResources = {
     ['ox_inventory']   = "ox_inventory/web/images/",
     ['core_inventory'] = "ox_inventory/web/images/",
   },
-  TargetSystem   = {'qtarget', 'sb-target', 'ox_target'},
-  TimeSystem     = {'vSync', 'cd_easytime', 'sb-weathersync'},
-  JailSystem     = {'esx_jail', 'sb-prison', 'rcore_prison', 'pickle_prisons'},
+  TargetSystem   = {'qtarget', 'qb-target', 'ox_target'},
+  TimeSystem     = {'vSync', 'cd_easytime', 'qb-weathersync'},
+  JailSystem     = {'esx_jail', 'qb-prison', 'rcore_prison', 'pickle_prisons'},
   ProgressBar    = {'progressbar', 'ox_lib', 'rprogress'},
-  Framework      = {'vrp','es_extended', 'sb-core'},
-  KeySystem      = {'sb-vehiclekeys', 'cd_garage', 'okokGarage'},
+  Framework      = {'vrp','es_extended', 'qb-core'},
+  KeySystem      = {'qb-vehiclekeys', 'cd_garage', 'okokGarage'},
   DispatchSystem = {'ps-dispatch', 'cd_dispatch', 'qs-dispatch'},
-  PhoneSystem    = {'qs-smartphone', 'gksphone', 'lb-phone', 'npwd', 'sb-phone'},
+  PhoneSystem    = {'qs-smartphone', 'gksphone', 'lb-phone', 'npwd', 'qb-phone'},
 }
 
 local datatype = type
@@ -115,11 +115,11 @@ Citizen.CreateThread(function()
       else 
         ESX = exports['es_extended']:getSharedObject()
       end
-    elseif Config.Framework == "sb-core" then 
-      QBCore = exports['sb-core']:GetCoreObject()
+    elseif Config.Framework == "qb-core" then 
+      QBCore = exports['qb-core']:GetCoreObject()
       Core.Shared = QBCore.Shared
       RegisterNetEvent('QBCore:Client:UpdateObject', function() 
-        QBCore = exports['sb-core']:GetCoreObject();
+        QBCore = exports['qb-core']:GetCoreObject();
       end)
     elseif Config.Framework == "vrp" then 
       local serverSide = IsDuplicityVersion()

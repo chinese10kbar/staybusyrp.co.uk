@@ -6,8 +6,8 @@ Config.RentalBoat = "dinghy"                                    -- Fishing boat 
 Config.StopFishing =  73                                        -- Stop Fishing Key [X] (https://docs.fivem.net/docs/game-references/controls/)
 Config.BoatPrice = 100                                          -- Price of the boat rental, price is divided when boat is returned
 Config.TestFish = false											-- Test Fish with commands /startfish or /spawnfish
-Config.Skillbar = "sb-skillbar"                             	-- Must choose one of the avalible skillbars ["reload-skillbar","np-skillbar","sb-skillbar"]
-Config.targetExport = "sb-target"                               -- The name of the Target export you are using ["sb-target", "qtarget", "bt-target"]
+Config.Skillbar = "qb-skillbar"                             	-- Must choose one of the avalible skillbars ["reload-skillbar","np-skillbar","qb-skillbar"]
+Config.targetExport = "qb-target"                               -- The name of the Target export you are using ["qb-target", "qtarget", "bt-target"]
 
 Config.PearlsSellsBlip = vector3(-1816.406, -1193.334, 13.305)  -- Blip to sell fish you have caught
 
@@ -59,7 +59,7 @@ Config.largeLootboxRewards = {                                  -- Rewards found
 }
 
 -- [SOURCE: https://github.com/sjpfeiffer/ped_spawner]
-Config.PedList = {                                              -- Peds that will be spawned in (if you change a ped model here you need to also change the ped model in client/addons.lua sb-target exports)
+Config.PedList = {                                              -- Peds that will be spawned in (if you change a ped model here you need to also change the ped model in client/addons.lua qb-target exports)
 	{
 		model = "u_m_m_filmdirector",                            -- Boat/Gear Menu
 		coords = vector3(-1604.236, 5256.483, 1.073),               

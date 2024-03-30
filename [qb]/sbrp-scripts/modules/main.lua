@@ -1,4 +1,4 @@
-local QBCore = exports['sb-core']:GetCoreObject()
+local QBCore = exports['qb-core']:GetCoreObject()
 
 RegisterNetEvent('tackle:server:TacklePlayer', function(playerId)
     TriggerClientEvent('tackle:client:GetTackled', playerId)
@@ -44,16 +44,16 @@ RegisterNetEvent('seatbelt:DoHarnessDamage', function(hp, data)
     end
 end)
 
-RegisterNetEvent('sb-carwash:server:washCar', function()
+RegisterNetEvent('qb-carwash:server:washCar', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
 
     if not Player then return end
 
     if Player.Functions.RemoveMoney('cash', Config.CarWash.defaultPrice, 'car-washed') then
-        TriggerClientEvent('sb-carwash:client:washCar', src)
+        TriggerClientEvent('qb-carwash:client:washCar', src)
     elseif Player.Functions.RemoveMoney('bank', Config.CarWash.defaultPrice, 'car-washed') then
-        TriggerClientEvent('sb-carwash:client:washCar', src)
+        TriggerClientEvent('qb-carwash:client:washCar', src)
     else
         TriggerClientEvent('QBCore:Notify', src, Lang:t('error.dont_have_enough_money'), 'error')
     end

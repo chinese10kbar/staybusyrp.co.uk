@@ -33,7 +33,7 @@ ensure [K_FRAUD]
 Both Shops/ATMS are not encrypted so you are free to edit them as you please
 and K_FRAUD has alot of configs so you can edit mostly anything but if you want something else to edit just pop it in the discord
 
-Add these to sb-core/shared/items.lua
+Add these to qb-core/shared/items.lua
     ['laptop2'] 			 = {['name'] = 'laptop2', 					['label'] = 'Laptop #2', 				['weight'] = 500, 		['type'] = 'item', 		['image'] = 'laptop2.png', 		['unique'] = false, 		['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = ''},
 	['whiteslip'] 			 = {['name'] = 'whiteslip', 				['label'] = 'White Slip', 				['weight'] = 500, 		['type'] = 'item', 		['image'] = 'whiteslip.png', 		['unique'] = false, 		['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = ''},
 	['stolencard'] 			 = {['name'] = 'stolencard', 				['label'] = 'Stolen Bankcard', 				['weight'] = 500, 		['type'] = 'item', 		['image'] = 'stolencard.png', 		['unique'] = false, 		['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = ''},

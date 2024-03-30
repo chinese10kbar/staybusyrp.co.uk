@@ -8,7 +8,7 @@ if wsb.framework == 'esx' then
 	ESX = exports['es_extended']:getSharedObject() -- Custom esx object?
 end
 if wsb.framework == 'qb' then
-	QBCore = exports['sb-core']:GetCoreObject()
+	QBCore = exports['qb-core']:GetCoreObject()
 end
 
 IsDispatched = false

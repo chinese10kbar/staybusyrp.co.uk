@@ -41,7 +41,7 @@ function GiveItemToPlayer(source, item, amount)
 		elseif itemData['name'] == 'markedbills' then
 			info.worth = math.random(5000, 10000)
 		elseif itemData['name'] == 'labkey' then
-			info.lab = exports['sb-methlab']:GenerateRandomLab()
+			info.lab = exports['qb-methlab']:GenerateRandomLab()
 		elseif itemData['name'] == 'printerdocument' then
 			info.url = 'https://cdn.discordapp.com/attachments/870094209783308299/870104331142189126/Logo_-_Display_Picture_-_Stylized_-_Red.png'
 		elseif ItemList[itemData['name']]['decay'] and ItemList[itemData['name']]['decay'] > 0 then

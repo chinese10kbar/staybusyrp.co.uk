@@ -44,7 +44,7 @@ if Config.Framework == "auto" then
 
 	if isResourceStartedOrStarting("es_extended") then
 		Config.Framework = "esx"
-	elseif isResourceStartedOrStarting("sb-core") then
+	elseif isResourceStartedOrStarting("qb-core") then
 		Config.Framework = "qbcore"
 	else
 		Config.Framework = "standalone"

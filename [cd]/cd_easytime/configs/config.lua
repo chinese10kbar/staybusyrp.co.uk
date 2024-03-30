@@ -17,7 +17,7 @@ Config.FrameworkTriggers = { --You can change the esx/qbcore events (IF NEEDED).
     main = 'QBCore:GetObject',   --ESX = 'esx:getSharedObject'   QBCORE = 'QBCore:GetObject'
     load = 'QBCore:Client:OnPlayerLoaded',      --ESX = 'esx:playerLoaded'      QBCORE = 'QBCore:Client:OnPlayerLoaded'
     job = 'QBCore:Client:OnJobUpdate',             --ESX = 'esx:setJob'            QBCORE = 'QBCore:Client:OnJobUpdate'
-    resource_name = 'sb-core'   --ESX = 'es_extended'           QBCORE = 'sb-core'
+    resource_name = 'qb-core'   --ESX = 'es_extended'           QBCORE = 'qb-core'
 }
 
 Config.NotificationType = { --[ 'esx' / 'qbcore' / 'mythic_old' / 'mythic_new' / 'chat' / 'other' ] Choose your notification script.

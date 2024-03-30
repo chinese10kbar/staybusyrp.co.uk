@@ -25,7 +25,7 @@ module.exports = {
 
     run: async (client, interaction, args) => {
         if (!GetPlayerName(args.id)) return interaction.reply({ content: "This ID seems invalid.", ephemeral: true });
-        emitNet("sb-clothing:client:openMenu", args.id);
+        emitNet("qb-clothing:client:openMenu", args.id);
         client.utils.log.info(`[${interaction.member.displayName}] gave ${args.id} the clothing menu`);
         return interaction.reply({ content: `${GetPlayerName(args.id)} (${args.id}) was given the clothing menu`, ephemeral: false });
     },

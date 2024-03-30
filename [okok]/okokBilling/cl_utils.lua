@@ -1,4 +1,4 @@
-QBCore = exports["sb-core"]:GetCoreObject()
+QBCore = exports["qb-core"]:GetCoreObject()
 
 RegisterNetEvent('QBCore:Client:OnJobUpdate')
 AddEventHandler('QBCore:Client:OnJobUpdate', function(job)

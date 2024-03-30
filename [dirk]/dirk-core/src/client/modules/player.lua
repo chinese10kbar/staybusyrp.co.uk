@@ -11,7 +11,7 @@ Core.Player = {
         if now - start_time >= Config.WaitForPlayerReady * 1000 then print('SKIPPED WAITING FOR PLAYER LOADED AS TOOK TOO LONG') return true; end
         Wait(500) 
       end
-    elseif Config.Framework == "sb-core" then
+    elseif Config.Framework == "qb-core" then
       while not QBCore do print('AWAITING QBCORE OBJECT') Wait(500); end
       while not QBCore.Functions.GetPlayerData().job do   
         local now = GetGameTimer()
@@ -55,7 +55,7 @@ Core.Player = {
         birthdate   = "",
         phone       = "",
         
-        --## sb-CORE
+        --## QB-CORE
         backstory   = "",
         account     = 0,
         cid         = 0,
@@ -63,7 +63,7 @@ Core.Player = {
     }
     if Config.Framework == "es_extended" then
       return ESX.GetPlayerData()
-    elseif Config.Framework == "sb-core" then
+    elseif Config.Framework == "qb-core" then
       local fwData = QBCore.Functions.GetPlayerData() 
       retFormat.characterID = fwData.citizenid
       retFormat.license     = fwData.license
@@ -104,7 +104,7 @@ Core.Player = {
   end,
 
   Inventory = function()
-    if Config.Framework == "sb-core" then 
+    if Config.Framework == "qb-core" then 
       local raw = QBCore.Functions.GetPlayerData().items
       local items = {}
       for k,v in pairs(raw) do 
@@ -153,7 +153,7 @@ Core.Player = {
     if Config.Framework == "es_extended" then
       local data = ESX.GetPlayerData()
       return data.identifier
-    elseif Config.Framework == "sb-core" then
+    elseif Config.Framework == "qb-core" then
       local data = QBCore.Functions.GetPlayerData()
       return data.citizenid
     end
@@ -201,7 +201,7 @@ Core.Player = {
   GetGang = function()
     local gt = {}
 
-    if Config.Framework == "sb-core" then 
+    if Config.Framework == "qb-core" then 
       if not Config.GangSystem then 
         local rawGang = QBCore.Functions.GetPlayerData().gang
         gt.name  = rawGang.name
@@ -224,7 +224,7 @@ Core.Player = {
       jt.duty   = true
       jt.isBoss = false
       jt.isCop =  Config.PoliceJobs[data.job.name]
-    elseif Config.Framework == "sb-core" then
+    elseif Config.Framework == "qb-core" then
       local data = QBCore.Functions.GetPlayerData()
       while not data.job do data = QBCore.Functions.GetPlayerData() Wait(500); end 
       jt.name   = data.job.name
@@ -255,7 +255,7 @@ CreateThread(function()
     RegisterNetEvent("esx:setJob", function(job)
       TriggerEvent("Dirk-Core:JobChange", Core.Player.GetJob())
     end)
-  elseif Config.Framework == "sb-core" then
+  elseif Config.Framework == "qb-core" then
     if not Config.GangSystem then 
       RegisterNetEvent('QBCore:Client:OnGangUpdate', function(InfoGang)
         TriggerEvent("Dirk-Core:GangChange", Core.Player.GetGang())

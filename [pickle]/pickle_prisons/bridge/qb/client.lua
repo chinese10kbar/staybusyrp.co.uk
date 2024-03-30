@@ -1,6 +1,6 @@
-if GetResourceState('sb-core') ~= 'started' then return end
+if GetResourceState('qb-core') ~= 'started' then return end
 
-QBCore = exports['sb-core']:GetCoreObject()
+QBCore = exports['qb-core']:GetCoreObject()
 
 function ServerCallback(name, cb, ...)
     QBCore.Functions.TriggerCallback(name, cb,  ...)
@@ -47,9 +47,9 @@ function ToggleOutfit(inPrison)
         local gender = QBCore.Functions.GetPlayerData().charinfo.gender
         local outfit = gender == 1 and outfits.female or outfits.male
         if not outfit then return end 
-        TriggerEvent('sb-clothing:client:loadOutfit', {outfitData = outfit})
+        TriggerEvent('qb-clothing:client:loadOutfit', {outfitData = outfit})
     else
-        TriggerServerEvent("sb-clothes:loadPlayerSkin")
+        TriggerServerEvent("qb-clothes:loadPlayerSkin")
     end
 end
 

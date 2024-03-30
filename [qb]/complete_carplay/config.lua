@@ -6,10 +6,10 @@ Config.Debug                    = false
 -- === IMPORTANT ===
 -- add this item
 --  ['carplay'] = {['name'] = 'carplay', ['label'] = 'Carplay', ['weight'] = 1000, ['type'] = 'item', ['image'] = 'carplay.png', ['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = 'Device to controll your vehicle'}
--- remember to add the export in sb-phone as told in the readme.md
+-- remember to add the export in qb-phone as told in the readme.md
 
 -- === GENERAL ===
-Config.QBCoreName               = 'sb-core' -- if you have renamed the sb-core folder change this
+Config.QBCoreName               = 'qb-core' -- if you have renamed the qb-core folder change this
 Config.OpenUICommand            = 'carplay' -- Console command to open the NUI
 Config.OpenUIKey                = 'n'
 Config.OpenTrunkCameraCommand   = 'trunk-camera' -- Console command to open the trunk camera

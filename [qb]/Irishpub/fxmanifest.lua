@@ -22,8 +22,8 @@ client_script {
 }
 
 dependencies {
-    'sb-core',
+    'qb-core',
     'PolyZone',
-    --'sb-target',
-    'sb-menu'
+    --'qb-target',
+    'qb-menu'
 }

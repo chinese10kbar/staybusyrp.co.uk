@@ -803,7 +803,7 @@ function createInput(title, opts)
         return dialog
     end
     if Config.System.Menu == "qb" then
-        dialog = exports['sb-input']:ShowInput({ header = title, submitText = "Accept", inputs = opts })
+        dialog = exports['qb-input']:ShowInput({ header = title, submitText = "Accept", inputs = opts })
         return dialog
     end
     if Config.System.Menu == "gta" then
@@ -1063,7 +1063,7 @@ function createUseableItem(item, funct)
         while not ESX do Wait(0) end
         ESX.RegisterUsableItem(item, funct)
     elseif GetResourceState(QBExport):find("start") and not GetResourceState(QBXExport):find("start") then
-        if Config.System.Debug then print("^6Bridge^7: ^2Registering item as ^3Useable^2 with ^7sb-core", item) end
+        if Config.System.Debug then print("^6Bridge^7: ^2Registering item as ^3Useable^2 with ^7qb-core", item) end
         Core.Functions.CreateUseableItem(item, funct)
     elseif GetResourceState(QBXExport):find("start") then
         if Config.System.Debug then print("^6Bridge^7: ^2Registering item as ^3Useable^2 with ^7qbx_core", item) end
@@ -1102,7 +1102,7 @@ function hasJob(job, source, grade) local hasJob, duty = false, true
             end
 
         elseif GetResourceState(QBExport):find("start") and not GetResourceState(QBXExport):find("start") then
-            if Core.Functions.GetPlayer then -- support older sb-core functions
+            if Core.Functions.GetPlayer then -- support older qb-core functions
                 local jobinfo = Core.Functions.GetPlayer(src).PlayerData.job
                 if jobinfo.name == job then hasJob = true
                     duty = Core.Functions.GetPlayer(src).PlayerData.job.onduty
@@ -1112,7 +1112,7 @@ function hasJob(job, source, grade) local hasJob, duty = false, true
                 if ganginfo.name == job then hasJob = true
                     if grade and not (grade <= ganginfo.grade.level) then hasJob = false end
                 end
-            else -- support newer sb-core exports
+            else -- support newer qb-core exports
                 local jobinfo = exports[QBExport]:GetPlayer(src).PlayerData.job
                 if jobinfo.name == job then hasJob = true
                     duty = exports[QBExport]:GetPlayer(src).PlayerData.job.onduty
@@ -1208,7 +1208,7 @@ function getPlayer(source) local Player = {}
             }
 
         elseif GetResourceState(QBExport):find("start") and not GetResourceState(QBXExport):find("start") then
-            if Core.Functions.GetPlayer ~= nil then -- support older sb-core functions
+            if Core.Functions.GetPlayer ~= nil then -- support older qb-core functions
                 local info = Core.Functions.GetPlayer(src).PlayerData
                 Player = {
                     name = info.charinfo.firstname.." "..info.charinfo.lastname,
@@ -1289,8 +1289,8 @@ function sendPhoneMail(data) local phoneResource = ""
     elseif GetResourceState("lb-phone"):find("start") then phoneResource = "lb-phone"
         TriggerServerEvent(GetCurrentResourceName()..":lbphone:SendMail", data)
 
-    elseif GetResourceState("sb-phone"):find("start") then phoneResource = "sb-phone"
-        TriggerServerEvent('sb-phone:server:sendNewMail', data)
+    elseif GetResourceState("qb-phone"):find("start") then phoneResource = "qb-phone"
+        TriggerServerEvent('qb-phone:server:sendNewMail', data)
 
     elseif GetResourceState("jpr-phonesystem"):find("start") then phoneResource = "jpr-phonesystem"
         TriggerServerEvent(GetCurrentResourceName()..":jpr:SendMail", data)
@@ -1327,7 +1327,7 @@ RegisterNetEvent(GetCurrentResourceName()..":yflip:SendMail", function(data)
 end)
 
 RegisterNetEvent(GetCurrentResourceName()..":jpr:SendMail", function(data)
-    local QBCore = exports['sb-core']:GetCoreObject()
+    local QBCore = exports['qb-core']:GetCoreObject()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     TriggerEvent('jpr-phonesystem:server:sendEmail', {
@@ -1344,7 +1344,7 @@ function registerCommand(command, options)
         if Config.System.Debug then print("^6Bridge^7: ^2Registering ^3Command^2 with ^7"..OXLibExport, command) end
         lib.addCommand(command, { help = options[1], restricted = options[5] and "group."..options[5] or nil }, options[4])
     elseif GetResourceState(QBExport):find("start") and not GetResourceState(QBXExport):find("start") then
-        if Config.System.Debug then print("^6Bridge^7: ^2Registering ^3Command^2 with ^7sb-core"..QBExport, command) end
+        if Config.System.Debug then print("^6Bridge^7: ^2Registering ^3Command^2 with ^7qb-core"..QBExport, command) end
         Core.Commands.Add(command, options[1], options[2], options[3], options[4], options[5] and options[5] or nil)
     end
 end

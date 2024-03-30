@@ -1,15 +1,15 @@
 # Progressbar
 
-Dependency for creating progressbars in sb-Core.
+Dependency for creating progressbars in QB-Core.
 
 # Usage
 
-## sb-Core Functions
+## QB-Core Functions
 
 ### Client
 
 - QBCore.Functions.Progressbar(**name**: string, **label**: string, **duration**: number, **useWhileDead**: boolean, **canCancel**: boolean, **disableControls**: table, **animation**: table, **prop**: table, **propTwo**: table, **onFinish**: function, **onCancel**: function)
-  > Create a new progressbar from the built in sb-core functions.<br>
+  > Create a new progressbar from the built in qb-core functions.<br>
   > **Example:**
   > ```lua
   >QBCore.Functions.Progressbar("random_task", "Doing something", 5000, false, true, {
@@ -33,7 +33,7 @@ Dependency for creating progressbars in sb-Core.
 ### Client
 
 - Progress(**data**: string, **handler**: function)
-  > Creates a new progress bar directly from the export, always use the built in sb-core function if possible.<br>
+  > Creates a new progress bar directly from the export, always use the built in qb-core function if possible.<br>
   > **Example:**
   > ```lua
   >exports['progressbar']:Progress({

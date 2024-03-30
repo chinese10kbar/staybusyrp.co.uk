@@ -11,7 +11,7 @@ A highly in-depth fuel system for **FiveM** with support for the **QBCore Framew
 - Removed spamming debug print. 
 - Changed the way Air Fuel Zones spawn PolyZones and Props.
 - Player Job Error on load.
-- Syphoning Issue with sb-Inventory.
+- Syphoning Issue with QB-Inventory.
 
 
 <br>
@@ -51,8 +51,8 @@ Make sure you have the following dependencies, otherwise, issues most likely wil
 
 ### Dependencies:
 
-- [sb-target](https://github.com/BerkieBb/sb-target)
-- [sb-menu](https://github.com/qbcore-framework/sb-menu) **&** [sb-input](https://github.com/qbcore-framework/sb-input) **OR** [ox_lib](https://github.com/overextended/ox_lib)
+- [qb-target](https://github.com/BerkieBb/qb-target)
+- [qb-menu](https://github.com/qbcore-framework/qb-menu) **&** [qb-input](https://github.com/qbcore-framework/qb-input) **OR** [ox_lib](https://github.com/overextended/ox_lib)
 - [interact-sound](https://github.com/plunkettscott/interact-sound)
 - [PolyZone](https://github.com/qbcore-framework/PolyZone)
 - _Other dependencies are included in the resource._
@@ -131,7 +131,7 @@ We will now be installing the Jerry Can & Syphoning Kit items into your server. 
 <br> <br>
 If you plan to not use them, you can skip this Step and Step 7!
 <br> <br>
-The first step of installing our items is to navigate to your *sb-core/shared/items.lua*.
+The first step of installing our items is to navigate to your *qb-core/shared/items.lua*.
 <br> <br>
 Once there, we will paste the following items at the bottom of our items table.
 ```Lua
@@ -185,7 +185,7 @@ You can follow this GIF to get a better understanding:
 <br>
 
 ### Step 6:
-This step is only necessary for you to be able to do the */giveitem* command or to put items in the sb-shops.
+This step is only necessary for you to be able to do the */giveitem* command or to put items in the qb-shops.
 
 Navigate to inventoryname/server/server.lua, and CTRL + F the following line:
 ```Lua
@@ -208,7 +208,7 @@ Alternatively, watch this GIF to better understand the process:
 
 <br> 
 
-##### sb-Shop Setup
+##### QB-Shop Setup
 
 Here are some preconfigured shop items if you wish to put them in the shop. (The Jerry Can is buyable via the Gas Pump!)
 
@@ -234,9 +234,9 @@ Here are some preconfigured shop items if you wish to put them in the shop. (The
 You will most likely have to change the slot it is in for it to work properly!
 <br><br>
 
-### sb-Target Issue Fix 
+### QB-Target Issue Fix 
 
-There is a **possible** issue with *sb-target* if you are using the *Config.GlobalVehicleOptions* or *Config.TargetBones* options. 
+There is a **possible** issue with *qb-target* if you are using the *Config.GlobalVehicleOptions* or *Config.TargetBones* options. 
 <br>
 ### **If you are NOT having this issue occur, do not follow the instructions below, as it could mess up other things.**
 <br>
@@ -267,14 +267,14 @@ Firstly, this option will have to be added to your *Config.TargetBones* under th
 
 *Here is an example of how to add this option:*
 
-![Step5part33 sb-Target](https://i.imgur.com/UOgPJRi.png)
+![Step5part33 QB-Target](https://i.imgur.com/UOgPJRi.png)
 <br> 
 *This is **specifically** for the "**boot**" bone, but, add it on which bone you are having trouble with.*
 
 <br>
 <br>
 
-*Next, we'll add this simple Function & Export into our sb-Target in the Functions() area:*
+*Next, we'll add this simple Function & Export into our QB-Target in the Functions() area:*
 
 ```Lua
 local function AllowRefuel(state, electric) 
@@ -303,7 +303,7 @@ end exports('AllowRefuel', AllowRefuel)
 
 <br> 
 
-Lastly, add the following to the top of your _init.lua_ in sb-Target:
+Lastly, add the following to the top of your _init.lua_ in QB-Target:
 ```
 local Allowrefuel = false
 local AllowElectricRefuel = false
@@ -326,7 +326,7 @@ We highly recommend you add the following snippet to your engine toggle command.
 
 ##### ***Engine Toggle Snippet***
 ```Lua
--- FOR sb-VEHICLEKEYS, FUNCTION ToggleEngine();
+-- FOR QB-VEHICLEKEYS, FUNCTION ToggleEngine();
 local NotifyCooldown = false
 function ToggleEngine(veh)
     if veh then

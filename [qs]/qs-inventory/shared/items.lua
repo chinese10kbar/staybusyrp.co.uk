@@ -1,6 +1,6 @@
 --[[
 	Please read carefully.
-	In case you use sb-core, you must use your shared in sb-core,
+	In case you use qb-core, you must use your shared in qb-core,
 	not this shared, this section is exclusive for esx!
 
 	However, you can copy all the items from here for your convenience!
@@ -22,7 +22,7 @@
 
 
         The next level is the consumables, you can use esx_basicneeds
-        or sb-smallresources, but the native way will always be better,
+        or qb-smallresources, but the native way will always be better,
         since it will avoid a series of item dupes and its functionality
         will be completely direct.
 

@@ -11,7 +11,7 @@ if Config.Framework ~= "qb" then
 end
 
 Citizen.CreateThread(function()
-    QBCore = exports['sb-core']:GetCoreObject()
+    QBCore = exports['qb-core']:GetCoreObject()
 
     while QBCore.Functions.GetPlayerData().job == nil do
         Citizen.Wait(10)
@@ -20,9 +20,9 @@ Citizen.CreateThread(function()
     PlayerData = QBCore.Functions.GetPlayerData()
 end)
 
-qbcoreMenu = 'sb-menu'         -- Only if use a custom name of sb-menu
-qbcoreInput = 'sb-input'       -- Only if use a custom name of sb-input
-qbcoreRadial = 'sb-radialmenu' -- Only if use a custom name of sb-radialmenu
+qbcoreMenu = 'qb-menu'         -- Only if use a custom name of qb-menu
+qbcoreInput = 'qb-input'       -- Only if use a custom name of qb-input
+qbcoreRadial = 'qb-radialmenu' -- Only if use a custom name of qb-radialmenu
 
 RegisterNetEvent('QBCore:Client:OnJobUptade')
 AddEventHandler('QBCore:Client:OnJobUptade', function(playerData)

@@ -24,7 +24,7 @@ CreateThread(function()
                 end
             end
             if KonfigCL.QBTarget then
-                exports['sb-target']:AddTargetEntity(blackMarketPed, {
+                exports['qb-target']:AddTargetEntity(blackMarketPed, {
                     options = {
                     {
                         type = "client",
@@ -53,7 +53,7 @@ CreateThread(function()
                 end
             end
             if KonfigCL.QBTarget then
-                exports['sb-target']:AddTargetEntity(slipsPed, {
+                exports['qb-target']:AddTargetEntity(slipsPed, {
                     options = {
                     {
                         type = "client",
@@ -82,7 +82,7 @@ CreateThread(function()
                 end
             end
             if KonfigCL.QBTarget then
-                exports['sb-target']:AddTargetEntity(electronicPed, {
+                exports['qb-target']:AddTargetEntity(electronicPed, {
                     options = {
                     {
                         type = "client",
@@ -111,7 +111,7 @@ CreateThread(function()
                         DrawMarker(2, KonfigCL.BankerLocation, 0.0, 0.0, 0.0, 0.0, 0.0, 0.3, 0.3, 0.3, 0.3, 255, 0, 0, 150, 1, 0, 2, 1, 0, 0, false )
                     end
                 end
-                exports['sb-target']:AddTargetEntity(bankerPed, {
+                exports['qb-target']:AddTargetEntity(bankerPed, {
                     options = {
                     {
                         type = "server",

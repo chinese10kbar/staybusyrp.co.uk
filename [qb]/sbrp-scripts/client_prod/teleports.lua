@@ -24,7 +24,7 @@ local function teleportMenu(zones, currentZone)
             }
         end
     end
-    exports['sb-menu']:showHeader(menu)
+    exports['qb-menu']:showHeader(menu)
 end
 
 CreateThread(function()

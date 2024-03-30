@@ -27,7 +27,7 @@ Config = {
   ]]
   AlternativeResourceNames = { --## Replace false with the alternative name you have used for that resource if you are renaming resources.
     Inventory = {
-      ['sb-inventory'] = false,
+      ['qb-inventory'] = false,
       ['ps-inventory'] = false,
       ['ox_inventory'] = false,
       ['mf-inventory'] = false,
@@ -36,17 +36,17 @@ Config = {
     },
     TargetSystem   = {
       ['qtarget']   = false,
-      ['sb-target'] = false,
+      ['qb-target'] = false,
       ['ox_target'] = false,
     },
     TimeSystem     = {
       ['vSync'] = false,
       ['cd_easytime']    = false,
-      ['sb-weathersync'] = false,
+      ['qb-weathersync'] = false,
     },
     JailSystem     = {
       ['esx_jail']  = false,
-      ['sb-prison'] = false,
+      ['qb-prison'] = false,
       ['rcore_prison'] = false,
     },
     ProgressBar    = {
@@ -55,11 +55,11 @@ Config = {
     },
     Framework      = {
       ['es_extended'] = false,
-      ['sb-core']     = false,
+      ['qb-core']     = false,
       ['vrp']         = false,
     },
     KeySystem      = {
-      ['sb-vehiclekeys'] = false,
+      ['qb-vehiclekeys'] = false,
       ['cd_garage']      = false,
     },
     DispatchSystem = {
@@ -71,7 +71,7 @@ Config = {
       ['gks_phone']     = false,
       ['lb-phone']      = false,
       ['nwpd']          = false,
-      ['sb-phone']      = false,
+      ['qb-phone']      = false,
     },
   },
 

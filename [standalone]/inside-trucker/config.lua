@@ -12,7 +12,7 @@ Keys = {
 cfg = {}
 cfg.Prefix = QBCore -- Prefix of your Framework
 cfg.TriggerPrefix = "QBCore" -- Prefix of your triggers Framework
-cfg.ExportPrefix = "sb-core" -- Prefix of your Export
+cfg.ExportPrefix = "qb-core" -- Prefix of your Export
 cfg.Colors = {r = 78, g = 255, b = 175} -- Colors of DrawTexts, Markers etc.
 cfg.DepositPrice = 1500
 cfg.Salary = "bank" -- ("bank"/"cash")Receipt of salary by a Bank or in Cash.

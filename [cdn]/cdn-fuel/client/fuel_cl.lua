@@ -342,7 +342,7 @@ if Config.RenewedPhonePayment then
 		local cost = amount * FuelPrice
 		local tax = GlobalTax(cost)
 		local total = math.ceil(cost + tax)
-		local success = exports['sb-phone']:PhoneNotification(Lang:t("fuel_phone_header"), Lang:t("phone_notification")..total, 'fas fa-gas-pump', '#9f0e63', "NONE", 'fas fa-check-circle', 'fas fa-times-circle')
+		local success = exports['qb-phone']:PhoneNotification(Lang:t("fuel_phone_header"), Lang:t("phone_notification")..total, 'fas fa-gas-pump', '#9f0e63', "NONE", 'fas fa-check-circle', 'fas fa-times-circle')
 		if success then
 			if QBCore.Functions.GetPlayerData().money['bank'] <= total then
 				QBCore.Functions.Notify(Lang:t("not_enough_money"), "error")
@@ -730,7 +730,7 @@ RegisterNetEvent('cdn-fuel:client:FinalMenu', function(purchasetype)
 			if ReserveLevels < maxfuel then
 				local wholetankcost = (FuelPrice * ReserveLevels)
 				local wholetankcostwithtax = math.ceil(FuelPrice * ReserveLevels + GlobalTax(wholetankcost))
-				fuel = exports['sb-input']:ShowInput({
+				fuel = exports['qb-input']:ShowInput({
 					header = "Select the Amount of Fuel<br>Current Price: £" ..
 					FuelPrice .. " / Liter <br> Current Fuel: " .. finalfuel .. " Liters <br> Full Tank Cost: £" ..
 					wholetankcostwithtax .. "",
@@ -743,7 +743,7 @@ RegisterNetEvent('cdn-fuel:client:FinalMenu', function(purchasetype)
 					}}
 				})
 			else
-				fuel = exports['sb-input']:ShowInput({
+				fuel = exports['qb-input']:ShowInput({
 					header = "Select the Amount of Fuel<br>Current Price: £" ..
 					FuelPrice .. " / Liter <br> Current Fuel: " .. finalfuel .. " Liters <br> Full Tank Cost: £" ..
 					wholetankcostwithtax .. "",
@@ -757,7 +757,7 @@ RegisterNetEvent('cdn-fuel:client:FinalMenu', function(purchasetype)
 				})
 			end
 		else
-			fuel = exports['sb-input']:ShowInput({
+			fuel = exports['qb-input']:ShowInput({
 				header = "Select the Amount of Fuel<br>Current Price: £" ..
 				FuelPrice .. " / Liter <br> Current Fuel: " .. finalfuel .. " Liters <br> Full Tank Cost: £" ..
 				wholetankcostwithtax .. "",
@@ -856,7 +856,7 @@ RegisterNetEvent('cdn-fuel:client:SendMenuToServer', function(type)
 				})
 				lib.showContext('cdnfueldmainmenu')
 			else
-				exports['sb-menu']:openMenu({
+				exports['qb-menu']:openMenu({
 					{
 						header = header,
 						isMenuHeader = true,
@@ -885,7 +885,7 @@ RegisterNetEvent('cdn-fuel:client:SendMenuToServer', function(type)
 						txt = Lang:t("menu_refuel_cancel"),
 						icon = "fas fa-times-circle",
 						params = {
-							event = "sb-menu:closeMenu",
+							event = "qb-menu:closeMenu",
 						}
 					},
 				})
@@ -1248,7 +1248,7 @@ RegisterNetEvent('cdn-fuel:jerrycan:refuelmenu', function(itemData)
 				fulltank = false
 				GasString = Lang:t("menu_jerry_can_footer_refuel_gas")
 			end
-			exports['sb-menu']:openMenu({
+			exports['qb-menu']:openMenu({
 				{
 					header = Lang:t("menu_header_jerry_can"),
 					isMenuHeader = true,
@@ -1270,7 +1270,7 @@ RegisterNetEvent('cdn-fuel:jerrycan:refuelmenu', function(itemData)
 					txt = Lang:t("menu_jerry_can_close"),
 					icon = "fas fa-times-circle",
 					params = {
-						event = "sb-menu:closeMenu",
+						event = "qb-menu:closeMenu",
 					}
 				},
 			})
@@ -1282,7 +1282,7 @@ RegisterNetEvent('cdn-fuel:jerrycan:refuelmenu', function(itemData)
 			else nogas = false
 				GasString = Lang:t("menu_jerry_can_footer_use_gas")
 			end
-			exports['sb-menu']:openMenu({
+			exports['qb-menu']:openMenu({
 				{
 					header = Lang:t("menu_header_jerry_can"),
 					isMenuHeader = true,
@@ -1304,7 +1304,7 @@ RegisterNetEvent('cdn-fuel:jerrycan:refuelmenu', function(itemData)
 					txt = Lang:t("menu_jerry_can_close"),
 					icon = "fas fa-times-circle",
 					params = {
-						event = "sb-menu:closeMenu",
+						event = "qb-menu:closeMenu",
 					}
 				},
 			})
@@ -1360,7 +1360,7 @@ RegisterNetEvent('cdn-fuel:client:purchasejerrycan', function()
 		})
 		lib.showContext('purchasejerrycan')
 	else
-		exports['sb-menu']:openMenu({
+		exports['qb-menu']:openMenu({
 			{
 				header = Lang:t("menu_jerry_can_purchase_header")..(math.ceil(Config.JerryCanPrice + GlobalTax(Config.JerryCanPrice))),
 				isMenuHeader = true,
@@ -1389,7 +1389,7 @@ RegisterNetEvent('cdn-fuel:client:purchasejerrycan', function()
 				txt = Lang:t("menu_jerry_can_footer_close"),
 				icon = "fas fa-times-circle",
 				params = {
-					event = "sb-menu:closeMenu",
+					event = "qb-menu:closeMenu",
 				}
 			},
 		})
@@ -1498,7 +1498,7 @@ RegisterNetEvent('cdn-fuel:jerrycan:refuelvehicle', function(data)
 				end
 			end
 		else
-			local refuel = exports['sb-input']:ShowInput({
+			local refuel = exports['qb-input']:ShowInput({
 				header = Lang:t("input_select_refuel_header"),
 				submitText = Lang:t("input_refuel_submit"),
 				inputs = {
@@ -1664,7 +1664,7 @@ RegisterNetEvent('cdn-fuel:jerrycan:refueljerrycan', function(data)
 		end
 	else
 		local JerryCanMaxRefuel = (Config.JerryCanCap - jerrycanfuelamount)
-		local refuel = exports['sb-input']:ShowInput({
+		local refuel = exports['qb-input']:ShowInput({
 			header = Lang:t("input_select_refuel_header"),
 			submitText = Lang:t("input_refuel_jerrycan_submit"),
 			inputs = { {
@@ -1739,9 +1739,9 @@ local function PoliceAlert(coords)
 	if chance < Config.SyphonPoliceCallChance then
 		if Config.SyphonDispatchSystem == "ps-dispatch" then
 			exports['ps-dispatch']:SuspiciousActivity()
-		elseif Config.SyphonDispatchSystem == "sb-dispatch" then
-			TriggerServerEvent('sb-dispatch:911call', coords)
-		elseif Config.SyphonDispatchSystem == "sb-default" then
+		elseif Config.SyphonDispatchSystem == "qb-dispatch" then
+			TriggerServerEvent('qb-dispatch:911call', coords)
+		elseif Config.SyphonDispatchSystem == "qb-default" then
 			TriggerServerEvent('cdn-syphoning:callcops', coords)
 		elseif Config.SyphonDispatchSystem == "custom" then
 			-- Put your own dispatch system here
@@ -1826,7 +1826,7 @@ RegisterNetEvent('cdn-syphoning:syphon:menu', function(itemData)
 			})
 			lib.showContext('syphoningmenu')
 		else
-			exports['sb-menu']:openMenu({
+			exports['qb-menu']:openMenu({
 				{
 					header = "Syphoning Kit",
 					isMenuHeader = true,
@@ -1862,7 +1862,7 @@ RegisterNetEvent('cdn-syphoning:syphon:menu', function(itemData)
 					txt = Lang:t("menu_syphon_cancel"),
 					icon = "fas fa-times-circle",
 					params = {
-						event = "sb-menu:closeMenu",
+						event = "qb-menu:closeMenu",
 					}
 				},
 			})
@@ -1966,7 +1966,7 @@ RegisterNetEvent('cdn-syphoning:syphon', function(data)
 						end
 					end
 				else
-					local syphon = exports['sb-input']:ShowInput({
+					local syphon = exports['qb-input']:ShowInput({
 						header = "Select how much gas to steal.",
 						submitText = "Begin Syphoning",
 						inputs = {
@@ -2063,7 +2063,7 @@ RegisterNetEvent('cdn-syphoning:syphon', function(data)
 						end
 					end
 				else
-					local refuel = exports['sb-input']:ShowInput({
+					local refuel = exports['qb-input']:ShowInput({
 						header = Lang:t("input_select_refuel_header"),
 						submitText = Lang:t("input_refuel_submit"),
 						inputs = {

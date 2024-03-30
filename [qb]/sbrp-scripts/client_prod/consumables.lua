@@ -1,13 +1,13 @@
 -- Variables
 
-local QBCore = exports['sb-core']:GetCoreObject()
+local QBCore = exports['qb-core']:GetCoreObject()
 local alcoholCount = 0
 local healing, parachuteEquipped = false, false
 local currVest, currVestTexture = nil, nil
 
 -- Functions
 RegisterNetEvent('QBCore:Client:UpdateObject', function()
-    QBCore = exports['sb-core']:GetCoreObject()
+    QBCore = exports['qb-core']:GetCoreObject()
 end)
 
 local function loadAnimDict(dict)
@@ -401,7 +401,7 @@ RegisterNetEvent('consumables:client:UseParachute', function()
         local parachuteData = {
             outfitData = { ['bag'] = { item = 7, texture = 0 } } -- Adding Parachute Clothing
         }
-        TriggerEvent('sb-clothing:client:loadOutfit', parachuteData)
+        TriggerEvent('qb-clothing:client:loadOutfit', parachuteData)
         parachuteEquipped = true
         TaskPlayAnim(ped, 'clothingshirt', 'exit', 8.0, 1.0, -1, 49, 0, false, false, false)
     end)
@@ -421,9 +421,9 @@ RegisterNetEvent('consumables:client:ResetParachute', function()
             local parachuteResetData = {
                 outfitData = { ['bag'] = { item = 0, texture = 0 } } -- Removing Parachute Clothing
             }
-            TriggerEvent('sb-clothing:client:loadOutfit', parachuteResetData)
+            TriggerEvent('qb-clothing:client:loadOutfit', parachuteResetData)
             TaskPlayAnim(ped, 'clothingshirt', 'exit', 8.0, 1.0, -1, 49, 0, false, false, false)
-            TriggerServerEvent('sb-smallpenis:server:AddParachute')
+            TriggerServerEvent('qb-smallpenis:server:AddParachute')
             parachuteEquipped = false
         end)
     else

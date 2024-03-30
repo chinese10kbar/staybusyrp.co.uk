@@ -9,11 +9,11 @@ Framework = {
         unload = 'QBCore:Server:OnPlayerUnload',
 
        -- House / Apartment
-        house = 'sb-houses:client:LastLocationHouse',
-        houseS = 'sb-houses:server:SetInsideMeta',
-        apart = 'sb-apartments:client:LastLocationHouse',
-        apartS = 'sb-apartments:server:SetInsideMeta',
-        logout = 'sb-houses:server:LogoutLocation',
+        house = 'qb-houses:client:LastLocationHouse',
+        houseS = 'qb-houses:server:SetInsideMeta',
+        apart = 'qb-apartments:client:LastLocationHouse',
+        apartS = 'qb-apartments:server:SetInsideMeta',
+        logout = 'qb-houses:server:LogoutLocation',
     }
 }
 
@@ -23,7 +23,7 @@ Framework = {
 if not Config.ConvertQBoxLicense then
 
     function Framework:Core()
-        QBCore = exports['sb-core']:GetCoreObject()
+        QBCore = exports['qb-core']:GetCoreObject()
         return QBCore
     end
 

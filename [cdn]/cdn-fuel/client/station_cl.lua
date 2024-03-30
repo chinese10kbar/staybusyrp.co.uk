@@ -60,7 +60,7 @@ if Config.PlayerOwnedGasStationsEnabled then -- This is so Player Owned Gas Stat
             FreezeEntityPosition(ped, true)
             SetEntityInvincible(ped, true)
             SetBlockingOfNonTemporaryEvents(ped, true)
-            exports['sb-target']:AddTargetEntity(ped, {
+            exports['qb-target']:AddTargetEntity(ped, {
                 options = {
                     {
                         type = "client",
@@ -391,7 +391,7 @@ if Config.PlayerOwnedGasStationsEnabled then -- This is so Player Owned Gas Stat
                 })
                 lib.showContext('purchasereservesmenu')
             else
-                exports['sb-menu']:openMenu({
+                exports['qb-menu']:openMenu({
                     {
                         header = Lang:t("menu_station_reserves_header")..Config.GasStations[location].label,
                         isMenuHeader = true,
@@ -415,7 +415,7 @@ if Config.PlayerOwnedGasStationsEnabled then -- This is so Player Owned Gas Stat
                         txt = Lang:t("menu_station_reserves_cancel_footer"),
                         icon = "fas fa-times-circle",
                         params = {
-                            event = "sb-menu:closeMenu",
+                            event = "qb-menu:closeMenu",
                         }
                     },
                 })
@@ -483,7 +483,7 @@ if Config.PlayerOwnedGasStationsEnabled then -- This is so Player Owned Gas Stat
                     end
                 end
             else
-                local reserves = exports['sb-input']:ShowInput({
+                local reserves = exports['qb-input']:ShowInput({
                     header = Lang:t("input_purchase_reserves_header_1") .. Lang:t("input_purchase_reserves_header_2") .. Currentreserveamount .. Lang:t("input_purchase_reserves_header_3") ..
                     math.ceil(GlobalTax((Config.MaxFuelReserves - Currentreserveamount) * Config.FuelReservesPrice) + ((Config.MaxFuelReserves - Currentreserveamount) * Config.FuelReservesPrice)) .. "",
                     submitText = Lang:t("input_purchase_reserves_submit_text"),
@@ -561,7 +561,7 @@ if Config.PlayerOwnedGasStationsEnabled then -- This is so Player Owned Gas Stat
                     end
                 end
             else
-                local fuelprice = exports['sb-input']:ShowInput({
+                local fuelprice = exports['qb-input']:ShowInput({
                     header = Lang:t("input_alter_fuel_price_header_1")..StationFuelPrice..Lang:t("input_alter_fuel_price_header_2"),
                     submitText = Lang:t("input_alter_fuel_price_submit_text"),
                     inputs = { {
@@ -634,7 +634,7 @@ if Config.PlayerOwnedGasStationsEnabled then -- This is so Player Owned Gas Stat
                 lib.showContext('sellstationmenu')
                 TriggerServerEvent("cdn-fuel:stations:server:stationsold", location)
             else
-                exports['sb-menu']:openMenu({
+                exports['qb-menu']:openMenu({
                     {
                         header = Lang:t("menu_sell_station_header")..Config.GasStations[location].label,
                         isMenuHeader = true,
@@ -657,7 +657,7 @@ if Config.PlayerOwnedGasStationsEnabled then -- This is so Player Owned Gas Stat
                         txt = Lang:t("menu_sell_station_footer_close"),
                         icon = "fas fa-times-circle",
                         params = {
-                            event = "sb-menu:closeMenu",
+                            event = "qb-menu:closeMenu",
                         }
                     },
                 })
@@ -708,7 +708,7 @@ if Config.PlayerOwnedGasStationsEnabled then -- This is so Player Owned Gas Stat
                     TriggerServerEvent("cdn-fuel:station:server:updatelocationname", NewName, CurrentLocation)
                 end
             else
-                local NewName = exports['sb-input']:ShowInput({
+                local NewName = exports['qb-input']:ShowInput({
                     header = Lang:t("input_change_name_header_1")..Config.GasStations[CurrentLocation].label..Lang:t("input_change_name_header_2"),
                     submitText = Lang:t("input_change_name_submit_text"),
                     inputs = { {
@@ -826,7 +826,7 @@ if Config.PlayerOwnedGasStationsEnabled then -- This is so Player Owned Gas Stat
                 })
                 lib.showContext('stationmanagemenu')
             else
-                exports['sb-menu']:openMenu({
+                exports['qb-menu']:openMenu({
                     {
                         header = Lang:t("menu_manage_header")..Config.GasStations[location].label,
                         isMenuHeader = true,
@@ -895,7 +895,7 @@ if Config.PlayerOwnedGasStationsEnabled then -- This is so Player Owned Gas Stat
                         txt = Lang:t("menu_manage_close"),
                         icon = "fas fa-times-circle",
                         params = {
-                            event = "sb-menu:closeMenu",
+                            event = "qb-menu:closeMenu",
                         }
                     },
                 })
@@ -968,7 +968,7 @@ if Config.PlayerOwnedGasStationsEnabled then -- This is so Player Owned Gas Stat
                 })
                 lib.showContext('managefundsmenu')
             else
-                exports['sb-menu']:openMenu({
+                exports['qb-menu']:openMenu({
                     {
                         header = Lang:t("menu_manage_company_funds_header_2")..Config.GasStations[CurrentLocation].label,
                         isMenuHeader = true,
@@ -1057,7 +1057,7 @@ if Config.PlayerOwnedGasStationsEnabled then -- This is so Player Owned Gas Stat
                     end
                 end
             else
-                local Withdraw = exports['sb-input']:ShowInput({
+                local Withdraw = exports['qb-input']:ShowInput({
                     header = Lang:t("input_withdraw_funds_header") ..StationBalance,
                     submitText = Lang:t("input_withdraw_submit_text"),
                     inputs = { {
@@ -1130,7 +1130,7 @@ if Config.PlayerOwnedGasStationsEnabled then -- This is so Player Owned Gas Stat
                     end
                 end
             else
-                local Deposit = exports['sb-input']:ShowInput({
+                local Deposit = exports['qb-input']:ShowInput({
                     header = Lang:t("input_deposit_funds_header") ..StationBalance,
                     submitText = Lang:t("input_deposit_submit_text"),
                     inputs = { {
@@ -1220,7 +1220,7 @@ if Config.PlayerOwnedGasStationsEnabled then -- This is so Player Owned Gas Stat
             })
             lib.showContext('purchasemenu')
         else
-            exports['sb-menu']:openMenu({
+            exports['qb-menu']:openMenu({
                 {
                     header = Config.GasStations[location].label,
                     isMenuHeader = true,
@@ -1248,7 +1248,7 @@ if Config.PlayerOwnedGasStationsEnabled then -- This is so Player Owned Gas Stat
                     txt = Lang:t("menu_purchase_station_cancel_footer"),
                     icon = "fas fa-times-circle",
                     params = {
-                        event = "sb-menu:closeMenu",
+                        event = "qb-menu:closeMenu",
                     }
                 },
             })
@@ -1346,7 +1346,7 @@ if Config.PlayerOwnedGasStationsEnabled then -- This is so Player Owned Gas Stat
             })
             lib.showContext('stationmainmenu')
         else
-            exports['sb-menu']:openMenu({
+            exports['qb-menu']:openMenu({
                 {
                     header = Config.GasStations[CurrentLocation].label,
                     isMenuHeader = true,
@@ -1387,7 +1387,7 @@ if Config.PlayerOwnedGasStationsEnabled then -- This is so Player Owned Gas Stat
                     txt = Lang:t("menu_ped_close_footer"),
                     icon = "fas fa-times-circle",
                     params = {
-                        event = "sb-menu:closeMenu",
+                        event = "qb-menu:closeMenu",
                     }
                 },
             })

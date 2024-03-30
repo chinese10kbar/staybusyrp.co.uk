@@ -17,7 +17,7 @@ server_scripts { '@mysql-async/lib/MySQL.lua', 'server/*.lua' }
 
 dependencies { 'mysql-async', 'ox_lib', 'wasabi_bridge' }
 
-provides { 'esx_policejob', 'sb-policejob' }
+provides { 'esx_policejob', 'qb-policejob' }
 
 escrow_ignore {
   'configuration/*.lua',

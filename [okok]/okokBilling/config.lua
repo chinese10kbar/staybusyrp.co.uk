@@ -34,7 +34,7 @@ Config.VATPercentage = 23
 
 Config.SocietyReceivesLessWithVAT = false
 
-Config.QBManagement = true -- If set to true it will use the sb-management resource, if set to false it will use the okokBanking database tables
+Config.QBManagement = true -- If set to true it will use the qb-management resource, if set to false it will use the okokBanking database tables
 
 Config.UseQBBanking = false -- Useful for latest QBCore versions
 

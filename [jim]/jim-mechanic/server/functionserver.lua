@@ -96,8 +96,8 @@ local Previewing, xenonColour, VehicleNitrous, nosColour, dutyList = {}, {}, {},
 		end
 	end)
 
-	-- For sb-garages
-	RegisterNetEvent('sb-vehicletuning:server:SaveVehicleProps', function(vehicleProps)
+	-- For qb-garages
+	RegisterNetEvent('qb-vehicletuning:server:SaveVehicleProps', function(vehicleProps)
 		if IsVehicleOwned(vehicleProps.plate) then
 			MySQL.update('UPDATE '..vehDatabase..' SET mods = ? WHERE plate = ?', {json.encode(vehicleProps), vehicleProps.plate})
 		end
@@ -205,7 +205,7 @@ local Previewing, xenonColour, VehicleNitrous, nosColour, dutyList = {}, {}, {},
 		if Config.System.RenewedBanking then
 			exports['Renewed-Banking']:addAccountMoney(society, math.ceil(cost - (cost / 4)))
 		else
-			exports["sb-management"]:AddMoney(society, math.ceil(cost - (cost / 4)))
+			exports["qb-management"]:AddMoney(society, math.ceil(cost - (cost / 4)))
 		end
 	end)
 

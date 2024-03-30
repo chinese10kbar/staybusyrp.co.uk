@@ -4,18 +4,18 @@ if Config.PropertyGarages.ENABLE then
 
         local HouseGarages = {}
 
-        RegisterNetEvent('sb-garages:client:houseGarageConfig')
-        AddEventHandler('sb-garages:client:houseGarageConfig', function(garageConfig)
+        RegisterNetEvent('qb-garages:client:houseGarageConfig')
+        AddEventHandler('qb-garages:client:houseGarageConfig', function(garageConfig)
             HouseGarages = garageConfig
         end)
 
-        RegisterNetEvent('sb-garages:client:addHouseGarage')
-        AddEventHandler('sb-garages:client:addHouseGarage', function(house, garageInfo)
+        RegisterNetEvent('qb-garages:client:addHouseGarage')
+        AddEventHandler('qb-garages:client:addHouseGarage', function(house, garageInfo)
             HouseGarages[house] = garageInfo
         end)
 
-        RegisterNetEvent('sb-garages:client:setHouseGarage')
-        AddEventHandler('sb-garages:client:setHouseGarage', function(house, hasKey)
+        RegisterNetEvent('qb-garages:client:setHouseGarage')
+        AddEventHandler('qb-garages:client:setHouseGarage', function(house, hasKey)
             hasGarageKey = hasKey
         end)
 

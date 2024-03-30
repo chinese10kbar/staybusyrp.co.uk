@@ -4,7 +4,7 @@ local client = client
 
 -- Backwards Compatible Events
 
-RegisterNetEvent("sb-clothing:client:openMenu", function()
+RegisterNetEvent("qb-clothing:client:openMenu", function()
     local config = GetDefaultConfig()
     config.ped = true
     config.headBlend = true
@@ -16,13 +16,13 @@ RegisterNetEvent("sb-clothing:client:openMenu", function()
     OpenShop(config, true, "all")
 end)
 
-RegisterNetEvent("sb-clothing:client:openOutfitMenu", function()
+RegisterNetEvent("qb-clothing:client:openOutfitMenu", function()
     OpenMenu(nil, "outfit")
 end)
 
-RegisterNetEvent("sb-clothing:client:loadOutfit", LoadJobOutfit)
+RegisterNetEvent("qb-clothing:client:loadOutfit", LoadJobOutfit)
 
-RegisterNetEvent("sb-multicharacter:client:chooseChar", function()
+RegisterNetEvent("qb-multicharacter:client:chooseChar", function()
     client.setPedTattoos(cache.ped, {})
     ClearPedDecorations(cache.ped)
 

@@ -48,13 +48,13 @@ Config.Language = 'en' -- 'en' or 'es' by default (you can create more)
 
     UseTarget:
         'ox_target'
-        'qb-target'
+        'sb-target'
 
         'none'
 ]]
 
 local esxHas = GetResourceState('es_extended') == 'started'
-local qbHas = GetResourceState('qb-core') == 'started'
+local qbHas = GetResourceState('sb-core') == 'started'
 
 Config.Framework = esxHas and 'esx' or qbHas and 'qb' or 'esx' -- You can change to 'qb' or 'esx'
 
@@ -63,13 +63,13 @@ Config.Framework = esxHas and 'esx' or qbHas and 'qb' or 'esx' -- You can change
 
     UseTarget:
         'ox_target'
-        'qb-target'
+        'sb-target'
 
         'none'
 ]]
 
-Config.UseTarget = 'none'     -- 'ox_target', 'qb-target' or 'none'
-Config.QBCoreDrawText = true -- Set true/false (you need exports['qb-core']:DrawText(...))
+Config.UseTarget = 'none'     -- 'ox_target', 'sb-target' or 'none'
+Config.QBCoreDrawText = true -- Set true/false (you need exports['sb-core']:DrawText(...))
 
 --[[
     Extra configurations that will serve to maintain a stable
@@ -90,7 +90,7 @@ Config.TransferLimit = false -- Do you want to enable Transfer limit?
     mention the inventories that are compatible with this function.
 
     'qs-inventory'
-    'qb-inventory'
+    'sb-inventory'
     'ox_inventory'
     'core_inventory'
 

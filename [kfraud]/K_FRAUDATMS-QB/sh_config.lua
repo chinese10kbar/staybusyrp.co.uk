@@ -4,6 +4,6 @@ KonfigSH = {}
 KonfigSH.ClonedItem = 'clonedcard'
 
 function GetQBVersion()
-    local version = exports['qb-core']:GetCoreObject()
+    local version = exports['sb-core']:GetCoreObject()
     return version
 end

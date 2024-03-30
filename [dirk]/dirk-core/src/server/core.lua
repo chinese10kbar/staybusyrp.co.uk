@@ -51,7 +51,7 @@ Core = {
       ESX.RegisterCommand(name, Config.CommandPerms, function(xPlayer, args, showError)
         func(xPlayer.playerId)
       end, false, {help = desc})
-    elseif Config.Framework == "qb-core" then
+    elseif Config.Framework == "sb-core" then
       QBCore.Commands.Add(name, desc, {}, false, function(source)
         func(source)
       end, Config.CommandPerms)
@@ -75,12 +75,12 @@ Core = {
           end
         end
       end
-    elseif Config.Framework == "qb-core" then
+    elseif Config.Framework == "sb-core" then
       while not QBCore do Wait(500); end
       local failures = {}
       if Config.AutoAddItems then
         for k,v in pairs(toAdd) do
-          local suc,msg = exports['qb-core']:AddItem(k,v)
+          local suc,msg = exports['sb-core']:AddItem(k,v)
           if not suc then failures[k] = msg; end 
         end
         for k,v in pairs(failures) do
@@ -112,7 +112,7 @@ Core = {
         players[info.identifier] = info
       end
       return players
-    elseif Config.Framework == "qb-core" then
+    elseif Config.Framework == "sb-core" then
       local players = {}
       local result = MySQL.query.await('SELECT charinfo, citizenid FROM players', {})
       for k,v in pairs(result) do

@@ -1,4 +1,4 @@
-if GetResourceState('ox_target') == 'started' or GetResourceState('qb-target') ~= 'started' or not Config.UseTarget then return end
+if GetResourceState('ox_target') == 'started' or GetResourceState('sb-target') ~= 'started' or not Config.UseTarget then return end
 
 local Zones = {}
 
@@ -8,11 +8,11 @@ function AddModel(models, options)
         optionsNames[i] = options[i].name
     end
     RemoveModel(models, optionsNames)
-    exports['qb-target']:AddTargetModel(models, {options = options, distance = 2.5})
+    exports['sb-target']:AddTargetModel(models, {options = options, distance = 2.5})
 end
 
 function RemoveModel(models, optionsNames)
-    exports['qb-target']:RemoveTargetModel(models, optionsNames)
+    exports['sb-target']:RemoveTargetModel(models, optionsNames)
 end
 
 function AddTargetZone(coords, radius, options)
@@ -26,7 +26,7 @@ function AddTargetZone(coords, radius, options)
             options[i].onSelect = nil
         end
     end
-    exports['qb-target']:AddCircleZone(index, coords, radius, {name = index}, {
+    exports['sb-target']:AddCircleZone(index, coords, radius, {name = index}, {
         options = options
     })
     return index
@@ -34,5 +34,5 @@ end
 
 function RemoveTargetZone(index)
     Zones[index] = nil
-    exports['qb-target']:RemoveZone(index)
+    exports['sb-target']:RemoveZone(index)
 end

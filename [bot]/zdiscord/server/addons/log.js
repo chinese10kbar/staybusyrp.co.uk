@@ -18,7 +18,7 @@ class Log {
         this.hooks = {};
 
         if (this.enabled) {
-            StopResource("qb-logs");
+            StopResource("sb-logs");
             let count = 0;
             Object.entries(z.config.LoggingWebhooks).forEach(entry => {
                 const [key, value] = entry;

@@ -1,6 +1,6 @@
-if GetResourceState('qb-core') ~= 'started' then return end
+if GetResourceState('sb-core') ~= 'started' then return end
 
-local QBCore = exports['qb-core']:GetCoreObject()
+local QBCore = exports['sb-core']:GetCoreObject()
 
 RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
     
@@ -12,7 +12,7 @@ end)
 
 function handleVehicleKeys(veh)
     local plate = GetVehicleNumberPlateText(veh)
-    TriggerServerEvent('qb-vehiclekeys:server:AcquireVehicleKeys', plate)
+    TriggerServerEvent('sb-vehiclekeys:server:AcquireVehicleKeys', plate)
 end
 
 function hasPlyLoaded()

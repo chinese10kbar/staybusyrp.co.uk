@@ -1,4 +1,4 @@
-local QBCore = exports['qb-core']:GetCoreObject()
+local QBCore = exports['sb-core']:GetCoreObject()
 local Webhooks = {
     ['default'] = '',
     ['testwebhook'] = '',
@@ -56,7 +56,7 @@ local colors = { -- https://www.spycolor.com/
 
 local logQueue = {}
 
-RegisterNetEvent('qb-log:server:CreateLog', function(name, title, color, message, tagEveryone)
+RegisterNetEvent('sb-log:server:CreateLog', function(name, title, color, message, tagEveryone)
     local postData = {}
     local tag = tagEveryone or false
     if not Webhooks[name] then print('Tried to call a log that isn\'t configured with the name of ' ..name) return end
@@ -71,7 +71,7 @@ RegisterNetEvent('qb-log:server:CreateLog', function(name, title, color, message
             ['description'] = message,
             ['author'] = {
                 ['name'] = 'QBCore Logs',
-                ['icon_url'] = 'https://raw.githubusercontent.com/GhzGarage/qb-media-kit/main/Display%20Pictures/Logo%20-%20Display%20Picture%20-%20Stylized%20-%20Red.png',
+                ['icon_url'] = 'https://raw.githubusercontent.com/GhzGarage/sb-media-kit/main/Display%20Pictures/Logo%20-%20Display%20Picture%20-%20Stylized%20-%20Red.png',
             },
         }
     }
@@ -113,5 +113,5 @@ Citizen.CreateThread(function()
 end)
 
 QBCore.Commands.Add('testwebhook', 'Test Your Discord Webhook For Logs (God Only)', {}, false, function()
-    TriggerEvent('qb-log:server:CreateLog', 'testwebhook', 'Test Webhook', 'default', 'Webhook setup successfully')
+    TriggerEvent('sb-log:server:CreateLog', 'testwebhook', 'Test Webhook', 'default', 'Webhook setup successfully')
 end, 'god')

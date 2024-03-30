@@ -1,7 +1,7 @@
 local server = IsDuplicityVersion()
 
 if Config.Framework == 'qbcore' then
-    Framework = exports['qb-core']:GetCoreObject()
+    Framework = exports['sb-core']:GetCoreObject()
 
     if not server then
         PlayerData = Framework.Functions.GetPlayerData()

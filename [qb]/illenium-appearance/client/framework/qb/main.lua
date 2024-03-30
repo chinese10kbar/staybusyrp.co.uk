@@ -2,7 +2,7 @@ if not Framework.QBCore() then return end
 
 local client = client
 
-local QBCore = exports["qb-core"]:GetCoreObject()
+local QBCore = exports["sb-core"]:GetCoreObject()
 
 local PlayerData = QBCore.Functions.GetPlayerData()
 
@@ -86,7 +86,7 @@ RegisterNetEvent("QBCore:Client:OnPlayerLoaded", function()
     InitAppearance()
 end)
 
-RegisterNetEvent("qb-clothes:client:CreateFirstCharacter", function()
+RegisterNetEvent("sb-clothes:client:CreateFirstCharacter", function()
     QBCore.Functions.GetPlayerData(function(pd)
         PlayerData = pd
         setClientParams()

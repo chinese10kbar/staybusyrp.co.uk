@@ -3,7 +3,7 @@ local QBCore = exports[Config.Core]:GetCoreObject()
 local PlayerData, Targets, Props = {}, {}, {}
 local Locations = {}
 
-local function removeTargets() for k in pairs(Targets) do exports['qb-target']:RemoveZone(k) end Targets = {} for i = 1, #Props do DeleteEntity(Props[i]) end Props = {} end
+local function removeTargets() for k in pairs(Targets) do exports['sb-target']:RemoveZone(k) end Targets = {} for i = 1, #Props do DeleteEntity(Props[i]) end Props = {} end
 
 local function makeTargets()
 	removeTargets()
@@ -15,7 +15,7 @@ local function makeTargets()
 			end
 			if Locations[i].gang then RequireGang = Locations[i].RequireGang end
 			Targets["Booth"..i] =
-			exports['qb-target']:AddCircleZone("Booth"..i, Locations[i].coords, 0.6, {name="Booth"..i, debugPoly=Config.Debug, useZ=true, },
+			exports['sb-target']:AddCircleZone("Booth"..i, Locations[i].coords, 0.6, {name="Booth"..i, debugPoly=Config.Debug, useZ=true, },
 				{ options = { { event = "jim-djbooth:client:playMusic", icon = "fab fa-youtube", label = Loc[Config.Lan].target["dj_booth"], job = RequireJob, gang = RequireGang, zoneNum = i, coords = Locations[i].coords }, }, distance = 2.0 })
 			if Locations[i].prop then
 				Props[#Props+1] = makeProp({prop = Locations[i].prop, coords = vec4(Locations[i].coords.x, Locations[i].coords.y, Locations[i].coords.z, math.random(1,359)+0.0) }, true, false)
@@ -90,19 +90,19 @@ RegisterNetEvent("jim-djbooth:client:playMusic", function(data)
 			header = '<img src=https://cdn-icons-png.flaticon.com/512/1384/1384060.png width=20px></img>&nbsp; '..Loc[Config.Lan].target["dj_booth"],
 			txt = ""
 		}
-		musicMenu[#musicMenu+1] = { icon = "fas fa-circle-xmark", header = "", txt = Loc[Config.Lan].menu["close"], params = { event = "qb-menu:client:closemenu" } }
+		musicMenu[#musicMenu+1] = { icon = "fas fa-circle-xmark", header = "", txt = Loc[Config.Lan].menu["close"], params = { event = "sb-menu:client:closemenu" } }
 	end
 
 	musicMenu[#musicMenu + 1] = {
 		canClick = false,
 		disabled = true,
 		image = song.icon, icon = song.icon,
-		header = song.header, txt = song.txt.."<br>"..song.timeStamp, --qb-menu
+		header = song.header, txt = song.txt.."<br>"..song.timeStamp, --sb-menu
 		title = song.header, description = song.txt.."\n"..song.timeStamp, -- ox_lib
 	}
 	musicMenu[#musicMenu+1] = {
 		icon = "fab fa-youtube",
-		header = song.header, txt =  Loc[Config.Lan].menu["enter_url"], --qb-menu
+		header = song.header, txt =  Loc[Config.Lan].menu["enter_url"], --sb-menu
 		title = Loc[Config.Lan].menu["play"], -- ox_lib
 		header = Loc[Config.Lan].menu["play"],
 		event = "jim-djbooth:client:musicMenu",	args = { zoneNum = data.zoneNum }, -- ox_lib
@@ -156,7 +156,7 @@ RegisterNetEvent("jim-djbooth:client:playMusic", function(data)
 		exports.ox_lib:registerContext({id = 'booth', title = Loc[Config.Lan].target["dj_booth"], position = 'top-right', options = musicMenu })
 		exports.ox_lib:showContext("booth")
 	elseif Config.Menu == "qb" then
-		exports['qb-menu']:openMenu(musicMenu)
+		exports['sb-menu']:openMenu(musicMenu)
 	end
 	song = nil
 end)
@@ -186,7 +186,7 @@ RegisterNetEvent("jim-djbooth:client:history", function(data)
 		exports.ox_lib:registerContext({ id = 'history', title = Loc[Config.Lan].target["dj_booth"], position = 'top-right', options = musicMenu,})
 		exports.ox_lib:showContext("history")
 	elseif Config.Menu == "qb" then
-		exports['qb-menu']:openMenu(musicMenu)
+		exports['sb-menu']:openMenu(musicMenu)
 	end
 end)
 
@@ -197,7 +197,7 @@ RegisterNetEvent('jim-djbooth:client:musicMenu', function(data)
 	if Config.Menu == "ox" then
 		dialog = exports.ox_lib:inputDialog(Loc[Config.Lan].menu["select"], {Loc[Config.Lan].menu["youtube_url"]})
 	elseif Config.Menu == "qb" then
-		dialog = exports['qb-input']:ShowInput({
+		dialog = exports['sb-input']:ShowInput({
         header = Loc[Config.Lan].menu["select"],
         submitText = Loc[Config.Lan].menu["submit"],
         inputs = { { type = 'text', isRequired = true, name = 'song', text = Loc[Config.Lan].menu["youtube_url"] } } })
@@ -216,7 +216,7 @@ RegisterNetEvent('jim-djbooth:client:changeVolume', function(data)
 	if Config.Menu == "ox" then
 		dialog = exports.ox_lib:inputDialog(Loc[Config.Lan].menu["music_volume"], {Loc[Config.Lan].menu["range"]})
 	elseif Config.Menu == "qb" then
-		dialog = exports['qb-input']:ShowInput({
+		dialog = exports['sb-input']:ShowInput({
         header = Loc[Config.Lan].menu["music_volume"],
         submitText = Loc[Config.Lan].menu["submit"],
         inputs = { { type = 'text', isRequired = true, name = 'volume', text = Loc[Config.Lan].menu["range"] } } })
@@ -234,8 +234,8 @@ RegisterNetEvent('jim-djbooth:client:changeVolume', function(data)
 end)
 
 AddEventHandler('onResourceStop', function(r) if r ~= GetCurrentResourceName() then return end
-	if GetResourceState("qb-target") == "started" or GetResourceState("ox_target") == "started" then
-		for k in pairs(Targets) do exports['qb-target']:RemoveZone(k) end
+	if GetResourceState("sb-target") == "started" or GetResourceState("ox_target") == "started" then
+		for k in pairs(Targets) do exports['sb-target']:RemoveZone(k) end
 		for i = 1, #Props do DeleteEntity(Props[i]) end
 	end
 end)

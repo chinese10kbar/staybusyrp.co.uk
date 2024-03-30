@@ -1,5 +1,5 @@
-if GetResourceState('qb-core') ~= 'started' then return end
-QBCore = exports['qb-core']:GetCoreObject()
+if GetResourceState('sb-core') ~= 'started' then return end
+QBCore = exports['sb-core']:GetCoreObject()
 WSB = {}
 WSB.framework, WSB.playerLoaded, WSB.playerData = 'qb', nil, {}
 ---@diagnostic disable: duplicate-set-field
@@ -47,7 +47,7 @@ RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
 end)
 
 RegisterNetEvent('QBCore:Player:SetPlayerData', function(newPlayerData)
-    if source ~= '' and GetInvokingResource() ~= 'qb-core' then return end
+    if source ~= '' and GetInvokingResource() ~= 'sb-core' then return end
     SwitchHandler('QBCore:Player:SetPlayerData', newPlayerData)
 end)
 
@@ -115,7 +115,7 @@ function WSB.isOnDuty()
 end
 
 function WSB.openBossMenu(_job)
-    TriggerEvent('qb-bossmenu:client:OpenMenu')
+    TriggerEvent('sb-bossmenu:client:OpenMenu')
 end
 
 function WSB.getGender()

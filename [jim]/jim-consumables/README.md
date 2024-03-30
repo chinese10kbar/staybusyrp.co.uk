@@ -2,7 +2,7 @@
 Consumables script for QBCore
 
 # What is this?
-This script is designed as a replacement/override for food and drink consumables in `qb-smallresources`
+This script is designed as a replacement/override for food and drink consumables in `sb-smallresources`
 
 It's main purpose was to make it so players did not stand up while sitting with my scripts due to lazy events such as ClearPedTasks in progressbar and dpemotes, this one is designed to cancel the animation you have chosen, not all animations.
 
@@ -27,7 +27,7 @@ It's recommended to set `Config.UseProgBar` to `false` to get this effect.
 - Example of my load order:
 ```CSS
 # QBCore & Extra stuff
-ensure qb-core
+ensure sb-core
 ensure [qb]
 ensure [standalone]
 ensure [voice]
@@ -39,14 +39,14 @@ ensure [jimextras]
 ensure [jim]
 ```
 
-## QB-SmallResources
+## sb-SmallResources
 
 - It should already take control of default qbcore food, drink and drugs.
-- If it fails to do this and attempts to use qb-smallresources still you will need to:
-- `[qb]` > `qb-smallresources` > `server` > `consumables.lua`
+- If it fails to do this and attempts to use sb-smallresources still you will need to:
+- `[qb]` > `sb-smallresources` > `server` > `consumables.lua`
 - Remove or comment out the `CreateUseableItem` events for *alcohol*, *eat*, *drink* and *drug* in this file
 - Not all of them! (such as armour related items)
-- This ***should*** stop `qb-smallresources` taking control and confusing `jim-consumables`
+- This ***should*** stop `sb-smallresources` taking control and confusing `jim-consumables`
 
 ## New Items
 To add an item, you only need to add a new item table in the Config.Consumables like this:

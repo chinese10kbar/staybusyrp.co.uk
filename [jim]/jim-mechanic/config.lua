@@ -89,7 +89,7 @@ Config = {
 
 	},
 
-	vehFailure = { 						-- Enabling these will make allow you to no longer need qb-vehiclefailure
+	vehFailure = { 						-- Enabling these will make allow you to no longer need sb-vehiclefailure
 										-- ONLY ENABLE IF NOT USING VEHICLEFAILURE OR ANOTHER SCRIPT TO REPLACE IT
 		damages = true,					-- Makes jim-mechanic automatically handle extra damages instead of needing an edit to vehfailure
 		repairKits = false,				-- Takes control of repairkit and advancedrepairkit
@@ -139,7 +139,7 @@ Config = {
 		FreeRepair = false,  		-- Are repairs free? True means yes
 		StashRepair = true, 		-- Enable for repair materials to be removed from a job stash (disabled if RequiresJob = false)
 
-		ExtraDamages = true,		-- When enabled, it will use the built in extra damage systems (Like qb-mechanicjobs functions)
+		ExtraDamages = true,		-- When enabled, it will use the built in extra damage systems (Like sb-mechanicjobs functions)
 
 		EffectLevels = {			-- What level the parts need to be below before the effects kick in when crashing
 			["oil"] = 50,
@@ -460,7 +460,7 @@ Config = {
 		EnableScreen = true, 		-- True adds screen effects while boosting
 
 		skillcheck = "ox_lib", -- When adding Nos to a vehicle there are three script options available
-									-- "qb-skillbar" "qb-lock" "ps-ui" "ox_lib"
+									-- "sb-skillbar" "sb-lock" "ps-ui" "ox_lib"
 
 		explosiveFail = true, 		-- Better not fail that skill check. (1 in 10 chance of explosion)
 		explosiveFailJob = true, 	-- if true, mechanics can trigger an explosion on failure to add nos

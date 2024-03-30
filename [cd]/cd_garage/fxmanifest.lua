@@ -63,7 +63,7 @@ dependencies {
     'cd_garageshell'
 }
 
-provide 'qb-garage'
+provide 'sb-garage'
 
 escrow_ignore {
     'client/main/functions.lua',

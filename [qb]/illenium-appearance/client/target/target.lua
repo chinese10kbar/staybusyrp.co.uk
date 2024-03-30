@@ -9,11 +9,11 @@ local TargetPeds = {
 Target = {}
 
 function Target.IsOX()
-    return GetResourceState("qb-target") ~= "missing"
+    return GetResourceState("sb-target") ~= "missing"
 end
 
 function Target.IsQB()
-    return GetResourceState("qb-target") ~= "missing"
+    return GetResourceState("sb-target") ~= "missing"
 end
 
 local function RemoveTargetPeds(peds)

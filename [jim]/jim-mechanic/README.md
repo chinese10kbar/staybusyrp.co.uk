@@ -4,12 +4,12 @@ Read this before opening a ticket. please GOD, read it.
 ## Multi-Framework Support
 My actual "live" support of this is very limited
 With the use of my free script `jim_bridge` the script is now able to be used fully on:
-- qb-core
+- sb-core
 - qbx-core
 - ox_core
 - ex_extended - (with the use of `ox_lib`, `ox_target` and `ox_inventory`)
 
-The ones we can personally help with are qb-core and qbx-core, the others are just compatability as of now
+The ones we can personally help with are sb-core and qbx-core, the others are just compatability as of now
 Most likely `es_extended` will have many options that I don't know about, so don't expect anything special from it
 
 ------------------
@@ -173,7 +173,7 @@ These can be repaired by a mechanic with mechanic tools item
 
 - This file creates repair benches that can **ONLY** be used when there isn't any mechanics on duty.
 - The benches are added to set locations at the top of this file
-- They are activated by targetting with `qb-target` while in a car
+- They are activated by targetting with `sb-target` while in a car
 - How the config.lua options are set will determine how the menu functions
 	- `Config.ManualRepairs.ManualRepairCost` - This is the **SET** amount a vehicle repair will cost
 	- `Config.ManualRepairs.ManualRepairBased` - when `true` this overrides the above and grabs the value of the vehicle from vehicles.lua
@@ -255,13 +255,13 @@ There is little snippets of information on each line for these, but this is a mo
 
 ### Menu
 - This controls which menu will be used
-	- "qb" for `qb-menu/qbx-menu` or `jixel-menu`
+	- "qb" for `sb-menu/qbx-menu` or `jixel-menu`
 	- "ox" for `ox_lib`
 	- "gta" for `warmenu`
 
 ### Notify
 - This controls which notification system is to be called
-	- "qb" - `qb-core/qbx-core`
+	- "qb" - `sb-core/qbx-core`
 	- "ox" - `ox_lib`
 	- "esx"	- `es_extended`
 	- "gta" - `Built in GTA notifications`
@@ -269,7 +269,7 @@ There is little snippets of information on each line for these, but this is a mo
 
 ### ProgressBar
 - This Controls what progressbar will be shown when using the script
-	- "qb" - `qb-core/qbx-core` Default
+	- "qb" - `sb-core/qbx-core` Default
 	- "ox" - `ox_lib` default
 	- "gta" - `gta` default
 	- "esx" - `esx_progressbar` default
@@ -283,7 +283,7 @@ There is little snippets of information on each line for these, but this is a mo
 ## General
 
 ### JimShops
-- Set this to true if you are using my free qb-shops alternative, [jim-shops](https://github.com/jimathy/jim-shops)
+- Set this to true if you are using my free sb-shops alternative, [jim-shops](https://github.com/jimathy/jim-shops)
 - Set to false to use default inventory style shops
 
 ### showClockInTill
@@ -309,7 +309,7 @@ There is little snippets of information on each line for these, but this is a mo
 
 ### showItemBox
 - This was added for people with customised inventories
-- qb-inventory by default(for some reason) doesn't include the itembox event when triggered (use, add, remove)
+- sb-inventory by default(for some reason) doesn't include the itembox event when triggered (use, add, remove)
 - you need to add them your self after, but some put them in to be automated
 - Basically this toggles showing these boxes or not, to stop doubling them up
 
@@ -438,19 +438,19 @@ There is little snippets of information on each line for these, but this is a mo
 
 ### damages
 - This enables `jim-mechanic` control of vehicle extra damages in the script
-- Enable this if you don't use `qb-vehiclefailure`
+- Enable this if you don't use `sb-vehiclefailure`
 
 ### repairKits
-- This takes control of `advancedrepairkit` and `repairkit` if you don't use either `qb-mechanicjob` or `qb-vehiclefailure`
+- This takes control of `advancedrepairkit` and `repairkit` if you don't use either `sb-mechanicjob` or `sb-vehiclefailure`
 - On frameworks that didn't use thse items, they can be added manually after enabling this
 
 ### fixCommand
-- This takes control of the `/fix` command after removing `qb-mechanicjob` and `qb-vehiclefailure`
+- This takes control of the `/fix` command after removing `sb-mechanicjob` and `sb-vehiclefailure`
 - This fixes the vehicle's extra damages aswell if enabled
 - Don't use this if you haven't removed the previous `/fix` command
 
 ### PreventRoll
-- This was added to take over `qb-vehiclefailures` ability to prevent vehicles from being flipped over by pressing right or left while still in the drivers seat
+- This was added to take over `sb-vehiclefailures` ability to prevent vehicles from being flipped over by pressing right or left while still in the drivers seat
 
 ## CarLifts
 
@@ -514,7 +514,7 @@ There is little snippets of information on each line for these, but this is a mo
 
 ### PhoneMail
 - If PreviewPhone is true, change this to choose the correct phone system
-	- "qb" = use qb-phone for emails
+	- "qb" = use sb-phone for emails
 	- "gks" = use gks-phone for emails
 	- "qs" = use qs-smartphone for emails
 	- "roadphone" = use roadphone for emails
@@ -616,8 +616,8 @@ There is little snippets of information on each line for these, but this is a mo
 - If disabled it will only attempt to repair the body
 
 ### repairExtras
-- Enabling this will include Extra Damages repair that come from `qb-mechanicjob`
-- if `qb-mechanicjob` is not found but this is true, it will skip over these extras
+- Enabling this will include Extra Damages repair that come from `sb-mechanicjob`
+- if `sb-mechanicjob` is not found but this is true, it will skip over these extras
 
 ### dutyMessage
 - I left his here as people were giving me different reasons for why they wanted the repair benches in the script
@@ -699,8 +699,8 @@ NosBoostPower = {
 
 ### skillcheck
 - When adding Nos to a vehicle there are three skillcheck script options available
-	- "qb-skillbar"
-	- "qb-lock"
+	- "sb-skillbar"
+	- "sb-lock"
 	- "ps-ui"
 
 ### explosiveFail

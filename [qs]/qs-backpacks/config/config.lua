@@ -10,8 +10,8 @@ Locales = Locales or {}
 
 Config.Framework = 'qb'         -- 'esx' or 'qb'
 Config.Language = 'en'           -- Set your lang in locales folder
-Config.SkinScript = 'illenium-appearance'   -- 'qb-clothing', 'illenium-appearance', 'esx_skin'
-Config.Menu = 'qb-menu' -- 'qb-menu', 'ox_lib', 'esx_menu_default'
+Config.SkinScript = 'illenium-appearance'   -- 'sb-clothing', 'illenium-appearance', 'esx_skin'
+Config.Menu = 'sb-menu' -- 'sb-menu', 'ox_lib', 'esx_menu_default'
 
 -- which slots are your hot bar
 Config.Hotbar = {

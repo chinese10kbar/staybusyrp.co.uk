@@ -4,7 +4,7 @@ Config = {
 	Lan = "en",
 	Debug = false, -- Set to true to show target locations
 
-	Core = "qb-core",
+	Core = "sb-core",
 	Menu = "qb",
 	Notify = "qb",
 

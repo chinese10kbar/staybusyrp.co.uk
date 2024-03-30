@@ -5,7 +5,7 @@ local seconds, minutes = 1000, 60000
 Config = {}
 
 Config.jobMenu = 'F6'          -- Default job menu key
-Config.useTarget = true        -- Enable target for police functions (Supports qtarget, qb-target, and ox_target)
+Config.useTarget = true        -- Enable target for police functions (Supports qtarget, sb-target, and ox_target)
 Config.MobileMenu = {          -- THIS WILL USE A OX_LIB MENU RATHER THAN OX_LIB CONTEXT MENU!
     enabled = true,           -- Use a mobile menu from ox_lib rather than context? (Use arrow keys to navigate menu rather than mouse)
     position =
@@ -13,18 +13,18 @@ Config.MobileMenu = {          -- THIS WILL USE A OX_LIB MENU RATHER THAN OX_LIB
 }
 Config.UseRadialMenu = false   -- Enable use of radial menu built in to ox_lib? (REQUIRES OX_LIB 3.0 OR HIGHER - Editable in client/radial.lua)
 
-Config.customCarlock = false   -- If you use wasabi_carlock OR qb-carlock set to true(Add your own carlock system in client/cl_customize.lua)
+Config.customCarlock = false   -- If you use wasabi_carlock OR sb-carlock set to true(Add your own carlock system in client/cl_customize.lua)
 Config.billingSystem = false   -- Current options: 'esx' (For esx_billing) / 'qb' (QBCore) / 'okok' (For okokBilling) (Easy to add more/fully customize in client/cl_customize.lua)
 Config.skinScript =
-'qb'                          -- Current options: 'esx' (For esx_skin) / 'appearance' (For wasabi-fivem-appearance) / 'qb' for qb-clothing / 'custom' for custom (Custom can be added in client/cl_customize.lua) / false for disabled
+'qb'                          -- Current options: 'esx' (For esx_skin) / 'appearance' (For wasabi-fivem-appearance) / 'qb' for sb-clothing / 'custom' for custom (Custom can be added in client/cl_customize.lua) / false for disabled
 Config.AdvancedParking = false -- Delete vehicles with their exports(Script named advanced parking)
 Config.Jail = {
     enabled = true,           -- Enable jail feature?
     input = true,              -- Enable input? Some needs it
-    jail = 'custom',                 -- Current options: 'qb' (For qb-prison) / 'rcore' (For rcore-prison) / 'tk_jail' (For tk_jail) / 'hd_jail' (For hd_jail) / 'myPrison' (For myPrison) / 'qalle-jail' (For qalle-jail) / 'plouffe ' (For Plouffe Jail) / 'mx' (For mxJail) / 'custom' (For custom)
+    jail = 'custom',                 -- Current options: 'qb' (For sb-prison) / 'rcore' (For rcore-prison) / 'tk_jail' (For tk_jail) / 'hd_jail' (For hd_jail) / 'myPrison' (For myPrison) / 'qalle-jail' (For qalle-jail) / 'plouffe ' (For Plouffe Jail) / 'mx' (For mxJail) / 'custom' (For custom)
 }
--- NOTE: If using qb-prison, you must make one small change to qb-prison.
--- SEE https://docs.wasabiscripts.com/scripts/wasabi_police/customizations#qb-prison-integration
+-- NOTE: If using sb-prison, you must make one small change to sb-prison.
+-- SEE https://docs.wasabiscripts.com/scripts/wasabi_police/customizations#sb-prison-integration
 
 
 Config.inventory =
@@ -41,8 +41,8 @@ Config.spikeStripsEnabled = true -- Enable functionality of spike strips (Disabl
     wasabi_police:outVehiclePlayer
 ]]
 Config.AllowedResources = {
-    'qb-core',
-    'qb-radialmenu', -- For civilians to be able to use radial menu features
+    'sb-core',
+    'sb-radialmenu', -- For civilians to be able to use radial menu features
 }
 
 Config.AllowedJobs = { -- THIS HAS NOTHING TO DO with Config.policeJobs, only with triggering
@@ -403,7 +403,7 @@ Config.Locations = {
         },
 
         cloakroom = {
-            enabled = false,                       -- WILL NOT SHOW IN QBCORE INSTEAD USE QB-CLOTHING CONFIG! Set to false if you don't want to use (Compatible with esx_skin & wasabi fivem-appearance fork)
+            enabled = false,                       -- WILL NOT SHOW IN QBCORE INSTEAD USE sb-CLOTHING CONFIG! Set to false if you don't want to use (Compatible with esx_skin & wasabi fivem-appearance fork)
             jobLock = 'police',                    -- Allow only one of Config.policeJob listings / Set to false if allow all Config.policeJobs
             coords = vec3(462.36, -999.62, 30.69), -- Coords of cloakroom
             label = '[E] - Change Clothes',        -- String of text ui of cloakroom

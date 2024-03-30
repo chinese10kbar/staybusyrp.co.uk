@@ -55,7 +55,7 @@ Showcase: https://www.youtube.com/watch?v=iarfWQxAMAg
 
 If you use esx_policejob, you can remove the built in functionality by removing `p_ld_stinger_s` from [the table](https://github.com/esx-framework/esx_policejob/blob/c62253c1fc9993e024bc68c50954035419995289/client/main.lua#L1378) in the `-- Enter / Exit entity zone events` thread in `esx_policejob/client/main.lua`.
 
-If you use qb-policejob, you can remove the built in functionality by removing [the thread](https://github.com/qbcore-framework/qb-policejob/blob/63026f9051f10abf703cc1b56ea5073a0c301c4f/client/objects.lua#L237) in `qb-policejob/client/object.lua` that handles the spike strip.
+If you use sb-policejob, you can remove the built in functionality by removing [the thread](https://github.com/qbcore-framework/sb-policejob/blob/63026f9051f10abf703cc1b56ea5073a0c301c4f/client/objects.lua#L237) in `sb-policejob/client/object.lua` that handles the spike strip.
 
 ### Dependencies
 
@@ -90,8 +90,8 @@ Add to ox_inventory/data/items.lua:
 </details>
 
 <details>
-<summary>qb-inventory</summary>
-Add to qb-core/shared/items.lua:
+<summary>sb-inventory</summary>
+Add to sb-core/shared/items.lua:
 
 ```lua
 spikestrip = { name = 'spikestrip', label = 'Spike strip', weight = 500, type = 'item', image = 'spikestrip.png', unique = false, useable = true, shouldClose = true, combinable = nil, description = 'Useful for stopping the bad guys' },

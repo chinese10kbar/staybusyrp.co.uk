@@ -107,9 +107,9 @@ The MechBoard item is an item given to the person who uses the preview menu and 
 
 To make full use of this item you need to add the ability for the item to show item info in your inventory system
 
-I have only done this with `qb-inventory` and `ps-inventory` as they are similar
+I have only done this with `sb-inventory` and `ps-inventory` as they are similar
 
-`qb-inventory/html/js/app.js`
+`sb-inventory/html/js/app.js`
 
 - Search for "harness" or Scroll down until you find:
 ```js
@@ -129,7 +129,7 @@ I have only done this with `qb-inventory` and `ps-inventory` as they are similar
     );
 ```
 
-- On newer qb-inventory:
+- On newer sb-inventory:
 - Search for "harness" or Scroll down until you find:
 ```js
 case "harness":
@@ -151,6 +151,6 @@ When successfully added the mechboards will show the vehicle and plate number
 If using `ox_lib`:
 - Replace the `getVehicleProperties` and `setVehicleProperties` in `ox_lib > resource > vehicleProperties > client.lua` with the ones from `properties_ox.lua`
 
-If using just `qb-core`:
-- Replace the `QBCore.Functions.GetVehicleProperties` and `QBCore.Functions.SetVehicleProperties` in `qb-core > client > functions.lua` with the ones from `properties_qb.lua`
+If using just `sb-core`:
+- Replace the `QBCore.Functions.GetVehicleProperties` and `QBCore.Functions.SetVehicleProperties` in `sb-core > client > functions.lua` with the ones from `properties_qb.lua`
 ```

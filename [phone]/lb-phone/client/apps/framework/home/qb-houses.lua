@@ -1,4 +1,4 @@
-if Config.HouseScript ~= "qb-houses" then
+if Config.HouseScript ~= "sb-houses" then
     return
 end
 
@@ -9,11 +9,11 @@ CreateThread(function()
 
     local allHouses = {}
 
-    RegisterNetEvent("qb-houses:client:setHouseConfig", function(houseConfig)
+    RegisterNetEvent("sb-houses:client:setHouseConfig", function(houseConfig)
         allHouses = houseConfig
     end)
 
-    RegisterNetEvent("qb-houses:client:lockHouse", function(bool, house)
+    RegisterNetEvent("sb-houses:client:lockHouse", function(bool, house)
         if not allHouses[house] then
             return
         end
@@ -21,7 +21,7 @@ CreateThread(function()
         allHouses[house].locked = bool
     end)
 
-    TriggerServerEvent("qb-houses:server:setHouses")
+    TriggerServerEvent("sb-houses:server:setHouses")
 
     local function formatKeyHolders(keyholders)
         local formatted = {}
@@ -56,7 +56,7 @@ CreateThread(function()
         local action = data.action
 
         if action == "getHomes" then
-            QB.Functions.TriggerCallback("qb-phone:server:GetPlayerHouses", function(houses)
+            QB.Functions.TriggerCallback("sb-phone:server:GetPlayerHouses", function(houses)
                 if not houses then
                     return cb({})
                 end
@@ -65,9 +65,9 @@ CreateThread(function()
             end)
         elseif action == "removeKeyholder" then
             local houseData = data.houseData
-            TriggerServerEvent("qb-houses:server:removeHouseKey", houseData.uniqueId, { citizenid = data.identifier, firstname = "", lastname = "" })
+            TriggerServerEvent("sb-houses:server:removeHouseKey", houseData.uniqueId, { citizenid = data.identifier, firstname = "", lastname = "" })
             Wait(500)
-            QB.Functions.TriggerCallback("qb-phone:server:GetPlayerHouses", function(houses)
+            QB.Functions.TriggerCallback("sb-phone:server:GetPlayerHouses", function(houses)
                 if not houses then
                     return cb({})
                 end
@@ -76,9 +76,9 @@ CreateThread(function()
             end)
         elseif action == "addKeyholder" then
             local houseData = data.houseData
-            TriggerServerEvent("qb-houses:server:giveHouseKey", tonumber(data.source), houseData.uniqueId)
+            TriggerServerEvent("sb-houses:server:giveHouseKey", tonumber(data.source), houseData.uniqueId)
             Wait(500)
-            QB.Functions.TriggerCallback("qb-phone:server:GetPlayerHouses", function(houses)
+            QB.Functions.TriggerCallback("sb-phone:server:GetPlayerHouses", function(houses)
                 if not houses then
                     return cb({})
                 end
@@ -92,7 +92,7 @@ CreateThread(function()
                 house = { locked = false }
             end
 
-            TriggerServerEvent("qb-houses:server:lockHouse", not house.locked, data.uniqueId)
+            TriggerServerEvent("sb-houses:server:lockHouse", not house.locked, data.uniqueId)
             cb(not house.locked)
         elseif action == "setWaypoint" then
             local houseData = data.houseData

@@ -1,8 +1,8 @@
 # Coke Run Script By ! Error#5927
 
-# Add to qb-core
-Items to add to qb-core>shared>items.lua
-Paste All The Image In your qb-inventory>html>images 
+# Add to sb-core
+Items to add to sb-core>shared>items.lua
+Paste All The Image In your sb-inventory>html>images 
 ```
 --Coke Heist
 	["securitycase"] =         {["name"] = "securitycase",        ["label"] = "Security Case",         ["weight"] = 1000,     ["type"] = "item",        ["image"] = "securitycase.png",        ["unique"] = true,      ["useable"] = false,     ['shouldClose'] = false,           ["combinable"] = nil,      ["description"] = "Security case"},
@@ -15,5 +15,5 @@ Paste All The Image In your qb-inventory>html>images
 # Dependencies
 * ps-ui - https://github.com/Project-Sloth/ps-ui
 * boostinghack - https://github.com/Lionh34rt/boostinghack
-* qb-core - https://github.com/qbcore-framework/qb-core
-* qb-target - https://github.com/BerkieBb/qb-target
+* sb-core - https://github.com/qbcore-framework/sb-core
+* sb-target - https://github.com/BerkieBb/sb-target

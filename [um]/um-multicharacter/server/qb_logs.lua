@@ -6,7 +6,7 @@ function QBLogs(data)
     if data.type == 'joinleave' then
         if data.status ~= nil and data.status == 'loaded' then
             TriggerEvent(
-                "qb-log:server:CreateLog",
+                "sb-log:server:CreateLog",
                 data.type,
                 "Loaded",
                 "green",
@@ -14,7 +14,7 @@ function QBLogs(data)
             )
         else
             TriggerEvent(
-                'qb-log:server:CreateLog',
+                'sb-log:server:CreateLog',
                 data.type,
                 'Character Deleted',
                 'red',
@@ -23,7 +23,7 @@ function QBLogs(data)
         end
     elseif data.type == 'anticheat' then
         TriggerEvent(
-            'qb-log:server:CreateLog',
+            'sb-log:server:CreateLog',
             data.type,
             'Anti-Cheat',
             'white',

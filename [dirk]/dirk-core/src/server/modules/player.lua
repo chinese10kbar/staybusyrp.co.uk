@@ -2,7 +2,7 @@ Core.Player = {
   Get = function(s)
     if Config.Framework == "es_extended" then
       return ESX.GetPlayerFromId(s)
-    elseif Config.Framework == "qb-core" then
+    elseif Config.Framework == "sb-core" then
       return QBCore.Functions.GetPlayer(s)
     elseif Config.Framework == "vrp" then
       return vRP.getUserId(s);
@@ -14,7 +14,7 @@ Core.Player = {
     if not player or type(player) ~= "table" then return; end
     if Config.Framework == "es_extended" then
       return player.identifier
-    elseif Config.Framework == "qb-core" then
+    elseif Config.Framework == "sb-core" then
       return player.PlayerData.citizenid
     elseif Config.Framework == "vrp" then
       return vRP.getUserId(p);
@@ -29,7 +29,7 @@ Core.Player = {
       local raw = ply.getName()
       local firstName, lastName = raw:match("(%a+)%s+(.*)")
       return firstName, lastName
-    elseif Config.Framework == "qb-core" then
+    elseif Config.Framework == "sb-core" then
       return ply.PlayerData.charinfo.firstname, ply.PlayerData.charinfo.lastname
     elseif Config.Framework == "vrp" then
       local identity = vRP.getUserIdentity(Core.Player.Id(p))
@@ -43,7 +43,7 @@ Core.Player = {
     if not ply then return; end
     if Config.Framework == "es_extended" then
       return "Circa 1923"
-    elseif Config.Framework == "qb-core" then
+    elseif Config.Framework == "sb-core" then
       return ply.PlayerData.charinfo.birthdate
     elseif Config.Framework == "vrp" then
 
@@ -57,7 +57,7 @@ Core.Player = {
     if Config.Framework == "es_extended" then
       local result = MySQL.Sync.fetchAll("SELECT phone_number FROM users WHERE identifier = @identifier", {['@identifier'] = ply.identifier})
       return result[1] or "No Number"
-    elseif Config.Framework == "qb-core" then
+    elseif Config.Framework == "sb-core" then
       return ply.PlayerData.charinfo.phone
     elseif Config.Framework == "vrp" then
       return vRP.getPhoneDirectory(Core.Player.Id(p))
@@ -69,7 +69,7 @@ Core.Player = {
     local ply = Core.Player.Get(p)
     if Config.Framework == "es_extended" then
 
-    elseif Config.Framework == "qb-core" then
+    elseif Config.Framework == "sb-core" then
       return ply.PlayerData.charinfo.gender
     end
   end,
@@ -90,7 +90,7 @@ Core.Player = {
     if Config.JailSystem == "esx_jail" then
 
       TriggerEvent('esx_jail:sendToJail', id, time * 60, true)
-    elseif Config.JailSystem == "qb-prison" then
+    elseif Config.JailSystem == "sb-prison" then
       local OtherPlayer = Core.Player.Get(id)
       if not OtherPlayer then return; end
 
@@ -118,7 +118,7 @@ Core.Player = {
     local inv = {}
     if Config.Framework == "es_extended" then
       inv = ply.getInventory()
-    elseif Config.Framework == "qb-core" then
+    elseif Config.Framework == "sb-core" then
       inv = ply.PlayerData.items
     elseif Config.Framework == "vrp" then
       inv = vRP.getInventory(ply)
@@ -156,12 +156,12 @@ Core.Player = {
     else
       --## FALL BACK FOR MOST INVENTORIES
       -- OLD QS
-      -- QB-INVENTORY
+      -- sb-INVENTORY
       -- LJ-INVENTORY
       -- ESX-INVENTORY
       if Config.Framework == "es_extended" then
         ply.addInventoryItem(i,a, md or nil)
-      elseif Config.Framework == "qb-core" then
+      elseif Config.Framework == "sb-core" then
         if ply.Functions.RemoveItem(i,a,slot) then 
           ply.Functions.AddItem(i,a, slot, new)
         end
@@ -187,12 +187,12 @@ Core.Player = {
     else
       --## FALL BACK FOR MOST INVENTORIES
       -- OLD QS
-      -- QB-INVENTORY
+      -- sb-INVENTORY
       -- LJ-INVENTORY
       -- ESX-INVENTORY
       if Config.Framework == "es_extended" then
         ply.addInventoryItem(i,a, md or nil)
-      elseif Config.Framework == "qb-core" then
+      elseif Config.Framework == "sb-core" then
         ply.Functions.AddItem(i,a, nil, md or nil)
         TriggerClientEvent('inventory:client:ItemBox', p, QBCore.Shared.Items[i], "add")
       end
@@ -210,7 +210,7 @@ Core.Player = {
       if Config.Framework == "es_extended" then
         ply.removeInventoryItem(i,a)
         return true
-      elseif Config.Framework == "qb-core" then
+      elseif Config.Framework == "sb-core" then
         if ply.Functions.RemoveItem(i,a,slot) then
           TriggerClientEvent('inventory:client:ItemBox', p, QBCore.Shared.Items[i], "remove")
           return true
@@ -250,7 +250,7 @@ Core.Player = {
       jt.duty   = true
       jt.isBoss = false
       jt.isCop =  Config.PoliceJobs[ply.job.name]
-    elseif Config.Framework == "qb-core" then
+    elseif Config.Framework == "sb-core" then
       jt.name  = ply.PlayerData.job.name
       jt.label = ply.PlayerData.job.label
       jt.rank  = ply.PlayerData.job.grade.level
@@ -267,7 +267,7 @@ Core.Player = {
   GetGang = function(p)
     local gt = {}
     local ply = Core.Player.Get(tonumber(p))
-    if Config.Framework == "qb-core" then
+    if Config.Framework == "sb-core" then
       if not Config.GangSystem then
         local rawGang = ply.PlayerData.gang
         gt.name  = rawGang.name
@@ -283,7 +283,7 @@ Core.Player = {
     local ply = Core.Player.Get(tonumber(p))
     if Config.Framework == "es_extended" then
       ply.setJob(j,r)
-    elseif Config.Framework == "qb-core" then
+    elseif Config.Framework == "sb-core" then
       ply.Functions.SetJob(j,r)
     elseif Config.Framework == "vrp" then
       vRP.addUserGroup(ply, j)
@@ -300,7 +300,7 @@ Core.Player = {
         local currentFirst, currentLast = Core.Player.Name(p)
         ply.setName(currentFirst.." "..info)
       end
-    elseif Config.Framework == "qb-core" then
+    elseif Config.Framework == "sb-core" then
       if _type == "firstname" or _type == "lastname" or _type == "gender" or _type == "birthdate" or _type == "phone" then
         local charInfo = ply.PlayerData.charinfo
         charInfo[_type] = info
@@ -319,7 +319,7 @@ Core.Player = {
         local currentFirst, currentLast = Core.Player.Name(p)
         ply.setName(currentFirst.." "..info)
       end
-    elseif Config.Framework == "qb-core" then
+    elseif Config.Framework == "sb-core" then
       if _type == "firstname" or _type == "lastname" or _type == "gender" or _type == "birthdate" or _type == "phone" then
         local charInfo = ply.PlayerData.charinfo
         charInfo[_type] = info
@@ -334,7 +334,7 @@ Core.Player = {
     local ply = Core.Player.Get(tonumber(p))
     if Config.Framework == "es_extended" then
       print('ESX does not have a standardised gang system please insert your own code here')
-    elseif Config.Framework == "qb-core" then
+    elseif Config.Framework == "sb-core" then
       ply.Functions.SetGang(g,r)
     elseif Config.Framework == "vrp" then
       vRP.addUserGroup(ply, g)
@@ -342,7 +342,7 @@ Core.Player = {
   end,
 
   Revive = function(p)
-    if Config.Framework == "qb-core" then
+    if Config.Framework == "sb-core" then
       TriggerClientEvent('hospital:client:Revive', tonumber(p))
     elseif Config.Framework == "es_extended" then
       TriggerClientEvent('esx_ambulancejob:revive', tonumber(p)) -- IS THIS RIGHT?
@@ -363,7 +363,7 @@ Core.Player = {
         ret[v.name] = v.money
       end
       return ret
-    elseif Config.Framework == "qb-core" then
+    elseif Config.Framework == "sb-core" then
       return ply.PlayerData.money
     elseif Config.Framework == "vrp" then
       return {
@@ -378,7 +378,7 @@ Core.Player = {
     a = tonumber(a)
     if Config.Framework == "es_extended" then
       ply.setAccountMoney(acc,a)
-    elseif Config.Framework == "qb-core" then
+    elseif Config.Framework == "sb-core" then
       ply.Functions.SetMoney(acc,a)
     elseif Config.Framework == "vrp" then
       if acc == "cash" then
@@ -396,7 +396,7 @@ Core.Player = {
     local ply = Core.Player.Get(tonumber(p))
     if Config.Framework == "es_extended" then
       return ply.removeAccountMoney(acc,a)
-    elseif Config.Framework == "qb-core" then
+    elseif Config.Framework == "sb-core" then
       return ply.Functions.RemoveMoney(acc,a)
     elseif Config.Framework == "vrp" then
       if acc == "cash" then
@@ -419,7 +419,7 @@ Core.Player = {
         end
       end
       ply.addAccountMoney(acc,a)
-    elseif Config.Framework == "qb-core" then
+    elseif Config.Framework == "sb-core" then
       ply.Functions.AddMoney(acc,a)
     elseif Config.Framework == "vrp" then
       if acc == "cash" then
@@ -442,7 +442,7 @@ Core.Player = {
           return v
         end
       end
-    elseif Config.Framework == "qb-core" then
+    elseif Config.Framework == "sb-core" then
       local has, account
       for k,v in pairs(Config.FrameworkAccounts) do
         if ply.Functions.GetMoney(v) >= a then
@@ -465,7 +465,7 @@ Core.Player = {
       if ply.getAccount(acc).money >= a then
         return true
       end
-    elseif Config.Framework == "qb-core" then
+    elseif Config.Framework == "sb-core" then
       if ply.PlayerData.money[acc] and (ply.PlayerData.money[acc] >= a) then
         return true
       end

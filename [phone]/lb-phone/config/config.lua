@@ -11,7 +11,7 @@ Config.Framework = "qb"
     Supported frameworks:
         * auto: auto-detect framework (ONLY WORKS WITH THE ONES LISTED BELOW)
         * esx: es_extended, https://github.com/esx-framework/esx-legacy
-        * qb: qb-core, https://github.com/qbcore-framework/qb-core
+        * qb: sb-core, https://github.com/qbcore-framework/sb-core
         * ox: ox_core, https://github.com/overextended/ox_core
         * standalone: no framework, note that framework specific apps will not work unless you implement the functions
 ]]
@@ -28,7 +28,7 @@ Config.Item.Inventory = "qs-inventory" --[[
     Supported:
         * auto: auto-detect inventory (ONLY WORKS WITH THE ONE LISTED BELOW)
         * ox_inventory - https://github.com/overextended/ox_inventory
-        * qb-inventory - https://github.com/qbcore-framework/qb-inventory
+        * sb-inventory - https://github.com/qbcore-framework/sb-inventory
         * lj-inventory - https://github.com/loljoshie/lj-inventory
         * core_inventory - https://www.c8re.store/package/5121548
         * mf-inventory - https://modit.store/products/mf-inventory?variant=39985142268087
@@ -214,7 +214,7 @@ Config.HouseScript = "auto" --[[
     The housing script you use on your server
     Supported:
         * loaf_housing - https://store.loaf-scripts.com/package/4310850
-        * qb-houses - https://github.com/qbcore-framework/qb-houses
+        * sb-houses - https://github.com/qbcore-framework/sb-houses
         * qs-housing - https://buy.quasar-store.com/package/5677308
 ]]
 
@@ -506,7 +506,7 @@ Config.Crypto.Enabled = true
 Config.Crypto.Coins = {"bitcoin","ethereum","tether","binancecoin","usd-coin","ripple","binance-usd","cardano","dogecoin","solana","shiba-inu","polkadot","litecoin","bitcoin-cash"}
 Config.Crypto.Currency = "gbp" -- currency to use for crypto prices. https://api.coingecko.com/api/v3/simple/supported_vs_currencies
 Config.Crypto.Refresh = 5 * 60 * 1000 -- how often should the crypto prices be refreshed (client cache)? (Default 5 minutes)
-Config.Crypto.QBit = true -- support QBit? (requires qb-crypto & qb-core)
+Config.Crypto.QBit = true -- support QBit? (requires sb-crypto & sb-core)
 
 Config.KeyBinds = {
     -- Find keybinds here: https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/

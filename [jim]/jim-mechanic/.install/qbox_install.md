@@ -121,7 +121,7 @@ To make your hud not complain about the harness export you will need to change t
 `ps-hud` > `client.lua` > line 80
 REPLACE:
 ```lua
-    local hasHarness = exports['qb-smallresources']:HasHarness()
+    local hasHarness = exports['sb-smallresources']:HasHarness()
 ```
 WITH:
 ```lua

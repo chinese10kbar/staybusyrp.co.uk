@@ -3,7 +3,7 @@ local windowState1 = true
 local windowState2 = true
 local windowState3 = true
 local windowState4 = true
-local QBCore = exports['qb-core']:GetCoreObject()
+local QBCore = exports['sb-core']:GetCoreObject()
 
 Citizen.CreateThread(function()
     while true do

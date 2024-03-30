@@ -1,5 +1,5 @@
 Config.Theme = {
-    currentTheme = "qb-core",
+    currentTheme = "sb-core",
     themes = {
         {
             id = "default",
@@ -16,7 +16,7 @@ Config.Theme = {
             smoothBackgroundTransition = false
         },
         {
-            id = "qb-core",
+            id = "sb-core",
             borderRadius = "3vh",
             fontColor = "255, 255, 255",
             fontColorHover = "255, 255, 255",

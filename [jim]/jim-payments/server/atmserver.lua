@@ -68,7 +68,7 @@ RegisterServerEvent('jim-payments:server:ATM:use', function(amount, billtype, ba
 				triggerNotify(nil, Loc[Config.Lan].success["draw"]..cv(amount)..Loc[Config.Lan].success["fromthe"]..Player.PlayerData.job.label..Loc[Config.Lan].success["account"], "success", src)
 				Player.Functions.AddMoney('bank', amount)
 				if Config.Banking == "renewed" then exports['Renewed-Banking']:removeAccountMoney(tostring(Player.PlayerData.job.name), amount)
-				elseif Config.Banking == "qb-management" then exports["qb-management"]:RemoveMoney(tostring(Player.PlayerData.job.name), amount)
+				elseif Config.Banking == "sb-management" then exports["sb-management"]:RemoveMoney(tostring(Player.PlayerData.job.name), amount)
 				elseif Config.Banking == "qs-banking" then exports["qs-banking"]:RemoveMoney(tostring(Player.PlayerData.job.name), amount)
 				elseif Config.Banking == "fd" then exports.fd_banking:RemoveMoney(tostring(Player.PlayerData.job.name), amount) end
 			end
@@ -76,7 +76,7 @@ RegisterServerEvent('jim-payments:server:ATM:use', function(amount, billtype, ba
 			if bankB < amount then triggerNotify(nil, Loc[Config.Lan].error["nomoney_bank"], "error", src)
 			elseif bankB >= amount then
 				if Config.Banking == "renewed" then exports['Renewed-Banking']:addAccountMoney(tostring(Player.PlayerData.job.name), amount)
-				elseif Config.Banking == "qb-management" then exports["qb-management"]:AddMoney(tostring(Player.PlayerData.job.name), amount)
+				elseif Config.Banking == "sb-management" then exports["sb-management"]:AddMoney(tostring(Player.PlayerData.job.name), amount)
 				elseif Config.Banking == "qs-banking" then exports["qs-banking"]:AddMoney(tostring(Player.PlayerData.job.name), amount)
 				elseif Config.Banking == "fd" then exports.fd_banking:AddMoney(tostring(Player.PlayerData.job.name), amount) end
 				Player.Functions.RemoveMoney('bank', amount) Wait(1500)
@@ -102,7 +102,7 @@ RegisterServerEvent('jim-payments:server:ATM:use', function(amount, billtype, ba
 			if result[1] then
 				local Reciever = QBCore.Functions.GetPlayerByCitizenId(result[1].citizenid)
 				if Config.Banking == "renewed" then exports['Renewed-Banking']:removeAccountMoney(tostring(Player.PlayerData.job.name), amount)
-				elseif Config.Banking == "qb-management" then exports["qb-management"]:RemoveMoney(tostring(Player.PlayerData.job.name), amount)
+				elseif Config.Banking == "sb-management" then exports["sb-management"]:RemoveMoney(tostring(Player.PlayerData.job.name), amount)
 				elseif Config.Banking == "qs-banking" then exports["qs-banking"]:RemoveMoney(tostring(Player.PlayerData.job.name), amount)
 				elseif Config.Banking == "fd" then exports.fd_banking:RemoveMoney(tostring(Player.PlayerData.job.name), amount) end
 				if Reciever then
@@ -126,7 +126,7 @@ RegisterServerEvent('jim-payments:server:ATM:use', function(amount, billtype, ba
 				triggerNotify(nil, Loc[Config.Lan].success["draw"]..cv(amount)..Loc[Config.Lan].success["fromthe"]..Player.PlayerData.gang.label..Loc[Config.Lan].success["account"], "success", src)
 				Player.Functions.AddMoney('bank', amount)
 				if Config.Banking == "renewed" then exports['Renewed-Banking']:removeAccountMoney(tostring(Player.PlayerData.gang.name), amount)
-				elseif Config.Banking == "qb-management" then exports["qb-management"]:RemoveGangMoney(tostring(Player.PlayerData.gang.name), amount)
+				elseif Config.Banking == "sb-management" then exports["sb-management"]:RemoveGangMoney(tostring(Player.PlayerData.gang.name), amount)
 				elseif Config.Banking == "qs-banking" then exports["qs-banking"]:RemoveGangMoney(tostring(Player.PlayerData.gang.name), amount)
 				elseif Config.Banking == "fd" then exports.fd_banking:RemoveGangMoney(tostring(Player.PlayerData.gang.name), amount) end
 			end
@@ -134,7 +134,7 @@ RegisterServerEvent('jim-payments:server:ATM:use', function(amount, billtype, ba
 			if bankB < amount then triggerNotify(nil, Loc[Config.Lan].error["nomoney_bank"], "error", src)
 			elseif bankB >= amount then
 				if Config.Banking == "rewnewed" then exports['Renewed-Banking']:addAccountMoney(tostring(Player.PlayerData.gang.name), amount)
-				elseif Config.Banking == "qb-management" then exports["qb-management"]:AddGangMoney(tostring(Player.PlayerData.gang.name), amount)
+				elseif Config.Banking == "sb-management" then exports["sb-management"]:AddGangMoney(tostring(Player.PlayerData.gang.name), amount)
 				elseif Config.Banking == "qs-banking" then exports["qs-banking"]:AddGangMoney(tostring(Player.PlayerData.gang.name), amount)
 				elseif Config.Banking == "fd" then exports.fd_banking:AddGangMoney(tostring(Player.PlayerData.gang.name), amount) end
 				Player.Functions.RemoveMoney('bank', amount) Wait(1500)
@@ -160,7 +160,7 @@ RegisterServerEvent('jim-payments:server:ATM:use', function(amount, billtype, ba
 			if result[1] then
 				local Reciever = QBCore.Functions.GetPlayerByCitizenId(result[1].citizenid)
 				if Config.Banking == "renewed" then exports['Renewed-Banking']:removeAccountMoney(tostring(Player.PlayerData.gang.name), amount)
-				elseif Config.Banking == "qb-management" then exports["qb-management"]:RemoveGangMoney(tostring(Player.PlayerData.gang.name), amount)
+				elseif Config.Banking == "sb-management" then exports["sb-management"]:RemoveGangMoney(tostring(Player.PlayerData.gang.name), amount)
 				elseif Config.Banking == "qs-banking" then exports["qs-banking"]:RemoveGangMoney(tostring(Player.PlayerData.gang.name), amount)
 				elseif Config.Banking == "fd" then exports.fd_banking:RemoveGangMoney(tostring(Player.PlayerData.gang.name), amount) end
 				if not Reciever then
@@ -232,7 +232,7 @@ QBCore.Functions.CreateCallback('jim-payments:ATM:Find', function(source, cb)
 			end
 		end
 
-	-- If qb-management, grab info directly from database
+	-- If sb-management, grab info directly from database
 	elseif not Config.Banking == "renewed" then
 		local result = MySQL.Sync.fetchAll('SELECT * FROM management_funds')
 		for _, v in pairs(result) do

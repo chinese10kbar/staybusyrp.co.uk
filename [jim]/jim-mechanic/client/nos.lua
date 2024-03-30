@@ -90,15 +90,15 @@ RegisterNetEvent('jim-mechanic:client:applyNOS', function() local Ped = PlayerPe
 		playAnim(above and "amb@prop_human_movie_bulb@idle_a" or "mini@repair", above and "idle_b" or "fixing_a_ped", 35000, 16)
 		startTempCam(cam)
 		if Config.Overrides.DoorAnimations then SetVehicleDoorOpen(vehicle, 4, false, false) end
-		if Config.NOS.skillcheck == "qb-lock" then
-			local Skillbar = exports['qb-lock']:StartLockPickCircle(math.random(2,4), math.random(7,10), success)
+		if Config.NOS.skillcheck == "sb-lock" then
+			local Skillbar = exports['sb-lock']:StartLockPickCircle(math.random(2,4), math.random(7,10), success)
 			if Skillbar then nosAdd(Ped, vehicle) else nosFail(Ped, vehicle) end
 		elseif Config.NOS.skillcheck == "ps-ui" then
 			exports['ps-ui']:Circle(function(Skillbar)
 				if Skillbar then nosAdd(Ped, vehicle) else nosFail(Ped, vehicle) end
 			end, 2, 20)
-		elseif Config.NOS.skillcheck == "qb-skillbar" then
-			local Skillbar = exports['qb-skillbar']:GetSkillbarObject()
+		elseif Config.NOS.skillcheck == "sb-skillbar" then
+			local Skillbar = exports['sb-skillbar']:GetSkillbarObject()
 			Skillbar.Start({ duration = math.random(2500,5000), pos = math.random(10, 30), width = math.random(10, 20),	},	function() -- On success
 				nosAdd(Ped, vehicle)
 			end, function() -- On fail
@@ -658,7 +658,7 @@ RegisterNetEvent('jim-mechanic:client:NOS:RGBHexMenu', function(data)
 		if data.hex then format = { { type = 'text', name = 'hex', text = "#"..rgbToHex(r, g, b):upper() } }
 		else format = { { type = 'number', name = 'Red', text = 'R - '..r }, { type = 'number', name = 'Green', text = 'G - '..g }, { type = 'number', name = 'Blue', text = 'B - '..b } }
 		end
-			dialog = exports['qb-input']:ShowInput({
+			dialog = exports['sb-input']:ShowInput({
 				header = "<center>"..Loc[Config.Lan]["nos"].nosColour
 						.."<br>"..(data.hex and Loc[Config.Lan]["paintrgb"].hexP or Loc[Config.Lan]["paintrgb"].rgbP)
 						.."<br><br>- "..Loc[Config.Lan]["common"].current.." -<br>"..(data.hex and "#"..rgbToHex(r, g, b):upper() or "["..r..", "..g..", "..b.."]"),

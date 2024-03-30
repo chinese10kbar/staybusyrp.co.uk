@@ -164,7 +164,7 @@ RegisterNetEvent('jim-mechanic:client:RGBMenu', function(data) -- Custom Undergl
 			r, g, b = tonumber(dialog[1][1]) or r, tonumber(dialog[1][2]) or g, tonumber(dialog[1][3]) or b
 		end
 	else
-		dialog = exports['qb-input']:ShowInput({
+		dialog = exports['sb-input']:ShowInput({
 		header = Loc[Config.Lan]["xenons"].customheader,
 		submitText = Loc[Config.Lan]["xenons"].customconfirm,
 		inputs = {

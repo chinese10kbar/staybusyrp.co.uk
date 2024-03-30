@@ -594,7 +594,7 @@ end)
 
 AddEventHandler('onResourceStop', function(r)
 	if r == GetCurrentResourceName() then
-		for k, v in pairs(Config.Emergency.Locations) do exports['qb-target']:RemoveZone("bench"..k) end
+		for k, v in pairs(Config.Emergency.Locations) do exports['sb-target']:RemoveZone("bench"..k) end
 		for i = 1, #bench do DeleteEntity(bench[i])	end
 	end
 end)

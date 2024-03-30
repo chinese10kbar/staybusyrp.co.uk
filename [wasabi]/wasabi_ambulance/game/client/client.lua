@@ -1513,7 +1513,7 @@ RegisterNetEvent('wasabi_ambulance:revivePlayer', function(serverdata)
             TriggerServerEvent('esx:onPlayerSpawn')
             TriggerEvent('esx:onPlayerSpawn')
         elseif wsb.framework == 'qb' then
-            TriggerServerEvent('hospital:server:resetHungerThirst') -- qb-ambulancejob compatibility
+            TriggerServerEvent('hospital:server:resetHungerThirst') -- sb-ambulancejob compatibility
             TriggerServerEvent('hud:server:RelieveStress', 100)
             TriggerEvent('wasabi_bridge:onPlayerSpawn')
         end
@@ -1566,7 +1566,7 @@ RegisterNetEvent('wasabi_ambulance:revive', function(noAnim)
         TriggerServerEvent('esx:onPlayerSpawn')
         TriggerEvent('esx:onPlayerSpawn', (noAnim or false))
     elseif wsb.framework == 'qb' then
-        TriggerServerEvent('hospital:server:resetHungerThirst') -- qb-ambulancejob compatibility
+        TriggerServerEvent('hospital:server:resetHungerThirst') -- sb-ambulancejob compatibility
         TriggerServerEvent('hud:server:RelieveStress', 100)
         TriggerEvent('wasabi_bridge:onPlayerSpawn', (noAnim or false))
     end
@@ -1791,7 +1791,7 @@ AddEventHandler('wasabi_ambulance:billPatient', function()
                         gender = Strings.mrs
                     end
                     local charinfo = wsb.playerData.charinfo
-                    TriggerServerEvent('qb-phone:server:sendNewMail', {
+                    TriggerServerEvent('sb-phone:server:sendNewMail', {
                         sender = wsb.playerData.job.label,
                         subject = Strings.debt_collection,
                         message = (Strings.db_email):format(gender, charinfo.lastname, amount),
@@ -1891,11 +1891,11 @@ RegisterNetEvent('hospital:client:Revive', function()
     TriggerEvent('wasabi_ambulance:revive')
 end)
 
-RegisterNetEvent('qb-radialmenu:client:TakeStretcher', function()
+RegisterNetEvent('sb-radialmenu:client:TakeStretcher', function()
     ToggleStretcher()
 end)
 
-RegisterNetEvent('qb-radialmenu:client:RemoveStretcher', function()
+RegisterNetEvent('sb-radialmenu:client:RemoveStretcher', function()
     local closestStretcher = GetClosestStretcher(3.0)
     if not closestStretcher then
         TriggerEvent('wasabi_bridge:notify', Strings.no_nearby, Strings.no_nearby_desc, 'error')

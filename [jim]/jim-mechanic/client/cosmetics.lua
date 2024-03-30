@@ -373,7 +373,7 @@ RegisterNetEvent('jim-mechanic:client:smokeCustomMenu', function()
         { type = 'number', isRequired = true, name = 'G', text = 'G', description = "G", min = 0, max = 255, },
         { type = 'number', isRequired = true, name = 'B', text = 'B', description = "B", min = 0, max = 255, } }
 	if Config.System.Menu == "ox" then dialog = exports.ox_lib:inputDialog( Loc[Config.Lan]["smoke"].custom, inputs)
-    else dialog = exports['qb-input']:ShowInput({ header = Loc[Config.Lan]["smoke"].custom, submitText = "Submit", inputs = inputs, }) end
+    else dialog = exports['sb-input']:ShowInput({ header = Loc[Config.Lan]["smoke"].custom, submitText = "Submit", inputs = inputs, }) end
     if dialog or dialog[1] then
         if not (dialog.R or dialog[1]) or not (dialog.G or dialog[2]) or not (dialog.B or dialog[3]) then return end
         local data = { R = tonumber(dialog.R or dialog[1]), G = tonumber(dialog.G or dialog[2]), B = tonumber(dialog.B or dialog[3]) }

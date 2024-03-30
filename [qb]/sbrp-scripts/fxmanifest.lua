@@ -11,7 +11,7 @@ server_debug_mode 'false'
 
 
 shared_scripts {
-  '@qb-core/shared/locale.lua',
+  '@sb-core/shared/locale.lua',
   'locales/*.lua',
   'config.lua'
 }
@@ -242,7 +242,7 @@ data_file 'AUDIO_SOUNDDATA' 'audioconfig/aq35ferf154cd_sounds.dat'
 data_file 'AUDIO_WAVEPACK' 'sfx/dlc_aq35ferf154cd'
 
 provides {
-	'qb-smallresources',
+	'sb-smallresources',
   'datacrack',
 
 }

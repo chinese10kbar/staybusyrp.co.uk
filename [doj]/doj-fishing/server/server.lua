@@ -1,4 +1,4 @@
-local QBCore = exports['qb-core']:GetCoreObject()
+local QBCore = exports['sb-core']:GetCoreObject()
 --============================================================================ Items
 
 QBCore.Functions.CreateUseableItem("anchor", function(source, item)

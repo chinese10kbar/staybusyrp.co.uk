@@ -4,7 +4,7 @@ end
 
 ---@diagnostic disable: param-type-mismatch
 debugprint("Loading QB")
-QB = exports["qb-core"]:GetCoreObject()
+QB = exports["sb-core"]:GetCoreObject()
 local PlayerJob = {}
 
 while not LocalPlayer.state.isLoggedIn do
@@ -109,10 +109,10 @@ function GetCompanyData(cb)
     }
 
     if jobData.isBoss then
-        if GetResourceState("qb-management") ~= "started" then
+        if GetResourceState("sb-management") ~= "started" then
             local moneyPromise = promise.new()
 
-            QB.Functions.TriggerCallback("qb-bossmenu:server:GetAccount", function(money)
+            QB.Functions.TriggerCallback("sb-bossmenu:server:GetAccount", function(money)
                 moneyPromise:resolve(money)
             end, jobData.job)
 
@@ -123,7 +123,7 @@ function GetCompanyData(cb)
 
         local employeesPromise = promise.new()
 
-        QB.Functions.TriggerCallback("qb-bossmenu:server:GetEmployees", function(employees)
+        QB.Functions.TriggerCallback("sb-bossmenu:server:GetEmployees", function(employees)
             for i = 1, #employees do
                 local employee = employees[i]
 
@@ -160,33 +160,33 @@ function GetCompanyData(cb)
 end
 
 function DepositMoney(amount, cb)
-    if GetResourceState("qb-management") == "started" then
+    if GetResourceState("sb-management") == "started" then
         lib.TriggerCallback("phone:services:addMoney", cb, amount)
         return
     end
 
-    TriggerServerEvent("qb-bossmenu:server:depositMoney", amount)
+    TriggerServerEvent("sb-bossmenu:server:depositMoney", amount)
 
     SetTimeout(500, function()
-        QB.Functions.TriggerCallback("qb-bossmenu:server:GetAccount", cb, PlayerJob.name)
+        QB.Functions.TriggerCallback("sb-bossmenu:server:GetAccount", cb, PlayerJob.name)
     end)
 end
 
 function WithdrawMoney(amount, cb)
-    if GetResourceState("qb-management") == "started" then
+    if GetResourceState("sb-management") == "started" then
         lib.TriggerCallback("phone:services:removeMoney", cb, amount)
         return
     end
 
-    TriggerServerEvent("qb-bossmenu:server:withdrawMoney", amount)
+    TriggerServerEvent("sb-bossmenu:server:withdrawMoney", amount)
 
     SetTimeout(500, function()
-        QB.Functions.TriggerCallback("qb-bossmenu:server:GetAccount", cb, PlayerJob.name)
+        QB.Functions.TriggerCallback("sb-bossmenu:server:GetAccount", cb, PlayerJob.name)
     end)
 end
 
 function HireEmployee(source, cb)
-    TriggerServerEvent("qb-bossmenu:server:HireEmployee", source)
+    TriggerServerEvent("sb-bossmenu:server:HireEmployee", source)
     lib.TriggerCallback("phone:services:getPlayerData", function(playerData)
         cb({
             name = playerData.name,
@@ -196,7 +196,7 @@ function HireEmployee(source, cb)
 end
 
 function FireEmployee(source, cb)
-    TriggerServerEvent("qb-bossmenu:server:FireEmployee", source)
+    TriggerServerEvent("sb-bossmenu:server:FireEmployee", source)
     cb(PlayerJob.isboss)
 end
 
@@ -213,7 +213,7 @@ function SetGrade(identifier, newGrade, cb)
         return cb(false)
     end
 
-    TriggerServerEvent("qb-bossmenu:server:GradeUpdate", {
+    TriggerServerEvent("sb-bossmenu:server:GradeUpdate", {
         cid = identifier,
         grade = newGrade,
         gradename = QB.Shared.Jobs[PlayerJob.name].grades[tostring(newGrade)].name
@@ -240,7 +240,7 @@ if Config.Crypto.QBit then
     function GetQBit()
         local promise = promise.new()
 
-        QB.Functions.TriggerCallback("qb-crypto:server:GetCryptoData", function(cryptoData)
+        QB.Functions.TriggerCallback("sb-crypto:server:GetCryptoData", function(cryptoData)
             promise:resolve(cryptoData)
         end, "qbit")
 
@@ -250,7 +250,7 @@ if Config.Crypto.QBit then
     function BuyQBit(amount)
         local promise = promise.new()
 
-        QB.Functions.TriggerCallback("qb-crypto:server:BuyCrypto", function(res)
+        QB.Functions.TriggerCallback("sb-crypto:server:BuyCrypto", function(res)
             promise:resolve({ success = type(res) == "table" })
         end, {
             Coins = amount / GetQBit().Worth,
@@ -263,7 +263,7 @@ if Config.Crypto.QBit then
     function SellQBit(amount)
         local promise = promise.new()
 
-        QB.Functions.TriggerCallback("qb-crypto:server:SellCrypto", function(res)
+        QB.Functions.TriggerCallback("sb-crypto:server:SellCrypto", function(res)
             promise:resolve({ success = type(res) == "table" })
         end, {
             Coins = amount,
@@ -286,7 +286,7 @@ if Config.Crypto.QBit then
 
         local promise = promise.new()
 
-        QB.Functions.TriggerCallback("qb-crypto:server:TransferCrypto", function(res)
+        QB.Functions.TriggerCallback("sb-crypto:server:TransferCrypto", function(res)
             promise:resolve({ success = type(res) == "table" })
         end, {
             Coins = amount,

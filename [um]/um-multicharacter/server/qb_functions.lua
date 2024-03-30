@@ -59,6 +59,6 @@ function loadHouseData(src)
             }
         end
     end
-    TriggerClientEvent("qb-garages:client:houseGarageConfig", src, HouseGarages)
-    TriggerClientEvent("qb-houses:client:setHouseConfig", src, Houses)
+    TriggerClientEvent("sb-garages:client:houseGarageConfig", src, HouseGarages)
+    TriggerClientEvent("sb-houses:client:setHouseConfig", src, Houses)
 end

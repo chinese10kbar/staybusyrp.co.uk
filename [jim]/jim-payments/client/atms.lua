@@ -1,6 +1,6 @@
--- This script is a simple replacement for qs-banking and QB-ATMs
--- It uses QB-Input and server callbacks to retreive info about accounts and cash
--- This requires QB-Target and has the location of every ATM, ATM prop and bank window
+-- This script is a simple replacement for qs-banking and sb-ATMs
+-- It uses sb-Input and server callbacks to retreive info about accounts and cash
+-- This requires sb-Target and has the location of every ATM, ATM prop and bank window
 
 local Targets = {}
 local Peds = {}
@@ -60,17 +60,17 @@ CreateThread(function()
 		end
 	end
 	if Config.useATM then
-		exports['qb-target']:AddTargetModel(Config.ATMModels, { options = { { event = "jim-payments:Client:ATM:use", icon = "fas fa-money-check-alt", label = Loc[Config.Lan].target["atm"], id = "atm" },}, distance = 1.5, })
+		exports['sb-target']:AddTargetModel(Config.ATMModels, { options = { { event = "jim-payments:Client:ATM:use", icon = "fas fa-money-check-alt", label = Loc[Config.Lan].target["atm"], id = "atm" },}, distance = 1.5, })
 		for k,v in pairs(Config.WallATMLocations) do
 			Targets["jimwallatm"..k] =
-			exports['qb-target']:AddCircleZone("jimwallatm"..k, vector3(v.x, v.y, v.z+0.2), 0.5, { name="jimwallatm"..k, debugPoly=Config.Debug, useZ=true, },
+			exports['sb-target']:AddCircleZone("jimwallatm"..k, vector3(v.x, v.y, v.z+0.2), 0.5, { name="jimwallatm"..k, debugPoly=Config.Debug, useZ=true, },
 			{ options = { { event = "jim-payments:Client:ATM:use", icon = "fas fa-money-check-alt", label = Loc[Config.Lan].target["atm"], id = "atm" },
 						--{ event = "jim-payments:Client:ATM:use", icon = "fas fa-arrow-right-arrow-left", label = Loc[Config.Lan].target["transfer_money"], id = "transfer" },
 			}, distance = 1.5 })
 		end
 		for k,v in pairs(Config.ATMLocations) do
 			Targets["jimatm"..k] =
-			exports['qb-target']:AddCircleZone("jimatm"..k, vector3(v.x, v.y, v.z+0.2), 0.5, { name="jimatm"..k, debugPoly=Config.Debug, useZ=true, },
+			exports['sb-target']:AddCircleZone("jimatm"..k, vector3(v.x, v.y, v.z+0.2), 0.5, { name="jimatm"..k, debugPoly=Config.Debug, useZ=true, },
 			{ options = { { event = "jim-payments:Client:ATM:use", icon = "fas fa-money-check-alt", label = Loc[Config.Lan].target["atm"], id = "atm" },
 						--{ event = "jim-payments:Client:ATM:use", icon = "fas fa-arrow-right-arrow-left", label = Loc[Config.Lan].target["transfer_money"], id = "transfer" },
 			}, distance = 1.5 })
@@ -80,7 +80,7 @@ CreateThread(function()
 		for k,v in pairs(Config.BankLocations) do
 			for l, b in pairs(v) do
 				Targets["jimbank"..k..l] =
-				exports['qb-target']:AddCircleZone("jimbank"..k..l, vector3(b.x, b.y, b.z+0.2), 2.0, { name="jimbank"..k..l, debugPoly=Config.Debug, useZ=true, },
+				exports['sb-target']:AddCircleZone("jimbank"..k..l, vector3(b.x, b.y, b.z+0.2), 2.0, { name="jimbank"..k..l, debugPoly=Config.Debug, useZ=true, },
 				{ options = { { event = "jim-payments:Client:ATM:use", icon = "fas fa-piggy-bank", label = Loc[Config.Lan].target["bank"], id = "bank" },
 							{ event = "jim-payments:Client:ATM:use", icon = "fas fa-arrow-right-arrow-left", label = Loc[Config.Lan].target["transfer"], id = "transfer" },
 							{ event = "jim-payments:Client:ATM:use", icon = "fas fa-money-check-dollar", label = Loc[Config.Lan].target["saving"], id = "savings" },
@@ -107,9 +107,9 @@ RegisterNetEvent('jim-payments:Client:ATM:use', function(data)
 	QBCore.Functions.TriggerCallback('jim-payments:ATM:Find', function(cb) p:resolve(cb) end) local info = Citizen.Await(p)
 	if Config.Banking == "qb" then
 		local p = promise.new()
-		QBCore.Functions.TriggerCallback('qb-bossmenu:server:GetAccount', function(cb) p:resolve(cb) end, PlayerJob.name) info.society = Citizen.Await(p)
+		QBCore.Functions.TriggerCallback('sb-bossmenu:server:GetAccount', function(cb) p:resolve(cb) end, PlayerJob.name) info.society = Citizen.Await(p)
 		local p2 = promise.new()
-		QBCore.Functions.TriggerCallback('qb-gangmenu:server:GetAccount', function(cb) p2:resolve(cb) end, PlayerGang.name) info.gsociety = Citizen.Await(p2)
+		QBCore.Functions.TriggerCallback('sb-gangmenu:server:GetAccount', function(cb) p2:resolve(cb) end, PlayerGang.name) info.gsociety = Citizen.Await(p2)
 	end
 	local atmbartime = 2500
 	local bartext = ""
@@ -199,7 +199,7 @@ RegisterNetEvent('jim-payments:Client:ATM:use', function(data)
 	TaskPlayAnim(PlayerPedId(), 'amb@prop_human_atm@male@enter', "enter", 1.0,-1.0, 1500, 1, 1, true, true, true)
 	unloadAnimDict('amb@prop_human_atm@male@enter')
 	QBCore.Functions.Progressbar("accessing_atm", bartext, atmbartime, false, true, { disableMovement = false, disableCarMovement = false, disableMouse = false, disableCombat = false, }, {}, {}, {}, function()
-		local dialog = exports['qb-input']:ShowInput({ header = setheader, txt = "test", submitText = Loc[Config.Lan].menu["transfer"], inputs = setinputs })
+		local dialog = exports['sb-input']:ShowInput({ header = setheader, txt = "test", submitText = Loc[Config.Lan].menu["transfer"], inputs = setinputs })
 		if dialog then
 			if not dialog.amount then return end
 			loadAnimDict('amb@prop_human_atm@male@exit')
@@ -228,7 +228,7 @@ RegisterNetEvent('jim-payments:client:ATM:give', function()
 			dist = nil
 		end
 		if not nearbyList[1] then triggerNotify(nil, Loc[Config.Lan].error["no_one"], "error") return end
-		local dialog = exports['qb-input']:ShowInput({ header = Loc[Config.Lan].menu["give_cash"], submitText = Loc[Config.Lan].menu["give"],
+		local dialog = exports['sb-input']:ShowInput({ header = Loc[Config.Lan].menu["give_cash"], submitText = Loc[Config.Lan].menu["give"],
 		inputs = {
 				{ text = " ", name = "citizen", type = "select", options = nearbyList },
 				{ type = 'number', isRequired = true, name = 'price', text = Loc[Config.Lan].menu["amount_pay"] }, }
@@ -241,6 +241,6 @@ RegisterNetEvent('jim-payments:client:ATM:give', function()
 end)
 
 AddEventHandler('onResourceStop', function(r) if r ~= GetCurrentResourceName() then return end
-	for k in pairs(Targets) do exports['qb-target']:RemoveZone(k) end
+	for k in pairs(Targets) do exports['sb-target']:RemoveZone(k) end
 	for k in pairs(Peds) do unloadModel(GetEntityModel(Peds[k])) DeletePed(Peds[k]) end
 end)

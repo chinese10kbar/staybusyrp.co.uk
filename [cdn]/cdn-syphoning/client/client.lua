@@ -1,4 +1,4 @@
-local QBCore = exports['qb-core']:GetCoreObject()
+local QBCore = exports['sb-core']:GetCoreObject()
 
 -- Functions --
 
@@ -18,9 +18,9 @@ local function PoliceAlert(coords)
     if chance < Config.SyphonPoliceCallChance then
         if Config.SyphonDispatchSystem == "ps-dispatch" then
             exports['ps-dispatch']:SuspiciousActivity()
-        elseif Config.SyphonDispatchSystem == "qb-dispatch" then
-           TriggerServerEvent('qb-dispatch:911call', coords)
-        elseif Config.SyphonDispatchSystem == "qb-default" then
+        elseif Config.SyphonDispatchSystem == "sb-dispatch" then
+           TriggerServerEvent('sb-dispatch:911call', coords)
+        elseif Config.SyphonDispatchSystem == "sb-default" then
             TriggerServerEvent('cdn-syphoning:callcops', coords)
         elseif Config.SyphonDispatchSystem == "custom" then
             -- Put your own dispatch system here
@@ -41,7 +41,7 @@ RegisterNetEvent('cdn-syphoning:syphon:menu', function(itemData)
     if GetVehicleBodyHealth(vehicle) < 100 then QBCore.Functions.Notify("Vehicle is too damaged!", 'error') return end
     local nogas if itemData.info.gasamount < 1 then nogas = true Nogasstring = "You have no gas in your Syphon Kit!" else nogas = false Nogasstring = "Put your stolen gasoline to use and refuel the vehicle!" end 
     local syphonfull if itemData.info.gasamount == Config.SyphonKitCap then syphonfull = true Stealfuelstring = "Your Syphon Kit is full! It only fits "..Config.SyphonKitCap.."L!" elseif GetFuel(vehicle) < 1 then syphonfull = true Stealfuelstring = "This vehicle's fuel tank is empty." else syphonfull = false Stealfuelstring = "Steal fuel from an unsuspecting victim!" end -- Disable Options based on item data
-    exports['qb-menu']:openMenu({
+    exports['sb-menu']:openMenu({
         {
             header = "Syphoning Kit",
             isMenuHeader = true,
@@ -103,7 +103,7 @@ RegisterNetEvent('cdn-syphoning:syphon', function(data)
             Stealstring = maxsyphon
         end
         if reason == "syphon" then
-            local syphon = exports['qb-input']:ShowInput({
+            local syphon = exports['sb-input']:ShowInput({
                 header = "Select how much gas to steal.",
                 submitText = "Begin Syphoning",
                 inputs = {
@@ -155,7 +155,7 @@ RegisterNetEvent('cdn-syphoning:syphon', function(data)
             else
                 Maxrefuel = currentsyphonamount
             end
-            local refuel = exports['qb-input']:ShowInput({
+            local refuel = exports['sb-input']:ShowInput({
                 header = "Select how much gas to refuel.",
                 submitText = "Refuel Vehicle",
                 inputs = {

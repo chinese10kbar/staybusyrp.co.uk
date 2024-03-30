@@ -1,9 +1,9 @@
-if Config.Menu ~= 'qb-menu' then
+if Config.Menu ~= 'sb-menu' then
      return
 end
 
 function CreateBackpack(ID)
-     local inputData = exports['qb-input']:ShowInput({
+     local inputData = exports['sb-input']:ShowInput({
           header = Lang('CREATE_PASSWORD') .. ' Min ' .. Config.PasswordLength.min .. ' Max ' .. Config.PasswordLength.max,
           inputs = {
                {
@@ -39,7 +39,7 @@ end
 
 function CheckMeta(backpack_metadata)
      if backpack_metadata.locked then
-          local inputData = exports['qb-input']:ShowInput({
+          local inputData = exports['sb-input']:ShowInput({
                header = Lang('INTRODUCE_PASSWORD'),
                inputs = {
                     {

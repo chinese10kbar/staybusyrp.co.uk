@@ -10,7 +10,7 @@ Core.Target = {
     for k,v in pairs(data.Options) do 
       if not v.distance then v.distance = (data.Distance or 1.5); end
     end  
-    if Config.TargetSystem == "qb-target" or Config.TargetSystem == "qtarget" then
+    if Config.TargetSystem == "sb-target" or Config.TargetSystem == "qtarget" then
       exports[Config.TargetSystem]:AddBoxZone(name, vector3(data.Position.x, data.Position.y, data.Position.z), (data.Length or 1.0), (data.Width or 1.0), {
         name = name, -- This is the name of the zone recognized by PolyZone, this has to be unique so it doesn't mess up with other zones
         debugPoly = Config.DrawDebug, -- This is for enabling/disabling the drawing of the box, it accepts only a boolean value (true or false), when true it will draw the polyzone in green
@@ -43,8 +43,8 @@ Core.Target = {
     local resource = GetInvokingResource() or 'dirk-core'
     if not createdZones[resource] then createdZones[resource] = {}; end
     createdZones[resource][name] = true
-    if Config.TargetSystem == "qb-target" or Config.TargetSystem == "qtarget" or Config.TargetSystem == "ox_target" then
-      if Config.TargetSystem == "ox_target" then tempTargetSystem = "qb-target" else tempTargetSystem = Config.TargetSystem;  end
+    if Config.TargetSystem == "sb-target" or Config.TargetSystem == "qtarget" or Config.TargetSystem == "ox_target" then
+      if Config.TargetSystem == "ox_target" then tempTargetSystem = "sb-target" else tempTargetSystem = Config.TargetSystem;  end
       local minZ = 999999999
       for k,v in pairs(data.Polygon) do 
         data.Polygon[k] = vector2(v.x, v.y)
@@ -70,7 +70,7 @@ Core.Target = {
   end,
 
   AddEntity = function(entity,data)
-    if Config.TargetSystem == "qb-target" or Config.TargetSystem == "qtarget" then
+    if Config.TargetSystem == "sb-target" or Config.TargetSystem == "qtarget" then
       exports[Config.TargetSystem]:AddTargetEntity(entity, {
         options = data.Options,
         distance = (data.Distance or 1.5)
@@ -89,7 +89,7 @@ Core.Target = {
   end,
 
   RemoveEntity = function(entity, net)
-    if Config.TargetSystem == "qb-target" or Config.TargetSystem == "qtarget" then
+    if Config.TargetSystem == "sb-target" or Config.TargetSystem == "qtarget" then
       exports[Config.TargetSystem]:RemoveTargetEntity(entity)
     elseif Config.TargetSystem == "ox_target" then
       if not net then
@@ -101,7 +101,7 @@ Core.Target = {
   end,
 
   AddGlobalVehicle = function(data)
-    if Config.TargetSystem == "qb-target" then
+    if Config.TargetSystem == "sb-target" then
       exports[Config.TargetSystem]:AddGlobalVehicle({
         distance = (data.Distance or 1.5),
         options  = data.Options,
@@ -121,7 +121,7 @@ Core.Target = {
   end,
 
   AddGlobalPed = function(data)
-    if Config.TargetSystem == "qb-target" then
+    if Config.TargetSystem == "sb-target" then
       exports[Config.TargetSystem]:AddGlobalPed({
         distance = (data.Distance or 1.5),
         options  = data.Options,
@@ -141,7 +141,7 @@ Core.Target = {
   end,
 
   AddModels    = function(data)
-    if Config.TargetSystem == "qb-target" then
+    if Config.TargetSystem == "sb-target" then
       exports[Config.TargetSystem]:AddTargetModel(data.Models, {
         distance = (data.Distance or 1.5),
         options  = data.Options,
@@ -165,7 +165,7 @@ Core.Target = {
     if not createdZones[resource] then return; end
     if not createdZones[resource][zn] then return; end
     createdZones[resource][zn] = nil
-    if Config.TargetSystem == "qb-target" or Config.TargetSystem == "q-target" then
+    if Config.TargetSystem == "sb-target" or Config.TargetSystem == "q-target" then
       exports[Config.TargetSystem]:RemoveZone(zn)
     elseif Config.TargetSystem == "ox_target" then
       exports['ox_target']:removeZone(tonumber(Core.Target.Holding[zn]))

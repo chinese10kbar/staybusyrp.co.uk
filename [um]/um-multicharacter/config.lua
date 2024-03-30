@@ -26,7 +26,7 @@ Config.CleanZone = false --  true (optional)
 Config.HideRadar = true --  true (optional)
 
 --[[
-    If you are using qb-logs, set this to true
+    If you are using sb-logs, set this to true
 ]]
 Config.QBLogs = false --  true (optional)
 
@@ -38,7 +38,7 @@ Config.Lang = 'en' -- [locales/.lua]
 
 Config.ConvertQBoxLicense = false -- If you are using QBox set true,
 
-Config.Clothing = 'illenium-appearance' -- illenium-appearance, fivem-appearance (old illenium for qb), qb-clothing, custom
+Config.Clothing = 'illenium-appearance' -- illenium-appearance, fivem-appearance (old illenium for qb), sb-clothing, custom
 
 Config.SkinTable = 'playerskins' -- If you are using skins inside players just set 'skin' | playerskins or skin
 
@@ -49,8 +49,8 @@ Config.ClothingExports = function(cacheped,skinData) -- If you don't have a cust
         exports['illenium-appearance']:setPedAppearance(cacheped, skinData)
     elseif Config.Clothing == 'fivem-appearance' then
         exports['fivem-appearance']:setPedAppearance(cacheped, skinData)
-    elseif Config.Clothing == 'qb-clothing' then
-        TriggerEvent('qb-clothing:client:loadPlayerClothing', skinData, cacheped)
+    elseif Config.Clothing == 'sb-clothing' then
+        TriggerEvent('sb-clothing:client:loadPlayerClothing', skinData, cacheped)
     elseif Config.Clothing == 'custom' then
         Debug('You can add your own clothing exports here.')
     end
@@ -93,19 +93,19 @@ Config.UMIDCard = {
 
 Config.QBEvents = {
 --[[
-      this event sends the character's data to qb-apartments and opens the spawn menu by running the qb-spawn event
-      If you are using custom spawn, type your spawn event here, or if you continue to use qb-apartments,
-      replace your custom spawn event with the one in qb-apartments
+      this event sends the character's data to sb-apartments and opens the spawn menu by running the sb-spawn event
+      If you are using custom spawn, type your spawn event here, or if you continue to use sb-apartments,
+      replace your custom spawn event with the one in sb-apartments
       --------------------------------------------------------------
       for um-spawn: 'um-spawn:client:startSpawnUI'
       for ps-housing: 'ps-housing:client:setupSpawnUI'
-      for qb-apartments: 'apartments:client:setupSpawnUI'
+      for sb-apartments: 'apartments:client:setupSpawnUI'
 ]]    spawnEventUI = 'um-spawn:client:startSpawnUI',
 
 --[[
      if you are not using a custom event don't change it illenium-appearance
-     and old illenium fivem-appearance and qb-clothing support it
-]]   createFirstCharacter = 'qb-clothes:client:CreateFirstCharacter'
+     and old illenium fivem-appearance and sb-clothing support it
+]]   createFirstCharacter = 'sb-clothes:client:CreateFirstCharacter'
 }
 
 
@@ -122,7 +122,7 @@ Config.DefaultSpawn = { -- If ApartmentStart is false, it spawns the [new charac
 
 --[[
     This simply means that when the character starts the game, it spawns in the last location and does not need any menu.
-    qb-spawn only works if ApartmentStart is true
+    sb-spawn only works if ApartmentStart is true
 --]]
 Config.UMSpawnLastLocation = false
 

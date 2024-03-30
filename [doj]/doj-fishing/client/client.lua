@@ -1,5 +1,5 @@
 
-local QBCore = exports['qb-core']:GetCoreObject()
+local QBCore = exports['sb-core']:GetCoreObject()
 local fishing = false
 local pause = false
 local pausetimer = 0
@@ -66,7 +66,7 @@ CreateThread(function()
 					TriggerEvent('fishing:SkillBar')
 				else
 					QBCore.Functions.Notify('The Fish Escaped!', 'error')
-					exports["qb-core"]:HideText()
+					exports["sb-core"]:HideText()
 					loseBait()
 				end
 			end
@@ -83,7 +83,7 @@ CreateThread(function()
 			pause = true
 			correct = 1
 			TriggerEvent('3dme:triggerDisplay', 'Fishing Rod Starts to Tug!')
-			exports["qb-core"]:DrawText("Press [F] to Catch Fish!")
+			exports["sb-core"]:DrawText("Press [F] to Catch Fish!")
 			input = 0
 			pausetimer = 0
 		end
@@ -146,7 +146,7 @@ end)
 
 
 RegisterNetEvent('fishing:SkillBar', function(message)
-	exports["qb-core"]:HideText()
+	exports["sb-core"]:HideText()
 	if Config.Skillbar == "reload-skillbar" then
 		local finished = exports["reload-skillbar"]:taskBar(math.random(5000,7500),math.random(2,4))
 		if finished ~= 100 then
@@ -175,8 +175,8 @@ RegisterNetEvent('fishing:SkillBar', function(message)
 		else
 			catchAnimation()
 		end
-	elseif Config.Skillbar == "qb-skillbar" then
-		local Skillbar = exports['qb-skillbar']:GetSkillbarObject()
+	elseif Config.Skillbar == "sb-skillbar" then
+		local Skillbar = exports['sb-skillbar']:GetSkillbarObject()
 		Skillbar.Start({
 			duration = math.random(2500,5000),
 			pos = math.random(10, 30),
@@ -264,7 +264,7 @@ RegisterNetEvent('fishing:fishstart', function()
 		local time = 1000
 		QBCore.Functions.Notify('Using Fishing Rod', 'primary', time)
 		Wait(time)
-		exports["qb-core"]:DrawText("Press [X] to stop fishing at any time") 
+		exports["sb-core"]:DrawText("Press [X] to stop fishing at any time") 
 		fishAnimation()
 	else
 		QBCore.Functions.Notify('You need to go further away from the shore', 'error')
@@ -514,9 +514,9 @@ loseBaitAnimation = function()
 	end
 	TaskPlayAnim(ped, animDict, animName, 1.0, -1.0, 1.0, 0, 0, 0, 48, 0)
 	RemoveAnimDict(animDict)
-	exports["qb-core"]:DrawText("Fish took your bait!")
+	exports["sb-core"]:DrawText("Fish took your bait!")
 	Wait(2000)
-	exports["qb-core"]:HideText()
+	exports["sb-core"]:HideText()
 	fishAnimation()
 end
 
@@ -564,7 +564,7 @@ fishAnimation = function()
 		fishingRodEntity()
 		fishing = true
 		Wait(3700)
-		exports["qb-core"]:HideText()
+		exports["sb-core"]:HideText()
 	else
 	  endFishing()
 	  QBCore.Functions.Notify("You dont have any fishing bait", "error")
@@ -587,7 +587,7 @@ endFishing = function()
 		ClearPedTasks(ped)
 		fishing = false
 		rodHandle = 0
-		exports["qb-core"]:HideText()
+		exports["sb-core"]:HideText()
     end
 end
 

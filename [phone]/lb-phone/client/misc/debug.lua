@@ -114,7 +114,7 @@ end)
 
 if Config.QBMailEvent then
     registerDebugCommand("qbmail", function()
-        TriggerServerEvent('qb-phone:server:sendNewMail', {
+        TriggerServerEvent('sb-phone:server:sendNewMail', {
             sender = "Very Cool",
             subject = "Delivery Location",
             message = "whatever",

@@ -14,9 +14,9 @@ function Management.RemoveItems()
 end
 
 function Management.AddBackMenuItem(managementMenu, args)
-    local bossMenuEvent = "qb-bossmenu:client:OpenMenu"
+    local bossMenuEvent = "sb-bossmenu:client:OpenMenu"
     if args.type == "Gang" then
-        bossMenuEvent = "qb-gangmenu:client:OpenMenu"
+        bossMenuEvent = "sb-gangmenu:client:OpenMenu"
     end
 
     managementMenu.options[#managementMenu.options+1] = {

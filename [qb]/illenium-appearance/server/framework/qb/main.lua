@@ -1,6 +1,6 @@
 if not Framework.QBCore() then return end
 
-local QBCore = exports["qb-core"]:GetCoreObject()
+local QBCore = exports["sb-core"]:GetCoreObject()
 
 function Framework.GetPlayerID(src)
     local Player = QBCore.Functions.GetPlayer(src)

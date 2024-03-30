@@ -5,7 +5,7 @@ if not wsb then return print((Strings.no_wsb):format(GetCurrentResourceName())) 
 playerLoaded, isDead, isBusy, disableKeys, cuffProp, isCuffed, inMenu, isRagdoll, cuffTimer, escorting, escorted, GSRData =
     nil, nil, nil, nil, nil, nil, nil, nil, {}, {}, {}, {}
 QBCore = nil
-if wsb.framework == 'qb' then QBCore = exports['qb-core']:GetCoreObject() end
+if wsb.framework == 'qb' then QBCore = exports['sb-core']:GetCoreObject() end
 
 
 RegisterNetEvent('wasabi_police:tackled', function(targetId)

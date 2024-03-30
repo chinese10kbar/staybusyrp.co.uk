@@ -17,8 +17,8 @@ Config.NotificationLocation = 'center-right'
 
 ---------------------------------------------------------
 --     Specify the target system being used here.      --    
--- Options are 'qb-target', 'qtarget', and 'ox_target' --
+-- Options are 'sb-target', 'qtarget', and 'ox_target' --
 -- Set to false if not using any of the above systems. --
 --           OR add your own target system!            --
 ---------------------------------------------------------
-Config.TargetSystem = 'qb-target'
+Config.TargetSystem = 'sb-target'

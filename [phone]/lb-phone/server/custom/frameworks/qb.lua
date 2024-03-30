@@ -3,7 +3,7 @@ if Config.Framework ~= "qb" then
 end
 
 debugprint("Loading QB")
-QB = exports["qb-core"]:GetCoreObject()
+QB = exports["sb-core"]:GetCoreObject()
 debugprint("QB loaded")
 
 ---@param source number
@@ -484,14 +484,14 @@ end)
 
 local function getSocietyMoney(job)
     local success, res = pcall(function()
-        return exports["qb-management"]:GetAccount(job)
+        return exports["sb-management"]:GetAccount(job)
     end)
 
     if success then
         return res
     end
 
-    return exports["qb-banking"]:GetAccountBalance(job)
+    return exports["sb-banking"]:GetAccountBalance(job)
 end
 
 lib.RegisterCallback("phone:services:getAccount", function(source, cb)
@@ -508,10 +508,10 @@ lib.RegisterCallback("phone:services:addMoney", function(source, cb, amount)
     end
 
     local success, _ = pcall(function()
-        return exports["qb-management"]:AddMoney(job, amount)
+        return exports["sb-management"]:AddMoney(job, amount)
     end)
 
-    if success or exports["qb-banking"]:AddMoney(job, amount) then
+    if success or exports["sb-banking"]:AddMoney(job, amount) then
         RemoveMoney(source, amount)
     end
 
@@ -526,11 +526,11 @@ lib.RegisterCallback("phone:services:removeMoney", function(source, cb, amount)
     end
 
     local success, res = pcall(function()
-        return exports["qb-management"]:RemoveMoney(job, amount)
+        return exports["sb-management"]:RemoveMoney(job, amount)
     end)
 
     if not success then
-        res = exports["qb-banking"]:RemoveMoney(job, amount)
+        res = exports["sb-banking"]:RemoveMoney(job, amount)
     end
 
     if res then
@@ -578,19 +578,19 @@ if Config.QBMailEvent then
         })
     end
 
-    RegisterNetEvent("qb-phone:server:sendNewMail", function(data)
+    RegisterNetEvent("sb-phone:server:sendNewMail", function(data)
         local phoneNumber = GetEquippedPhoneNumber(source)
 
         sendQBMail(phoneNumber, data)
     end)
 
-    RegisterNetEvent("qb-phone:server:sendNewMailToOffline", function(citizenid, data)
+    RegisterNetEvent("sb-phone:server:sendNewMailToOffline", function(citizenid, data)
         local phoneNumber = GetEquippedPhoneNumber(citizenid)
 
         sendQBMail(phoneNumber, data)
     end)
 
-    AddEventHandler("__cfx_export_qb-phone_sendNewMailToOffline", function(citizenid, data)
+    AddEventHandler("__cfx_export_sb-phone_sendNewMailToOffline", function(citizenid, data)
         local phoneNumber = GetEquippedPhoneNumber(citizenid)
 
         sendQBMail(phoneNumber, data)

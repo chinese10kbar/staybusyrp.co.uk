@@ -6,7 +6,7 @@ print("^2Jim^7-^2Consumables ^7v^41^7.^45 ^7- ^2Consumables Script by ^1Jimathy^
 
 Config = {
 	Debug = false,
-	Core = "qb-core",
+	Core = "sb-core",
 
 	Inv = "qb", -- set to "ox" if using ox_inventory
 	Notify = "qb",  -- set to "ox" if using ox_lib

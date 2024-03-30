@@ -1,8 +1,8 @@
 
-local QBCore = exports['qb-core']:GetCoreObject()
+local QBCore = exports['sb-core']:GetCoreObject()
 
 function BoatMenuLaPuerta()
-    exports['qb-menu']:openMenu({
+    exports['sb-menu']:openMenu({
         {
             header = "La Puerta Boat Rental",
             isMenuHeader = true
@@ -19,14 +19,14 @@ function BoatMenuLaPuerta()
             header = "Close",
             txt = "",
             params = {
-                event = "qb-menu:closeMenu"
+                event = "sb-menu:closeMenu"
             }
         },
     })
 end 
 
 function BoatMenuPaletoCove()
-    exports['qb-menu']:openMenu({
+    exports['sb-menu']:openMenu({
         {
             header = "Paleto Cove Boat Rental",
             isMenuHeader = true
@@ -43,14 +43,14 @@ function BoatMenuPaletoCove()
             header = "Close",
             txt = "",
             params = {
-                event = "qb-menu:closeMenu"
+                event = "sb-menu:closeMenu"
             }
         },
     })
 end 
 
 function BoatMenuElGordo()
-    exports['qb-menu']:openMenu({
+    exports['sb-menu']:openMenu({
         {
             header = "El Gordo Boat Rental",
             isMenuHeader = true
@@ -67,7 +67,7 @@ function BoatMenuElGordo()
             header = "Close",
             txt = "",
             params = {
-                event = "qb-menu:closeMenu"
+                event = "sb-menu:closeMenu"
             }
         },
     })
@@ -75,7 +75,7 @@ end
 
 
 function BoatMenuActDam()
-    exports['qb-menu']:openMenu({
+    exports['sb-menu']:openMenu({
         {
             header = "Act Dam Boat Rental",
             isMenuHeader = true
@@ -92,14 +92,14 @@ function BoatMenuActDam()
             header = "Close",
             txt = "",
             params = {
-                event = "qb-menu:closeMenu"
+                event = "sb-menu:closeMenu"
             }
         },
     })
 end 
 
 function BoatMenuAlamoSea()
-    exports['qb-menu']:openMenu({
+    exports['sb-menu']:openMenu({
         {
             header = "Alamo Sea Boat Rental",
             isMenuHeader = true
@@ -116,7 +116,7 @@ function BoatMenuAlamoSea()
             header = "Close",
             txt = "",
             params = {
-                event = "qb-menu:closeMenu"
+                event = "sb-menu:closeMenu"
             }
         },
     })
@@ -124,7 +124,7 @@ end
 --============================================================== ReturnMenus
 
 function ReturnBoatLaPuerta()
-    exports['qb-menu']:openMenu({
+    exports['sb-menu']:openMenu({
 		{
             header = "Fishing Boat Rental",
             isMenuHeader = true
@@ -141,14 +141,14 @@ function ReturnBoatLaPuerta()
             header = "Close",
             txt = "",
             params = {
-                event = "qb-menu:closeMenu"
+                event = "sb-menu:closeMenu"
             }
         },
     })
 end 
 
 function ReturnBoatPaletoCove()
-    exports['qb-menu']:openMenu({
+    exports['sb-menu']:openMenu({
 		{
             header = "Fishing Boat Rental",
             isMenuHeader = true
@@ -165,14 +165,14 @@ function ReturnBoatPaletoCove()
             header = "Close",
             txt = "",
             params = {
-                event = "qb-menu:closeMenu"
+                event = "sb-menu:closeMenu"
             }
         },
     })
 end 
 
 function ReturnBoatElGordo()
-    exports['qb-menu']:openMenu({
+    exports['sb-menu']:openMenu({
 		{
             header = "Fishing Boat Rental",
             isMenuHeader = true
@@ -189,14 +189,14 @@ function ReturnBoatElGordo()
             header = "Close",
             txt = "",
             params = {
-                event = "qb-menu:closeMenu"
+                event = "sb-menu:closeMenu"
             }
         },
     })
 end 
 
 function ReturnBoatActDam()
-    exports['qb-menu']:openMenu({
+    exports['sb-menu']:openMenu({
 		{
             header = "Fishing Boat Rental",
             isMenuHeader = true
@@ -213,14 +213,14 @@ function ReturnBoatActDam()
             header = "Close",
             txt = "",
             params = {
-                event = "qb-menu:closeMenu"
+                event = "sb-menu:closeMenu"
             }
         },
     })
 end 
 
 function ReturnBoatAlamoSea()
-    exports['qb-menu']:openMenu({
+    exports['sb-menu']:openMenu({
 		{
             header = "Fishing Boat Rental",
             isMenuHeader = true
@@ -237,7 +237,7 @@ function ReturnBoatAlamoSea()
             header = "Close",
             txt = "",
             params = {
-                event = "qb-menu:closeMenu"
+                event = "sb-menu:closeMenu"
             }
         },
     })
@@ -247,7 +247,7 @@ end
 
 RegisterNetEvent('doj:client:SellLegalFish')
 AddEventHandler('doj:client:SellLegalFish', function()
-    exports['qb-menu']:openMenu({
+    exports['sb-menu']:openMenu({
 		{
             header = "Pearl's Seafood Restaurant",
             isMenuHeader = true
@@ -301,7 +301,7 @@ AddEventHandler('doj:client:SellLegalFish', function()
             header = "Close",
             txt = "",
             params = {
-                event = "qb-menu:closeMenu"
+                event = "sb-menu:closeMenu"
             }
         },
     })
@@ -309,7 +309,7 @@ end)
 
 RegisterNetEvent('doj:client:buyFishingGear')
 AddEventHandler('doj:client:buyFishingGear', function() 
-    exports['qb-menu']:openMenu({
+    exports['sb-menu']:openMenu({
 		{
             header = "Purchase Fishing Gear",
             isMenuHeader = true
@@ -354,7 +354,7 @@ AddEventHandler('doj:client:buyFishingGear', function()
             header = "Close",
             txt = "",
             params = {
-                event = "qb-menu:closeMenu"
+                event = "sb-menu:closeMenu"
             }
         },
     })
@@ -366,7 +366,7 @@ AddEventHandler('doj:client:SellillegalFish', function()
 		if HasItem then
 			local charinfo = QBCore.Functions.GetPlayerData().charinfo
 			QBCore.Functions.Notify('Welcome, '..charinfo.firstname..' '..charinfo.lastname)
-			exports['qb-menu']:openMenu({
+			exports['sb-menu']:openMenu({
 				{
 					header = "Pearl's Seafood Restaurant",
 					isMenuHeader = true
@@ -411,7 +411,7 @@ AddEventHandler('doj:client:SellillegalFish', function()
 					header = "Close",
 					txt = "",
 					params = {
-						event = "qb-menu:closeMenu"
+						event = "sb-menu:closeMenu"
 					}
 				},
 			})

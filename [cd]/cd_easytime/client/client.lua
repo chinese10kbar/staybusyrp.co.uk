@@ -45,13 +45,13 @@ Citizen.CreateThread(function()
             TriggerServerEvent('cd_easytime:SyncMe', {time = true, weather = true})
         end)
 
-        RegisterNetEvent('qb-weathersync:client:EnableSync')
-        AddEventHandler('qb-weathersync:client:EnableSync', function()
+        RegisterNetEvent('sb-weathersync:client:EnableSync')
+        AddEventHandler('sb-weathersync:client:EnableSync', function()
             TriggerEvent('cd_easytime:PauseSync', true)
         end)
 
-        RegisterNetEvent('qb-weathersync:client:DisableSync')
-        AddEventHandler('qb-weathersync:client:DisableSync', function()
+        RegisterNetEvent('sb-weathersync:client:DisableSync')
+        AddEventHandler('sb-weathersync:client:DisableSync', function()
             TriggerEvent('cd_easytime:PauseSync', false)
         end)
     

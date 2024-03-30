@@ -1,4 +1,4 @@
-if Config.Housing ~= "qb-housing" then
+if Config.Housing ~= "sb-housing" then
     return
 end
 

@@ -39,5 +39,5 @@ server_exports {
     'GetWeather'
 }
 
-provide 'qb-weathersync'
+provide 'sb-weathersync'
 provide 'vSync'

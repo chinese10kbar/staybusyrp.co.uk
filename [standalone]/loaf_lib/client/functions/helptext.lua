@@ -13,7 +13,7 @@ function functions.HideHelpText()
         elseif Config.HelpTextStyle == "esx" then
             TriggerEvent("ESX:HideUI")
         elseif Config.HelpTextStyle == "qbcore" then
-            TriggerEvent("qb-core:client:HideText")
+            TriggerEvent("sb-core:client:HideText")
         elseif Config.HelpTextStyle == "gta" then
             ClearAllHelpMessages()
             ClearHelp(true)
@@ -44,7 +44,7 @@ function functions.DrawHelpText(text, coords, key)
     elseif Config.HelpTextStyle == "esx" then
         TriggerEvent("ESX:TextUI", currentHelptext)
     elseif Config.HelpTextStyle == "qbcore" then
-        TriggerEvent("qb-core:client:DrawText", currentHelptext)
+        TriggerEvent("sb-core:client:DrawText", currentHelptext)
     elseif Config.HelpTextStyle == "gta" then
         AddTextEntry(textEntry, currentHelptext)
         BeginTextCommandDisplayHelp(textEntry)

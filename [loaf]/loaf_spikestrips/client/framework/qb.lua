@@ -4,7 +4,7 @@ end
 
 debugprint("Loading QB")
 
-QB = exports["qb-core"]:GetCoreObject()
+QB = exports["sb-core"]:GetCoreObject()
 
 while not LocalPlayer.state.isLoggedIn do
 	Wait(500)

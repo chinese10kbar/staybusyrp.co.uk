@@ -1,6 +1,6 @@
 --[[
 	Please read carefully.
-	In case you use qb-core, you must use your shared in qb-core,
+	In case you use sb-core, you must use your shared in sb-core,
 	not this shared, this section is exclusive for esx!
 
 	However, you can copy all the items from here for your convenience!

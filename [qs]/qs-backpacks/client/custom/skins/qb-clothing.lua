@@ -1,17 +1,17 @@
-if Config.SkinScript ~= 'qb-clothing' then
+if Config.SkinScript ~= 'sb-clothing' then
     return
 end
 
 function putClothes(backpack)
     if getSex() == 0 then
-        TriggerEvent('qb-clothing:client:loadOutfit', { outfitData = backpack.cloth['male'] })
+        TriggerEvent('sb-clothing:client:loadOutfit', { outfitData = backpack.cloth['male'] })
     else
-        TriggerEvent('qb-clothing:client:loadOutfit', { outfitData = backpack.cloth['female'] })
+        TriggerEvent('sb-clothing:client:loadOutfit', { outfitData = backpack.cloth['female'] })
     end
 end
 
 function RemoveClothes()
-    TriggerEvent('qb-clothing:client:loadOutfit', {
+    TriggerEvent('sb-clothing:client:loadOutfit', {
         outfitData = {
             ['bag'] = { item = -1, texture = 0 }
         }

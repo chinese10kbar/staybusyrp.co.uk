@@ -1,8 +1,8 @@
-Core = exports['qb-core']:GetCoreObject()
+Core = exports['sb-core']:GetCoreObject()
 
 --Core = {}
 if Config.Core == "qb" then
-	local CoreConvert = exports['qb-core']:GetCoreObject()
+	local CoreConvert = exports['sb-core']:GetCoreObject()
 	Core.Shared.Items = CoreConvert.Shared.Items
 end
 if Config.Core == "ox" then

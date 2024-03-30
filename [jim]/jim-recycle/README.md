@@ -10,7 +10,7 @@ FiveM Custom QBCORE recycling script made by me from scratch
   - Scrapping - Search wrecked vehicles for scraps
 
 - Customisable points for Selling materials
-  - Add a Location for an ore to the config and it will use this location for both qb-target and a prop
+  - Add a Location for an ore to the config and it will use this location for both sb-target and a prop
   - Can place them anywhere, doesn't have to be just one mining location
   - I opted for a drilling animation as opposed to the pickaxe swinging
   - Nicely animated for better immersion
@@ -26,8 +26,8 @@ FiveM Custom QBCORE recycling script made by me from scratch
 - Recycling center & Material Selling: https://streamable.com/16w1pk
 
 ## Dependencies
-- qb-menu - for the menus
-- qb-target - for the third eye selection
+- sb-menu - for the menus
+- sb-target - for the third eye selection
 
 # How to install
 
@@ -40,7 +40,7 @@ ensure jim-recycle
 ### Item installation
 
 - Add the images to your inventory folder
-  - for example: `[qb] > qb-inventory > html > images`
+  - for example: `[qb] > sb-inventory > html > images`
 - **This script supports automatic installation of items to items.lua with newer QBCore exports**
   - You still need to install images
 - If you're having issues or your core doesn't support this then, put these lines in your items.lua

@@ -1,6 +1,6 @@
 if not um.property.houses.status or um.property.houses.script ~= 'qb' then return end
 
-Debug('qb-houses for house', 'debug')
+Debug('sb-houses for house', 'debug')
 
 lib.callback.register('getHouses', function(source)
     local citizenid = GetCitizenID(GetPlayer(source))

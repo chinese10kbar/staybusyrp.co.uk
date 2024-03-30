@@ -1,5 +1,5 @@
 ---@diagnostic disable: duplicate-set-field
-QBCore = exports['qb-core']:GetCoreObject()
+QBCore = exports['sb-core']:GetCoreObject()
 local ox_inventory = exports.ox_inventory
 local PlayerData = {}
 
@@ -34,7 +34,7 @@ end)
 
 RegisterNetEvent('QBCore:Player:SetPlayerData', function(newPlayerData)
     local invokingResource = GetInvokingResource()
-    if invokingResource and invokingResource ~= 'qb-core' then return end
+    if invokingResource and invokingResource ~= 'sb-core' then return end
     PlayerData = newPlayerData
 end)
 

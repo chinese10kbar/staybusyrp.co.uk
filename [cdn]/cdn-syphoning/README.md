@@ -11,8 +11,8 @@ This resource, cdn-syphoning, is a **standalone** version of the syphoning, whic
 
 ### Dependencies:
 
-- [qb-menu](https://github.com/qbcore-framework/qb-menu)
-- [qb-input](https://github.com/qbcore-framework/qb-input)
+- [sb-menu](https://github.com/qbcore-framework/sb-menu)
+- [sb-input](https://github.com/qbcore-framework/sb-input)
 
 <br>
 <br>
@@ -36,7 +36,7 @@ Then, we will drag it into our resources folder. We recommend putting it in your
 
 Next, we're going to get the item added into our server! This is fairly simple.
 <br> <br> 
-_Copy and Paste the following into your items.lua in QB-Core/Shared/items.lua_
+_Copy and Paste the following into your items.lua in sb-Core/Shared/items.lua_
 <br>
 **If you have the decay system setup, add the necessary compenents for that as well!**
 ```
@@ -53,7 +53,7 @@ Next, we will add the image, located @ _cdn-syphoning/assets/syphoningkit.png_ i
 
 ### Step 3:
 
-Lastly, we need to get proper formatting for our itemData in the qb-inventory! If using another inventory such as LJ-Inventory, the process should be that same.
+Lastly, we need to get proper formatting for our itemData in the sb-inventory! If using another inventory such as LJ-Inventory, the process should be that same.
 <br> <br> 
 We want to navigate to our app.js in your inventory resource. This is usually located here: *inventoryname*/html/js/app.js*
 <br> <br> 
@@ -90,7 +90,7 @@ ensure cdn-syphoning
 ```
 ### Optional Step 5:
 
-If you wish, we have preconfigured an item for the qb-shops config, you can use this to add the syphoningkit to your shops or add it yourself:
+If you wish, we have preconfigured an item for the sb-shops config, you can use this to add the syphoningkit to your shops or add it yourself:
 ```
         [10] = {
             name = "syphoningkit",

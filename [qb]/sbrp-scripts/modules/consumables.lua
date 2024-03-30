@@ -1,4 +1,4 @@
-local QBCore = exports['qb-core']:GetCoreObject()
+local QBCore = exports['sb-core']:GetCoreObject()
 ----------- / alcohol
 
 for k, _ in pairs(Config.Consumables.alcohol) do
@@ -103,7 +103,7 @@ QBCore.Commands.Add('resetparachute', 'Resets Parachute', {}, false, function(so
     TriggerClientEvent('consumables:client:ResetParachute', source)
 end)
 
-RegisterNetEvent('qb-smallpenis:server:AddParachute', function()
+RegisterNetEvent('sb-smallpenis:server:AddParachute', function()
     local Player = QBCore.Functions.GetPlayer(source)
     if not Player then return end
     Player.Functions.AddItem('parachute', 1)

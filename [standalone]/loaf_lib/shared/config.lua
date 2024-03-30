@@ -8,7 +8,7 @@ Config.HelpTextStyle = "gta" --[[
         * 3d-gta - https://i.gyazo.com/cfa770414d21aced89e1f3d2003813a0.png
         * 3d - https://gyazo.com/0ad2bd85b8985bc3859d4c04a6712027
         * esx - https://github.com/esx-framework/esx-legacy/tree/main/%5Besx%5D/esx_textui
-        * qbcore - https://github.com/qbcore-framework/qb-core
+        * qbcore - https://github.com/qbcore-framework/sb-core
 ]]
 
 Config.Distancescale3DText = false -- true: 3d text will be distance based (draws a bit more cpu), false: 3d text will be the same size, no matter the distance

@@ -8,16 +8,16 @@ Locales = {}
 ]]
 
 local esxHas = GetResourceState('es_extended') == 'started'
-local qbHas = GetResourceState('qb-core') == 'started'
+local qbHas = GetResourceState('sb-core') == 'started'
 
 Config.Framework = esxHas and 'esx' or qbHas and 'qb' or 'esx'
 
 Config.Language = 'en'
 
 --[[
-    Shop system based on qb-shops!
+    Shop system based on sb-shops!
     Here you have a small configuration for the details of your stores,
-    remember that UseTrucketJob is exclusive for qb-core!
+    remember that UseTrucketJob is exclusive for sb-core!
 
     For the firearms license, you must use the item weaponlicense.
 ]]
@@ -40,13 +40,13 @@ Config.esx_licensecheckLicense = 'esx_license:checkLicense' -- esx_license event
 
 --[[
     You can use the following targets by default:
-        'qb-target'
+        'sb-target'
         'ox_target'
 
         'none'
 ]]
 
-Config.UseTarget = 'qb-target' -- Choose between 'qb-target', 'ox_target' or 'none'
+Config.UseTarget = 'sb-target' -- Choose between 'sb-target', 'ox_target' or 'none'
 
 --[[
     Stashing system!
@@ -111,7 +111,7 @@ Config.Stashes = {
 --[[
     Store setup!
     Remember to add the items correctly, checking that they exist
-    within your qb-core or your qs-inventory/shared/*.
+    within your sb-core or your qs-inventory/shared/*.
 
     Below you can add these items to the desired stores.
 

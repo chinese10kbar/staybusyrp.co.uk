@@ -1,7 +1,7 @@
 # jim-djbooth
 Play music at configured coords!
 
-My edit that uses qb-menu icons and allows qb-target to be used for every location
+My edit that uses sb-menu icons and allows sb-target to be used for every location
 
 Targets are generated as "Circle Zones" from the coords set for each location.
 
@@ -12,9 +12,9 @@ Has Dynamic menu that changes depending on state of music.
 ## Dependencies
 * [xsound](https://github.com/Xogy/xsound)
 * [PolyZone](https://github.com/qbcore-framework/PolyZone)
-* [qb-menu](https://github.com/qbcore-framework/qb-menu)
-* [qb-target](https://github.com/qbcore-framework/qb-target)
-* [ox_lib Context](https://github.com/qbcore-framework/qb-target) (optional)
+* [sb-menu](https://github.com/qbcore-framework/sb-menu)
+* [sb-target](https://github.com/qbcore-framework/sb-target)
+* [ox_lib Context](https://github.com/qbcore-framework/sb-target) (optional)
 
 
 # Prequisites
@@ -32,7 +32,7 @@ Has Dynamic menu that changes depending on state of music.
 Example of my load order:
 ```CSS
 # QBCore & Extra stuff
-ensure qb-core
+ensure sb-core
 ensure [qb]
 ensure [standalone]
 ensure [voice]

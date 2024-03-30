@@ -1,4 +1,4 @@
-local QBCore = exports['qb-core']:GetCoreObject()
+local QBCore = exports['sb-core']:GetCoreObject()
 
 QBCore.Functions.CreateCallback('inside-builder:getexperience', function(source, cb, xPlayer)
     local PlayerData = QBCore.Functions.GetPlayer(source)

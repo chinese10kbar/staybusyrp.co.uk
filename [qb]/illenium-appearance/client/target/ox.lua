@@ -24,16 +24,16 @@ local function convert(options)
 end
 
 function Target.RemoveZone(zone)
-    exports["qb-target"]:removeZone(ZoneIDMap[zone])
+    exports["sb-target"]:removeZone(ZoneIDMap[zone])
 end
 
 function Target.AddTargetEntity(entity, parameters)
-    exports["qb-target"]:addLocalEntity(entity, convert(parameters))
+    exports["sb-target"]:addLocalEntity(entity, convert(parameters))
 end
 
 function Target.AddBoxZone(name, coords, size, parameters)
     local rotation = parameters.rotation
-    ZoneIDMap[name] = exports["qb-target"]:addBoxZone({
+    ZoneIDMap[name] = exports["sb-target"]:addBoxZone({
         coords = coords,
         size = size,
         rotation = rotation,
@@ -43,7 +43,7 @@ function Target.AddBoxZone(name, coords, size, parameters)
 end
 
 function Target.AddPolyZone(name, points, parameters)
-    ZoneIDMap[name] = exports["qb-target"]:addPolyZone({
+    ZoneIDMap[name] = exports["sb-target"]:addPolyZone({
         points = points,
         debug = Config.Debug,
         options = convert(parameters)
@@ -51,5 +51,5 @@ function Target.AddPolyZone(name, points, parameters)
 end
 
 function Target.IsTargetStarted()
-    return GetResourceState("qb-target") == "started"
+    return GetResourceState("sb-target") == "started"
 end

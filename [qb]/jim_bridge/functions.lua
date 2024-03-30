@@ -307,7 +307,7 @@ function DuiSelect(data)
 			end
 		end
 	end
-    local dialog = exports['qb-input']:ShowInput({
+    local dialog = exports['sb-input']:ShowInput({
         header = image..Loc[Config.Lan].menu["dui_new"],
         submitText = Loc[Config.Lan].menu["dui_change"],
         inputs = { { type = 'text', isRequired = true, name = 'url', text = Loc[Config.Lan].menu["dui_url"] } } })

@@ -133,7 +133,7 @@ function makeLocs()
 							local options = {
 								{ action = function() TriggerEvent("jim-payments:client:Charge", { job = loc.job, img = loc.payments.img }) end, icon = "fas fa-credit-card", label = Loc[Config.Lan]["payments"].charge, job = loc.job, },
 								(Config.General.showClockInTill and { action = function() toggleDuty() end, job = loc.job, gang = loc.gang, icon = "fas fa-user-check", label = "Duty Toggle", } or nil),
-								(Config.General.showBossMenuTill and { action = function() TriggerEvent("qb-bossmenu:client:OpenMenu") end, job = loc.job and bossroles, gang = loc.gang and bossroles, icon = "fas fa-list", label = "Open Bossmenu", } or nil),
+								(Config.General.showBossMenuTill and { action = function() TriggerEvent("sb-bossmenu:client:OpenMenu") end, job = loc.job and bossroles, gang = loc.gang and bossroles, icon = "fas fa-list", label = "Open Bossmenu", } or nil),
 							}
 							if b.prop then
 								Prop[name] = makeProp({prop = "prop_till_03", coords = vec4(b.coords.x, b.coords.y, b.coords.z+1.03, b.coords.w+180.0)}, 1, false)
@@ -175,7 +175,7 @@ function makeLocs()
 								if Jobs and not Jobs[loc.job] then print("^5Debug^7: ^1Can't find the job ^7'^6"..loc.job.."^7' ^1in the core shared files^7") else
 									local options = {
 										{ action = function() toggleDuty() end, icon = "fas fa-clipboard", label = "Duty Toggle", job = loc.job },
-										{ action = function() TriggerEvent("qb-bossmenu:client:OpenMenu") end, icon = "fas fa-list", label = "Open Bossmenu", job = loc.job and bossroles, gang = loc.gang and bossroles, },
+										{ action = function() TriggerEvent("sb-bossmenu:client:OpenMenu") end, icon = "fas fa-list", label = "Open Bossmenu", job = loc.job and bossroles, gang = loc.gang and bossroles, },
 									}
 									if b.prop then
 										Prop[name] = makeProp({prop = "prop_laptop_01a", coords = vec4(b.coords.x, b.coords.y, b.coords.z+1.03, b.coords.w+180.0)}, 1, false)

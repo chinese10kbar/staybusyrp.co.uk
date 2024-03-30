@@ -1,4 +1,4 @@
-local QBCore = exports['qb-core']:GetCoreObject()
+local QBCore = exports['sb-core']:GetCoreObject()
 
 ----------------------------------------------------
 --------- Blips
@@ -139,7 +139,7 @@ function CraftNonAlcoholicMenu()
         item.params = { event = 'Ranjit-irishpub:client:CraftNonAlcoholic', args = { type = k } }
         table.insert(columns, item)
     end
-    exports['qb-menu']:openMenu(columns)
+    exports['sb-menu']:openMenu(columns)
 end
 
 function CraftNonAlcoholic(weapon)
@@ -183,7 +183,7 @@ function CraftAlcoholicMenu()
         item.params = { event = 'Ranjit-irishpub:client:CraftAlcoholic', args = { type = k } }
         table.insert(columns, item)
     end
-    exports['qb-menu']:openMenu(columns)
+    exports['sb-menu']:openMenu(columns)
 end
 
 function CraftAlcoholic(weapon)

@@ -377,8 +377,8 @@ function GiveVehicleKeys(plate, vehicle) --This will be triggered when the scrip
             TriggerServerEvent('F_RealCarKeysSystem:generateVehicleKeys', plate)
         
         else
-            TriggerEvent('vehiclekeys:client:SetOwner', plate) --The default qb-keys event.
-            TriggerEvent('vehiclekeys:client:AddKeys', plate) --The default qb-keys event.
+            TriggerEvent('vehiclekeys:client:SetOwner', plate) --The default sb-keys event.
+            TriggerEvent('vehiclekeys:client:AddKeys', plate) --The default sb-keys event.
             --Add your own give vehicle keys events/exports here.
         end
     end
@@ -424,7 +424,7 @@ function ToggleShellTime(toggle)
             NetworkOverrideClockTime(23, 00, 00)
 
         elseif Config.InsideGarage.shell_time_script == 'qbcore' then
-            TriggerEvent('qb-weathersync:client:DisableSync')
+            TriggerEvent('sb-weathersync:client:DisableSync')
 
         elseif Config.InsideGarage.shell_time_script == 'other' then
             --Add your own code here.
@@ -439,7 +439,7 @@ function ToggleShellTime(toggle)
             TriggerServerEvent('vSync:requestSync')
 
         elseif Config.InsideGarage.shell_time_script == 'qbcore' then
-            TriggerEvent('qb-weathersync:client:EnableSync')
+            TriggerEvent('sb-weathersync:client:EnableSync')
 
         elseif Config.InsideGarage.shell_time_script == 'other' then
             --Add your own code here.

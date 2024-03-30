@@ -1,4 +1,4 @@
-QBCore = exports['qb-core']:GetCoreObject()
+QBCore = exports['sb-core']:GetCoreObject()
 
 RegisterNetEvent('ak47_qb_smokingv2:notify')
 AddEventHandler('ak47_qb_smokingv2:notify', function(msg)

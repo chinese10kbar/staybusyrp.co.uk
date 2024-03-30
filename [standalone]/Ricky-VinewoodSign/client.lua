@@ -9,14 +9,14 @@ LoadFramework = function()
         ESX = exports['es_extended']:getSharedObject()
         FrameworkFound = 'esx'
     elseif Config.Framework == 'qbcore' then 
-        QBCore = exports["qb-core"]:GetCoreObject()
+        QBCore = exports["sb-core"]:GetCoreObject()
         FrameworkFound = 'qbcore'
     elseif Config.Framework == 'autodetect' then
         if GetResourceState('es_extended') == 'started' then 
             ESX = exports['es_extended']:getSharedObject()
             FrameworkFound = 'esx'
-        elseif GetResourceState('qb-core') == 'started' then
-            QBCore = exports["qb-core"]:GetCoreObject()
+        elseif GetResourceState('sb-core') == 'started' then
+            QBCore = exports["sb-core"]:GetCoreObject()
             FrameworkFound = 'qbcore'
         else
             FrameworkFound = 'standalone'

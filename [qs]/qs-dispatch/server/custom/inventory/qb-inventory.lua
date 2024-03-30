@@ -1,4 +1,4 @@
-if Config.InventorySystem ~= "qb-inventory" then
+if Config.InventorySystem ~= "sb-inventory" then
     return
 end
 
@@ -29,6 +29,6 @@ AddEventHandler("qs-dispatch:server:RemoveIlegalItems", RemoveIlegalItems)
 
 -- RegisterCommand("giveilegalitems", function(source, args, rawCommand)
 --     for k, v in pairs(Config.Penitencial.IlegalItems) do
---         exports['qb-inventory']:AddItem(source, v, 3)
+--         exports['sb-inventory']:AddItem(source, v, 3)
 --     end
 -- end, false)

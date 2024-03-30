@@ -1,6 +1,6 @@
 Config = {}
 
-Config.Framework = GetResourceState('qb-core') == 'started' and 'qb' or GetResourceState('es_extended') == 'started' and 'esx' or 'esx'                                                                                                                       -- Place here the framework either esx or qb
+Config.Framework = GetResourceState('sb-core') == 'started' and 'qb' or GetResourceState('es_extended') == 'started' and 'esx' or 'esx'                                                                                                                       -- Place here the framework either esx or qb
 Config.Language = 'en'                                                                                                                        -- Set the language in which you want to have the script [en, en].
 Config.Debug = false                                                                                                         -- Enable debug mode by setting this to true (Multiple console prints showing debug information and enabling color shapes for zones). -- true make the script very slow
 Config.AllowImages = true                                                                                                   -- this option can delay the alert
@@ -13,15 +13,15 @@ Config.useVehicleIconsInDispatchLargueMap = false                               
 
 
 
-Config.InventorySystem = "qs-inventory" -- qb-inventory or qs-inventory or esx-default you can select ox-inventory but this is not fully tested
+Config.InventorySystem = "qs-inventory" -- sb-inventory or qs-inventory or esx-default you can select ox-inventory but this is not fully tested
 
 local function getHouses()
     local qsHousesHas = GetResourceState('qs-housing') == 'started'
-    local qbHousesHas = GetResourceState('qb-houses') == 'started'
+    local qbHousesHas = GetResourceState('sb-houses') == 'started'
     if qsHousesHas then
         return 'qs-housing'
     elseif qbHousesHas then
-        return 'qb-houses'
+        return 'sb-houses'
     else
         return 'default'
     end

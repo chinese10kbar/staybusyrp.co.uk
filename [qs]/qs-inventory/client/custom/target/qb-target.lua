@@ -1,9 +1,9 @@
-if Config.UseTarget ~= 'qb-target' then
+if Config.UseTarget ~= 'sb-target' then
     return
 end
 
 function DropTarget(dropItem, index)
-    exports['qb-target']:AddTargetEntity(dropItem, {
+    exports['sb-target']:AddTargetEntity(dropItem, {
         options = {
             {
                 icon = 'fa-solid fa-bag-shopping',
@@ -20,7 +20,7 @@ end
 CreateThread(function()
     -- Selling
     for k, v in pairs(Config.SellItems) do
-        exports['qb-target']:AddBoxZone(k, vec3(v['coords'].x, v['coords'].y, v['coords'].z), 1.5, 1.5, {
+        exports['sb-target']:AddBoxZone(k, vec3(v['coords'].x, v['coords'].y, v['coords'].z), 1.5, 1.5, {
             name = k,
             heading = 90.0,
             debugPoly = Config.ZoneDebug,
@@ -51,7 +51,7 @@ CreateThread(function()
     -- Crafting
     if Config.Crafting then
         for k, v in pairs(Config.CraftingTables) do
-            exports['qb-target']:AddBoxZone(k, vec3(v.location.x, v.location.y, v.location.z), 2.5, 2.5, {
+            exports['sb-target']:AddBoxZone(k, vec3(v.location.x, v.location.y, v.location.z), 2.5, 2.5, {
                 name = k,
                 heading = 90.0,
                 debugPoly = Config.ZoneDebug,
@@ -94,7 +94,7 @@ CreateThread(function()
 
     -- Vending shops
     for k, v in pairs(Config.Vendings) do
-        exports['qb-target']:AddTargetModel(v['Model'], {
+        exports['sb-target']:AddTargetModel(v['Model'], {
             options = {
                 {
                     icon = 'fa-solid fa-cash-register',
@@ -109,7 +109,7 @@ CreateThread(function()
     end
 
     -- Gargabe Code
-    exports['qb-target']:AddTargetModel(Config.GarbageObjects, {
+    exports['sb-target']:AddTargetModel(Config.GarbageObjects, {
         options = {
             {
                 icon = 'fa-solid fa-trash',

@@ -1,6 +1,6 @@
-if GetResourceState('qb-core') ~= 'started' then return end
+if GetResourceState('sb-core') ~= 'started' then return end
 
-QBCore = exports["qb-core"]:GetCoreObject()
+QBCore = exports["sb-core"]:GetCoreObject()
 
 function ShowNotification(text)
 	QBCore.Functions.Notify(text)

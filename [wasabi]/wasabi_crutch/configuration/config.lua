@@ -13,7 +13,7 @@ Config.menuPosition = 'bottom-right'
 -- These resources can trigger "wasabi_crutch:giveCrutch" and "wasabi_crutch:giveChair"
 Config.AllowedResources = {
     'wasabi_ambulance',
-    'qb-core',
+    'sb-core',
 }
 
 
@@ -49,4 +49,4 @@ Config.usableWheelchairItem = { -- Usable item settings
     item = 'wheelchair' -- Item to be in your items table
 }
 
-Config.CustomCarKeyScript = true -- Set to true if using wasabi_carlock or qb-vehiclekeys (Customize in wasabi_bridge/customize/cl_customize.lua)
+Config.CustomCarKeyScript = true -- Set to true if using wasabi_carlock or sb-vehiclekeys (Customize in wasabi_bridge/customize/cl_customize.lua)

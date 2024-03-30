@@ -103,7 +103,7 @@ RegisterNUICallback("Services", function(data, cb)
         local timer = GetGameTimer() + 1500
         while GetGameTimer() < timer do
             Wait(100)
-            exports["qb-menu"]:closeMenu()
+            exports["sb-menu"]:closeMenu()
         end
     end
 end)

@@ -1,4 +1,4 @@
-local QBCore = exports['qb-core']:GetCoreObject()
+local QBCore = exports['sb-core']:GetCoreObject()
 
 ----------------------------------------------------
 --------- TARGETS
@@ -55,7 +55,7 @@ exports[Config.Target]:AddBoxZone("Duty", vector3(825.6, -113.19, 80.43), 0.5, 0
 -- || ===============> BossMenu
 exports[Config.Target]:AddBoxZone("BossMenu", vector3(830.38, -117.75, 80.43), 2.9, 0.4, 
     { name="BossMenu", heading = 329.95, debugPoly = false, minZ = 79.41, maxZ = 81.45 }, 
-    { options = { {  event = "qb-bossmenu:client:OpenMenu", icon = "fa-solid fa-clipboard-list", label = "Boss Menu", job = Config.Job }, },  distance = 2.0 })
+    { options = { {  event = "sb-bossmenu:client:OpenMenu", icon = "fa-solid fa-clipboard-list", label = "Boss Menu", job = Config.Job }, },  distance = 2.0 })
 -- || ===============> Tray01
 exports[Config.Target]:AddBoxZone("Tray01", vector3(837.56,-1114.51,79.93), 0.5, 0.5, 
     { name="Tray01", heading = 150.0, debugPoly = false, minZ = 78.91, maxZ = 80.95 }, 

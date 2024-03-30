@@ -1,4 +1,4 @@
-local QBCore = exports['qb-core']:GetCoreObject()
+local QBCore = exports['sb-core']:GetCoreObject()
 
 RegisterNetEvent("nc-headbag:getClosestPlayer", function(closestPlayer)
     getPlayer = closestPlayer;

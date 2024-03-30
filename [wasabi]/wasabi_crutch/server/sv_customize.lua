@@ -1,7 +1,7 @@
 local ESX, QBCore = nil, nil
 
 if wsb.framework == 'esx' then ESX = exports['es_extended']:getSharedObject() end
-if wsb.framework == 'qb' then QBCore = exports['qb-core']:GetCoreObject() end
+if wsb.framework == 'qb' then QBCore = exports['sb-core']:GetCoreObject() end
 
 
 if wsb.framework == 'esx' then

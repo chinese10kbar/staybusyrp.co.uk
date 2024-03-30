@@ -157,7 +157,7 @@ Config.KnockoutFeature = {
 }
 
 -- Last Stand (2 Stage death)
-Config.LastStand = true                -- Enable a 2 stage death. Where initially you can crawl around(Similiar to qb-ambulancejob)
+Config.LastStand = true                -- Enable a 2 stage death. Where initially you can crawl around(Similiar to sb-ambulancejob)
 Config.DisableLastStandCrawl = false   -- Disable crawling within last stand
 Config.LastStandTickTime = 5 * seconds -- Everytime this time passes while in last stand, a random amount(8-15) amount of
 -- health will be deducted to similuate bleeding out
@@ -236,21 +236,21 @@ Config.EnviPrescriptions = {
 }
 
 Config.phoneDistress = 'lb'        -- Options: 'gks' (GKS Phone - ESX ONLY) / 'qs' (qs-smartphone) / 'd-p' (d-phone) / 'lb' (lb-phone) WILL REPLACE BUILT IN DISPATCH WITH PHONE DISPATCH / Add additonal dispatch in client/cl_customize.lua
-Config.customCarlock = false        -- If you use wasabi_carlock OR qb-carlock(Or want to add your own key system to wasabi_bridge/customize/cl_customize.lua)
+Config.customCarlock = false        -- If you use wasabi_carlock OR sb-carlock(Or want to add your own key system to wasabi_bridge/customize/cl_customize.lua)
 Config.MythicHospital = false       -- If you use that old injury script by mythic. (Added per request to reset injuries on respawn)
 Config.AdvancedParking = false      -- If you use AdvancedParking (Deletes vehicles with their exports)
 Config.FuelSystem = false           -- 'legacy' (cdn-fuel) / 'ox' (ox_fuel) / 'default'
 
 Config.jobMenu = 'F6'               -- Default job menu key
 Config.billingSystem = false        -- Current options: 'esx' (For esx_billing) / 'qb' (For qbcore users) 'okok' (For okokBilling) / 'pefcl' (For NPWD billing system) (Easy to add more in editable client - SET TO false IF UNDESIRED) or of course false to disable
-Config.targetSystem = true          -- Target system for targetting players, medbags, and stretcher(If disabled with replace with menus/3D text) (Compatible out of the box with qTarget, qb-target, and ox_target)
+Config.targetSystem = true          -- Target system for targetting players, medbags, and stretcher(If disabled with replace with menus/3D text) (Compatible out of the box with qTarget, sb-target, and ox_target)
 
 Config.RespawnTimer = 5 * minutes   -- Time before optional respawn
 Config.BleedoutTimer = 10 * minutes -- Time before it forces respawn
 
 Config.removeItemsOnDeath = false   -- Must have Config.Inventory set properly
 Config.Inventory =
-'qs'                                --Options include: 'ox' - (ox_inventory) / 'qb' - (QBCore qb-inventory) 'mf' - (mf-inventory) / 'qs' (qs-inventory) / 'esx' (default esx) / 'other' (whatever else can customize in client/cl_customize.lua)
+'qs'                                --Options include: 'ox' - (ox_inventory) / 'qb' - (QBCore sb-inventory) 'mf' - (mf-inventory) / 'qs' (qs-inventory) / 'esx' (default esx) / 'other' (whatever else can customize in client/cl_customize.lua)
 
 Config.AntiCombatLog = {            --  When enabled will kill player who logged out while dead
     enabled = true,                 --  enabled?
@@ -403,7 +403,7 @@ Config.Locations = {
         },
 
         PersonalLocker = {
-            enabled = false,                        -- Enable personal locker(stash) - THIS IS CURRENTLY ONLY AVALIABLE IN QB-INVENTORY
+            enabled = false,                        -- Enable personal locker(stash) - THIS IS CURRENTLY ONLY AVALIABLE IN sb-INVENTORY
             coords = vec3(298.6, -598.45, 43.28),   -- Location of where to access personal locker (If target is disabled)
             label = '[E] - Access Personal Locker', -- Text to display(If not using target)
             distance = 1.5,                         -- Distance to display text UI(If not using target)

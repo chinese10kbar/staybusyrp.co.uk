@@ -9,13 +9,13 @@ Config = {}
 -- ╚██████╔╝░░░██║░░░██║███████╗██║░░░██║░░░░░░██║░░░
 -- ░╚═════╝░░░░╚═╝░░░╚═╝╚══════╝╚═╝░░░╚═╝░░░░░░╚═╝░░░
 
-Config.CoreName = "qb-core" -- Core name
+Config.CoreName = "sb-core" -- Core name
 Config.Job = "irishpub" -- Job
 Config.JimPayments = false -- Using jim-payments?
-Config.Target = "qb-target" -- Name of your resource qb-target
-Config.Input = "qb-input" -- Name of your resource qb-input
+Config.Target = "sb-target" -- Name of your resource sb-target
+Config.Input = "sb-input" -- Name of your resource sb-input
 Config.InvLink = "qs-inventory/html/images/" -- Your directory images inventory
-Config.Bossmenu = "qb-bossmenu:client:OpenMenu" -- Your trigger to open boss menu
+Config.Bossmenu = "sb-bossmenu:client:OpenMenu" -- Your trigger to open boss menu
 
 -- ██████╗░██╗░░░░░██╗██████╗░
 -- ██╔══██╗██║░░░░░██║██╔══██╗

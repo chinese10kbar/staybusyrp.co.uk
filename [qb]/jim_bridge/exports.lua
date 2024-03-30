@@ -1,11 +1,11 @@
 Exports = {
-    QBExport = "qb-core",
+    QBExport = "sb-core",
     QBXExport = "qbx_core",
     ESXExport = "es_extended",
     OXCoreExport = "ox_core",
 
     OXInv = "ox_inventory",
-    QBInv = "qb-inventory",
+    QBInv = "sb-inventory",
     QSInv = "qs-inventory",
     CoreInv = "core_inventory",
     CodeMInv = "codem-inventory",
@@ -13,8 +13,8 @@ Exports = {
 
     OXLibExport = "ox_lib",
 
-    QBMenuExport = "qb-menu",
+    QBMenuExport = "sb-menu",
 
-    QBTargetExport = "qb-target",
+    QBTargetExport = "sb-target",
     OXTargetExport = "ox_target"
 }

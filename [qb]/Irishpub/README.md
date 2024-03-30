@@ -2,7 +2,7 @@
 
 
 Copy this into:
-**qb-core/shared/items.lua** 
+**sb-core/shared/items.lua** 
 ```
     -- Ranjit-irishpub
 	["irishpub_berry_hydrating"] 		= {["name"] = "irishpub_berry_hydrating", 		["label"] = "Berry Hydrating", 			 ["weight"] = 50, 	["type"] = "item", 	["image"] = "irishpub_berry_hydrating.png", 		["unique"] = false,   	["useable"] = true,    ["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = ""},
@@ -44,7 +44,7 @@ Copy this into:
 	["irishpub_coconut"] 			= {["name"] = "irishpub_coconut", 					["label"] = "Coconut", 			 		["weight"] = 50, 	["type"] = "item", 	["image"] = "irishpub_coconut.png", 				["unique"] = false,   	["useable"] = true,    ["shouldClose"] = false,    ["combinable"] = nil,   ["description"] = ""},
 ```
 copy this into the small resources config
-# **qb-smallresources/config.lua**
+# **sb-smallresources/config.lua**
 	ConsumeablesDrink = {
 	    ["irishpub_berry_hydrating"] = math.random(20, 40),
 	    ["irishpub_green_dream"] = math.random(20, 40),
@@ -72,7 +72,7 @@ copy this into the small resources config
 	    ["irishpub_redhot_daquiri"] = math.random(20, 40),
 	}
 Copy this into jobs.lua
-# **qb-core/shared/jobs.lua**
+# **sb-core/shared/jobs.lua**
     ['irishpub'] = {
         label = 'IrishPub',
         defaultDuty = true,

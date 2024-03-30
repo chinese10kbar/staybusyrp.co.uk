@@ -18,9 +18,9 @@ Core.Game = {
       TriggerEvent('cd_easytime:PauseSync', s)
     elseif Config.TimeSystem == "vSync" then
       if s then TriggerServerEvent('vSync:requestSync'); end
-    elseif Config.TimeSystem == "qb-weathersync" then
-      if s then TriggerEvent("qb-weathersync:client:EnableSync") return true; end
-      if not s then TriggerEvent("qb-weathersync:client:DisableSync") return true; end
+    elseif Config.TimeSystem == "sb-weathersync" then
+      if s then TriggerEvent("sb-weathersync:client:EnableSync") return true; end
+      if not s then TriggerEvent("sb-weathersync:client:DisableSync") return true; end
     end
   end,
 
@@ -135,7 +135,7 @@ Core.Game = {
   end,
 
   GetClosestPlayer = function(ignoreMe)
-    if Config.Framework == "qb-core" then
+    if Config.Framework == "sb-core" then
       local closestPlayer, closestDistance = QBCore.Functions.GetClosestPlayer(ignoreMe)
       return closestPlayer, closestDistance
     elseif Config.Framework == "es_extended" then

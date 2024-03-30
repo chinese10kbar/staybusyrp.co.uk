@@ -17,7 +17,7 @@ Install instructions (QBCore):
 5. Upload sql sql_STANDALONE-QBCORE.sql file to your mysql database.
 6. Open fxmanifest.lua and edit it same like on this screenshot (https://i.imgur.com/LWaYxz7.png) remove -- from line 11, or replace line 11 with '@oxmysql/lib/MySQL.lua',
 7. Put rtx_gym to the server.cfg
-6. Add new items to qb-core/shared/items.lua - items name: protein, creatine, preworkout, testosterone 
+6. Add new items to sb-core/shared/items.lua - items name: protein, creatine, preworkout, testosterone 
 Example items line for items.lua:
 ['protein'] = {['name'] = 'protein', ['label'] = 'Protein', ['weight'] = 1000, ['type'] = 'item', ['image'] = 'protein.png', ['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = 'Protein'},
 ['creatine'] = {['name'] = 'creatine', ['label'] = 'Creatine', ['weight'] = 1000, ['type'] = 'item', ['image'] = 'creatine.png', ['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = 'Creatine'},

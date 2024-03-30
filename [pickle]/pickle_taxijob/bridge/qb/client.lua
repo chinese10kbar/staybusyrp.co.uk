@@ -1,6 +1,6 @@
-if GetResourceState('qb-core') ~= 'started' then return end
+if GetResourceState('sb-core') ~= 'started' then return end
 
-QBCore = exports['qb-core']:GetCoreObject()
+QBCore = exports['sb-core']:GetCoreObject()
 
 function ServerCallback(name, cb, ...)
     QBCore.Functions.TriggerCallback(name, cb,  ...)
@@ -34,7 +34,7 @@ function AccessBossMenu(businessID)
     if not CanAccessGroup(cfg.bossgroups) then 
         return ShowNotification(_L("no_access"))
     end
-    TriggerEvent('qb-bossmenu:client:OpenMenu')
+    TriggerEvent('sb-bossmenu:client:OpenMenu')
 end
 
 RegisterNetEvent(GetCurrentResourceName()..":showNotification", function(text)

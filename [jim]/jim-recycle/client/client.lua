@@ -33,19 +33,19 @@ CreateThread(function()
 			local nameEnter = "RecycleEnter"..location
 			local jobLoc = loc.JobLocations
 			Targets[nameEnter] =
-				exports['qb-target']:AddBoxZone(nameEnter, jobLoc.Enter.coords.xyz, jobLoc.Enter.w, jobLoc.Enter.d, { name=nameEnter, heading = jobLoc.Enter.coords.w, debugPoly=Config.Debug, minZ=jobLoc.Enter.coords.z-1, maxZ=jobLoc.Enter.coords.z+2 },
+				exports['sb-target']:AddBoxZone(nameEnter, jobLoc.Enter.coords.xyz, jobLoc.Enter.w, jobLoc.Enter.d, { name=nameEnter, heading = jobLoc.Enter.coords.w, debugPoly=Config.Debug, minZ=jobLoc.Enter.coords.z-1, maxZ=jobLoc.Enter.coords.z+2 },
 					{ options = { { event = "jim-recycle:TeleWareHouse", icon = "fas fa-recycle", label = Loc[Config.Lan].target["enter"]..(Config.PayAtDoor and " ($"..Config.PayAtDoor..")" or ""), tele = jobLoc.Enter.tele, job = loc.Job, enter = true }, },
 					distance = 1.5 })
 
 			local nameExit = "RecycleExit"..location
 			Targets[nameExit] =
-				exports['qb-target']:AddBoxZone(nameExit, jobLoc.Exit.coords.xyz, jobLoc.Exit.w, jobLoc.Exit.d, { name=nameExit, heading = jobLoc.Exit.coords.w, debugPoly=Config.Debug, minZ=jobLoc.Exit.coords.z-1, maxZ=jobLoc.Exit.coords.z+2, },
+				exports['sb-target']:AddBoxZone(nameExit, jobLoc.Exit.coords.xyz, jobLoc.Exit.w, jobLoc.Exit.d, { name=nameExit, heading = jobLoc.Exit.coords.w, debugPoly=Config.Debug, minZ=jobLoc.Exit.coords.z-1, maxZ=jobLoc.Exit.coords.z+2, },
 					{ options = { { event = "jim-recycle:TeleWareHouse", icon = "fas fa-recycle", label = Loc[Config.Lan].target["exit"], tele = jobLoc.Exit.tele }, },
 					distance = 1.5 })
 
 			local nameDuty = "RecycleDuty"..location
 			Targets[nameDuty] =
-				exports['qb-target']:AddBoxZone(nameDuty, jobLoc.Duty.coords.xyz, jobLoc.Duty.w, jobLoc.Duty.d, { name=nameDuty, heading = jobLoc.Duty.coords.w, debugPoly=Config.Debug, minZ=jobLoc.Duty.coords.z-0.5, maxZ=jobLoc.Duty.coords.z+0.5, },
+				exports['sb-target']:AddBoxZone(nameDuty, jobLoc.Duty.coords.xyz, jobLoc.Duty.w, jobLoc.Duty.d, { name=nameDuty, heading = jobLoc.Duty.coords.w, debugPoly=Config.Debug, minZ=jobLoc.Duty.coords.z-0.5, maxZ=jobLoc.Duty.coords.z+0.5, },
 					{ options = { { event = "jim-recycle:dutytoggle", icon = "fas fa-hard-hat", label = Loc[Config.Lan].target["duty"], job = loc.Job, Trolly = jobLoc.Trolly }, },
 					distance = 1.5 })
 
@@ -54,7 +54,7 @@ CreateThread(function()
 					local nameTrade = "RecycleTrade"..location..i
 					Peds[nameTrade] = makePed(jobLoc.Trade[i].model, jobLoc.Trade[i].coords, true, false, jobLoc.Trade[i].scenario, nil)
 					Targets[nameTrade] =
-						exports['qb-target']:AddBoxZone(nameTrade, vec3(jobLoc.Trade[i].coords.x, jobLoc.Trade[i].coords.y, jobLoc.Trade[i].coords.z-1), jobLoc.Trade[i].w, jobLoc.Trade[i].d, { name=nameTrade, heading = jobLoc.Trade[i].coords.w, debugPoly=Config.Debug, minZ= jobLoc.Trade[i].coords.z-1, maxZ=jobLoc.Trade[i].coords.z+1 },
+						exports['sb-target']:AddBoxZone(nameTrade, vec3(jobLoc.Trade[i].coords.x, jobLoc.Trade[i].coords.y, jobLoc.Trade[i].coords.z-1), jobLoc.Trade[i].w, jobLoc.Trade[i].d, { name=nameTrade, heading = jobLoc.Trade[i].coords.w, debugPoly=Config.Debug, minZ= jobLoc.Trade[i].coords.z-1, maxZ=jobLoc.Trade[i].coords.z+1 },
 							{ options = { { event = "jim-recycle:Trade:Menu", icon = "fas fa-box", label = Loc[Config.Lan].target["trade"], job = loc.Job, Ped = Peds[nameTrade] }, },
 							distance = 1.5 })
 				end
@@ -68,7 +68,7 @@ CreateThread(function()
 		Peds[nameSell] = makePed(loc.Ped.model, loc.coords, true, false, loc.Ped.scenario, nil)
 		if loc.Blip.blipEnable then makeBlip({ coords = loc.coords, sprite = loc.Blip.sprite, col = loc.Blip.col, name = loc.Blip.name } ) end
 		Targets[nameSell] =
-			exports['qb-target']:AddBoxZone(nameSell, vec3(loc.coords.x, loc.coords.y, loc.coords.z-1), 1.0, 1.0, { name=nameSell, heading = loc.coords.w, debugPoly = Config.Debug, minZ = loc.coords.z-1, maxZ=loc.coords.z+1 },
+			exports['sb-target']:AddBoxZone(nameSell, vec3(loc.coords.x, loc.coords.y, loc.coords.z-1), 1.0, 1.0, { name=nameSell, heading = loc.coords.w, debugPoly = Config.Debug, minZ = loc.coords.z-1, maxZ=loc.coords.z+1 },
 				{ options = { { event = "jim-recycle:Selling:Menu", icon = "fas fa-box", label = Loc[Config.Lan].target["sell"], Ped = Peds[nameSell], }, },
 				distance = 2.5 })
 	end
@@ -78,7 +78,7 @@ CreateThread(function()
 		Peds[nameBank] = makePed(loc.Ped.model, loc.coords, true, false, loc.Ped.scenario, nil)
 		if loc.Blip.blipEnable then makeBlip({ coords = loc.coords, sprite = loc.Blip.sprite, col = loc.Blip.col, name = loc.Blip.name } ) end
 		Targets[nameBank] =
-			exports['qb-target']:AddBoxZone(nameBank, vec3(loc.coords.x, loc.coords.y, loc.coords.z-1), 1.0, 1.0, { name=nameBank, heading = loc.coords.w, debugPoly = Config.Debug, minZ = loc.coords.z-1, maxZ=loc.coords.z+1 },
+			exports['sb-target']:AddBoxZone(nameBank, vec3(loc.coords.x, loc.coords.y, loc.coords.z-1), 1.0, 1.0, { name=nameBank, heading = loc.coords.w, debugPoly = Config.Debug, minZ = loc.coords.z-1, maxZ=loc.coords.z+1 },
 				{ options = { { event = "jim-recycle:Bottle:Menu", icon = "fas fa-certificate", label = Loc[Config.Lan].target["sell_bottles"], job = Config.JobRole, Ped = Peds[nameBank] }, },
 				distance = 1.5 })
 	end
@@ -99,7 +99,7 @@ function MakeProps(location)
 end
 
 function EndJob()
-	if Targets["Package"] then exports["qb-target"]:RemoveTargetEntity(randPackage) end
+	if Targets["Package"] then exports["sb-target"]:RemoveTargetEntity(randPackage) end
 	if TrollyProp then destroyProp(TrollyProp) TrollyProp = nil end
 	for i = 1, #searchProps do SetEntityDrawOutline(searchProps[i], false) end
 	randPackage = nil
@@ -114,7 +114,7 @@ function ClearProps()
 	for _, v in pairs(searchProps) do unloadModel(GetEntityModel(v)) DeleteObject(v) end searchProps = {}
 	for _, v in pairs(Props) do unloadModel(GetEntityModel(v)) DeleteObject(v) end Props = {}
 	for k in pairs(Config.scrapPool) do unloadModel(Config.scrapPool[k].model) end
-	if Targets["DropOff"] then exports["qb-target"]:RemoveTargetEntity(TrollyProp) end
+	if Targets["DropOff"] then exports["sb-target"]:RemoveTargetEntity(TrollyProp) end
 	unloadModel(GetEntityModel(TrollyProp)) DeleteObject(TrollyProp)
 end
 
@@ -122,7 +122,7 @@ end
 function PickRandomPackage(Trolly)
 	if not TrollyProp then TrollyProp = makeProp(Trolly, 1, 0) end
 	--If somehow already exists, remove target
-	if Targets["Package"] then exports["qb-target"]:RemoveTargetEntity(randPackage, "Search") end
+	if Targets["Package"] then exports["sb-target"]:RemoveTargetEntity(randPackage, "Search") end
 	--Pick random prop to use
 	randPackage = searchProps[math.random(1, #searchProps)]
 	SetEntityDrawOutline(randPackage, true)
@@ -130,7 +130,7 @@ function PickRandomPackage(Trolly)
 	SetEntityDrawOutlineShader(1)
 	--Generate Target Location on the selected package
 	Targets["Package"] =
-		exports['qb-target']:AddTargetEntity(randPackage,
+		exports['sb-target']:AddTargetEntity(randPackage,
 			{ options = { { event = "jim-recycle:PickupPackage:Start", icon = 'fas fa-magnifying-glass', label = Loc[Config.Lan].target["search"], Trolly = Trolly} },
 			distance = 2.5,	})
 end
@@ -190,7 +190,7 @@ end)
 
 RegisterNetEvent("jim-recycle:PickupPackage:Hold", function(data) local Ped = PlayerPedId()
 	--Clear current target info
-	exports["qb-target"]:RemoveTargetEntity(randPackage, "Search")
+	exports["sb-target"]:RemoveTargetEntity(randPackage, "Search")
 	SetEntityDrawOutline(randPackage, false) randPackage = nil
 
 	--Make prop to put in hands
@@ -207,16 +207,16 @@ RegisterNetEvent("jim-recycle:PickupPackage:Hold", function(data) local Ped = Pl
 	SetEntityDrawOutlineShader(1)
 
 	Targets["DropOff"] =
-		exports['qb-target']:AddTargetEntity(TrollyProp,
+		exports['sb-target']:AddTargetEntity(TrollyProp,
 			{ options = { { event = "jim-recycle:PickupPackage:Finish", icon = 'fas fa-recycle', label = Loc[Config.Lan].target["drop_off"], Trolly = data.Trolly } },
 			distance = 2.5,	})
 end)
 
 RegisterNetEvent("jim-recycle:PickupPackage:Finish", function(data) local Ped = PlayerPedId()
 	--Once this is triggered it can't be stopped, so remove the target and prop
-	if Targets["DropOff"] then exports["qb-target"]:RemoveTargetEntity(TrollyProp, Loc[Config.Lan].target["drop_off"]) Targets["DropOff"] = nil end
+	if Targets["DropOff"] then exports["sb-target"]:RemoveTargetEntity(TrollyProp, Loc[Config.Lan].target["drop_off"]) Targets["DropOff"] = nil end
 	destroyProp(TrollyProp) SetEntityDrawOutline(TrollyProp, false) TrollyProp = nil
-	--Remove target and the whole prop, seen as how no ones qb-target works and its my fault 😊
+	--Remove target and the whole prop, seen as how no ones sb-target works and its my fault 😊
 	TrollyProp = makeProp(data.Trolly, 1, 0)
 
 	--Load and Start animation
@@ -302,7 +302,7 @@ RegisterNetEvent('jim-recycle:Selling:Menu', function(data)
 		}
 	end
 	if Config.Menu == "ox" then exports.ox_lib:registerContext({id = 'sellMenu', title = Loc[Config.Lan].menu["sell_mats"], position = 'top-right', options = sellMenu })	exports.ox_lib:showContext("sellMenu")
-	elseif Config.Menu == "qb" then exports['qb-menu']:openMenu(sellMenu) end
+	elseif Config.Menu == "qb" then exports['sb-menu']:openMenu(sellMenu) end
 	lookEnt(data.Ped)
 end)
 
@@ -334,7 +334,7 @@ RegisterNetEvent('jim-recycle:Trade:Menu', function(data)
 		Wait(0)
 	end
 	if Config.Menu == "ox" then exports.ox_lib:registerContext({id = 'tradeMenu', title = Loc[Config.Lan].menu["sell_mats"], position = 'top-right', options = tradeMenu })	exports.ox_lib:showContext("tradeMenu")
-	elseif Config.Menu == "qb" then exports['qb-menu']:openMenu(tradeMenu) end
+	elseif Config.Menu == "qb" then exports['sb-menu']:openMenu(tradeMenu) end
 	lookEnt(data.Ped)
 end)
 
@@ -357,12 +357,12 @@ RegisterNetEvent('jim-recycle:Bottle:Menu', function(data)
 		}
 	end
 	if Config.Menu == "ox" then exports.ox_lib:registerContext({id = 'tradeMenu', title = Loc[Config.Lan].menu["sell_mats"], position = 'top-right', options = tradeMenu })	exports.ox_lib:showContext("tradeMenu")
-	elseif Config.Menu == "qb" then exports['qb-menu']:openMenu(tradeMenu) end
+	elseif Config.Menu == "qb" then exports['sb-menu']:openMenu(tradeMenu) end
 	lookEnt(data.Ped)
 end)
 
 AddEventHandler('onResourceStop', function(r) if r ~= GetCurrentResourceName() then return end
-	for k in pairs(Targets) do exports['qb-target']:RemoveZone(k) end
+	for k in pairs(Targets) do exports['sb-target']:RemoveZone(k) end
 	for _, v in pairs(Peds) do unloadModel(GetEntityModel(v)) DeletePed(v) end
 	for _, v in pairs(Props) do unloadModel(GetEntityModel(v)) DeleteObject(v) end
 	for _, v in pairs(searchProps) do unloadModel(GetEntityModel(v)) DeleteObject(v) end

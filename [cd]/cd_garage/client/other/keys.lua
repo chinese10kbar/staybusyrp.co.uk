@@ -426,8 +426,8 @@ if Config.VehicleKeys.ENABLE then
         AddKey(GetCorrectPlateFormat(plate))
     end)
 
-    RegisterNetEvent('qb-vehiclekeys:client:AddKeys')
-    AddEventHandler('qb-vehiclekeys:client:AddKeys', function(plate)
+    RegisterNetEvent('sb-vehiclekeys:client:AddKeys')
+    AddEventHandler('sb-vehiclekeys:client:AddKeys', function(plate)
         AddKey(GetCorrectPlateFormat(plate))
     end)
 

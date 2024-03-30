@@ -13,9 +13,9 @@ Config.DebugLevel = {
 }
 
 -- if you use ESX/QBCore as your framework and you renamed the folder with the script change the name here
--- if you have naming `es_extended` / `qb-core` you could leave this set to `nil`
+-- if you have naming `es_extended` / `sb-core` you could leave this set to `nil`
 Config.ESXFolderName = nil
-Config.QBCoreFolderName = "qb-core"
+Config.QBCoreFolderName = "sb-core"
 
 -- SCRIPT = 'resource_folder_name'
 -- edit resource_folder_name to match your naming if it's different

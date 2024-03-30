@@ -5,7 +5,7 @@ description 'Coke Heist Script For Qbcore'
 game 'gta5'
 
 shared_scripts {
-    '@qb-core/shared/locale.lua',
+    '@sb-core/shared/locale.lua',
     'locales/en.lua',
     'config.lua',
 }

@@ -1,4 +1,4 @@
-local QBCore = exports['qb-core']:GetCoreObject()
+local QBCore = exports['sb-core']:GetCoreObject()
 
 RegisterNetEvent("Ranjit-irishpub:Server:Billing", function(playerId, amount)
     local biller = QBCore.Functions.GetPlayer(source)
@@ -14,7 +14,7 @@ RegisterNetEvent("Ranjit-irishpub:Server:Billing", function(playerId, amount)
                         ['@society'] = biller.PlayerData.job.name,
                         ['@sender'] = biller.PlayerData.charinfo.firstname
                     })
-                    TriggerClientEvent("qb-phone:RefreshPhone", billed.PlayerData.source)
+                    TriggerClientEvent("sb-phone:RefreshPhone", billed.PlayerData.source)
                     TriggerClientEvent('Ranjit-irishpub:Client:Notify', source, Language.Notify.Send, 'success', 5000)
                     TriggerClientEvent('Ranjit-irishpub:Client:Notify', billed.PlayerData.source, Language.Notify.InvoiceReceived)
                 else

@@ -35,14 +35,14 @@ end
 local function ToggleSync(status)
     if status then
         if um.weather.sc == 'qb' then
-            TriggerEvent('qb-weathersync:client:DisableSync')
+            TriggerEvent('sb-weathersync:client:DisableSync')
         elseif um.weather.sc == 'cd' then
             TriggerEvent('cd_easytime:PauseSync', true)
         end
         Debug('Custom Weather: true')
     else
         if um.weather.sc == 'qb' then
-            TriggerEvent('qb-weathersync:client:EnableSync')
+            TriggerEvent('sb-weathersync:client:EnableSync')
         elseif um.weather.sc == 'cd' then
             TriggerEvent('cd_easytime:PauseSync', false)
         end

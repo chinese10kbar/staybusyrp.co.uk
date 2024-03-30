@@ -7,7 +7,7 @@ Core.Inventory = {
       ESX.RegisterUsableItem(name, function(source,item,extra, mf)
         cb(source,item,extra, mf)
       end)
-    elseif Config.Framework == "qb-core" then
+    elseif Config.Framework == "sb-core" then
       QBCore.Functions.CreateUseableItem(name, function(source, item, extra)
         cb(source,item, extra)
       end)
@@ -16,7 +16,7 @@ Core.Inventory = {
 
   GetItemLabel = function(name)
     if Config.Framework == "es_extended" then return ESX.GetItemLabel(name); end
-    if Config.Framework == "qb-core" then
+    if Config.Framework == "sb-core" then
       if not QBCore.Shared.Items[name] then return "No Label"; end
       return QBCore.Shared.Items[name]['label']
     end
@@ -49,7 +49,7 @@ Core.Inventory = {
       if Config.Inventory == "ox_inventory" then
         local success, response = exports.ox_inventory:AddItem(self.id, item, amount, info or nil)
         return success,response
-      elseif Config.Inventory == "ps-inventory" or Config.Inventory == "qb-inventory" or Config.Inventory == "lj-inventory" or (Config.Inventory == "qs-inventory" and not Config.NewQSInventory) then 
+      elseif Config.Inventory == "ps-inventory" or Config.Inventory == "sb-inventory" or Config.Inventory == "lj-inventory" or (Config.Inventory == "qs-inventory" and not Config.NewQSInventory) then 
         local itemsCurrent = self.getItems()
         local takenSlots = {}
         for k,thisItem in pairs(itemsCurrent) do 
@@ -116,7 +116,7 @@ Core.Inventory = {
       if Config.Inventory == "ox_inventory" then
         local success, response = exports.ox_inventory:RemoveItem(self.id, item, amount, info or nil)
         return success,response
-      elseif Config.Inventory == "ps-inventory" or Config.Inventory == "qb-inventory" or Config.Inventory == "lj-inventory" or (Config.Inventory == "qs-inventory" and not Config.NewQSInventory) then 
+      elseif Config.Inventory == "ps-inventory" or Config.Inventory == "sb-inventory" or Config.Inventory == "lj-inventory" or (Config.Inventory == "qs-inventory" and not Config.NewQSInventory) then 
         if not self.hasItem(item,amount,info) then return false; end 
         local itemsCurrent = self.getItems()
         for k,v in pairs(itemsCurrent) do 
@@ -138,7 +138,7 @@ Core.Inventory = {
         local count = exports.ox_inventory:GetItemCount(self.id, item, info, true)
         if count < amount then return false; end
         return count
-      elseif Config.Inventory == "ps-inventory" or Config.Inventory == "qb-inventory" or Config.Inventory == "lj-inventory" or (Config.Inventory == "qs-inventory" and not Config.NewQSInventory) then 
+      elseif Config.Inventory == "ps-inventory" or Config.Inventory == "sb-inventory" or Config.Inventory == "lj-inventory" or (Config.Inventory == "qs-inventory" and not Config.NewQSInventory) then 
         local itemsCurrent = self.getItems()
         for slot,thisItem in pairs(itemsCurrent) do 
           if thisItem.name == item and thisItem.count >= amount and (not info or Core.Inventory.CheckMatch(thisItem.info, info)) then return thisItem.count; end 
@@ -163,7 +163,7 @@ Core.Inventory = {
           }
         end
         return ret
-      elseif Config.Inventory == "ps-inventory" or Config.Inventory == "qb-inventory" or Config.Inventory == "lj-inventory" or (Config.Inventory == "qs-inventory" and not Config.NewQSInventory) then 
+      elseif Config.Inventory == "ps-inventory" or Config.Inventory == "sb-inventory" or Config.Inventory == "lj-inventory" or (Config.Inventory == "qs-inventory" and not Config.NewQSInventory) then 
         local ret = {}
         local result = MySQL.scalar.await('SELECT items FROM stashitems WHERE stash = ?', {"Stash_"..self.id})
         if not result then return ret end
@@ -210,7 +210,7 @@ Core.Inventory = {
     self.clearInventory = function()
       if Config.Inventory == "ox_inventory" then
         exports.ox_inventory:ClearInventory(self.id)
-      elseif Config.Inventory == "ps-inventory" or Config.Inventory == "qb-inventory" or Config.Inventory == "lj-inventory" or (Config.Inventory == "qs-inventory" and not Config.NewQSInventory) then 
+      elseif Config.Inventory == "ps-inventory" or Config.Inventory == "sb-inventory" or Config.Inventory == "lj-inventory" or (Config.Inventory == "qs-inventory" and not Config.NewQSInventory) then 
         self.updateDB({})
       end
     end

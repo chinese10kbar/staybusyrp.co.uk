@@ -13,6 +13,6 @@ KonfigSH.InfoUSBItem = 'infousb'
 KonfigSH.StolenCardItem = 'stolencard'
 
 function GetQBVersion()
-    local version = exports['qb-core']:GetCoreObject()
+    local version = exports['sb-core']:GetCoreObject()
     return version
 end
